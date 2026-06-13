@@ -1,9 +1,9 @@
 group_order,group_code,group_name,current_status,route_start_date,route_end_date,archive_count,archive_cycle_days,current_archive_code,current_archive_name,current_display_code,archive_day,mastery_pct,notion_page_id,route_file,next_action
 1,Q-FIN,Quantitative Finance,active,2026-06-13,2027-03-09,9,30,TR,Trading and Market Microstructure,Q-FIN - TR,1,0,37eb1a98-6ba6-8133-a01b-e6fbff80849b,10_PROGRAM_STATE/group_routes/Q-FIN.csv,Run D001 concept-first lesson
 2,PHYS,Physics,active,2026-06-13,2030-08-20,51,30,quant-ph,Quantum Physics,PHYS - quant-ph,1,0,37eb1a98-6ba6-81a9-a1a3-e42720e82960,10_PROGRAM_STATE/group_routes/PHYS.csv,Run D001 concept-first lesson
-3,MATH,Mathematics,queued,2026-06-13,2029-01-27,32,30,,,,0,0,,,Wait for active slot after a prior group completes
-4,STAT,Statistics,queued,2026-06-13,2026-12-09,6,30,,,,0,0,,,Wait for active slot after a prior group completes
-5,CS,Computer Science,queued,2026-06-13,2029-09-24,40,30,,,,0,0,37eb1a98-6ba6-800a-8e95-f17a784cf2a8,10_PROGRAM_STATE/group_routes/CS.csv,Wait for active slot after a prior group completes
-6,ECON,Economics,queued,2026-06-13,2026-09-10,3,30,,,,0,0,,,Wait for active slot after a prior group completes
-7,EE/EESS,Electrical Engineering and Systems Science,queued,2026-06-13,2026-10-10,4,30,,,,0,0,,,Wait for active slot after a prior group completes
-8,Q-BIO,Quantitative Biology,queued,2026-06-13,2027-04-08,10,30,,,,0,0,,,Wait for active slot after a prior group completes
+3,MATH,Mathematics,queued,2027-03-10,2029-10-24,32,30,,,,0,0,,,Starts after Q-FIN group completes
+4,STAT,Statistics,queued,2029-10-25,2030-04-22,6,30,,,,0,0,,,Starts after MATH group completes
+5,CS,Computer Science,queued,2030-04-23,2033-08-04,40,30,,,,0,0,37eb1a98-6ba6-800a-8e95-f17a784cf2a8,10_PROGRAM_STATE/group_routes/CS.csv,Starts after STAT group completes
+6,ECON,Economics,queued,2030-08-21,2030-11-18,3,30,,,,0,0,,,Starts after PHYS group completes
+7,EE/EESS,Electrical Engineering and Systems Science,queued,2030-11-19,2031-03-18,4,30,,,,0,0,,,Starts after ECON group completes
+8,Q-BIO,Quantitative Biology,queued,2031-03-19,2032-01-12,10,30,,,,0,0,,,Starts after EE/EESS group completes
