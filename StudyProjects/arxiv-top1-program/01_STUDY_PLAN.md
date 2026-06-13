@@ -13,6 +13,19 @@ This is a rolling learning program, not a fixed one-off course.
 | Active archive 1 | `Q-FIN - TR` Trading and Market Microstructure |
 | Active archive 2 | `PHYS - quant-ph` Quantum Physics |
 
+## Planned Group Windows
+
+| Group | Start Date | End Date |
+|---|---|---|
+| Q-FIN | 2026-06-13 | 2026-07-12 |
+| PHYS | 2026-06-13 | 2026-07-12 |
+| MATH | 2026-07-13 | 2026-08-11 |
+| STAT | 2026-07-13 | 2026-08-11 |
+| CS | 2026-08-12 | 2026-09-10 |
+| ECON | 2026-08-12 | 2026-09-10 |
+| EE/EESS | 2026-09-11 | 2026-10-10 |
+| Q-BIO | 2026-09-11 | 2026-10-10 |
+
 ## Daily Session Protocol
 
 | Step | Required action |
