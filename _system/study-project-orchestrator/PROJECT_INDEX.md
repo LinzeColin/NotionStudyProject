@@ -2,7 +2,7 @@
 
 Generated: 2026-06-13
 Timezone: Australia/Sydney
-Status: initialized
+Status: active
 
 This file is the routing index for all concurrent Study Projects under `LinzeColin/Notion/StudyProjects/<project-slug>/`.
 
@@ -10,7 +10,7 @@ This file is the routing index for all concurrent Study Projects under `LinzeCol
 
 | Project | Slug | Status | Domain | Notion source | Current week/day | Last sync | Next action |
 |---|---|---|---|---|---|---|---|
-| None yet | | | | | | | Start the first Study Project |
+| AI | ai | active | AI / Large Models / Agents / Automation | Notion database pending; teamspace parent tool limit | W01D01 | 2026-06-13 | Continue ai W01D01 |
 
 ## Routing Rules
 
