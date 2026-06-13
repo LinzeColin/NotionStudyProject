@@ -1,100 +1,101 @@
-# arXiv Study Plan
+# arXiv 学习计划
 
-Updated: 2026-06-13  
-Source: official arXiv Category Taxonomy, checked 2026-06-13.
+更新日期：2026-06-13  
+来源：官方 arXiv Category Taxonomy，已于 2026-06-13 检查。
 
-## Correct Program Model
+## 正确项目模型
 
-This is a rolling parallel archive-mastery program, not a one-month-per-group plan.
+这是滚动式双 group 并行学习计划，不是每个 group 固定一个月。
 
-| Rule | Correct Meaning |
+| 规则 | 含义 |
 |---|---|
-| Archive duration | Each archive/category is fixed at 30 days. |
-| Group duration | A group duration is `archive_count * 30 days`. |
-| Current active load | Exactly 2 active groups/archives at a time. |
-| Promotion | When one full group is completed, the next group in the sequence enters the freed slot. |
-| Notion timeline Date | Group route window starts on 2026-06-13 and ends after all archives in that group. |
-| Active status | Stored separately in `state.json` and `active_tracks.json`; do not infer active status from Notion Date. |
+| archive 学习周期 | 每个 archive/category 固定 30 天。 |
+| group 总时长 | `archive_count * 30 天`。 |
+| 当前 active 负载 | 同时只学 2 个 active group/archive。 |
+| 推进规则 | 某个 group 完成后，下一个 queued group 进入空出来的 active slot。 |
+| Notion Timeline Date | 写真实计划窗口；queued group 不能默认写今天。 |
+| active 状态 | 由 `state.json` 和 `active_tracks.json` 记录，不从 Notion Date 推断。 |
+| 学习笔记语言 | 默认中文；保留必要专业术语、archive code、API 名、论文名和工具名。 |
 
-## Group Route Windows
+## Group 真实计划窗口
 
-| Group | Archive Count | Route Start | Route End | Current Status |
-|---|---:|---|---|---|
-| Q-FIN | 9 | 2026-06-13 | 2027-03-09 | active |
-| PHYS | 51 | 2026-06-13 | 2030-08-20 | active |
-| MATH | 32 | 2026-06-13 | 2029-01-27 | queued |
-| STAT | 6 | 2026-06-13 | 2026-12-09 | queued |
-| CS | 40 | 2026-06-13 | 2029-09-24 | queued |
-| ECON | 3 | 2026-06-13 | 2026-09-10 | queued |
-| EE/EESS | 4 | 2026-06-13 | 2026-10-10 | queued |
-| Q-BIO | 10 | 2026-06-13 | 2027-04-08 | queued |
+| Group | Archive 数量 | 计划开始 | 计划结束 | 当前状态 | 推进依据 |
+|---|---:|---|---|---|---|
+| Q-FIN | 9 | 2026-06-13 | 2027-03-09 | active | 项目 Day 1 启动 |
+| PHYS | 51 | 2026-06-13 | 2030-08-20 | active | 项目 Day 1 启动 |
+| MATH | 32 | 2027-03-10 | 2029-10-24 | queued | Q-FIN 完成后进入 slot |
+| STAT | 6 | 2029-10-25 | 2030-04-22 | queued | MATH 完成后进入 slot |
+| CS | 40 | 2030-04-23 | 2033-08-04 | queued | STAT 完成后进入 slot |
+| ECON | 3 | 2030-08-21 | 2030-11-18 | queued | PHYS 完成后进入 slot |
+| EE/EESS | 4 | 2030-11-19 | 2031-03-18 | queued | ECON 完成后进入 slot |
+| Q-BIO | 10 | 2031-03-19 | 2032-01-12 | queued | EE/EESS 完成后进入 slot |
 
-## Current Two Active Groups
+## 当前两个 active group
 
-| Track | Group | Active Archive | Day | Route File |
+| Track | Group | 当前 archive | Day | Route file |
 |---|---|---|---:|---|
 | 1 | Q-FIN | `q-fin.TR` Trading and Market Microstructure | 1/30 | `10_PROGRAM_STATE/group_routes/Q-FIN.csv` |
 | 2 | PHYS | `quant-ph` Quantum Physics | 1/30 | `10_PROGRAM_STATE/group_routes/PHYS.csv` |
 
-## Q-FIN Route Order
+## Q-FIN 学习顺序
 
-ROI logic: start from market microstructure because it is the most direct bridge to alpha, execution quality, liquidity, risk, and agent-driven market decision systems.
+ROI 逻辑：先学 market microstructure，因为它最直接连接 alpha、执行质量、流动性、risk control 和交易 Agent 系统判断。
 
-| # | Archive | Why This Order |
+| # | Archive | 为什么排在这里 |
 |---:|---|---|
-| 1 | `q-fin.TR` Trading and Market Microstructure | Understand how trades, liquidity, spread, execution, and market impact actually work. |
-| 2 | `q-fin.RM` Risk Management | Hard constraints, loss bounds, drawdown control, and fail-closed systems. |
-| 3 | `q-fin.ST` Statistical Finance | Evidence, signal reliability, distributions, backtests, uncertainty. |
-| 4 | `q-fin.PR` Pricing of Securities | Valuation, no-arbitrage, instruments, and model boundaries. |
-| 5 | `q-fin.PM` Portfolio Management | Position sizing, allocation, portfolio construction, risk/return tradeoff. |
-| 6 | `q-fin.MF` Mathematical Finance | Formal models behind pricing and risk. |
-| 7 | `q-fin.CP` Computational Finance | Simulation, numerical methods, productionizable computation. |
-| 8 | `q-fin.EC` Economics | Macro/micro economic context for market behavior. |
-| 9 | `q-fin.GN` General Finance | Integration and synthesis. |
+| 1 | `q-fin.TR` Trading and Market Microstructure | 先理解交易、流动性、spread、market impact 和执行质量。 |
+| 2 | `q-fin.RM` Risk Management | 建立硬约束、损失上限、回撤控制和 fail-closed 系统。 |
+| 3 | `q-fin.ST` Statistical Finance | 理解证据、信号可靠性、分布、回测和不确定性。 |
+| 4 | `q-fin.PR` Pricing of Securities | 理解定价、无套利、金融工具和模型边界。 |
+| 5 | `q-fin.PM` Portfolio Management | 理解仓位、组合构建和风险收益权衡。 |
+| 6 | `q-fin.MF` Mathematical Finance | 补正式定价与风险模型。 |
+| 7 | `q-fin.CP` Computational Finance | 学仿真、数值方法和可生产化计算。 |
+| 8 | `q-fin.EC` Economics | 补经济背景和市场行为解释。 |
+| 9 | `q-fin.GN` General Finance | 综合整理与迁移。 |
 
-## PHYS Route Order
+## PHYS 学习顺序
 
-ROI logic: front-load information, probability, computation, statistical mechanics, nonlinear systems, and mathematical physics because they transfer best to AI, agents, markets, systems thinking, uncertainty, and frontier research literacy.
+ROI 逻辑：优先学习信息、概率、计算、statistical mechanics、nonlinear systems 和 mathematical physics，因为这些最能迁移到 AI、Agent、市场、复杂系统、不确定性和前沿研究阅读。
 
-| Phase | Archives | Purpose |
+| 阶段 | Archives | 目的 |
 |---|---|---|
-| 1 Information/probability core | `quant-ph`, `physics.data-an`, `physics.comp-ph`, `cond-mat.stat-mech`, `math-ph` | Build the mental model for uncertainty, measurement, computation, and formal reasoning. |
-| 2 Nonlinear/complex systems | `nlin.AO`, `nlin.CD`, `nlin.CG`, `nlin.PS`, `nlin.SI` | Understand dynamics, chaos, adaptation, patterns, and emergent behavior. |
-| 3 Fundamental physics | `gr-qc`, `hep-th`, `hep-ph`, `hep-ex`, `hep-lat`, `nucl-th`, `nucl-ex` | Learn frontier theory/experiment separation and model-evidence discipline. |
-| 4 Astro/cosmology | `astro-ph.CO`, `astro-ph.HE`, `astro-ph.IM`, `astro-ph.SR`, `astro-ph.EP`, `astro-ph.GA` | Train large-scale systems reasoning and instrumentation awareness. |
-| 5 Condensed matter/materials | `cond-mat.dis-nn`, `cond-mat.mes-hall`, `cond-mat.mtrl-sci`, `cond-mat.quant-gas`, `cond-mat.soft`, `cond-mat.str-el`, `cond-mat.supr-con`, `cond-mat.other` | Connect physics to materials, devices, computation, and technology. |
-| 6 Applied/general physics | `physics.acc-ph` through `physics.space-ph` | Cover applied domains, instrumentation, optics, plasma, society, and edge cases. |
+| 1 信息/概率核心 | `quant-ph`, `physics.data-an`, `physics.comp-ph`, `cond-mat.stat-mech`, `math-ph` | 建立不确定性、测量、计算和形式化推理的底层模型。 |
+| 2 非线性/复杂系统 | `nlin.AO`, `nlin.CD`, `nlin.CG`, `nlin.PS`, `nlin.SI` | 理解动态、混沌、自适应、模式和涌现。 |
+| 3 基础物理 | `gr-qc`, `hep-th`, `hep-ph`, `hep-ex`, `hep-lat`, `nucl-th`, `nucl-ex` | 建立理论/实验分离、模型/证据纪律。 |
+| 4 天体/宇宙 | `astro-ph.CO`, `astro-ph.HE`, `astro-ph.IM`, `astro-ph.SR`, `astro-ph.EP`, `astro-ph.GA` | 训练大尺度系统理解和仪器意识。 |
+| 5 凝聚态/材料 | `cond-mat.dis-nn`, `cond-mat.mes-hall`, `cond-mat.mtrl-sci`, `cond-mat.quant-gas`, `cond-mat.soft`, `cond-mat.str-el`, `cond-mat.supr-con`, `cond-mat.other` | 连接材料、器件、计算和技术趋势。 |
+| 6 应用/通用物理 | `physics.acc-ph` 到 `physics.space-ph` | 覆盖应用、仪器、optics、plasma、society 和边界主题。 |
 
-Full PHYS order is stored in `10_PROGRAM_STATE/group_routes/PHYS.csv`.
+完整 PHYS 顺序保存在 `10_PROGRAM_STATE/group_routes/PHYS.csv`。
 
-## First 7 Days: Concept-First, No Premature Build
+## 前 7 天：先学概念，不急着搭建
 
-| Day | Q-FIN - TR | PHYS - quant-ph | Required Output |
+| Day | Q-FIN - TR | PHYS - quant-ph | 必须产出 |
 |---:|---|---|---|
-| D001 | What market microstructure studies; why trades are not the same as prices | What quantum physics studies; why measurement changes what can be known | Two boundary maps: object, mechanism, misuse, ROI use |
-| D002 | Orders, limit order book, spread, liquidity | State, measurement, uncertainty | Two concept cards + active recall answers |
-| D003 | Price formation and information | Amplitude vs probability | Classical vs probabilistic comparison note |
-| D004 | Participants, incentives, adverse selection | Operators and observables | Mechanism map |
-| D005 | Market impact and execution quality | Entanglement as information structure | Feynman explanation |
-| D006 | Trading signal vs execution edge | Quantum information transfer to computation/AI | ROI transfer memo |
-| D007 | Weekly review and route calibration | Weekly review and route calibration | W01 review + next archive adjustment if needed |
+| D001 | market microstructure 研究什么；为什么成交不等于价格 | quantum physics 研究什么；为什么测量会影响可知内容 | 两张边界图：对象、机制、误用、ROI 用法 |
+| D002 | order、limit order book、spread、liquidity | state、measurement、uncertainty | 两张概念卡 + 主动回忆答案 |
+| D003 | price formation 和 information | amplitude vs probability | classical probability vs quantum probability 对比笔记 |
+| D004 | 市场参与者、激励、adverse selection | operator 和 observable | 机制图 |
+| D005 | market impact 和 execution quality | entanglement 作为信息结构 | 费曼解释 |
+| D006 | trading signal vs execution edge | quantum information 对 computation/AI 的迁移 | ROI 迁移 memo |
+| D007 | 周复盘和 route 校准 | 周复盘和 route 校准 | W01 review + 如有必要调整后续 archive 顺序 |
 
-## Daily Session Protocol
+## 每日学习协议
 
-| Step | Required Action |
+| 步骤 | 必须做什么 |
 |---|---|
-| 1 | State current progress: `Dxxx`, active group, archive day out of 30. |
-| 2 | Active recall from previous session. |
-| 3 | Teach one core concept deeply before any practice. |
-| 4 | Explain how the concept should be used by the user. |
-| 5 | Connect concept to decision quality, ROI, work, learning, and productivity. |
-| 6 | Assign one small output. |
-| 7 | Update GitHub state/logs after session. |
-| 8 | End with upcoming lessons and dynamic adjustment notes. |
+| 1 | 说明当前进度：`Dxxx`、active group、archive day out of 30。 |
+| 2 | 先做上一节主动回忆。 |
+| 3 | 先深讲一个核心概念，再进入练习。 |
+| 4 | 说明这个概念我应该怎么用。 |
+| 5 | 连接到决策质量、ROI、工作、学习和生产效率。 |
+| 6 | 给一个小产出任务。 |
+| 7 | 学完后更新 GitHub state/logs。 |
+| 8 | 结束时给出后续课题，并根据表现动态调整。 |
 
-## Stop Conditions
+## 停止条件
 
-- Do not start a new archive without route order, date window, and archive count.
-- Do not create or update Notion before reading current schema/page format.
-- Do not treat building a project as learning progress unless the concept has been taught, recalled, and used.
-- Do not use model confidence as a substitute for hard constraints, evidence, and verification.
+- 没有 route order、date window、archive count，不开始新 archive。
+- 没有读取 Notion 当前 schema/page format，不修改 Notion。
+- 概念没有讲清、回忆、使用，不把项目搭建当学习进度。
+- 不用 model confidence 替代硬规则、证据和验证。
