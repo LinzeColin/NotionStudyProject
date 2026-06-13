@@ -10,7 +10,7 @@ This file is the routing index for all concurrent Study Projects under `LinzeCol
 
 | Project | Slug | Status | Domain | Notion source | Current week/day | Last sync | Next action |
 |---|---|---|---|---|---|---|---|
-| AI | ai | active | AI / Large Models / Agents / Automation | Notion database pending; teamspace parent tool limit | W01D01 | 2026-06-13 | Continue ai W01D01 |
+| AI | ai | scope_pending_confirmation | AI / Large Models / Agents / Automation | Codex Study Timeline `37eb1a986ba680bdb5f9ea2367b08991` | W01D01 / 第1/28天 pending start | 2026-06-13 | Confirm AI scope, Day 1 date, and authorization |
 
 ## Routing Rules
 
@@ -31,7 +31,9 @@ Before reading or writing any project state:
 | Learning goal | yes | Understand, apply, monetize/career, expert judgment |
 | Domain/industry | yes | Broad field |
 | Subdomain/content focus | yes | Concrete track chosen from high-ROI options |
-| Duration | yes | 30/60/90 days by default |
+| Duration | yes | 28/30/60/90 days by default depending on context |
+| Day 1 start date | yes | Every daily session must show 第X/Y天 |
+| Explicit authorization | yes | Required before starting learning content |
 | Daily time | yes | 30, 45-60, or 90+ minutes |
 | Notion source | optional at start | Page/database URL when available |
 | Reminder mode | yes | Return-to-Codex trigger |
@@ -63,6 +65,7 @@ New Study Project databases/pages should be created under `Linz Dashboard` as pe
 - `制造业`
 - `Re:0`
 - `arXiv`
+- `Codex Study Timeline`
 
 Existing workspaces are read-only by default.
 
