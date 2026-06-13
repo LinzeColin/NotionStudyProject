@@ -8,17 +8,18 @@
   "active_track_limit": 2,
   "archive_cycle_days": 30,
   "hard_rule": "One archive/category is always a 30-day cycle. A group is not 30 days; group route duration equals archive_count * 30 days.",
-  "date_rule_for_notion_timeline": "Each group page uses route_start_date = 2026-06-13 and route_end_date = program_start_date + archive_count * 30 - 1. Active status is tracked separately.",
+  "date_rule_for_notion_timeline": "Only currently active groups default to the program start date. Queued group dates must be computed from active-slot promotion rules or explicit project state; never default every queued group to today.",
+  "learning_note_language_rule": "Learning notes, daily logs, reviews, and Notion note content must be Chinese by default. Keep English only for unavoidable professional terms, API names, paper/category codes, exact source titles, and tool names.",
   "group_order": ["Q-FIN", "PHYS", "MATH", "STAT", "CS", "ECON", "EE/EESS", "Q-BIO"],
   "group_route_windows": [
-    {"group_code": "Q-FIN", "group_name": "Quantitative Finance", "archive_count": 9, "route_start_date": "2026-06-13", "route_end_date": "2027-03-09", "route_file": "10_PROGRAM_STATE/group_routes/Q-FIN.csv", "status": "active"},
-    {"group_code": "PHYS", "group_name": "Physics", "archive_count": 51, "route_start_date": "2026-06-13", "route_end_date": "2030-08-20", "route_file": "10_PROGRAM_STATE/group_routes/PHYS.csv", "status": "active"},
-    {"group_code": "MATH", "group_name": "Mathematics", "archive_count": 32, "route_start_date": "2026-06-13", "route_end_date": "2029-01-27", "status": "queued"},
-    {"group_code": "STAT", "group_name": "Statistics", "archive_count": 6, "route_start_date": "2026-06-13", "route_end_date": "2026-12-09", "status": "queued"},
-    {"group_code": "CS", "group_name": "Computer Science", "archive_count": 40, "route_start_date": "2026-06-13", "route_end_date": "2029-09-24", "route_file": "10_PROGRAM_STATE/group_routes/CS.csv", "status": "queued"},
-    {"group_code": "ECON", "group_name": "Economics", "archive_count": 3, "route_start_date": "2026-06-13", "route_end_date": "2026-09-10", "status": "queued"},
-    {"group_code": "EE/EESS", "group_name": "Electrical Engineering and Systems Science", "archive_count": 4, "route_start_date": "2026-06-13", "route_end_date": "2026-10-10", "status": "queued"},
-    {"group_code": "Q-BIO", "group_name": "Quantitative Biology", "archive_count": 10, "route_start_date": "2026-06-13", "route_end_date": "2027-04-08", "status": "queued"}
+    {"group_code": "Q-FIN", "group_name": "Quantitative Finance", "archive_count": 9, "route_start_date": "2026-06-13", "route_end_date": "2027-03-09", "route_file": "10_PROGRAM_STATE/group_routes/Q-FIN.csv", "status": "active", "slot": 1},
+    {"group_code": "PHYS", "group_name": "Physics", "archive_count": 51, "route_start_date": "2026-06-13", "route_end_date": "2030-08-20", "route_file": "10_PROGRAM_STATE/group_routes/PHYS.csv", "status": "active", "slot": 2},
+    {"group_code": "MATH", "group_name": "Mathematics", "archive_count": 32, "route_start_date": "2027-03-10", "route_end_date": "2029-10-24", "status": "queued", "slot_after": "Q-FIN"},
+    {"group_code": "STAT", "group_name": "Statistics", "archive_count": 6, "route_start_date": "2029-10-25", "route_end_date": "2030-04-22", "status": "queued", "slot_after": "MATH"},
+    {"group_code": "CS", "group_name": "Computer Science", "archive_count": 40, "route_start_date": "2030-04-23", "route_end_date": "2033-08-04", "route_file": "10_PROGRAM_STATE/group_routes/CS.csv", "status": "queued", "slot_after": "STAT"},
+    {"group_code": "ECON", "group_name": "Economics", "archive_count": 3, "route_start_date": "2030-08-21", "route_end_date": "2030-11-18", "status": "queued", "slot_after": "PHYS"},
+    {"group_code": "EE/EESS", "group_name": "Electrical Engineering and Systems Science", "archive_count": 4, "route_start_date": "2030-11-19", "route_end_date": "2031-03-18", "status": "queued", "slot_after": "ECON"},
+    {"group_code": "Q-BIO", "group_name": "Quantitative Biology", "archive_count": 10, "route_start_date": "2031-03-19", "route_end_date": "2032-01-12", "status": "queued", "slot_after": "EE/EESS"}
   ],
   "active_tracks": [
     {
@@ -54,7 +55,7 @@
       "status": "active"
     }
   ],
-  "promotion_rule": "When any active group completes all archive cycles and reaches archive/group mastery criteria, the next queued group in group_order becomes active in that freed slot. Do not assign fake active dates before promotion.",
+  "promotion_rule": "Two active slots are maintained. When an active group completes, the next queued group in group_order starts the next calendar day in the freed slot. Do not assign queued group start dates before promotion unless the queue simulation already determines them.",
   "queued_groups": ["MATH", "STAT", "CS", "ECON", "EE/EESS", "Q-BIO"],
   "notion_sources": {
     "arxiv_taxonomy_database_id": "37cb1a986ba680838ccddc8c0931281b",
@@ -67,6 +68,6 @@
     }
   },
   "last_sync_date": "2026-06-13",
-  "next_action": "Present corrected Q-FIN and PHYS route, then run D001 concept-first lesson only after the route model is clear.",
+  "next_action": "Run D001 concept-first lesson in Chinese: Q-FIN q-fin.TR and PHYS quant-ph.",
   "status": "active"
 }
