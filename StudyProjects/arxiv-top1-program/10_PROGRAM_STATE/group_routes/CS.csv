@@ -1,41 +1,41 @@
 order,group_code,full_code,archive_code,archive_name,cycle_days,planned_start,planned_end,status,route_reason
-1,CS,cs.AI,AI,Artificial Intelligence,30,2026-06-13,2026-07-12,queued,queued within group route
-2,CS,cs.LG,LG,Machine Learning,30,2026-07-13,2026-08-11,queued,queued within group route
-3,CS,cs.CL,CL,Computation and Language,30,2026-08-12,2026-09-10,queued,queued within group route
-4,CS,cs.MA,MA,Multiagent Systems,30,2026-09-11,2026-10-10,queued,queued within group route
-5,CS,cs.SE,SE,Software Engineering,30,2026-10-11,2026-11-09,queued,queued within group route
-6,CS,cs.CR,CR,Cryptography and Security,30,2026-11-10,2026-12-09,queued,queued within group route
-7,CS,cs.DB,DB,Databases,30,2026-12-10,2027-01-08,queued,queued within group route
-8,CS,cs.DC,DC,"Distributed, Parallel, and Cluster Computing",30,2027-01-09,2027-02-07,queued,queued within group route
-9,CS,cs.IR,IR,Information Retrieval,30,2027-02-08,2027-03-09,queued,queued within group route
-10,CS,cs.CV,CV,Computer Vision and Pattern Recognition,30,2027-03-10,2027-04-08,queued,queued within group route
-11,CS,cs.RO,RO,Robotics,30,2027-04-09,2027-05-08,queued,queued within group route
-12,CS,cs.PL,PL,Programming Languages,30,2027-05-09,2027-06-07,queued,queued within group route
-13,CS,cs.OS,OS,Operating Systems,30,2027-06-08,2027-07-07,queued,queued within group route
-14,CS,cs.DS,DS,Data Structures and Algorithms,30,2027-07-08,2027-08-06,queued,queued within group route
-15,CS,cs.CE,CE,"Computational Engineering, Finance, and Science",30,2027-08-07,2027-09-05,queued,queued within group route
-16,CS,cs.NI,NI,Networking and Internet Architecture,30,2027-09-06,2027-10-05,queued,queued within group route
-17,CS,cs.SY,SY,Systems and Control,30,2027-10-06,2027-11-04,queued,queued within group route
-18,CS,cs.GT,GT,Computer Science and Game Theory,30,2027-11-05,2027-12-04,queued,queued within group route
-19,CS,cs.HC,HC,Human-Computer Interaction,30,2027-12-05,2028-01-03,queued,queued within group route
-20,CS,cs.CY,CY,Computers and Society,30,2028-01-04,2028-02-02,queued,queued within group route
-21,CS,cs.IT,IT,Information Theory,30,2028-02-03,2028-03-03,queued,queued within group route
-22,CS,cs.NE,NE,Neural and Evolutionary Computing,30,2028-03-04,2028-04-02,queued,queued within group route
-23,CS,cs.AR,AR,Hardware Architecture,30,2028-04-03,2028-05-02,queued,queued within group route
-24,CS,cs.ET,ET,Emerging Technologies,30,2028-05-03,2028-06-01,queued,queued within group route
-25,CS,cs.CC,CC,Computational Complexity,30,2028-06-02,2028-07-01,queued,queued within group route
-26,CS,cs.LO,LO,Logic in Computer Science,30,2028-07-02,2028-07-31,queued,queued within group route
-27,CS,cs.DM,DM,Discrete Mathematics,30,2028-08-01,2028-08-30,queued,queued within group route
-28,CS,cs.FL,FL,Formal Languages and Automata Theory,30,2028-08-31,2028-09-29,queued,queued within group route
-29,CS,cs.CG,CG,Computational Geometry,30,2028-09-30,2028-10-29,queued,queued within group route
-30,CS,cs.GR,GR,Graphics,30,2028-10-30,2028-11-28,queued,queued within group route
-31,CS,cs.MM,MM,Multimedia,30,2028-11-29,2028-12-28,queued,queued within group route
-32,CS,cs.SI,SI,Social and Information Networks,30,2028-12-29,2029-01-27,queued,queued within group route
-33,CS,cs.PF,PF,Performance,30,2029-01-28,2029-02-26,queued,queued within group route
-34,CS,cs.SC,SC,Symbolic Computation,30,2029-02-27,2029-03-28,queued,queued within group route
-35,CS,cs.MS,MS,Mathematical Software,30,2029-03-29,2029-04-27,queued,queued within group route
-36,CS,cs.NA,NA,Numerical Analysis,30,2029-04-28,2029-05-27,queued,queued within group route
-37,CS,cs.SD,SD,Sound,30,2029-05-28,2029-06-26,queued,queued within group route
-38,CS,cs.DL,DL,Digital Libraries,30,2029-06-27,2029-07-26,queued,queued within group route
-39,CS,cs.GL,GL,General Literature,30,2029-07-27,2029-08-25,queued,queued within group route
-40,CS,cs.OH,OH,Other Computer Science,30,2029-08-26,2029-09-24,queued,queued within group route
+1,CS,cs.AI,AI,Artificial Intelligence,30,2030-04-23,2030-05-22,queued,queued within group route
+2,CS,cs.LG,LG,Machine Learning,30,2030-05-23,2030-06-21,queued,queued within group route
+3,CS,cs.CL,CL,Computation and Language,30,2030-06-22,2030-07-21,queued,queued within group route
+4,CS,cs.MA,MA,Multiagent Systems,30,2030-07-22,2030-08-20,queued,queued within group route
+5,CS,cs.SE,SE,Software Engineering,30,2030-08-21,2030-09-19,queued,queued within group route
+6,CS,cs.CR,CR,Cryptography and Security,30,2030-09-20,2030-10-19,queued,queued within group route
+7,CS,cs.DB,DB,Databases,30,2030-10-20,2030-11-18,queued,queued within group route
+8,CS,cs.DC,DC,"Distributed, Parallel, and Cluster Computing",30,2030-11-19,2030-12-18,queued,queued within group route
+9,CS,cs.IR,IR,Information Retrieval,30,2030-12-19,2031-01-17,queued,queued within group route
+10,CS,cs.CV,CV,Computer Vision and Pattern Recognition,30,2031-01-18,2031-02-16,queued,queued within group route
+11,CS,cs.RO,RO,Robotics,30,2031-02-17,2031-03-18,queued,queued within group route
+12,CS,cs.PL,PL,Programming Languages,30,2031-03-19,2031-04-17,queued,queued within group route
+13,CS,cs.OS,OS,Operating Systems,30,2031-04-18,2031-05-17,queued,queued within group route
+14,CS,cs.DS,DS,Data Structures and Algorithms,30,2031-05-18,2031-06-16,queued,queued within group route
+15,CS,cs.CE,CE,"Computational Engineering, Finance, and Science",30,2031-06-17,2031-07-16,queued,queued within group route
+16,CS,cs.NI,NI,Networking and Internet Architecture,30,2031-07-17,2031-08-15,queued,queued within group route
+17,CS,cs.SY,SY,Systems and Control,30,2031-08-16,2031-09-14,queued,queued within group route
+18,CS,cs.GT,GT,Computer Science and Game Theory,30,2031-09-15,2031-10-14,queued,queued within group route
+19,CS,cs.HC,HC,Human-Computer Interaction,30,2031-10-15,2031-11-13,queued,queued within group route
+20,CS,cs.CY,CY,Computers and Society,30,2031-11-14,2031-12-13,queued,queued within group route
+21,CS,cs.IT,IT,Information Theory,30,2031-12-14,2032-01-12,queued,queued within group route
+22,CS,cs.NE,NE,Neural and Evolutionary Computing,30,2032-01-13,2032-02-11,queued,queued within group route
+23,CS,cs.AR,AR,Hardware Architecture,30,2032-02-12,2032-03-12,queued,queued within group route
+24,CS,cs.ET,ET,Emerging Technologies,30,2032-03-13,2032-04-11,queued,queued within group route
+25,CS,cs.CC,CC,Computational Complexity,30,2032-04-12,2032-05-11,queued,queued within group route
+26,CS,cs.LO,LO,Logic in Computer Science,30,2032-05-12,2032-06-10,queued,queued within group route
+27,CS,cs.DM,DM,Discrete Mathematics,30,2032-06-11,2032-07-10,queued,queued within group route
+28,CS,cs.FL,FL,Formal Languages and Automata Theory,30,2032-07-11,2032-08-09,queued,queued within group route
+29,CS,cs.CG,CG,Computational Geometry,30,2032-08-10,2032-09-08,queued,queued within group route
+30,CS,cs.GR,GR,Graphics,30,2032-09-09,2032-10-08,queued,queued within group route
+31,CS,cs.MM,MM,Multimedia,30,2032-10-09,2032-11-07,queued,queued within group route
+32,CS,cs.SI,SI,Social and Information Networks,30,2032-11-08,2032-12-07,queued,queued within group route
+33,CS,cs.PF,PF,Performance,30,2032-12-08,2033-01-06,queued,queued within group route
+34,CS,cs.SC,SC,Symbolic Computation,30,2033-01-07,2033-02-05,queued,queued within group route
+35,CS,cs.MS,MS,Mathematical Software,30,2033-02-06,2033-03-07,queued,queued within group route
+36,CS,cs.NA,NA,Numerical Analysis,30,2033-03-08,2033-04-06,queued,queued within group route
+37,CS,cs.SD,SD,Sound,30,2033-04-07,2033-05-06,queued,queued within group route
+38,CS,cs.DL,DL,Digital Libraries,30,2033-05-07,2033-06-05,queued,queued within group route
+39,CS,cs.GL,GL,General Literature,30,2033-06-06,2033-07-05,queued,queued within group route
+40,CS,cs.OH,OH,Other Computer Science,30,2033-07-06,2033-08-04,queued,queued within group route
