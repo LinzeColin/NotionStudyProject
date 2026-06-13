@@ -11,7 +11,7 @@ This file is the routing index for all concurrent Study Projects under `LinzeCol
 | Project | Slug | Status | Domain | Notion source | Current week/day | Last sync | Next action |
 |---|---|---|---|---|---|---|---|
 | AI | ai | active | AI / Large Models / Agents / Automation | Codex Study Timeline `37eb1a986ba680bdb5f9ea2367b08991`; D01 page `37eb1a986ba681098a14d2c8c71f3715` | W01D01 / 第1/28天 | 2026-06-13 | Complete D01 baseline active recall and Personal AI leverage map |
-| arXiv Top1 Program | arxiv-top1-program | active | arXiv / Q-FIN, PHYS, MATH, STAT, CS, ECON, EE/EESS, Q-BIO | arXiv Taxonomy database `37cb1a986ba680838ccddc8c0931281b`; Code column added | D001 / Archive Day 1/30 for `Q-FIN - TR` and `PHYS - quant-ph` | 2026-06-13 | Start D001 concept-first archive boundary lesson |
+| arXiv Top1 Program | arxiv-top1-program | active | arXiv / Q-FIN, PHYS, MATH, STAT, CS, ECON, EE/EESS, Q-BIO | Codex Study Timeline `37eb1a986ba680bdb5f9ea2367b08991`; Q-FIN page `37eb1a986ba68133a01be6fbff80849b`; PHYS page `37eb1a986ba681a9a1a3e42720e82960`; CS page `37eb1a986ba6800a8e95f17a784cf2a8`; arXiv Taxonomy database `37cb1a986ba680838ccddc8c0931281b` | D001 / active archives `Q-FIN - q-fin.TR` and `PHYS - quant-ph`; rule: archive=30d, group=archive_count*30d | 2026-06-13 | Teach D001 concept-first only after presenting corrected Q-FIN/PHYS routes |
 
 ## Routing Rules
 
@@ -63,7 +63,8 @@ For rolling programs, also use:
 10_PROGRAM_STATE/
 ├── active_tracks.json
 ├── archive_catalog.csv
-└── progression_log.csv
+├── progression_log.csv
+└── group_routes/
 ```
 
 ## Notion Placement Rule
