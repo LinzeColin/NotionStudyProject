@@ -1,9 +1,9 @@
-group_order,group_code,group_name,current_status,start_date,end_date,current_archive_code,current_archive_name,current_display_code,archive_day,archive_cycle_days,mastery_pct,next_action
-1,Q-FIN,Quantitative Finance,active,2026-06-13,2026-07-12,TR,Trading and Market Microstructure,Q-FIN - TR,1,30,0,Start D001 archive boundary lesson
-2,PHYS,Physics,active,2026-06-13,2026-07-12,quant-ph,Quantum Physics,PHYS - quant-ph,1,30,0,Start D001 archive boundary lesson
-3,MATH,Mathematics,queued,2026-07-13,2026-08-11,,,,0,30,0,Wait for active slot
-4,STAT,Statistics,queued,2026-07-13,2026-08-11,,,,0,30,0,Wait for active slot
-5,CS,Computer Science,queued,2026-08-12,2026-09-10,,,,0,30,0,Wait for active slot
-6,ECON,Economics,queued,2026-08-12,2026-09-10,,,,0,30,0,Wait for active slot
-7,EE/EESS,Electrical Engineering and Systems Science,queued,2026-09-11,2026-10-10,,,,0,30,0,Wait for active slot
-8,Q-BIO,Quantitative Biology,queued,2026-09-11,2026-10-10,,,,0,30,0,Wait for active slot
+group_order,group_code,group_name,current_status,route_start_date,route_end_date,archive_count,archive_cycle_days,current_archive_code,current_archive_name,current_display_code,archive_day,mastery_pct,notion_page_id,route_file,next_action
+1,Q-FIN,Quantitative Finance,active,2026-06-13,2027-03-09,9,30,TR,Trading and Market Microstructure,Q-FIN - TR,1,0,37eb1a98-6ba6-8133-a01b-e6fbff80849b,10_PROGRAM_STATE/group_routes/Q-FIN.csv,Run D001 concept-first lesson
+2,PHYS,Physics,active,2026-06-13,2030-08-20,51,30,quant-ph,Quantum Physics,PHYS - quant-ph,1,0,37eb1a98-6ba6-81a9-a1a3-e42720e82960,10_PROGRAM_STATE/group_routes/PHYS.csv,Run D001 concept-first lesson
+3,MATH,Mathematics,queued,2026-06-13,2029-01-27,32,30,,,,0,0,,,Wait for active slot after a prior group completes
+4,STAT,Statistics,queued,2026-06-13,2026-12-09,6,30,,,,0,0,,,Wait for active slot after a prior group completes
+5,CS,Computer Science,queued,2026-06-13,2029-09-24,40,30,,,,0,0,37eb1a98-6ba6-800a-8e95-f17a784cf2a8,10_PROGRAM_STATE/group_routes/CS.csv,Wait for active slot after a prior group completes
+6,ECON,Economics,queued,2026-06-13,2026-09-10,3,30,,,,0,0,,,Wait for active slot after a prior group completes
+7,EE/EESS,Electrical Engineering and Systems Science,queued,2026-06-13,2026-10-10,4,30,,,,0,0,,,Wait for active slot after a prior group completes
+8,Q-BIO,Quantitative Biology,queued,2026-06-13,2027-04-08,10,30,,,,0,0,,,Wait for active slot after a prior group completes
