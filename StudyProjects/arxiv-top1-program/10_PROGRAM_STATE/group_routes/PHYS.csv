@@ -1,0 +1,52 @@
+order,group_code,full_code,archive_code,archive_name,cycle_days,planned_start,planned_end,status,route_reason
+1,PHYS,quant-ph,quant-ph,Quantum Physics,30,2026-06-13,2026-07-12,active,active first archive
+2,PHYS,physics.data-an,data-an,"Data Analysis, Statistics and Probability",30,2026-07-13,2026-08-11,queued,queued within group route
+3,PHYS,physics.comp-ph,comp-ph,Computational Physics,30,2026-08-12,2026-09-10,queued,queued within group route
+4,PHYS,cond-mat.stat-mech,stat-mech,Statistical Mechanics,30,2026-09-11,2026-10-10,queued,queued within group route
+5,PHYS,math-ph,math-ph,Mathematical Physics,30,2026-10-11,2026-11-09,queued,queued within group route
+6,PHYS,nlin.AO,AO,Adaptation and Self-Organizing Systems,30,2026-11-10,2026-12-09,queued,queued within group route
+7,PHYS,nlin.CD,CD,Chaotic Dynamics,30,2026-12-10,2027-01-08,queued,queued within group route
+8,PHYS,nlin.CG,CG,Cellular Automata and Lattice Gases,30,2027-01-09,2027-02-07,queued,queued within group route
+9,PHYS,nlin.PS,PS,Pattern Formation and Solitons,30,2027-02-08,2027-03-09,queued,queued within group route
+10,PHYS,nlin.SI,SI,Exactly Solvable and Integrable Systems,30,2027-03-10,2027-04-08,queued,queued within group route
+11,PHYS,gr-qc,gr-qc,General Relativity and Quantum Cosmology,30,2027-04-09,2027-05-08,queued,queued within group route
+12,PHYS,hep-th,hep-th,High Energy Physics - Theory,30,2027-05-09,2027-06-07,queued,queued within group route
+13,PHYS,hep-ph,hep-ph,High Energy Physics - Phenomenology,30,2027-06-08,2027-07-07,queued,queued within group route
+14,PHYS,hep-ex,hep-ex,High Energy Physics - Experiment,30,2027-07-08,2027-08-06,queued,queued within group route
+15,PHYS,hep-lat,hep-lat,High Energy Physics - Lattice,30,2027-08-07,2027-09-05,queued,queued within group route
+16,PHYS,nucl-th,nucl-th,Nuclear Theory,30,2027-09-06,2027-10-05,queued,queued within group route
+17,PHYS,nucl-ex,nucl-ex,Nuclear Experiment,30,2027-10-06,2027-11-04,queued,queued within group route
+18,PHYS,astro-ph.CO,CO,Cosmology and Nongalactic Astrophysics,30,2027-11-05,2027-12-04,queued,queued within group route
+19,PHYS,astro-ph.HE,HE,High Energy Astrophysical Phenomena,30,2027-12-05,2028-01-03,queued,queued within group route
+20,PHYS,astro-ph.IM,IM,Instrumentation and Methods for Astrophysics,30,2028-01-04,2028-02-02,queued,queued within group route
+21,PHYS,astro-ph.SR,SR,Solar and Stellar Astrophysics,30,2028-02-03,2028-03-03,queued,queued within group route
+22,PHYS,astro-ph.EP,EP,Earth and Planetary Astrophysics,30,2028-03-04,2028-04-02,queued,queued within group route
+23,PHYS,astro-ph.GA,GA,Astrophysics of Galaxies,30,2028-04-03,2028-05-02,queued,queued within group route
+24,PHYS,cond-mat.dis-nn,dis-nn,Disordered Systems and Neural Networks,30,2028-05-03,2028-06-01,queued,queued within group route
+25,PHYS,cond-mat.mes-hall,mes-hall,Mesoscale and Nanoscale Physics,30,2028-06-02,2028-07-01,queued,queued within group route
+26,PHYS,cond-mat.mtrl-sci,mtrl-sci,Materials Science,30,2028-07-02,2028-07-31,queued,queued within group route
+27,PHYS,cond-mat.quant-gas,quant-gas,Quantum Gases,30,2028-08-01,2028-08-30,queued,queued within group route
+28,PHYS,cond-mat.soft,soft,Soft Condensed Matter,30,2028-08-31,2028-09-29,queued,queued within group route
+29,PHYS,cond-mat.str-el,str-el,Strongly Correlated Electrons,30,2028-09-30,2028-10-29,queued,queued within group route
+30,PHYS,cond-mat.supr-con,supr-con,Superconductivity,30,2028-10-30,2028-11-28,queued,queued within group route
+31,PHYS,cond-mat.other,other,Other Condensed Matter,30,2028-11-29,2028-12-28,queued,queued within group route
+32,PHYS,physics.acc-ph,acc-ph,Accelerator Physics,30,2028-12-29,2029-01-27,queued,queued within group route
+33,PHYS,physics.app-ph,app-ph,Applied Physics,30,2029-01-28,2029-02-26,queued,queued within group route
+34,PHYS,physics.ao-ph,ao-ph,Atmospheric and Oceanic Physics,30,2029-02-27,2029-03-28,queued,queued within group route
+35,PHYS,physics.atm-clus,atm-clus,Atomic and Molecular Clusters,30,2029-03-29,2029-04-27,queued,queued within group route
+36,PHYS,physics.atom-ph,atom-ph,Atomic Physics,30,2029-04-28,2029-05-27,queued,queued within group route
+37,PHYS,physics.bio-ph,bio-ph,Biological Physics,30,2029-05-28,2029-06-26,queued,queued within group route
+38,PHYS,physics.chem-ph,chem-ph,Chemical Physics,30,2029-06-27,2029-07-26,queued,queued within group route
+39,PHYS,physics.class-ph,class-ph,Classical Physics,30,2029-07-27,2029-08-25,queued,queued within group route
+40,PHYS,physics.ed-ph,ed-ph,Physics Education,30,2029-08-26,2029-09-24,queued,queued within group route
+41,PHYS,physics.flu-dyn,flu-dyn,Fluid Dynamics,30,2029-09-25,2029-10-24,queued,queued within group route
+42,PHYS,physics.gen-ph,gen-ph,General Physics,30,2029-10-25,2029-11-23,queued,queued within group route
+43,PHYS,physics.geo-ph,geo-ph,Geophysics,30,2029-11-24,2029-12-23,queued,queued within group route
+44,PHYS,physics.hist-ph,hist-ph,History and Philosophy of Physics,30,2029-12-24,2030-01-22,queued,queued within group route
+45,PHYS,physics.ins-det,ins-det,Instrumentation and Detectors,30,2030-01-23,2030-02-21,queued,queued within group route
+46,PHYS,physics.med-ph,med-ph,Medical Physics,30,2030-02-22,2030-03-23,queued,queued within group route
+47,PHYS,physics.optics,optics,Optics,30,2030-03-24,2030-04-22,queued,queued within group route
+48,PHYS,physics.plasm-ph,plasm-ph,Plasma Physics,30,2030-04-23,2030-05-22,queued,queued within group route
+49,PHYS,physics.pop-ph,pop-ph,Popular Physics,30,2030-05-23,2030-06-21,queued,queued within group route
+50,PHYS,physics.soc-ph,soc-ph,Physics and Society,30,2030-06-22,2030-07-21,queued,queued within group route
+51,PHYS,physics.space-ph,space-ph,Space Physics,30,2030-07-22,2030-08-20,queued,queued within group route
