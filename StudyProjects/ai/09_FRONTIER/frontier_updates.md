@@ -1,6 +1,7 @@
 # AI Frontier Updates
 
 Generated: 2026-06-13
+Last live refresh: 2026-06-13
 
 ## Initial Source Set
 
@@ -12,6 +13,17 @@ The first source set is intentionally official/primary-source heavy:
 - Anthropic Building Effective Agents research note.
 - Google Gemini function calling docs.
 - Model Context Protocol docs and specification.
+
+## D01 Live Source Notes
+
+For D01, use sources only to anchor stable concepts, not to chase model rankings.
+
+| Source | Stable takeaway for this project |
+|---|---|
+| OpenAI Agents SDK docs | Agents involve planning, tool calls, specialist collaboration, state, and multi-step work; use SDK-style orchestration when the app owns tools, approvals, and state. |
+| Anthropic Building Effective Agents | Separate predictable workflows from more dynamic agents; do not overuse agentic complexity when a simpler workflow is enough. |
+| MCP docs | MCP is a cross-client protocol for connecting AI apps to tools/data; useful when learning reusable integrations. |
+| Gemini function calling docs | Tool/function calling can be single, parallel, sequential/compositional, or automatic depending on SDK and model support. |
 
 ## Weekly Update Policy
 
