@@ -4,7 +4,7 @@ Generated: 2026-06-13
 Timezone: Australia/Sydney
 Status: initialized
 
-This file is the routing index for all concurrent Study Projects under `LinzeColin/Notion/<project-slug>/`.
+This file is the routing index for all concurrent Study Projects under `LinzeColin/Notion/StudyProjects/<project-slug>/`.
 
 ## Active Projects
 
@@ -20,17 +20,17 @@ Before reading or writing any project state:
 2. Match it against this index.
 3. If there is no matching project, run the new project intake lock.
 4. If multiple projects match, ask the user to choose from a numbered list.
-5. Write only to the selected project folder.
+5. Write only to the selected project folder under `StudyProjects/<project-slug>/`.
 
 ## New Project Minimum Fields
 
 | Field | Required | Notes |
 |---|---|---|
 | Project name | yes | Human-readable name |
-| Slug | yes | Folder name under `LinzeColin/Notion/` |
+| Slug | yes | Folder name under `LinzeColin/Notion/StudyProjects/` |
 | Learning goal | yes | Understand, apply, monetize/career, expert judgment |
 | Domain/industry | yes | Broad field |
-| Subdomain/content focus | yes | Concrete track chosen from options |
+| Subdomain/content focus | yes | Concrete track chosen from high-ROI options |
 | Duration | yes | 30/60/90 days by default |
 | Daily time | yes | 30, 45-60, or 90+ minutes |
 | Notion source | optional at start | Page/database URL when available |
@@ -39,7 +39,7 @@ Before reading or writing any project state:
 ## Default Folder Structure Per Project
 
 ```text
-<project-slug>/
+StudyProjects/<project-slug>/
 ├── 00_PROJECT_BRIEF.md
 ├── 01_STUDY_PLAN.md
 ├── 02_TOP1_STRATEGY.md
@@ -54,3 +54,24 @@ Before reading or writing any project state:
 ├── state.json
 └── HANDOFF.md
 ```
+
+## Notion Placement Rule
+
+New Study Project databases/pages should be created under `Linz Dashboard` as peers to:
+
+- `个人价值增长`
+- `制造业`
+- `Re:0`
+- `arXiv`
+
+Existing workspaces are read-only by default.
+
+## Backup Rule
+
+Before creating or importing a new Notion Study Project workspace/database, create a backup under:
+
+```text
+NotionBackup/YYYYMMDD/
+```
+
+If a complete Notion workspace export is not available through the connector, record backup scope and gaps in the backup manifest.
