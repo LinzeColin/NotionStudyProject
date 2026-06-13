@@ -2,15 +2,27 @@
   "project_slug": "ai",
   "project_name": "AI",
   "domain": "AI / Large Models / Agents / Automation",
+  "scope_mode": "1A_default_high_roi_scope",
+  "final_scope": [
+    "AI fundamentals and practical judgment",
+    "Large models and LLM mental models",
+    "Prompt and context engineering",
+    "Tool use, function calling, and MCP",
+    "Agent architecture and orchestration",
+    "Automation workflows and approval gates",
+    "Evals, reliability, safety, and failure modes",
+    "AI productization and business/productivity applications interleaved"
+  ],
   "timezone": "Australia/Sydney",
-  "start_date": "pending_user_confirmation",
+  "start_date": "2026-06-13",
   "duration_days": 28,
   "current_week": 1,
   "current_day": 1,
-  "current_focus": "Scope confirmation before starting D01",
+  "current_day_label": "第1/28天",
+  "current_focus": "W01D01 - baseline recall, AI mental map, and personal AI leverage map",
   "last_session_date": "2026-06-13",
   "streak": 0,
-  "next_action": "Confirm AI scope, Day 1 start date, and authorization to start",
+  "next_action": "Complete D01 baseline active recall and build the Personal AI leverage map",
   "github_path": "LinzeColin/Notion/StudyProjects/ai/",
   "notion_source": {
     "teamspace": "Linz Dashboard",
@@ -19,9 +31,17 @@
     "timeline_database_id": "37eb1a986ba680bdb5f9ea2367b08991",
     "timeline_database_url": "https://www.notion.so/37eb1a986ba680bdb5f9ea2367b08991?v=37eb1a986ba68040b4f4000cc8b21956&source=copy_link",
     "timeline_data_source_url": "collection://37eb1a98-6ba6-80ad-94e0-000bbda7ab85",
+    "timeline_day1_page_id": "37eb1a98-6ba6-8109-8a14-d2c8c71f3715",
+    "timeline_day1_page_url": "https://app.notion.com/p/37eb1a986ba681098a14d2c8c71f3715",
     "sync_mode": "summary_structured_links_plus_optional_full_body",
-    "creation_status": "user_created_timeline_database_connected"
+    "creation_status": "user_created_timeline_database_connected_day1_page_created"
   },
   "reminder_mode": "return_to_codex",
-  "status": "scope_pending_confirmation"
+  "status": "active",
+  "authorization": {
+    "confirmed_reply": "1A，授权开始",
+    "confirmed_scope": "1A_default_high_roi_scope",
+    "day1_start_date": "2026-06-13",
+    "authorized_at": "2026-06-13"
+  }
 }
