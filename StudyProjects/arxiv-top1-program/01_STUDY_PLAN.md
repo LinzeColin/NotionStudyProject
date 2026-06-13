@@ -1,62 +1,100 @@
 # arXiv Study Plan
 
-## Program Shape
+Updated: 2026-06-13  
+Source: official arXiv Category Taxonomy, checked 2026-06-13.
 
-This is a rolling learning program, not a fixed one-off course.
+## Correct Program Model
 
-| Parameter | Value |
+This is a rolling parallel archive-mastery program, not a one-month-per-group plan.
+
+| Rule | Correct Meaning |
 |---|---|
-| Group sequence | Q-FIN -> PHYS -> MATH -> STAT -> CS -> ECON -> EE/EESS -> Q-BIO |
-| Concurrent groups | 2 |
-| Archive duration | 30 days each |
-| First day | 2026-06-13 |
-| Active archive 1 | `Q-FIN - TR` Trading and Market Microstructure |
-| Active archive 2 | `PHYS - quant-ph` Quantum Physics |
+| Archive duration | Each archive/category is fixed at 30 days. |
+| Group duration | A group duration is `archive_count * 30 days`. |
+| Current active load | Exactly 2 active groups/archives at a time. |
+| Promotion | When one full group is completed, the next group in the sequence enters the freed slot. |
+| Notion timeline Date | Group route window starts on 2026-06-13 and ends after all archives in that group. |
+| Active status | Stored separately in `state.json` and `active_tracks.json`; do not infer active status from Notion Date. |
 
-## Planned Group Windows
+## Group Route Windows
 
-| Group | Start Date | End Date |
+| Group | Archive Count | Route Start | Route End | Current Status |
+|---|---:|---|---|---|
+| Q-FIN | 9 | 2026-06-13 | 2027-03-09 | active |
+| PHYS | 51 | 2026-06-13 | 2030-08-20 | active |
+| MATH | 32 | 2026-06-13 | 2029-01-27 | queued |
+| STAT | 6 | 2026-06-13 | 2026-12-09 | queued |
+| CS | 40 | 2026-06-13 | 2029-09-24 | queued |
+| ECON | 3 | 2026-06-13 | 2026-09-10 | queued |
+| EE/EESS | 4 | 2026-06-13 | 2026-10-10 | queued |
+| Q-BIO | 10 | 2026-06-13 | 2027-04-08 | queued |
+
+## Current Two Active Groups
+
+| Track | Group | Active Archive | Day | Route File |
+|---|---|---|---:|---|
+| 1 | Q-FIN | `q-fin.TR` Trading and Market Microstructure | 1/30 | `10_PROGRAM_STATE/group_routes/Q-FIN.csv` |
+| 2 | PHYS | `quant-ph` Quantum Physics | 1/30 | `10_PROGRAM_STATE/group_routes/PHYS.csv` |
+
+## Q-FIN Route Order
+
+ROI logic: start from market microstructure because it is the most direct bridge to alpha, execution quality, liquidity, risk, and agent-driven market decision systems.
+
+| # | Archive | Why This Order |
+|---:|---|---|
+| 1 | `q-fin.TR` Trading and Market Microstructure | Understand how trades, liquidity, spread, execution, and market impact actually work. |
+| 2 | `q-fin.RM` Risk Management | Hard constraints, loss bounds, drawdown control, and fail-closed systems. |
+| 3 | `q-fin.ST` Statistical Finance | Evidence, signal reliability, distributions, backtests, uncertainty. |
+| 4 | `q-fin.PR` Pricing of Securities | Valuation, no-arbitrage, instruments, and model boundaries. |
+| 5 | `q-fin.PM` Portfolio Management | Position sizing, allocation, portfolio construction, risk/return tradeoff. |
+| 6 | `q-fin.MF` Mathematical Finance | Formal models behind pricing and risk. |
+| 7 | `q-fin.CP` Computational Finance | Simulation, numerical methods, productionizable computation. |
+| 8 | `q-fin.EC` Economics | Macro/micro economic context for market behavior. |
+| 9 | `q-fin.GN` General Finance | Integration and synthesis. |
+
+## PHYS Route Order
+
+ROI logic: front-load information, probability, computation, statistical mechanics, nonlinear systems, and mathematical physics because they transfer best to AI, agents, markets, systems thinking, uncertainty, and frontier research literacy.
+
+| Phase | Archives | Purpose |
 |---|---|---|
-| Q-FIN | 2026-06-13 | 2026-07-12 |
-| PHYS | 2026-06-13 | 2026-07-12 |
-| MATH | 2026-07-13 | 2026-08-11 |
-| STAT | 2026-07-13 | 2026-08-11 |
-| CS | 2026-08-12 | 2026-09-10 |
-| ECON | 2026-08-12 | 2026-09-10 |
-| EE/EESS | 2026-09-11 | 2026-10-10 |
-| Q-BIO | 2026-09-11 | 2026-10-10 |
+| 1 Information/probability core | `quant-ph`, `physics.data-an`, `physics.comp-ph`, `cond-mat.stat-mech`, `math-ph` | Build the mental model for uncertainty, measurement, computation, and formal reasoning. |
+| 2 Nonlinear/complex systems | `nlin.AO`, `nlin.CD`, `nlin.CG`, `nlin.PS`, `nlin.SI` | Understand dynamics, chaos, adaptation, patterns, and emergent behavior. |
+| 3 Fundamental physics | `gr-qc`, `hep-th`, `hep-ph`, `hep-ex`, `hep-lat`, `nucl-th`, `nucl-ex` | Learn frontier theory/experiment separation and model-evidence discipline. |
+| 4 Astro/cosmology | `astro-ph.CO`, `astro-ph.HE`, `astro-ph.IM`, `astro-ph.SR`, `astro-ph.EP`, `astro-ph.GA` | Train large-scale systems reasoning and instrumentation awareness. |
+| 5 Condensed matter/materials | `cond-mat.dis-nn`, `cond-mat.mes-hall`, `cond-mat.mtrl-sci`, `cond-mat.quant-gas`, `cond-mat.soft`, `cond-mat.str-el`, `cond-mat.supr-con`, `cond-mat.other` | Connect physics to materials, devices, computation, and technology. |
+| 6 Applied/general physics | `physics.acc-ph` through `physics.space-ph` | Cover applied domains, instrumentation, optics, plasma, society, and edge cases. |
+
+Full PHYS order is stored in `10_PROGRAM_STATE/group_routes/PHYS.csv`.
+
+## First 7 Days: Concept-First, No Premature Build
+
+| Day | Q-FIN - TR | PHYS - quant-ph | Required Output |
+|---:|---|---|---|
+| D001 | What market microstructure studies; why trades are not the same as prices | What quantum physics studies; why measurement changes what can be known | Two boundary maps: object, mechanism, misuse, ROI use |
+| D002 | Orders, limit order book, spread, liquidity | State, measurement, uncertainty | Two concept cards + active recall answers |
+| D003 | Price formation and information | Amplitude vs probability | Classical vs probabilistic comparison note |
+| D004 | Participants, incentives, adverse selection | Operators and observables | Mechanism map |
+| D005 | Market impact and execution quality | Entanglement as information structure | Feynman explanation |
+| D006 | Trading signal vs execution edge | Quantum information transfer to computation/AI | ROI transfer memo |
+| D007 | Weekly review and route calibration | Weekly review and route calibration | W01 review + next archive adjustment if needed |
 
 ## Daily Session Protocol
 
-| Step | Required action |
+| Step | Required Action |
 |---|---|
-| 1 | State current progress: `Dxxx`, active group, archive day out of 30 |
-| 2 | Active recall from previous session |
-| 3 | Teach one core concept deeply before practice |
-| 4 | Connect concept to decision quality, ROI, and real-world use |
-| 5 | Assign one small output |
-| 6 | Update GitHub state/logs after session |
-| 7 | End with upcoming lessons and dynamic adjustment notes |
+| 1 | State current progress: `Dxxx`, active group, archive day out of 30. |
+| 2 | Active recall from previous session. |
+| 3 | Teach one core concept deeply before any practice. |
+| 4 | Explain how the concept should be used by the user. |
+| 5 | Connect concept to decision quality, ROI, work, learning, and productivity. |
+| 6 | Assign one small output. |
+| 7 | Update GitHub state/logs after session. |
+| 8 | End with upcoming lessons and dynamic adjustment notes. |
 
-## First 7 Days
+## Stop Conditions
 
-| Day | Q-FIN - TR | PHYS - quant-ph | Output |
-|---|---|---|---|
-| D001 | What market microstructure actually studies | What quantum physics actually studies | Two archive boundary maps |
-| D002 | Orders, liquidity, spread, impact | State, measurement, uncertainty | Core concept cards |
-| D003 | Price formation and information | Probability amplitude vs classical probability | Comparison note |
-| D004 | Market participants and incentives | Operators and observables | Mechanism map |
-| D005 | Execution quality and adverse selection | Entanglement as information structure | Feynman explanation |
-| D006 | Trading signals vs execution edge | Quantum information relevance | ROI transfer memo |
-| D007 | Review and archive-order calibration | Review and archive-order calibration | W01 review |
-
-## Archive Completion Standard
-
-An archive is not complete because 30 days passed. It is complete when the 30-day cycle produces:
-
-- A concept map.
-- 20-40 core papers or landmark references tagged by theme.
-- A glossary of core concepts.
-- A misconception list.
-- A practical transfer memo.
-- A 1-5 mastery score with evidence.
+- Do not start a new archive without route order, date window, and archive count.
+- Do not create or update Notion before reading current schema/page format.
+- Do not treat building a project as learning progress unless the concept has been taught, recalled, and used.
+- Do not use model confidence as a substitute for hard constraints, evidence, and verification.
