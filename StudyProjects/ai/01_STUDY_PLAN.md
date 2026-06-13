@@ -2,35 +2,28 @@
 
 Project: AI
 Slug: `ai`
-Start date: pending user confirmation
+Start date: 2026-06-13
 Daily time: 45-60 minutes
-Status: scope pending confirmation
+Status: active
+Current progress: W01D01 / 第1/28天
 
-## Start Gate
+## Confirmed Scope
 
-Do not begin daily learning content until the user confirms:
-
-| Lock | Status |
-|---|---|
-| Final scope | Pending |
-| Day 1 start date | Pending |
-| Authorization to start | Pending |
-
-Every daily session must state progress as `第X/28天`.
+The user confirmed `1A，授权开始`: full high-ROI scope with AI fundamentals, LLMs, prompt/context engineering, tool use/function calling/MCP, agent architecture, automation, evals/reliability/safety, and AI business/productivity applications interleaved.
 
 ## Learning Operating System
 
 Every daily session follows:
 
 1. State current day, e.g. `第1/28天`.
-2. Active recall from previous material.
-3. Diagnosis of weak understanding.
-4. One core concept explained deeply and practically.
-5. One high-ROI practice/output task.
-6. Translation into work, decisions, learning, productivity, or life.
-7. GitHub log update and next return prompt.
+2. Active recall from previous material or baseline recall on D01.
+3. Diagnose weak understanding.
+4. Explain one core concept deeply and practically.
+5. Give one high-ROI practice/output task.
+6. Translate the concept into work, decisions, learning, productivity, or life.
+7. Sync GitHub log and next return prompt.
 
-## Proposed 4-Week Structure
+## 4-Week Structure
 
 | Week | Days | Focus | Weekly Output |
 |---|---:|---|---|
@@ -39,17 +32,17 @@ Every daily session follows:
 | W03 | 15-21 | Agent architecture and applied automation | Agent spec/prototype + automation backlog |
 | W04 | 22-28 | Personal AI operating system and final synthesis | Personal AI automation playbook |
 
-## Proposed 7-Day Sprint
+## 7-Day Sprint
 
-| Day | Theme | Training Task | Deliverable |
-|---|---|---|---|
-| D01 | Scope and AI mental map | Baseline recall and capability map | Personal AI leverage map |
-| D02 | Large models | Explain tokens/context/reasoning/tool use | LLM decision checklist |
-| D03 | Prompting and outputs | Build reusable prompt patterns | Prompt pack v0.1 |
-| D04 | Tools and function calling | Map tools/API/action boundaries | Tool-use workflow diagram |
-| D05 | Agents | Learn loop: goal, state, tools, evals, approvals | Agent architecture one-pager |
-| D06 | Automation | Convert repeated work into workflows | Automation opportunity backlog |
-| D07 | Review | Score recall/output/ROI | Week 1 review and Week 2 adjustment |
+| Day | Date | Theme | Training Task | Deliverable |
+|---|---|---|---|---|
+| D01 | 2026-06-13 | Scope and AI mental map | Baseline recall and capability map | Personal AI leverage map |
+| D02 | 2026-06-14 | Large models | Explain tokens/context/reasoning/tool use | LLM decision checklist |
+| D03 | 2026-06-15 | Prompting and outputs | Build reusable prompt patterns | Prompt pack v0.1 |
+| D04 | 2026-06-16 | Tools and function calling | Map tools/API/action boundaries | Tool-use workflow diagram |
+| D05 | 2026-06-17 | Agents | Learn loop: goal, state, tools, evals, approvals | Agent architecture one-pager |
+| D06 | 2026-06-18 | Automation | Convert repeated work into workflows | Automation opportunity backlog + W02 reminder |
+| D07 | 2026-06-19 | Review | Score recall/output/ROI | Week 1 review and W02 adjustment |
 
 ## Daily Scoring
 
@@ -60,6 +53,11 @@ Every daily session follows:
 | Output | No artifact | Partial artifact | Useful reusable artifact |
 | ROI | Vague use | Some use case | Concrete action with payoff |
 
-## Pending Scope Decision
+## D01 Acceptance Criteria
 
-The user asked to clarify scope and content before starting. The recommended high-ROI options are recorded in the next assistant response and should be persisted after confirmation.
+| Output | Minimum standard |
+|---|---|
+| Baseline recall | Answer 3 diagnostic questions without searching |
+| AI mental map | Distinguish AI, LLM, agent, and automation |
+| ROI map | Identify 5 personal high-value AI use cases |
+| Next step | Pick the first workflow worth automating or improving |
