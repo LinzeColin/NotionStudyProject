@@ -10,8 +10,8 @@ This file is the routing index for all concurrent Study Projects under `LinzeCol
 
 | Project | Slug | Status | Domain | Notion source | Current week/day | Last sync | Next action |
 |---|---|---|---|---|---|---|---|
-| AI | ai | active | AI / Large Models / Agents / Automation | Codex Study Timeline `37eb1a986ba680bdb5f9ea2367b08991`; D01 page `37eb1a986ba681098a14d2c8c71f3715` | W01D01 / 第1/28天 | 2026-06-13 | Complete D01 baseline active recall and Personal AI leverage map |
-| arXiv Top1 Program | arxiv-top1-program | active | arXiv / Q-FIN, PHYS, MATH, STAT, CS, ECON, EE/EESS, Q-BIO | Codex Study Timeline `37eb1a986ba680bdb5f9ea2367b08991`; Q-FIN page `37eb1a986ba68133a01be6fbff80849b`; PHYS page `37eb1a986ba681a9a1a3e42720e82960`; CS page `37eb1a986ba6800a8e95f17a784cf2a8`; arXiv Taxonomy database `37cb1a986ba680838ccddc8c0931281b` | D001 / active archives `Q-FIN - q-fin.TR` and `PHYS - quant-ph`; rule: archive=30d, group=archive_count*30d | 2026-06-13 | Teach D001 concept-first only after presenting corrected Q-FIN/PHYS routes |
+| AI | ai | active | AI / Large Models / Agents / Automation | Codex Study Timeline `37eb1a986ba680bdb5f9ea2367b08991`; D01 page `37eb1a986ba681098a14d2c8c71f3715` | W01D01 / 第1/28天 | 2026-06-13 | Continue D02 in Chinese: zero-human-interference boundaries and automation boundary map |
+| arXiv Top1 Program | arxiv-top1-program | active | arXiv / Q-FIN, PHYS, MATH, STAT, CS, ECON, EE/EESS, Q-BIO | Codex Study Timeline `37eb1a986ba680bdb5f9ea2367b08991`; Q-FIN page `37eb1a986ba68133a01be6fbff80849b`; PHYS page `37eb1a986ba681a9a1a3e42720e82960`; CS page `37eb1a986ba6800a8e95f17a784cf2a8`; arXiv Taxonomy database `37cb1a986ba680838ccddc8c0931281b` | D001 / active archives `Q-FIN - q-fin.TR` and `PHYS - quant-ph`; rule: archive=30d, group=archive_count*30d, queued dates from active-slot promotion | 2026-06-13 | Teach D001 concept-first in Chinese: Q-FIN market microstructure and PHYS quantum physics |
 
 ## Routing Rules
 
@@ -22,6 +22,8 @@ Before reading or writing any project state:
 3. If there is no matching project, run the new project intake lock.
 4. If multiple projects match, ask the user to choose from a numbered list.
 5. Write only to the selected project folder under `StudyProjects/<project-slug>/`.
+6. Learning notes, daily logs, reviews, and Notion note content must be Chinese by default. Keep English only for professional terms, archive codes, exact source titles, API names, and tool names.
+7. `study-project-daily-sync` is a detached local cron sync. It must read GitHub/Notion directly and must not rely on the current chat thread.
 
 ## New Project Minimum Fields
 
@@ -33,11 +35,11 @@ Before reading or writing any project state:
 | Domain/industry | yes | Broad field |
 | Subdomain/content focus | yes | Concrete track chosen from high-ROI options |
 | Duration | yes | 28/30/60/90 days by default depending on context |
-| Day 1 start date | yes | Every daily session must show 第X/Y天 |
+| Day 1 start date | yes | Every daily session must show 第X/Y天 or the rolling equivalent |
 | Explicit authorization | yes | Required before starting learning content |
 | Daily time | yes | 30, 45-60, or 90+ minutes |
 | Notion source | optional at start | Page/database URL when available |
-| Reminder mode | yes | Return-to-Codex trigger |
+| Reminder mode | yes | Return-to-Codex trigger or detached local sync |
 
 ## Default Folder Structure Per Project
 
