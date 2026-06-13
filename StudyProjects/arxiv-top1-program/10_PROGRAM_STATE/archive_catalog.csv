@@ -1,0 +1,9 @@
+group_order,group_code,group_name,current_status,current_archive_code,current_archive_name,current_display_code,archive_day,archive_cycle_days,mastery_pct,next_action
+1,Q-FIN,Quantitative Finance,active,TR,Trading and Market Microstructure,Q-FIN - TR,1,30,0,Start D001 archive boundary lesson
+2,PHYS,Physics,active,quant-ph,Quantum Physics,PHYS - quant-ph,1,30,0,Start D001 archive boundary lesson
+3,MATH,Mathematics,queued,,,,0,30,0,Wait for active slot
+4,STAT,Statistics,queued,,,,0,30,0,Wait for active slot
+5,CS,Computer Science,queued,,,,0,30,0,Wait for active slot
+6,ECON,Economics,queued,,,,0,30,0,Wait for active slot
+7,EE/EESS,Electrical Engineering and Systems Science,queued,,,,0,30,0,Wait for active slot
+8,Q-BIO,Quantitative Biology,queued,,,,0,30,0,Wait for active slot
