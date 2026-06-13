@@ -1,0 +1,10 @@
+order,group_code,full_code,archive_code,archive_name,cycle_days,planned_start,planned_end,status,route_reason
+1,Q-FIN,q-fin.TR,TR,Trading and Market Microstructure,30,2026-06-13,2026-07-12,active,active first archive
+2,Q-FIN,q-fin.RM,RM,Risk Management,30,2026-07-13,2026-08-11,queued,queued within group route
+3,Q-FIN,q-fin.ST,ST,Statistical Finance,30,2026-08-12,2026-09-10,queued,queued within group route
+4,Q-FIN,q-fin.PR,PR,Pricing of Securities,30,2026-09-11,2026-10-10,queued,queued within group route
+5,Q-FIN,q-fin.PM,PM,Portfolio Management,30,2026-10-11,2026-11-09,queued,queued within group route
+6,Q-FIN,q-fin.MF,MF,Mathematical Finance,30,2026-11-10,2026-12-09,queued,queued within group route
+7,Q-FIN,q-fin.CP,CP,Computational Finance,30,2026-12-10,2027-01-08,queued,queued within group route
+8,Q-FIN,q-fin.EC,EC,Economics,30,2027-01-09,2027-02-07,queued,queued within group route
+9,Q-FIN,q-fin.GN,GN,General Finance,30,2027-02-08,2027-03-09,queued,queued within group route
