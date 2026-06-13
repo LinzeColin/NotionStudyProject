@@ -11,7 +11,8 @@ Run a 21-day adaptive Study Project for prompt engineering and loop engineering:
 
 ## Current Status
 
-Project initialized locally for GitHub sync.
+Project initialized and synced to GitHub.
+Notion timeline page created.
 Day 1 is 2026-06-14.
 
 ## Key Decisions
@@ -35,7 +36,6 @@ Run JSON and CSV parse checks before sync.
 
 ## Open Risks
 
-- Notion page URL must be backfilled after creation.
 - Phase C scope should not be locked until W01 review.
 
 ## Next Step
@@ -45,4 +45,3 @@ Continue W01D01:
 ```text
 Continue prompt-engineering-loop-engineering W01D01. Start with active recall, then build Prompt Contract v1 and sync Notion notes.
 ```
-

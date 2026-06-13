@@ -2,6 +2,7 @@
 
 Target database: Codex Study Timeline
 Target data source: `collection://37eb1a98-6ba6-80ad-94e0-000bbda7ab85`
+Target page: `https://app.notion.com/p/37eb1a986ba6815594dfc76d517bfcbb`
 
 ## Timeline Record
 
@@ -25,4 +26,3 @@ Target data source: `collection://37eb1a98-6ba6-80ad-94e0-000bbda7ab85`
 ## Sync Rule
 
 Notion is a clean notebook and timeline. GitHub is the source of truth.
-

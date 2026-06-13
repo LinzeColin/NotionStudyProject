@@ -32,7 +32,7 @@
   "notion_source": {
     "database_url": "https://app.notion.com/p/37eb1a986ba680bdb5f9ea2367b08991",
     "data_source_url": "collection://37eb1a98-6ba6-80ad-94e0-000bbda7ab85",
-    "page_url": "",
+    "page_url": "https://app.notion.com/p/37eb1a986ba6815594dfc76d517bfcbb",
     "sync_mode": "summary_structured_links_plus_optional_full_body"
   },
   "github_source": {
@@ -42,4 +42,3 @@
   "reminder_mode": "return_to_codex_manual",
   "status": "active"
 }
-
