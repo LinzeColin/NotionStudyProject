@@ -16,14 +16,19 @@
   },
   "github": {
     "repository": "LinzeColin/Notion",
-    "path": "StudyProjects/notion-windows-markdown-operator/"
+    "path": "StudyProjects/notion-windows-markdown-operator/",
+    "url": "https://github.com/LinzeColin/Notion/tree/main/StudyProjects/notion-windows-markdown-operator"
   },
   "notion": {
-    "status": "pending_creation",
+    "status": "created",
     "target_database": "个人价值增长",
     "target_data_source_url": "collection://1b3b1a98-6ba6-8015-8857-000b3b9feec4",
+    "study_page_id": "37eb1a98-6ba6-8194-ab3f-f1fe15607cdb",
+    "study_page_url": "https://app.notion.com/p/37eb1a986ba68194ab3ff1fe15607cdb",
     "timeline_database": "Codex Study Timeline",
-    "timeline_data_source_url": "collection://37eb1a98-6ba6-80ad-94e0-000bbda7ab85"
+    "timeline_data_source_url": "collection://37eb1a98-6ba6-80ad-94e0-000bbda7ab85",
+    "timeline_page_id": "37eb1a98-6ba6-8174-8d6b-c074f7c3524e",
+    "timeline_page_url": "https://app.notion.com/p/37eb1a986ba681748d6bc074f7c3524e"
   },
   "daily_default": {
     "planned_minutes": 90,
@@ -49,7 +54,7 @@
   ],
   "last_sync": {
     "github": "2026-06-13",
-    "notion": null
+    "notion": "2026-06-13"
   },
   "next_action": "Start Day 1 on 2026-06-14 with active recall baseline and Windows/XiaoXin keyboard drills."
 }
