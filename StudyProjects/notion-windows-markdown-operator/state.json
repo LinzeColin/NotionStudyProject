@@ -1,0 +1,55 @@
+{
+  "project_slug": "notion-windows-markdown-operator",
+  "status": "active",
+  "timezone": "Australia/Sydney",
+  "created_date": "2026-06-13",
+  "start_date": "2026-06-14",
+  "end_date": "2026-06-20",
+  "duration_days": 7,
+  "current_day": 1,
+  "current_week": "W01",
+  "mode": "3+4_top1_practical_operator_sprint",
+  "scope": {
+    "domain": "productivity_personal_operating_system",
+    "tools": ["Notion", "Windows 11", "Lenovo XiaoXin", "Markdown"],
+    "focus": "keyboard_first_capture_structure_execution_review_loop"
+  },
+  "github": {
+    "repository": "LinzeColin/Notion",
+    "path": "StudyProjects/notion-windows-markdown-operator/"
+  },
+  "notion": {
+    "status": "pending_creation",
+    "target_database": "个人价值增长",
+    "target_data_source_url": "collection://1b3b1a98-6ba6-8015-8857-000b3b9feec4",
+    "timeline_database": "Codex Study Timeline",
+    "timeline_data_source_url": "collection://37eb1a98-6ba6-80ad-94e0-000bbda7ab85"
+  },
+  "daily_default": {
+    "planned_minutes": 90,
+    "minimum_minutes": 45,
+    "attack_minutes": 180
+  },
+  "dynamic_adjustment_rules": {
+    "actual_minutes_below_45": "next_day_recovery_mode",
+    "energy_lte_2": "more_drills_less_theory",
+    "recall_score_below_3": "start_next_day_with_15_min_recall",
+    "friction_count_above_5": "simplify_notion_before_adding_features",
+    "missing_output": "repeat_output_before_new_concept",
+    "finishes_early": "add_real_scenario"
+  },
+  "day_map": [
+    {"day": 1, "date": "2026-06-14", "theme": "Windows/XiaoXin operating layer", "status": "planned"},
+    {"day": 2, "date": "2026-06-15", "theme": "Markdown and Notion structure layer", "status": "planned"},
+    {"day": 3, "date": "2026-06-16", "theme": "Loop engineering layer", "status": "planned"},
+    {"day": 4, "date": "2026-06-17", "theme": "Speed and friction calibration", "status": "planned"},
+    {"day": 5, "date": "2026-06-18", "theme": "Real project workflow calibration", "status": "planned"},
+    {"day": 6, "date": "2026-06-19", "theme": "Knowledge workflow calibration", "status": "planned"},
+    {"day": 7, "date": "2026-06-20", "theme": "Final SOP and continuation decision", "status": "planned"}
+  ],
+  "last_sync": {
+    "github": "2026-06-13",
+    "notion": null
+  },
+  "next_action": "Start Day 1 on 2026-06-14 with active recall baseline and Windows/XiaoXin keyboard drills."
+}
