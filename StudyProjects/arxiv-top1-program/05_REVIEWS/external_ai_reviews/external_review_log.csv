@@ -1,0 +1,4 @@
+date,calendar_global_day,session,reviewer,status,packet_path,result_path,notes
+2026-06-14,2,D001-D002,ChatGPT,blocked_unavailable,05_REVIEWS/external_ai_reviews/2026-06-14_review_packet.md,,No separate ChatGPT connector/session was invoked in this turn; rule and packet created for future handoff.
+2026-06-14,2,D001-D002,Claude,blocked_unavailable,05_REVIEWS/external_ai_reviews/2026-06-14_review_packet.md,,No Claude connector/API/browser session available in this turn.
+2026-06-14,2,D001-D002,Perplexity,blocked_unavailable,05_REVIEWS/external_ai_reviews/2026-06-14_review_packet.md,,No Perplexity connector/API/browser session available in this turn.
