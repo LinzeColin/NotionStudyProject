@@ -9,5 +9,13 @@
   "current_day": 0,
   "absorbed_sources": ["ai", "prompt-engineering-loop-engineering", "Levnovo/Lenovo Notion", "Codex workflow", "Mermaid", "software development workflow"],
   "next_action": "Start after Industrial AI SaaS Builder unless user explicitly chooses parallel mode.",
+  "notion_status": "synced",
+  "notion_sources": {
+    "codex_study_timeline_database_id": "37eb1a986ba680bdb5f9ea2367b08991",
+    "codex_study_timeline_data_source": "collection://37eb1a98-6ba6-80ad-94e0-000bbda7ab85",
+    "timeline_page_id": "37fb1a98-6ba6-8146-a1ac-f721aa2aff8f",
+    "timeline_page_url": "https://app.notion.com/p/37fb1a986ba68146a1acf721aa2aff8f",
+    "timeline_project_select": "AI Workflow Operating System"
+  },
   "last_updated": "2026-06-14"
 }
