@@ -5,16 +5,17 @@
   "timezone": "Australia/Sydney",
   "start_date": "2026-06-14",
   "planned_end_date": "2026-07-04",
+  "schedule_note": "D02 opened early on 2026-06-14 after D01 recall passed; planned end date remains unchanged until weekly review.",
   "duration_days": 21,
   "current_week": 1,
-  "current_day": 1,
-  "current_day_label": "第1/21天",
-  "current_focus": "D01 recall correction and supervised live execution workflow boundary",
+  "current_day": 2,
+  "current_day_label": "第2/21天",
+  "current_focus": "Evidence/data source grading, freshness rules, and fail-closed behavior",
   "last_session_date": "2026-06-14",
   "streak": 1,
   "missed_study_today": false,
   "last_reminder_at": "",
-  "next_action": "Continue quant-agent-workspace W01D01. Restate Q2 and Q3 in your own words, then confirm the supervised live execution workflow boundary before D02.",
+  "next_action": "Continue quant-agent-workspace W01D02. Classify the three D02 sources by grade, OrderIntent eligibility, and fail-closed action.",
   "notion_source": {
     "database_url": "https://app.notion.com/p/37eb1a986ba680bdb5f9ea2367b08991",
     "data_source_url": "collection://37eb1a98-6ba6-80ad-94e0-000bbda7ab85",
@@ -36,6 +37,6 @@
     "daily_sync_id": "study-project-daily-sync",
     "daily_sync_role": "detached local cron; reads project index and checks missed study"
   },
-  "lesson_status": "D01 recall partially answered: Q1 score 3/5, Q2-Q3 taught after user said unknown; D02 gate closed until user restates Q2-Q3",
+  "lesson_status": "D01 recall passed; D02 opened early; Data Source Matrix v1 created; D02 practice classification pending",
   "status": "active"
 }
