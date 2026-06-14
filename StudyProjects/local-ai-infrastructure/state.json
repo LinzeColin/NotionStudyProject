@@ -1,0 +1,13 @@
+{
+  "project_slug": "local-ai-infrastructure",
+  "project_name": "Local AI Infrastructure",
+  "timezone": "Australia/Sydney",
+  "status": "queued",
+  "duration_days": 28,
+  "start_date": "2026-08-16",
+  "end_date": "2026-09-12",
+  "current_day": 0,
+  "absorbed_sources": ["Local LLM Deployment", "NPU applications", "local RAG", "local big-data strategy simulator", "CNN", "AI plan local model and automation components"],
+  "next_action": "Start after AI Workflow Operating System unless user explicitly chooses parallel mode.",
+  "last_updated": "2026-06-14"
+}
