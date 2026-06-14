@@ -1,6 +1,6 @@
 # Study Preferences
 
-Project: `industrial-ai-saas-builder`
+Project: `industrial-ai-saas-builder`  
 Updated: 2026-06-14
 
 ## Explanation Preferences
@@ -13,7 +13,7 @@ Updated: 2026-06-14
 
 ## Motivation Patterns
 
-- Works well: agent takes ownership of state reading, writing, syncing, verification, external review, and next-plan generation.
+- Works well: agent takes ownership of state reading, writing, syncing, verification, external review/blocker logging, and next-plan generation.
 - Does not work: asking the user to act as checklist or approve every small operational step after scope is already locked.
 - Return triggers: short daily prompt plus clear Day X/Y progress and next output.
 
@@ -21,7 +21,7 @@ Updated: 2026-06-14
 
 - Strongest mode: concrete explanation plus table, failure mode, decision rule, and a small output artifact.
 - Weakest mode: abstract prompt-only assignments without a worked answer.
-- Best practice format: active recall -> diagnosis -> concept teaching -> usage rules -> artifact -> sync -> external review -> next lessons.
+- Best practice format: active recall -> diagnosis/worked answer if needed -> concept teaching -> usage rules -> artifact -> sync -> external review or blocker log -> next lessons.
 
 ## Current Weak Areas
 
@@ -31,6 +31,7 @@ Updated: 2026-06-14
 | Distinguishing learning from building | User objected when project building replaced concept teaching | Keep learning primary and practical project work secondary. |
 | Multi-project confusion risk | User runs several Study Projects in parallel/sequence | Always read project index and state before writing. |
 | Artificial schedule padding | User rejected D000 and wants acceleration when possible | Never create Day 0; start the next real lesson early and keep all sync/review steps. |
+| Template friction | User dislikes being asked to fill templates when they need teaching | Provide worked answers and reusable artifacts, then use quick recall checks later. |
 
 ## Teaching Adjustments
 
@@ -38,3 +39,4 @@ Updated: 2026-06-14
 |---|---|---|---|
 | 2026-06-14 | Do not create D000; treat early start as D01 | User explicitly corrected that D00 has no value and acceleration is preferred | Project state corrected to D01 started early; D000 log removed. |
 | 2026-06-14 | If today's lesson is completed and user continues, advance to next lesson early | User wants faster overall completion when possible | Added to skill, reference, state, and handoff. |
+| 2026-06-14 | Use worked-answer mode when user asks Codex to complete learning instead of waiting for quiz answers | User wants concept teaching and usable answers, not empty templates | D01 completed with standard answers, scorecard, and decision matrix; D02 starts with quick independent recall. |
