@@ -13,10 +13,10 @@ Default execution through 2026-08-15 is now controlled parallel mode, because th
 | Order | Project | Slug | Status | Domain | Planned window | Current progress | Notion Timeline | Last sync | Next action |
 |---:|---|---|---|---|---|---|---|---|---|
 | 1 | Industrial AI SaaS Builder | `industrial-ai-saas-builder` | active from 2026-06-14 | Industrial AI / RAG / SaaS / business strategy / architecture / PM / Codex / AI SWE | 2026-06-14 to 2026-07-17 | D01 started early / 第1/34天; D01 output pending | `37fb1a98-6ba6-81d2-9a22-d08f109448d5` | 2026-06-14 | Continue/complete D01: RAG judgment + Industrial SaaS ROI; output `RAG opportunity scorecard + decision matrix` |
-| 2 | CEO Finance Strategy System | `ceo-finance-strategy-system` | scheduled parallel from 2026-06-18 | CEO/CFO commercial judgment / finance / legal basics / trading / arbitrage risk | 2026-06-18 to 2026-07-15 | D000 / 第0/28天 | `37fb1a98-6ba6-815a-b6c7-df67a5656fd4` | 2026-06-14 | Start D01 on 2026-06-18 after Industrial AI SaaS RAG foundation; education and decision-framework only |
-| 3 | AI Workflow Operating System | `ai-workflow-operating-system` | queued | Prompt / Loop / AI Agent / Codex / Notion OS / Mermaid / software workflow | 2026-07-19 to 2026-08-15 | D000 / 第0/28天 | `37fb1a98-6ba6-8146-a1ac-f721aa2aff8f` | 2026-06-14 | Start after Project 1 unless explicitly pulled earlier; runs in parallel with Local AI Infrastructure |
-| 4 | Local AI Infrastructure | `local-ai-infrastructure` | scheduled parallel from 2026-07-19 | Local LLM / NPU / local RAG / CNN / local big-data strategy simulator | 2026-07-19 to 2026-08-15 | D000 / 第0/28天 | `37fb1a98-6ba6-815b-b096-c70b9183d79f` | 2026-06-14 | Start D01 on 2026-07-19 in controlled parallel with AI Workflow Operating System |
-| 5 | arXiv Top1 Program | `arxiv-top1-program` | active rolling program | arXiv / Q-FIN, PHYS, MATH, STAT, CS, ECON, EE/EESS, Q-BIO | rolling archive schedule | D002 active: Q-FIN `q-fin.TR` day 2/30, PHYS `quant-ph` day 2/30; MATH `math.PR` starts 2026-06-15 as third active group | existing arXiv timeline pages; MATH Notion page not yet linked | 2026-06-14 | Next arXiv session must include three groups: Q-FIN, PHYS, MATH |
+| 2 | CEO Finance Strategy System | `ceo-finance-strategy-system` | scheduled parallel from 2026-06-18 | CEO/CFO commercial judgment / finance / legal basics / trading / arbitrage risk | 2026-06-18 to 2026-07-15 | not_started; next is D01 / 第1/28天 | `37fb1a98-6ba6-815a-b6c7-df67a5656fd4` | 2026-06-14 | Start D01 on 2026-06-18 after Industrial AI SaaS RAG foundation; education and decision-framework only |
+| 3 | AI Workflow Operating System | `ai-workflow-operating-system` | queued | Prompt / Loop / AI Agent / Codex / Notion OS / Mermaid / software workflow | 2026-07-19 to 2026-08-15 | not_started; next is D01 / 第1/28天 | `37fb1a98-6ba6-8146-a1ac-f721aa2aff8f` | 2026-06-14 | Start D01 on 2026-07-19 unless explicitly pulled earlier; runs in parallel with Local AI Infrastructure |
+| 4 | Local AI Infrastructure | `local-ai-infrastructure` | scheduled parallel from 2026-07-19 | Local LLM / NPU / local RAG / CNN / local big-data strategy simulator | 2026-07-19 to 2026-08-15 | not_started; next is D01 / 第1/28天 | `37fb1a98-6ba6-815b-b096-c70b9183d79f` | 2026-06-14 | Start D01 on 2026-07-19 in controlled parallel with AI Workflow Operating System |
+| 5 | arXiv Top1 Program | `arxiv-top1-program` | active rolling program | arXiv / Q-FIN, PHYS, MATH, STAT, CS, ECON, EE/EESS, Q-BIO | rolling archive schedule | D002 active: Q-FIN `q-fin.TR` day 2/30, PHYS `quant-ph` day 2/30; MATH `math.PR` not_started until first lesson | existing arXiv timeline pages; MATH Notion page not yet linked | 2026-06-14 | Next arXiv session must include three groups: Q-FIN, PHYS, MATH |
 
 ## Non-arXiv End-Date Cap
 
@@ -37,7 +37,7 @@ arXiv now runs three active groups daily:
 |---:|---|---|---|---:|
 | 1 | Q-FIN | `q-fin.TR` Trading and Market Microstructure | 2026-06-13 | 2/30 |
 | 2 | PHYS | `quant-ph` Quantum Physics | 2026-06-13 | 2/30 |
-| 3 | MATH | `math.PR` Probability | 2026-06-15 | 0/30 until first lesson |
+| 3 | MATH | `math.PR` Probability | 2026-06-15 | not_started until first lesson |
 
 Do not retroactively mark MATH as studied on 2026-06-14. Start it in the next arXiv daily session.
 
