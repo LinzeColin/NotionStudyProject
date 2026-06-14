@@ -9,7 +9,7 @@
     "raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/direct-pages-v2/00-personal-value-growth-database.png",
     "api_status": "blocked: 2026-06-14 update_page and update_data_source returned success, but fetch still reports /icons/document_red.svg for database and data source icon"
   },
-  "direct_page_count": 36,
+  "direct_page_count": 38,
   "pages": [
     {
       "n": 1,
@@ -232,6 +232,16 @@
       "raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/direct-pages-v2/22-deposit-investment.png"
     },
     {
+      "n": 39,
+      "title": "房租",
+      "slug": "rent",
+      "id": "30fb1a986ba6808fb4c6dd744eebb304",
+      "status": "Finance",
+      "glyph": "RE",
+      "file": "39-rent.png",
+      "raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/direct-pages-v2/39-rent.png"
+    },
+    {
       "n": 23,
       "title": "AI Prompt",
       "slug": "ai-prompt",
@@ -280,6 +290,16 @@
       "glyph": "MD",
       "file": "27-mermaid.png",
       "raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/direct-pages-v2/27-mermaid.png"
+    },
+    {
+      "n": 40,
+      "title": "坦桑尼亚",
+      "slug": "tanzania",
+      "id": "285b1a986ba680238be5fe4bbc3af921",
+      "status": "Life",
+      "glyph": "TZ",
+      "file": "40-tanzania.png",
+      "raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/direct-pages-v2/40-tanzania.png"
     },
     {
       "n": 28,
@@ -392,6 +412,7 @@
   ],
   "scope_notes": [
     "2026-06-14 correction: added missed direct Work row 面试.",
-    "2026-06-14 correction: promoted database, template, and non-excluded nested database records into structured manifest sections."
+    "2026-06-14 correction: promoted database, template, and non-excluded nested database records into structured manifest sections.",
+    "2026-06-14 correction: added UI-discovered direct rows 房租 and 坦桑尼亚."
   ]
 }
