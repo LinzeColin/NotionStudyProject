@@ -37,7 +37,7 @@
     "state_updated": true,
     "personalization_updated": true,
     "handoff_updated": true,
-    "project_index_updated": "pending_this_turn",
+    "project_index_updated": true,
     "allowed_to_promote": false,
     "D02_start_requirement": "Before D02, user must explain in their own words: RAG vs model memory, why evidence/checkability is the value, one strong industrial RAG case, and one non-RAG-first case."
   },
