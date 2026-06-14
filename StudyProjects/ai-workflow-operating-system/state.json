@@ -6,9 +6,20 @@
   "duration_days": 28,
   "start_date": "2026-07-19",
   "end_date": "2026-08-15",
-  "current_day": 0,
+  "current_day": null,
+  "current_day_status": "not_started",
+  "next_session": {
+    "date": "2026-07-19",
+    "day": 1,
+    "progress_label": "第1/28天"
+  },
+  "acceleration_policy": {
+    "no_d000": true,
+    "if_started_early_use_next_real_day": true,
+    "never_skip_required_workflow_steps": true
+  },
   "absorbed_sources": ["ai", "prompt-engineering-loop-engineering", "Levnovo/Lenovo Notion", "Codex workflow", "Mermaid", "software development workflow"],
-  "next_action": "Start after Industrial AI SaaS Builder unless user explicitly chooses parallel mode.",
+  "next_action": "Start D01 on 2026-07-19 unless user explicitly pulls this project earlier; if pulled earlier, use D01 immediately, not D000.",
   "notion_status": "synced",
   "notion_sources": {
     "codex_study_timeline_database_id": "37eb1a986ba680bdb5f9ea2367b08991",
