@@ -112,9 +112,9 @@
       "end_date": "2026-07-12",
       "archive_day": 2,
       "archive_cycle_days": 30,
-      "mastery_pct": 4,
+      "mastery_pct": 7,
       "status": "active",
-      "last_lesson_status": "D001 partial validated on 2026-06-14. User understands executable price needs spread/slippage/fees/tax quantified, but terminology must be corrected:成交价 is executed price; reference/expected price differs from executable total cost."
+      "last_lesson_status": "D002 taught on 2026-06-14: market order, limit order, stop order. Not yet validated by user self-recall."
     },
     {
       "track_id": 2,
@@ -129,9 +129,9 @@
       "end_date": "2026-07-12",
       "archive_day": 2,
       "archive_cycle_days": 30,
-      "mastery_pct": 2,
+      "mastery_pct": 5,
       "status": "active",
-      "last_lesson_status": "D001 partial validated on 2026-06-14. User understands object/method/tool affect result, but needs reinforcement: measurement selects observable/information boundary; it does not arbitrarily decide reality."
+      "last_lesson_status": "D002 taught on 2026-06-14: state as computable description, not reality itself. Not yet validated by user self-recall."
     }
   ],
   "promotion_rule": "Two active slots are maintained. When an active group completes, the next queued group in group_order starts the next calendar day in the freed slot. Do not assign queued group start dates before promotion unless the queue simulation already determines them.",
@@ -157,11 +157,11 @@
   "last_learning_session": {
     "date": "2026-06-14",
     "calendar_global_day": 2,
-    "lesson_covered": "D001 catch-up",
-    "daily_log": "04_DAILY_LOGS/2026-06-14.md",
-    "status": "partial_validated",
-    "reason": "User provided self-recall. Q-FIN is directionally correct with terminology correction needed; PHYS measurement concept requires deeper filter/information-boundary explanation."
+    "lesson_covered": "D002",
+    "daily_log": "04_DAILY_LOGS/2026-06-14_D002.md",
+    "status": "taught_not_validated",
+    "reason": "D002 was taught after D001 partial validation. User has not yet repeated the three D002 practice answers."
   },
-  "next_action": "Start D002 with a 3-minute recall check, then teach q-fin.TR order types and quant-ph state model. Reinforce measurement as filter/observable selection, not arbitrary result creation.",
+  "next_action": "Before D003, ask three recall questions: market order vs limit order; why stop order does not guarantee stop price fill; why state is not reality itself. Then teach price formation and amplitude vs probability.",
   "status": "active"
 }
