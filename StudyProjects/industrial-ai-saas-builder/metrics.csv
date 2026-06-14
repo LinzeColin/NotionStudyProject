@@ -1,2 +1,2 @@
 date,week,day,planned_minutes,actual_minutes,energy_1_5,recall_score_1_5,concept_score_1_5,output_score_1_5,roi_score_1_5,streak,notion_synced,github_updated,next_action
-2026-06-14,W00,D000,45,, ,0,0,1,4,0,yes,yes,"2026-06-15 D01: local vectorized RAG mental model; output RAG concept card + failure-mode table"
+2026-06-14,W00,D000,45,,,0,0,1,4,0,yes,yes,"2026-06-15 D01: RAG judgment + Industrial SaaS ROI; output RAG opportunity scorecard + decision matrix"
