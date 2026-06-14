@@ -10,10 +10,10 @@
   "start_date": "2026-06-14",
   "end_date": "2026-07-17",
   "current_week": 1,
-  "current_day": 1,
-  "current_progress_label": "第1/34天",
-  "current_day_status": "completed_after_recall_attempt_02",
-  "current_lesson_status": "D01_complete_D02_gate_open",
+  "current_day": 2,
+  "current_progress_label": "第2/34天",
+  "current_day_status": "D02_teaching_and_required_output_complete_recall_pending",
+  "current_lesson_status": "D02_teaching_asset_complete_D03_gate_closed_until_micro_recall",
   "scope_integration_2026_06_14": {
     "authorized": true,
     "integration_mode": "existing_projects_first_no_new_project_by_default",
@@ -40,7 +40,10 @@
     "RAG vs model memory vs fine-tuning vs workflow automation vs agent decision matrix": "complete",
     "RAG core concept remediation note": "complete",
     "D01 recall attempt 01": "complete_not_passed",
-    "D01 recall attempt 02": "complete_passed"
+    "D01 recall attempt 02": "complete_passed",
+    "D02 RAG pipeline architecture diagram": "complete",
+    "D02 component failure-mode table": "complete",
+    "D02 independent recall": "pending"
   },
   "recall_attempts": [
     {
@@ -87,6 +90,16 @@
     "allowed_to_promote": true,
     "D02_start_requirement": "Start D02 with pipeline failure-surface teaching: parsing, chunking, embedding, retrieval, reranking, generation, citation, eval."
   },
+  "promotion_gate_to_D03": {
+    "active_recall_recorded": "pending",
+    "concept_teaching_complete": true,
+    "required_outputs_complete": true,
+    "github_log_updated": true,
+    "notion_synced": true,
+    "external_review_or_blocker_logged": true,
+    "allowed_to_promote": false,
+    "D03_start_requirement": "Before D03, run a three-question micro recall on citation reliability, wrong-SOP failure localization, and real-time routing boundary."
+  },
   "external_review_status": {
     "route_review": "completed",
     "acceleration_correction_review": "completed",
@@ -117,27 +130,27 @@
   },
   "last_session": {
     "date": "2026-06-14",
-    "day": 1,
-    "progress_label": "第1/34天",
-    "type": "D01_recall_attempt_02_passed_plus_scope_integration",
-    "topic": "RAG vs model memory and routing GPU/RAG/multimodal/training scope",
+    "day": 2,
+    "progress_label": "第2/34天",
+    "type": "D02_worked_teaching_and_required_output_complete",
+    "topic": "RAG pipeline as failure surface and minimal auditable industrial RAG architecture",
     "actual_minutes": null,
-    "github_log": "StudyProjects/industrial-ai-saas-builder/04_DAILY_LOGS/2026-06-14_D01.md",
-    "remediation_note": "StudyProjects/industrial-ai-saas-builder/04_DAILY_LOGS/2026-06-14_D01_RAG_CORE_EXPLANATION.md",
-    "recall_attempt_note": "StudyProjects/industrial-ai-saas-builder/04_DAILY_LOGS/2026-06-14_D01_RECALL_ATTEMPT_02.md",
+    "github_log": "StudyProjects/industrial-ai-saas-builder/04_DAILY_LOGS/2026-06-14_D02.md",
+    "remediation_note": null,
+    "recall_attempt_note": null,
     "scope_integration_record": "_system/study-project-orchestrator/2026-06-14_SCOPE_UPDATE_GPU_RAG_MULTIMODAL.md",
     "notion_synced": true,
     "notion_page_id": "37fb1a98-6ba6-81d2-9a22-d08f109448d5",
     "external_review_or_blocker_logged": true,
-    "outcome": "Recall attempt 02 passed. D01 is complete and D02 gate is open. New GPU/RAG/multimodal/training scope was routed into existing projects without changing dates."
+    "outcome": "D02 concept teaching and required output asset are complete. Independent recall is pending, so D03 remains gated."
   },
   "next_session": {
     "date": "2026-06-15",
     "day": 2,
     "progress_label": "第2/34天",
-    "topic": "RAG pipeline as failure surface",
-    "core_question": "Where can a RAG system fail before the answer is generated?",
-    "required_output": "RAG pipeline architecture diagram + component failure-mode table"
+    "topic": "D02 micro recall gate before D03",
+    "core_question": "Can the user explain why citation does not prove reliability and locate wrong-SOP failures across source, metadata, retrieval, context, and generation?",
+    "required_output": "Three-question D02 recall gate; if passed, open D03 RAG eval and trust boundary."
   },
   "week_1_policy": {
     "theme": "RAG judgment + Industrial SaaS ROI",
@@ -160,7 +173,7 @@
     "notes_language": "Chinese by default except professional terms",
     "daily_end_requirement": "Always provide upcoming lesson map and sync GitHub + Notion when available."
   },
-  "notion_status": "synced_scope_summary_2026-06-14",
+  "notion_status": "synced_D02_2026-06-14",
   "notion_sources": {
     "codex_study_timeline_database_id": "37eb1a986ba680bdb5f9ea2367b08991",
     "codex_study_timeline_data_source": "collection://37eb1a98-6ba6-80ad-94e0-000bbda7ab85",
