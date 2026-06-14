@@ -1,21 +1,22 @@
 # HANDOFF
 
-Updated: 2026-06-13  
+Updated: 2026-06-14  
 Timezone: Australia/Sydney
 
 ## 当前目标
 
-运行 `arxiv-top1-program`：滚动式 arXiv archive mastery 计划，同时保持两个 active groups。
+运行 `arxiv-top1-program`：滚动式 arXiv archive mastery 计划，同时保持三个 active slots。
 
 ## 当前状态
 
 - 项目开始日期：2026-06-13。
-- 当前 global day：D001。
-- 当前 active tracks：`Q-FIN - q-fin.TR` 和 `PHYS - quant-ph`。
+- 当前 global day：D002。
+- 当前 active tracks：`Q-FIN - q-fin.TR`、`PHYS - quant-ph`，以及从 2026-06-15 开始的 `MATH - math.PR`。
 - 每个 archive/category 固定 30 天。
 - group 总时长 = `archive_count * 30 天`，不能把一个 group 当成一个月。
 - queued group 不能默认从今天开始；必须根据 active slot 释放时间计算。
 - 学习笔记、Notion note、daily log、review 默认中文；只保留必要专业术语、archive code、API 名、论文名、工具名。
+- 2026-06-14 D002 已完成：Q-FIN market/limit/stop order recall validated；PHYS state recall partial/usable。下一次进入 D003，不再重复 stop order 入场门，只需连接 price formation、order book depth、gap、slippage。
 
 ## 正确 group 计划窗口
 
@@ -23,12 +24,12 @@ Timezone: Australia/Sydney
 |---|---:|---|---|---|
 | Q-FIN | 9 | 2026-06-13 | 2027-03-09 | active |
 | PHYS | 51 | 2026-06-13 | 2030-08-20 | active |
-| MATH | 32 | 2027-03-10 | 2029-10-24 | queued |
-| STAT | 6 | 2029-10-25 | 2030-04-22 | queued |
-| CS | 40 | 2030-04-23 | 2033-08-04 | queued |
-| ECON | 3 | 2030-08-21 | 2030-11-18 | queued |
-| EE/EESS | 4 | 2030-11-19 | 2031-03-18 | queued |
-| Q-BIO | 10 | 2031-03-19 | 2032-01-12 | queued |
+| MATH | 32 | 2026-06-15 | 2029-01-29 | active_from_2026-06-15 |
+| STAT | 6 | 2027-03-10 | 2027-09-05 | queued |
+| CS | 40 | 2027-09-06 | 2030-12-18 | queued |
+| ECON | 3 | 2029-01-30 | 2029-04-29 | queued |
+| EE/EESS | 4 | 2029-04-30 | 2029-08-27 | queued |
+| Q-BIO | 10 | 2029-08-28 | 2030-06-23 | queued |
 
 完整 schedule：`10_PROGRAM_STATE/archive_catalog.csv`。
 
@@ -55,10 +56,11 @@ Timezone: Australia/Sydney
 
 ## 下一步
 
-不要继续做项目搭建。下一次应进行 D001 概念教学，且用中文讲解：
+不要继续做项目搭建。下一次应进行 D003/D001 概念教学，且用中文讲解：
 
-- Q-FIN - TR：market microstructure 到底研究什么，为什么重要。
-- PHYS - quant-ph：quantum physics 到底研究什么，为什么重要。
+- Q-FIN - TR D003：price formation，价格如何由订单流、bid/ask、depth、aggressive/passive orders 形成。
+- PHYS - quant-ph D003：amplitude vs probability，量子概率为什么不是普通频率直觉。
+- MATH - PR D001：probability as uncertainty compression，概率如何把不确定性变成可计算对象。
 
 教学必须讲到可使用：概念含义、核心机制、失败模式、真实例子、决策规则、ROI 最大化行动。
 

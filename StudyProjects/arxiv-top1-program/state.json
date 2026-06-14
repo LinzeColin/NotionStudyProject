@@ -114,9 +114,9 @@
       "end_date": "2026-07-12",
       "archive_day": 2,
       "archive_cycle_days": 30,
-      "mastery_pct": 10,
+      "mastery_pct": 12,
       "status": "active",
-      "last_lesson_status": "D002 partial validated on 2026-06-14. User understands market/limit order and state. Stop order standard answer taught; quick recall still needed before D003."
+      "last_lesson_status": "D002 validated on 2026-06-14. User understands market order, limit order, and stop order. Stop order recall passed: it controls when an action starts, not guaranteed execution price."
     },
     {
       "track_id": 2,
@@ -178,10 +178,10 @@
     "calendar_global_day": 2,
     "lesson_covered": "D002 validation",
     "daily_log": "04_DAILY_LOGS/2026-06-14_D002_VALIDATION.md",
-    "status": "partial_validated",
+    "status": "validated",
     "external_review_result": "05_REVIEWS/external_ai_reviews/2026-06-14_review_results.md",
-    "reason": "User recalled market/limit/state. Stop order was taught after user asked; external reviewer recommended spread/depth bridge before D003."
+    "reason": "User recalled market/limit/state and then passed stop order recall. External reviewer recommended spread/depth bridge before D003."
   },
-  "next_action": "D003 must include three groups: Q-FIN q-fin.TR archive day 3 starts with stop-order recall and a 10-minute bid/ask spread + depth bridge; PHYS quant-ph archive day 3 starts with state recall then amplitude vs probability; MATH math.PR archive day 1 starts with probability as uncertainty compression and stochastic-process bridge. Include daily judgment question: 如果我是交易系统/研究系统/agent 系统，今天这个概念会让我避免哪一种亏钱、误判或伪知识错觉？",
+  "next_action": "D003 must include three groups: Q-FIN q-fin.TR archive day 3 starts with price formation and a 10-minute bid/ask spread + order book depth bridge; PHYS quant-ph archive day 3 starts with state recall then amplitude vs probability; MATH math.PR archive day 1 starts with probability as uncertainty compression and stochastic-process bridge. Include daily judgment question: 如果我是交易系统/研究系统/agent 系统，今天这个概念会让我避免哪一种亏钱、误判或伪知识错觉？",
   "status": "active"
 }
