@@ -1,3 +1,3 @@
 date,calendar_global_day,lesson_covered,track_id,group_code,archive_code,display_code,archive_day,actual_minutes_confirmed,active_recall_score,concept_understanding_score,usage_clarity_score,mastery_pct_after,event
-2026-06-14,2,D001_catchup,1,Q-FIN,TR,Q-FIN - TR,1,false,1,2,2,2,d001_catchup_taught_not_validated
-2026-06-14,2,D001_catchup,2,PHYS,quant-ph,PHYS - quant-ph,1,false,0,1,1,1,d001_catchup_taught_not_validated
+2026-06-14,2,D001_catchup,1,Q-FIN,TR,Q-FIN - TR,1,false,3,3,3,4,d001_self_recall_partial_validated
+2026-06-14,2,D001_catchup,2,PHYS,quant-ph,PHYS - quant-ph,1,false,2,2,2,2,d001_self_recall_partial_validated
