@@ -112,9 +112,9 @@
       "end_date": "2026-07-12",
       "archive_day": 2,
       "archive_cycle_days": 30,
-      "mastery_pct": 2,
+      "mastery_pct": 4,
       "status": "active",
-      "last_lesson_status": "D001 taught as catch-up on 2026-06-14; not validated by user self-recall"
+      "last_lesson_status": "D001 partial validated on 2026-06-14. User understands executable price needs spread/slippage/fees/tax quantified, but terminology must be corrected:成交价 is executed price; reference/expected price differs from executable total cost."
     },
     {
       "track_id": 2,
@@ -129,9 +129,9 @@
       "end_date": "2026-07-12",
       "archive_day": 2,
       "archive_cycle_days": 30,
-      "mastery_pct": 1,
+      "mastery_pct": 2,
       "status": "active",
-      "last_lesson_status": "D001 standard answer provided on 2026-06-14; not validated by user self-recall"
+      "last_lesson_status": "D001 partial validated on 2026-06-14. User understands object/method/tool affect result, but needs reinforcement: measurement selects observable/information boundary; it does not arbitrarily decide reality."
     }
   ],
   "promotion_rule": "Two active slots are maintained. When an active group completes, the next queued group in group_order starts the next calendar day in the freed slot. Do not assign queued group start dates before promotion unless the queue simulation already determines them.",
@@ -159,9 +159,9 @@
     "calendar_global_day": 2,
     "lesson_covered": "D001 catch-up",
     "daily_log": "04_DAILY_LOGS/2026-06-14.md",
-    "status": "taught_not_validated",
-    "reason": "User requested direct standard answers because template was not yet understandable."
+    "status": "partial_validated",
+    "reason": "User provided self-recall. Q-FIN is directionally correct with terminology correction needed; PHYS measurement concept requires deeper filter/information-boundary explanation."
   },
-  "next_action": "Run D002 only after active recall of D001: executable price vs last price, signal edge vs trading-system profitability, quantum physics as state/measurement/uncertainty rather than mysticism.",
+  "next_action": "Start D002 with a 3-minute recall check, then teach q-fin.TR order types and quant-ph state model. Reinforce measurement as filter/observable selection, not arbitrary result creation.",
   "status": "active"
 }
