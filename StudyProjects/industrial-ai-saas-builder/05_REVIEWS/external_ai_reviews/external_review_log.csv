@@ -1,0 +1,5 @@
+date,project_slug,progress,reviewer,status,packet_path,result_path,notes
+2026-06-14,industrial-ai-saas-builder,D000,Codex multi-agent reviewer Helmholtz,completed,05_REVIEWS/external_ai_reviews/2026-06-14_review_packet.md,05_REVIEWS/external_ai_reviews/2026-06-14_review_results.md,"Adopted P0/P1 recommendations; revised W1 from technical RAG tutorial to RAG judgment + Industrial SaaS ROI."
+2026-06-14,industrial-ai-saas-builder,D000,ChatGPT external connector,blocked_unavailable,05_REVIEWS/external_ai_reviews/2026-06-14_review_packet.md,,"No separate ChatGPT external review connector was available in current tool context."
+2026-06-14,industrial-ai-saas-builder,D000,Claude external connector,blocked_unavailable,05_REVIEWS/external_ai_reviews/2026-06-14_review_packet.md,,"No Claude connector was available in current tool context."
+2026-06-14,industrial-ai-saas-builder,D000,Perplexity external connector,blocked_unavailable,05_REVIEWS/external_ai_reviews/2026-06-14_review_packet.md,,"No Perplexity connector was available in current tool context."
