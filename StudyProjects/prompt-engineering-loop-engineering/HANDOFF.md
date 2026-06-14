@@ -16,7 +16,7 @@ Notion timeline page created.
 Automations configured:
 
 - `study-project-daily-sync`: detached cron, daily 18:10 Sydney.
-- `prompt-loop-study-daily-reminder`: thread heartbeat, daily 09:00 Sydney for 21 occurrences.
+- `prompt-loop-study-daily-reminder`: detached cron, daily 09:00 Sydney for 21 occurrences.
 
 Day 1 is 2026-06-14.
 

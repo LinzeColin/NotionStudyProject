@@ -7,7 +7,7 @@ Purpose: bring the user back to Codex. Reminders do not replace the learning sur
 | Automation | ID | Kind | Schedule | Role | Status |
 |---|---|---|---|---|---|
 | Study Project Daily Sync | `study-project-daily-sync` | cron | daily 18:10 Sydney | Detached GitHub/Notion sync, missed-study check, Phase C guard | ACTIVE |
-| Prompt Loop Study Daily Reminder | `prompt-loop-study-daily-reminder` | heartbeat | daily 09:00 Sydney, 21 occurrences | Wake current thread and bring user back to W01D01 or latest GitHub next action | ACTIVE |
+| Prompt Loop Study Daily Reminder | `prompt-loop-study-daily-reminder` | cron | daily 09:00 Sydney, 21 occurrences | Detached reminder that reads GitHub/Notion state and does not rely on a chat thread | ACTIVE |
 
 ## Phase C Guard
 
