@@ -1,3 +1,5 @@
 date,calendar_global_day,session,notion_page,page_id,archive_code,sync_scope,result
 2026-06-14,2,D001-D002,Q-FIN,37eb1a98-6ba6-8133-a01b-e6fbff80849b,q-fin.TR,learning_notes_and_archive_day,success
 2026-06-14,2,D001-D002,PHYS,37eb1a98-6ba6-81a9-a1a3-e42720e82960,quant-ph,learning_notes_and_archive_day,success
+2026-06-14,2,D002_VALIDATION,Q-FIN,37eb1a98-6ba6-8133-a01b-e6fbff80849b,q-fin.TR,validation_stop_order_external_review_adoption,success
+2026-06-14,2,D002_VALIDATION,PHYS,37eb1a98-6ba6-81a9-a1a3-e42720e82960,quant-ph,state_validation_external_review_adoption,success
