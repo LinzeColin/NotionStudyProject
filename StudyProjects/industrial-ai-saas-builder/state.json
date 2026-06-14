@@ -24,6 +24,13 @@
     "local_ai_infrastructure": "local LLM/RAG/NPU/CNN/simulator infrastructure",
     "ceo_finance_strategy_system": "business strategy/legal/finance/trading/arbitrage"
   },
-  "notion_status": "pending; do not mutate Notion until schema/page format is fetched in the main workflow",
+  "notion_status": "synced",
+  "notion_sources": {
+    "codex_study_timeline_database_id": "37eb1a986ba680bdb5f9ea2367b08991",
+    "codex_study_timeline_data_source": "collection://37eb1a98-6ba6-80ad-94e0-000bbda7ab85",
+    "timeline_page_id": "37fb1a98-6ba6-81d2-9a22-d08f109448d5",
+    "timeline_page_url": "https://app.notion.com/p/37fb1a986ba681d29a22d08f109448d5",
+    "timeline_project_select": "Industrial AI SaaS Builder"
+  },
   "last_updated": "2026-06-14"
 }
