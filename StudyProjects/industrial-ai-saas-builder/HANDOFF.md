@@ -10,8 +10,11 @@ Run `Industrial AI SaaS Builder` as a 34-day accelerated Study Project starting 
 ## Current State
 
 - Artificial D000 / Day 0 has been removed.
-- 2026-06-14 is `D01 / 第1/34天`, started early and now completed.
+- 2026-06-14 is `D01 / 第1/34天`, started early and now complete after recall attempt 02.
 - D01 required outputs are complete: RAG opportunity scorecard and RAG decision matrix.
+- D01 remediation was required because recall attempt 01 did not pass.
+- D01 recall attempt 02 passed with 5/5 across: model memory vs RAG, evidence/checkability value, strong industrial RAG case, and non-RAG-first case.
+- D02 gate is open.
 - Notion timeline row Date is 2026-06-14 to 2026-07-17.
 - Existing `ai` study plan has been partially absorbed into this project.
 - Prompt/loop/Codex/Notion-specific material belongs to `ai-workflow-operating-system`.
@@ -29,11 +32,14 @@ Acceleration must never skip active recall, concept teaching, required output as
 Date: 2026-06-14  
 Progress label: `第1/34天`  
 Topic: Why Industrial AI SaaS starts with RAG judgment  
-Status: completed
+Status: completed after recall attempt 02
 
 GitHub records:
 
 - `StudyProjects/industrial-ai-saas-builder/04_DAILY_LOGS/2026-06-14_D01.md`
+- `StudyProjects/industrial-ai-saas-builder/04_DAILY_LOGS/2026-06-14_D01_RAG_CORE_EXPLANATION.md`
+- `StudyProjects/industrial-ai-saas-builder/04_DAILY_LOGS/2026-06-14_D01_RECALL_ATTEMPT_01.md`
+- `StudyProjects/industrial-ai-saas-builder/04_DAILY_LOGS/2026-06-14_D01_RECALL_ATTEMPT_02.md`
 - `StudyProjects/industrial-ai-saas-builder/05_REVIEWS/external_ai_reviews/2026-06-14_D01_completion_packet.md`
 - `StudyProjects/industrial-ai-saas-builder/05_REVIEWS/external_ai_reviews/2026-06-14_D01_completion_results.md`
 - `StudyProjects/industrial-ai-saas-builder/03_WEEKLY_PLANS/W01.md`
@@ -46,16 +52,17 @@ D01 output:
 
 - RAG opportunity scorecard: complete.
 - RAG vs model memory vs fine-tuning vs workflow automation vs agent decision matrix: complete.
+- Independent recall: passed on attempt 02.
 
 ## Next Action
 
 Next lesson is D02 on 2026-06-15: RAG pipeline as failure surface.
 
-Start D02 with quick recall:
+D02 should start with this framing:
 
-1. RAG 和模型记忆的区别是什么？
-2. 举一个强 RAG 工业场景。
-3. 举一个不应该 RAG-first 的场景，并说明更好的工具。
+- RAG is not one component; it is a chain.
+- Every chain stage can fail before the model produces the final answer.
+- D02 goal is to learn the failure surface: parsing, chunking, embedding, vector DB/indexing, query rewriting, retrieval, reranking, context packing, generation, citation, and eval.
 
 D02 required output:
 
