@@ -2,7 +2,7 @@
   "scope": "Direct rows under Notion data source collection://1b3b1a98-6ba6-8015-8857-000b3b9feec4 only; T2 nested databases/pages excluded; default template New doc excluded.",
   "generated_at": "2026-06-14",
   "database_icon_candidate": "00-personal-value-growth-database.png",
-  "count": 35,
+  "count": 36,
   "pages": [
     {
       "n": 1,
@@ -353,6 +353,19 @@
       "glyph": "IA",
       "file": "35-industry-analysis.png",
       "raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/direct-pages-v2/35-industry-analysis.png"
+    },
+    {
+      "n": 36,
+      "title": "面试",
+      "slug": "interview",
+      "id": "29eb1a986ba680c1926af10a4719bc36",
+      "status": "Work",
+      "glyph": "IV",
+      "file": "36-interview.png",
+      "raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/direct-pages-v2/36-interview.png"
     }
+  ],
+  "scope_notes": [
+    "2026-06-14 correction: added missed direct Work row 面试."
   ]
 }
