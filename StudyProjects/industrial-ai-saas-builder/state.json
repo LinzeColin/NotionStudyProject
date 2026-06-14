@@ -19,14 +19,29 @@
     "github_log": "StudyProjects/industrial-ai-saas-builder/04_DAILY_LOGS/2026-06-14_D000.md",
     "notion_synced": true,
     "notion_page_id": "37fb1a98-6ba6-81d2-9a22-d08f109448d5",
-    "outcome": "D000 readiness plan created; formal D01 remains 2026-06-15."
+    "external_review_completed": true,
+    "external_review_result": "StudyProjects/industrial-ai-saas-builder/05_REVIEWS/external_ai_reviews/2026-06-14_review_results.md",
+    "outcome": "D000 readiness plan created; W1 revised from technical RAG tutorial to RAG judgment + Industrial SaaS ROI; formal D01 remains 2026-06-15."
   },
   "next_session": {
     "date": "2026-06-15",
     "day": 1,
     "progress_label": "第1/34天",
-    "topic": "Local vectorized RAG mental model",
-    "required_output": "RAG 概念卡 + RAG 失败模式表"
+    "topic": "Why Industrial AI SaaS starts with RAG judgment",
+    "core_question": "When should an industrial SaaS use RAG instead of model memory, fine-tuning, workflow automation, agent execution, SQL/rules, or simulation?",
+    "required_output": "RAG opportunity scorecard + RAG vs model memory vs fine-tuning vs workflow automation vs agent decision matrix"
+  },
+  "week_1_policy": {
+    "theme": "RAG judgment + Industrial SaaS ROI",
+    "not_build_sprint": true,
+    "required_daily_asset": true,
+    "defer": [
+      "full local vector database implementation",
+      "agent orchestration",
+      "SaaS auth/billing/multi-tenancy",
+      "prompt tricks",
+      "full business plan"
+    ]
   },
   "absorbed_sources": [
     {
