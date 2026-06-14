@@ -12,31 +12,34 @@
   "current_week": 1,
   "current_day": 1,
   "current_progress_label": "第1/34天",
-  "current_day_status": "in_progress",
-  "current_lesson_status": "in_progress",
+  "current_day_status": "completed",
+  "current_lesson_status": "completed",
   "required_outputs_status": {
-    "RAG opportunity scorecard": "not_complete",
-    "RAG vs model memory vs fine-tuning vs workflow automation vs agent decision matrix": "not_complete"
+    "RAG opportunity scorecard": "complete",
+    "RAG vs model memory vs fine-tuning vs workflow automation vs agent decision matrix": "complete"
   },
   "promotion_gate_to_D02": {
-    "active_recall_recorded": false,
-    "concept_teaching_complete": false,
-    "required_outputs_complete": false,
+    "active_recall_recorded": "complete_with_worked_answer_mode",
+    "concept_teaching_complete": true,
+    "required_outputs_complete": true,
     "metrics_updated": true,
     "github_log_updated": true,
     "notion_synced": true,
-    "external_review_completed": true,
+    "external_review_or_blocker_logged": true,
     "state_updated": true,
     "personalization_updated": true,
     "handoff_updated": true,
     "project_index_updated": true,
-    "allowed_to_promote": false
+    "allowed_to_promote": true,
+    "D02_start_requirement": "Start with quick independent recall: RAG vs model memory, one strong RAG industrial scenario, one wrong-tool case."
   },
   "external_review_status": {
     "route_review": "completed",
     "acceleration_correction_review": "completed",
-    "latest_packet": "StudyProjects/industrial-ai-saas-builder/05_REVIEWS/external_ai_reviews/2026-06-14_acceleration_correction_packet.md",
-    "latest_result": "StudyProjects/industrial-ai-saas-builder/05_REVIEWS/external_ai_reviews/2026-06-14_acceleration_correction_results.md"
+    "d01_completion_review": "blocked_logged_not_claimed",
+    "latest_packet": "StudyProjects/industrial-ai-saas-builder/05_REVIEWS/external_ai_reviews/2026-06-14_D01_completion_packet.md",
+    "latest_result": "StudyProjects/industrial-ai-saas-builder/05_REVIEWS/external_ai_reviews/2026-06-14_D01_completion_results.md",
+    "blocker_reason": "Current side conversation did not include explicit post-boundary authorization to spawn a subagent; separate ChatGPT/Claude/Perplexity connectors unavailable."
   },
   "missed_study_today": false,
   "acceleration_policy": {
@@ -50,7 +53,7 @@
       "github_sync",
       "notion_sync",
       "verification",
-      "external_review_handshake",
+      "external_review_handshake_or_blocker_log",
       "state_update",
       "personalization_update",
       "next_plan_update"
@@ -59,24 +62,24 @@
   "last_session": {
     "date": "2026-06-14",
     "day": 1,
-    "type": "accelerated_D01_started",
+    "progress_label": "第1/34天",
+    "type": "D01_completed_worked_answer_mode",
     "topic": "RAG judgment + Industrial AI SaaS ROI",
     "actual_minutes": null,
     "github_log": "StudyProjects/industrial-ai-saas-builder/04_DAILY_LOGS/2026-06-14_D01.md",
     "notion_synced": true,
     "notion_page_id": "37fb1a98-6ba6-81d2-9a22-d08f109448d5",
-    "external_review_completed": true,
-    "external_review_result": "StudyProjects/industrial-ai-saas-builder/05_REVIEWS/external_ai_reviews/2026-06-14_acceleration_correction_results.md",
-    "correction": "Artificial D000 removed. 2026-06-14 is D01 started early. D01 required output is not complete yet.",
-    "outcome": "D01 started early; W1 revised to RAG judgment + Industrial SaaS ROI; D01 remains in progress until opportunity scorecard and decision matrix are completed."
+    "external_review_or_blocker_logged": true,
+    "external_review_result": "StudyProjects/industrial-ai-saas-builder/05_REVIEWS/external_ai_reviews/2026-06-14_D01_completion_results.md",
+    "outcome": "D01 completed: RAG opportunity scorecard and decision matrix finished. D02 can start after quick independent recall check."
   },
   "next_session": {
-    "date": "2026-06-14",
-    "day": 1,
-    "progress_label": "第1/34天",
-    "topic": "Complete D01: Why Industrial AI SaaS starts with RAG judgment",
-    "core_question": "When should an industrial SaaS use RAG instead of model memory, fine-tuning, workflow automation, agent execution, SQL/rules, or simulation?",
-    "required_output": "RAG opportunity scorecard + RAG vs model memory vs fine-tuning vs workflow automation vs agent decision matrix"
+    "date": "2026-06-15",
+    "day": 2,
+    "progress_label": "第2/34天",
+    "topic": "RAG pipeline as failure surface",
+    "core_question": "Where exactly can a RAG system fail before the model generates an answer?",
+    "required_output": "RAG pipeline architecture diagram + component failure-mode table"
   },
   "week_1_policy": {
     "theme": "RAG judgment + Industrial SaaS ROI",
