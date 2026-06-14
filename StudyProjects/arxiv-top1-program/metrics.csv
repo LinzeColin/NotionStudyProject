@@ -3,3 +3,5 @@ date,calendar_global_day,lesson_covered,track_id,group_code,archive_code,display
 2026-06-14,2,D001_catchup,2,PHYS,quant-ph,PHYS - quant-ph,1,false,2,2,2,2,d001_self_recall_partial_validated
 2026-06-14,2,D002,1,Q-FIN,TR,Q-FIN - TR,2,false,3,3,3,7,d002_order_types_taught_not_validated
 2026-06-14,2,D002,2,PHYS,quant-ph,PHYS - quant-ph,2,false,2,3,2,5,d002_state_model_taught_not_validated
+2026-06-14,2,D002_validation,1,Q-FIN,TR,Q-FIN - TR,2,false,4,4,4,10,d002_self_recall_partial_validated_stop_order_taught
+2026-06-14,2,D002_validation,2,PHYS,quant-ph,PHYS - quant-ph,2,false,4,4,4,8,d002_state_recall_validated
