@@ -1,15 +1,22 @@
 # CEO Finance Strategy System
 
-Project slug: `ceo-finance-strategy-system`
-Timezone: Australia/Sydney
-Planned start date: 2026-09-13
-Planned end date: 2026-10-10
-Duration: 28 days
-Status: queued
+Project slug: `ceo-finance-strategy-system`  
+Alias: `CFO Finance Project`, `CEO/CFO Finance Strategy`  
+Timezone: Australia/Sydney  
+Planned start date: 2026-06-18  
+Planned end date: 2026-07-15  
+Duration: 28 days  
+Status: scheduled parallel from 2026-06-18
+
+## Schedule Decision
+
+This project was moved forward on 2026-06-14 so every non-arXiv Study Project can finish no later than 2026-08-15.
+
+It runs in controlled parallel with `industrial-ai-saas-builder` because the finance/strategy/legal judgment directly improves the Industrial AI SaaS route: ICP, pricing, risk, unit economics, opportunity quality, and go/no-go decisions.
 
 ## Goal
 
-Build CEO-level commercial, legal, financial, trading, and opportunity-screening judgment.
+Build CEO/CFO-level commercial, legal, financial, trading, and opportunity-screening judgment.
 
 This project consolidates:
 
@@ -30,4 +37,4 @@ This is education and decision-framework building, not legal, financial, or trad
 - Can frame business opportunities using market, customer, unit economics, competition, moat, and execution risk.
 - Can identify legal risk categories: company obligations, contracts, IP, privacy, employment, consumer/fair trading, director duties.
 - Can reason about trading/arbitrage opportunities with evidence, costs, liquidity, risk, and execution limits.
-- Can produce a CEO decision memo and a risk-controlled opportunity scorecard.
+- Can produce a CEO/CFO decision memo and a risk-controlled opportunity scorecard.
