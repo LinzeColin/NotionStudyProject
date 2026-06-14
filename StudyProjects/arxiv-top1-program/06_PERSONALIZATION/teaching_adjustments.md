@@ -32,6 +32,15 @@ Timezone: Australia/Sydney
 - 同步后必须在 GitHub `07_NOTION/notion_sync_log.csv` 或等价文件记录：日期、session、page、sync scope、结果。
 - 如果 Notion connector 不可用，必须在 GitHub daily log 或 sync log 里显式记录 blocker，不能沉默跳过。
 
+## External AI Review Handshake Rule
+
+- 每次 arXiv 日课完成 GitHub 和 Notion 记录后，必须生成一个外部 AI 评审 packet，路径默认：`05_REVIEWS/external_ai_reviews/YYYY-MM-DD_review_packet.md`。
+- Packet 必须包含：当天 GitHub log、Notion 笔记链接或摘要、用户学习要求、当前弱点、下一步计划、Top 1%/ROI 目标、需要外部 reviewer 检查的问题。
+- 如果 ChatGPT、Claude、Perplexity 或其他 AI agent connector/API/browser session 可用，才实际发起握手评审；必须记录 reviewer、输入范围、建议、采纳/拒绝理由。
+- 如果外部 reviewer 不可用，必须在 `05_REVIEWS/external_ai_reviews/external_review_log.csv` 记录 `blocked_unavailable`，不能假装完成。
+- 外部 AI 建议只作为二级评审输入。不能覆盖用户明确要求、项目锁定范围、安全边界和 GitHub/Notion 的事实记录。
+- 采纳建议前，Codex 必须判断其是否高 ROI、是否符合用户学习风格、是否有助于 Top 1% 判断力，并在需要时用权威来源验证。
+
 ## Teaching Fit
 
 - 当用户说“模板不知道怎么填”时，不继续要求用户填模板；先给标准答案、反例、类比和可复制表达，再让用户用自己的话复述。
