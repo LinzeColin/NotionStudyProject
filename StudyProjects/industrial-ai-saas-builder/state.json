@@ -12,16 +12,24 @@
   "current_week": 1,
   "current_day": 1,
   "current_progress_label": "第1/34天",
-  "current_day_status": "completed",
-  "current_lesson_status": "completed",
+  "current_day_status": "content_delivered_remediation_recall_pending",
+  "current_lesson_status": "D01_assets_complete_but_core_concept_recall_pending",
   "required_outputs_status": {
     "RAG opportunity scorecard": "complete",
-    "RAG vs model memory vs fine-tuning vs workflow automation vs agent decision matrix": "complete"
+    "RAG vs model memory vs fine-tuning vs workflow automation vs agent decision matrix": "complete",
+    "RAG core concept remediation note": "complete"
   },
   "promotion_gate_to_D02": {
-    "active_recall_recorded": "complete_with_worked_answer_mode",
+    "active_recall_recorded": "worked_answer_mode_only; independent_user_recall_pending",
     "concept_teaching_complete": true,
     "required_outputs_complete": true,
+    "remediation_delivered": true,
+    "independent_recall_required": true,
+    "independent_recall_questions": [
+      "RAG 和 model memory 的区别是什么？",
+      "为什么 RAG 的价值是可检查证据，而不是模型更聪明？",
+      "举一个强 RAG 工业场景和一个不该 RAG-first 的场景。"
+    ],
     "metrics_updated": true,
     "github_log_updated": true,
     "notion_synced": true,
@@ -29,9 +37,9 @@
     "state_updated": true,
     "personalization_updated": true,
     "handoff_updated": true,
-    "project_index_updated": true,
-    "allowed_to_promote": true,
-    "D02_start_requirement": "Start with quick independent recall: RAG vs model memory, one strong RAG industrial scenario, one wrong-tool case."
+    "project_index_updated": "pending_this_turn",
+    "allowed_to_promote": false,
+    "D02_start_requirement": "Before D02, user must explain in their own words: RAG vs model memory, why evidence/checkability is the value, one strong industrial RAG case, and one non-RAG-first case."
   },
   "external_review_status": {
     "route_review": "completed",
@@ -63,22 +71,30 @@
     "date": "2026-06-14",
     "day": 1,
     "progress_label": "第1/34天",
-    "type": "D01_completed_worked_answer_mode",
-    "topic": "RAG judgment + Industrial AI SaaS ROI",
+    "type": "D01_RAG_core_concept_remediation",
+    "topic": "Why RAG value is evidence, checkability, and accountability rather than model smartness",
     "actual_minutes": null,
     "github_log": "StudyProjects/industrial-ai-saas-builder/04_DAILY_LOGS/2026-06-14_D01.md",
+    "remediation_note": "StudyProjects/industrial-ai-saas-builder/04_DAILY_LOGS/2026-06-14_D01_RAG_CORE_EXPLANATION.md",
     "notion_synced": true,
     "notion_page_id": "37fb1a98-6ba6-81d2-9a22-d08f109448d5",
     "external_review_or_blocker_logged": true,
     "external_review_result": "StudyProjects/industrial-ai-saas-builder/05_REVIEWS/external_ai_reviews/2026-06-14_D01_completion_results.md",
-    "outcome": "D01 completed: RAG opportunity scorecard and decision matrix finished. D02 can start after quick independent recall check."
+    "outcome": "User reported not understanding the core RAG statement. Remediation teaching was delivered and synced. D02 is blocked until independent recall check."
   },
   "next_session": {
+    "date": "2026-06-14",
+    "day": 1,
+    "progress_label": "第1/34天",
+    "topic": "D01 remediation recall check before D02",
+    "core_question": "Explain why RAG is evidence-before-generation, not model smartness.",
+    "required_output": "Three-sentence recall: RAG vs model memory; why evidence/checkability matters; one strong RAG case and one non-RAG-first case."
+  },
+  "next_scheduled_lesson_after_gate": {
     "date": "2026-06-15",
     "day": 2,
     "progress_label": "第2/34天",
     "topic": "RAG pipeline as failure surface",
-    "core_question": "Where exactly can a RAG system fail before the model generates an answer?",
     "required_output": "RAG pipeline architecture diagram + component failure-mode table"
   },
   "week_1_policy": {
