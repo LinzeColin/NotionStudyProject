@@ -1,17 +1,19 @@
 # arXiv 学习计划
 
-更新日期：2026-06-13  
-来源：官方 arXiv Category Taxonomy，已于 2026-06-13 检查。
+更新日期：2026-06-14  
+来源：官方 arXiv Mathematics archive/category taxonomy 已于 2026-06-14 核对，用于补建 MATH route。  
+模式：滚动式三 group 并行学习计划。
 
 ## 正确项目模型
 
-这是滚动式双 group 并行学习计划，不是每个 group 固定一个月。
+这不是每个 group 固定一个月。学习单位是 archive/category；每个 archive 固定 30 天。
 
 | 规则 | 含义 |
 |---|---|
 | archive 学习周期 | 每个 archive/category 固定 30 天。 |
 | group 总时长 | `archive_count * 30 天`。 |
-| 当前 active 负载 | 同时只学 2 个 active group/archive。 |
+| 当前 active 负载 | 从 2026-06-15 开始同时推进 3 个 active group/archive。 |
+| 当前 active groups | Q-FIN `q-fin.TR`、PHYS `quant-ph`、MATH `math.PR`。 |
 | 推进规则 | 某个 group 完成后，下一个 queued group 进入空出来的 active slot。 |
 | Notion Timeline Date | 写真实计划窗口；queued group 不能默认写今天。 |
 | active 状态 | 由 `state.json` 和 `active_tracks.json` 记录，不从 Notion Date 推断。 |
@@ -23,68 +25,44 @@
 |---|---:|---|---|---|---|
 | Q-FIN | 9 | 2026-06-13 | 2027-03-09 | active | 项目 Day 1 启动 |
 | PHYS | 51 | 2026-06-13 | 2030-08-20 | active | 项目 Day 1 启动 |
-| MATH | 32 | 2027-03-10 | 2029-10-24 | queued | Q-FIN 完成后进入 slot |
-| STAT | 6 | 2029-10-25 | 2030-04-22 | queued | MATH 完成后进入 slot |
-| CS | 40 | 2030-04-23 | 2033-08-04 | queued | STAT 完成后进入 slot |
-| ECON | 3 | 2030-08-21 | 2030-11-18 | queued | PHYS 完成后进入 slot |
-| EE/EESS | 4 | 2030-11-19 | 2031-03-18 | queued | ECON 完成后进入 slot |
-| Q-BIO | 10 | 2031-03-19 | 2032-01-12 | queued | EE/EESS 完成后进入 slot |
+| MATH | 32 | 2026-06-15 | 2029-01-29 | active from next arXiv session | 第三个 active slot |
+| STAT | 6 | 2027-03-10 | 2027-09-05 | queued | Q-FIN 完成后进入 slot 1 |
+| CS | 40 | 2027-09-06 | 2030-12-18 | queued | STAT 完成后进入 slot 1 |
+| ECON | 3 | 2029-01-30 | 2029-04-29 | queued | MATH 完成后进入 slot 3 |
+| EE/EESS | 4 | 2029-04-30 | 2029-08-27 | queued | ECON 完成后进入 slot 3 |
+| Q-BIO | 10 | 2029-08-28 | 2030-06-23 | queued | EE/EESS 完成后进入 slot 3 |
 
-## 当前两个 active group
+## 当前三个 active group
 
 | Track | Group | 当前 archive | Day | Route file |
 |---|---|---|---:|---|
-| 1 | Q-FIN | `q-fin.TR` Trading and Market Microstructure | 1/30 | `10_PROGRAM_STATE/group_routes/Q-FIN.csv` |
-| 2 | PHYS | `quant-ph` Quantum Physics | 1/30 | `10_PROGRAM_STATE/group_routes/PHYS.csv` |
+| 1 | Q-FIN | `q-fin.TR` Trading and Market Microstructure | 2/30 | `10_PROGRAM_STATE/group_routes/Q-FIN.csv` |
+| 2 | PHYS | `quant-ph` Quantum Physics | 2/30 | `10_PROGRAM_STATE/group_routes/PHYS.csv` |
+| 3 | MATH | `math.PR` Probability | 0/30, starts 2026-06-15 | `10_PROGRAM_STATE/group_routes/MATH.csv` |
 
-## Q-FIN 学习顺序
+## MATH 学习顺序
 
-ROI 逻辑：先学 market microstructure，因为它最直接连接 alpha、执行质量、流动性、risk control 和交易 Agent 系统判断。
+ROI 逻辑：先学 `math.PR` Probability，因为它直接连接 Q-FIN 的随机过程/风险、PHYS 的概率/测量、AI 的不确定性建模，以及现实决策中的证据质量。随后进入 Statistics Theory、Optimization and Control、Information Theory、Numerical Analysis、Dynamical Systems。
 
-| # | Archive | 为什么排在这里 |
-|---:|---|---|
-| 1 | `q-fin.TR` Trading and Market Microstructure | 先理解交易、流动性、spread、market impact 和执行质量。 |
-| 2 | `q-fin.RM` Risk Management | 建立硬约束、损失上限、回撤控制和 fail-closed 系统。 |
-| 3 | `q-fin.ST` Statistical Finance | 理解证据、信号可靠性、分布、回测和不确定性。 |
-| 4 | `q-fin.PR` Pricing of Securities | 理解定价、无套利、金融工具和模型边界。 |
-| 5 | `q-fin.PM` Portfolio Management | 理解仓位、组合构建和风险收益权衡。 |
-| 6 | `q-fin.MF` Mathematical Finance | 补正式定价与风险模型。 |
-| 7 | `q-fin.CP` Computational Finance | 学仿真、数值方法和可生产化计算。 |
-| 8 | `q-fin.EC` Economics | 补经济背景和市场行为解释。 |
-| 9 | `q-fin.GN` General Finance | 综合整理与迁移。 |
+完整 MATH route 存在 `10_PROGRAM_STATE/group_routes/MATH.csv`。
 
-## PHYS 学习顺序
+## 前 7 天：三组同步，但仍保持概念优先
 
-ROI 逻辑：优先学习信息、概率、计算、statistical mechanics、nonlinear systems 和 mathematical physics，因为这些最能迁移到 AI、Agent、市场、复杂系统、不确定性和前沿研究阅读。
-
-| 阶段 | Archives | 目的 |
-|---|---|---|
-| 1 信息/概率核心 | `quant-ph`, `physics.data-an`, `physics.comp-ph`, `cond-mat.stat-mech`, `math-ph` | 建立不确定性、测量、计算和形式化推理的底层模型。 |
-| 2 非线性/复杂系统 | `nlin.AO`, `nlin.CD`, `nlin.CG`, `nlin.PS`, `nlin.SI` | 理解动态、混沌、自适应、模式和涌现。 |
-| 3 基础物理 | `gr-qc`, `hep-th`, `hep-ph`, `hep-ex`, `hep-lat`, `nucl-th`, `nucl-ex` | 建立理论/实验分离、模型/证据纪律。 |
-| 4 天体/宇宙 | `astro-ph.CO`, `astro-ph.HE`, `astro-ph.IM`, `astro-ph.SR`, `astro-ph.EP`, `astro-ph.GA` | 训练大尺度系统理解和仪器意识。 |
-| 5 凝聚态/材料 | `cond-mat.dis-nn`, `cond-mat.mes-hall`, `cond-mat.mtrl-sci`, `cond-mat.quant-gas`, `cond-mat.soft`, `cond-mat.str-el`, `cond-mat.supr-con`, `cond-mat.other` | 连接材料、器件、计算和技术趋势。 |
-| 6 应用/通用物理 | `physics.acc-ph` 到 `physics.space-ph` | 覆盖应用、仪器、optics、plasma、society 和边界主题。 |
-
-完整 PHYS 顺序保存在 `10_PROGRAM_STATE/group_routes/PHYS.csv`。
-
-## 前 7 天：先学概念，不急着搭建
-
-| Day | Q-FIN - TR | PHYS - quant-ph | 必须产出 |
-|---:|---|---|---|
-| D001 | market microstructure 研究什么；为什么成交不等于价格 | quantum physics 研究什么；为什么测量会影响可知内容 | 两张边界图：对象、机制、误用、ROI 用法 |
-| D002 | order、limit order book、spread、liquidity | state、measurement、uncertainty | 两张概念卡 + 主动回忆答案 |
-| D003 | price formation 和 information | amplitude vs probability | classical probability vs quantum probability 对比笔记 |
-| D004 | 市场参与者、激励、adverse selection | operator 和 observable | 机制图 |
-| D005 | market impact 和 execution quality | entanglement 作为信息结构 | 费曼解释 |
-| D006 | trading signal vs execution edge | quantum information 对 computation/AI 的迁移 | ROI 迁移 memo |
-| D007 | 周复盘和 route 校准 | 周复盘和 route 校准 | W01 review + 如有必要调整后续 archive 顺序 |
+| Day | Q-FIN - TR | PHYS - quant-ph | MATH - PR | 必须产出 |
+|---:|---|---|---|---|
+| D001 | market microstructure 研究什么；为什么成交不等于价格 | quantum physics 研究什么；为什么测量会影响可知内容 | 从“事件发生可能性”理解 probability，不把概率当玄学预测 | 三张边界图：对象、机制、误用、ROI 用法 |
+| D002 | order、limit order book、spread、liquidity | state、measurement、uncertainty | sample space、event、probability measure | 三张概念卡 + 主动回忆答案 |
+| D003 | price formation 和 information | amplitude vs probability | random variable：把现实结果映射成可计算对象 | 概率/状态/成交价三者的“压缩现实”对比笔记 |
+| D004 | 市场参与者、激励、adverse selection | operator 和 observable | expectation：长期平均与单次结果的区别 | 机制图 |
+| D005 | market impact 和 execution quality | entanglement 作为信息结构 | variance / tail risk：为什么平均收益不等于可承受收益 | 费曼解释 |
+| D006 | trading signal vs execution edge | quantum information 对 computation/AI 的迁移 | conditional probability / Bayes：新信息如何更新判断 | ROI 迁移 memo |
+| D007 | 周复盘和 route 校准 | 周复盘和 route 校准 | 周复盘和 route 校准 | W01 review + 如有必要调整后续 archive 顺序 |
 
 ## 每日学习协议
 
 | 步骤 | 必须做什么 |
 |---|---|
-| 1 | 说明当前进度：`Dxxx`、active group、archive day out of 30。 |
+| 1 | 说明当前进度：`Dxxx`、三个 active group、archive day out of 30。 |
 | 2 | 先做上一节主动回忆。 |
 | 3 | 先深讲一个核心概念，再进入练习。 |
 | 4 | 说明这个概念我应该怎么用。 |
