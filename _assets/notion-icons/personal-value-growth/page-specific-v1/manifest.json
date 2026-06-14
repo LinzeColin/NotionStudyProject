@@ -1,0 +1,877 @@
+{
+  "generated_at": "2026-06-14T00:00:00+10:00",
+  "scope": "personal-value-growth page-specific icons; excludes two T2 2026 child databases themselves",
+  "count": 98,
+  "pages": [
+    {
+      "id": "379b1a986ba6804b8317d0298fdfb320",
+      "title": "T2 2026",
+      "status": "UNSW",
+      "kind": "term",
+      "file": "001-t2-2026.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/001-t2-2026.png"
+    },
+    {
+      "id": "21eb1a986ba68005ae9ac90c86a9eda3",
+      "title": "8404",
+      "status": "UNSW",
+      "kind": "course",
+      "file": "002-8404.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/002-8404.png"
+    },
+    {
+      "id": "275b1a986ba6809c93b5d3420fad0691",
+      "title": "ACCT5972",
+      "status": "UNSW",
+      "kind": "course",
+      "file": "003-acct5972.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/003-acct5972.png"
+    },
+    {
+      "id": "36fb1a986ba6801aae21d2edd5e1869a",
+      "title": "FINS5512",
+      "status": "UNSW",
+      "kind": "course",
+      "file": "004-fins5512.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/004-fins5512.png"
+    },
+    {
+      "id": "208b1a986ba680a4b990e8b9655914bc",
+      "title": "FINS3626 Tutorial",
+      "status": "UNSW",
+      "kind": "course",
+      "file": "005-fins3626-tutorial.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/005-fins3626-tutorial.png"
+    },
+    {
+      "id": "36fb1a986ba68032b810df91e27ae64f",
+      "title": "MGMT5050",
+      "status": "UNSW",
+      "kind": "course",
+      "file": "006-mgmt5050.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/006-mgmt5050.png"
+    },
+    {
+      "id": "36fb1a986ba680128db0df3e4c58ab38",
+      "title": "ACCT5925",
+      "status": "UNSW",
+      "kind": "course",
+      "file": "007-acct5925.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/007-acct5925.png"
+    },
+    {
+      "id": "375b1a986ba680b68163d991b242b35d",
+      "title": "ACCT5925 Weekly Submission",
+      "status": "UNSW",
+      "kind": "submission",
+      "file": "008-acct5925-weekly-submission.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/008-acct5925-weekly-submission.png"
+    },
+    {
+      "id": "373b1a986ba6804e8d08d683e0540f5c",
+      "title": "FINS5512 Workshop Quiz",
+      "status": "UNSW",
+      "kind": "quiz",
+      "file": "009-fins5512-workshop-quiz.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/009-fins5512-workshop-quiz.png"
+    },
+    {
+      "id": "26fb1a986ba680709824f1f6697f977c",
+      "title": "ACCT5995 Case Study",
+      "status": "UNSW",
+      "kind": "case",
+      "file": "010-acct5995-case-study.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/010-acct5995-case-study.png"
+    },
+    {
+      "id": "276b1a986ba680cfa54de0256904f1f2",
+      "title": "ACCT5995 Notes",
+      "status": "UNSW",
+      "kind": "notes",
+      "file": "011-acct5995-notes.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/011-acct5995-notes.png"
+    },
+    {
+      "id": "26cb1a986ba68057a0a8fdf72a61f57e",
+      "title": "公司运营",
+      "status": "Work",
+      "kind": "operations",
+      "file": "012-page.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/012-page.png"
+    },
+    {
+      "id": "373b1a986ba6803493c4f185c1fcbec9",
+      "title": "Codex量化研究",
+      "status": "Finance",
+      "kind": "quant",
+      "status_inferred": true,
+      "file": "013-codex.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/013-codex.png"
+    },
+    {
+      "id": "379b1a986ba6814eb36dea99b1e65226",
+      "title": "Assignment: Weekly Quiz 2",
+      "status": "UNSW",
+      "kind": "quiz",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "014-assignment-weekly-quiz-2.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/014-assignment-weekly-quiz-2.png"
+    },
+    {
+      "id": "379b1a986ba681d99e0ef73879ae5561",
+      "title": "Assignment: Weekly Quiz 8",
+      "status": "UNSW",
+      "kind": "quiz",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "015-assignment-weekly-quiz-8.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/015-assignment-weekly-quiz-8.png"
+    },
+    {
+      "id": "379b1a986ba681d8b75dd0d2e395e6dd",
+      "title": "Assignment: Weekly Quiz 7",
+      "status": "UNSW",
+      "kind": "quiz",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "016-assignment-weekly-quiz-7.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/016-assignment-weekly-quiz-7.png"
+    },
+    {
+      "id": "379b1a986ba681988f20cd6923ba8420",
+      "title": "Assignment: Weekly Quiz 1",
+      "status": "UNSW",
+      "kind": "quiz",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "017-assignment-weekly-quiz-1.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/017-assignment-weekly-quiz-1.png"
+    },
+    {
+      "id": "379b1a986ba6817aad78e4e57bc4bcc0",
+      "title": "Assignment: Weekly Quiz 9",
+      "status": "UNSW",
+      "kind": "quiz",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "018-assignment-weekly-quiz-9.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/018-assignment-weekly-quiz-9.png"
+    },
+    {
+      "id": "379b1a986ba68198ab10f89c7dd61f86",
+      "title": "Assignment: Weekly Quiz 4",
+      "status": "UNSW",
+      "kind": "quiz",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "019-assignment-weekly-quiz-4.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/019-assignment-weekly-quiz-4.png"
+    },
+    {
+      "id": "379b1a986ba681b28858f11740f2c0a6",
+      "title": "Assignment: Weekly Quiz 5",
+      "status": "UNSW",
+      "kind": "quiz",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "020-assignment-weekly-quiz-5.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/020-assignment-weekly-quiz-5.png"
+    },
+    {
+      "id": "379b1a986ba681569706ea29a11cabb7",
+      "title": "Assignment: Weekly Quiz 3",
+      "status": "UNSW",
+      "kind": "quiz",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "021-assignment-weekly-quiz-3.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/021-assignment-weekly-quiz-3.png"
+    },
+    {
+      "id": "379b1a986ba681e9b416f60d68568164",
+      "title": "Assignment: Weekly Quiz 6",
+      "status": "UNSW",
+      "kind": "quiz",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "022-assignment-weekly-quiz-6.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/022-assignment-weekly-quiz-6.png"
+    },
+    {
+      "id": "379b1a986ba681b8ac09daa582d2d5b2",
+      "title": "Assignment: Weekly Quiz 10",
+      "status": "UNSW",
+      "kind": "quiz",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "023-assignment-weekly-quiz-10.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/023-assignment-weekly-quiz-10.png"
+    },
+    {
+      "id": "379b1a986ba680ffba13ec4c730884e2",
+      "title": "Final Exam Wk 6-10",
+      "status": "UNSW",
+      "kind": "exam",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "024-final-exam-wk-6-10.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/024-final-exam-wk-6-10.png"
+    },
+    {
+      "id": "379b1a986ba68087a56ce9f870053d1c",
+      "title": "Mid-Term Quiz Wk 1-5",
+      "status": "UNSW",
+      "kind": "exam",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "025-mid-term-quiz-wk-1-5.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/025-mid-term-quiz-wk-1-5.png"
+    },
+    {
+      "id": "379b1a986ba6801cb07cc2fbf796a020",
+      "title": "Individual Quiz 2",
+      "status": "UNSW",
+      "kind": "quiz",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "026-individual-quiz-2.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/026-individual-quiz-2.png"
+    },
+    {
+      "id": "379b1a986ba68028bc51d181298bde4b",
+      "title": "Individual Quiz 1",
+      "status": "UNSW",
+      "kind": "quiz",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "027-individual-quiz-1.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/027-individual-quiz-1.png"
+    },
+    {
+      "id": "379b1a986ba68071a133e9cddeaf7c4b",
+      "title": "Wk10 Quiz",
+      "status": "UNSW",
+      "kind": "quiz",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "028-wk10-quiz.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/028-wk10-quiz.png"
+    },
+    {
+      "id": "379b1a986ba680b28441d39d00ab397a",
+      "title": "Group Case Study",
+      "status": "UNSW",
+      "kind": "case",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "029-group-case-study.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/029-group-case-study.png"
+    },
+    {
+      "id": "379b1a986ba6803eb864e0743c0b14d1",
+      "title": "Individual Memo",
+      "status": "UNSW",
+      "kind": "memo",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "030-individual-memo.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/030-individual-memo.png"
+    },
+    {
+      "id": "379b1a986ba6801d9f18ecfadebb730f",
+      "title": "Cumulative Reflection Part 3",
+      "status": "UNSW",
+      "kind": "reflection",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "031-cumulative-reflection-part-3.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/031-cumulative-reflection-part-3.png"
+    },
+    {
+      "id": "379b1a986ba6803094ade9c6ed0e91f6",
+      "title": "Individual Report",
+      "status": "UNSW",
+      "kind": "report",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "032-individual-report.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/032-individual-report.png"
+    },
+    {
+      "id": "379b1a986ba680c8b25ed407a4d45ee5",
+      "title": "Participation",
+      "status": "UNSW",
+      "kind": "participation",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "033-participation.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/033-participation.png"
+    },
+    {
+      "id": "379b1a986ba680a4a7cac1d5f038bfe8",
+      "title": "Cumulative Reflection Part 1",
+      "status": "UNSW",
+      "kind": "reflection",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "034-cumulative-reflection-part-1.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/034-cumulative-reflection-part-1.png"
+    },
+    {
+      "id": "379b1a986ba68076b439c6e054ae697f",
+      "title": "Cumulative Reflection Part 2",
+      "status": "UNSW",
+      "kind": "reflection",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "035-cumulative-reflection-part-2.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/035-cumulative-reflection-part-2.png"
+    },
+    {
+      "id": "379b1a986ba680a0be06dbd8198e4a02",
+      "title": "Seminar Engagement",
+      "status": "UNSW",
+      "kind": "participation",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "036-seminar-engagement.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/036-seminar-engagement.png"
+    },
+    {
+      "id": "379b1a986ba6804ab2afec12fa8a1350",
+      "title": "Webinar Engagement",
+      "status": "UNSW",
+      "kind": "participation",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "037-webinar-engagement.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/037-webinar-engagement.png"
+    },
+    {
+      "id": "379b1a986ba6808cbe2fd89795c68940",
+      "title": "Group Financial Literacy Builder",
+      "status": "UNSW",
+      "kind": "project",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "038-group-financial-literacy-builder.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/038-group-financial-literacy-builder.png"
+    },
+    {
+      "id": "379b1a986ba680e0855cd26fdd981d18",
+      "title": "Wk2 - FINS5512 - Workshop",
+      "status": "UNSW",
+      "kind": "workshop",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "039-wk2-fins5512-workshop.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/039-wk2-fins5512-workshop.png"
+    },
+    {
+      "id": "379b1a986ba680aaa564e76908263015",
+      "title": "Wk10 - FINS5512 - Workshop",
+      "status": "UNSW",
+      "kind": "workshop",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "040-wk10-fins5512-workshop.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/040-wk10-fins5512-workshop.png"
+    },
+    {
+      "id": "379b1a986ba680499cb6f339c78aca44",
+      "title": "Wk9 - FINS5512 - Workshop",
+      "status": "UNSW",
+      "kind": "workshop",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "041-wk9-fins5512-workshop.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/041-wk9-fins5512-workshop.png"
+    },
+    {
+      "id": "379b1a986ba680d79078f2534f632218",
+      "title": "Wk3 - FINS5512 - Workshop",
+      "status": "UNSW",
+      "kind": "workshop",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "042-wk3-fins5512-workshop.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/042-wk3-fins5512-workshop.png"
+    },
+    {
+      "id": "379b1a986ba68055a064cbbe71c3769b",
+      "title": "Wk1 - FINS5512 - Workshop",
+      "status": "UNSW",
+      "kind": "workshop",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "043-wk1-fins5512-workshop.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/043-wk1-fins5512-workshop.png"
+    },
+    {
+      "id": "379b1a986ba6801a98a6f7d64969e8eb",
+      "title": "Wk7 - FINS5512 - Workshop",
+      "status": "UNSW",
+      "kind": "workshop",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "044-wk7-fins5512-workshop.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/044-wk7-fins5512-workshop.png"
+    },
+    {
+      "id": "379b1a986ba680108cc0cc0b3d373561",
+      "title": "Wk5 - FINS5512 - Workshop",
+      "status": "UNSW",
+      "kind": "workshop",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "045-wk5-fins5512-workshop.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/045-wk5-fins5512-workshop.png"
+    },
+    {
+      "id": "379b1a986ba680d390f9cedb296feee2",
+      "title": "Wk8 - FINS5512 - Workshop",
+      "status": "UNSW",
+      "kind": "workshop",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "046-wk8-fins5512-workshop.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/046-wk8-fins5512-workshop.png"
+    },
+    {
+      "id": "379b1a986ba68061b2c5c413a7529584",
+      "title": "Wk6 - FINS5512 - Workshop",
+      "status": "UNSW",
+      "kind": "workshop",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "047-wk6-fins5512-workshop.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/047-wk6-fins5512-workshop.png"
+    },
+    {
+      "id": "379b1a986ba6800792c3c4c2a437bcc2",
+      "title": "Wk4 - FINS5512 - Workshop",
+      "status": "UNSW",
+      "kind": "workshop",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "048-wk4-fins5512-workshop.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/048-wk4-fins5512-workshop.png"
+    },
+    {
+      "id": "379b1a986ba680858bdaf8b749456f9a",
+      "title": "Wk9 - FINS5512 - Lecture",
+      "status": "UNSW",
+      "kind": "lecture",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "049-wk9-fins5512-lecture.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/049-wk9-fins5512-lecture.png"
+    },
+    {
+      "id": "379b1a986ba68010a7c8e6c622697893",
+      "title": "Wk5 - FINS5512 - Lecture",
+      "status": "UNSW",
+      "kind": "lecture",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "050-wk5-fins5512-lecture.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/050-wk5-fins5512-lecture.png"
+    },
+    {
+      "id": "379b1a986ba680c7803fddfd17c77151",
+      "title": "Wk4 - FINS5512 - Lecture",
+      "status": "UNSW",
+      "kind": "lecture",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "051-wk4-fins5512-lecture.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/051-wk4-fins5512-lecture.png"
+    },
+    {
+      "id": "379b1a986ba680bb9f97e80b48b62d0e",
+      "title": "Wk7 - FINS5512 - Lecture",
+      "status": "UNSW",
+      "kind": "lecture",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "052-wk7-fins5512-lecture.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/052-wk7-fins5512-lecture.png"
+    },
+    {
+      "id": "379b1a986ba680f4ab7af9fa131e38ee",
+      "title": "Wk2 - FINS5512 - Lecture",
+      "status": "UNSW",
+      "kind": "lecture",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "053-wk2-fins5512-lecture.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/053-wk2-fins5512-lecture.png"
+    },
+    {
+      "id": "379b1a986ba680178e1cf8261c92b61e",
+      "title": "Wk6 - FINS5512 - Lecture",
+      "status": "UNSW",
+      "kind": "lecture",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "054-wk6-fins5512-lecture.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/054-wk6-fins5512-lecture.png"
+    },
+    {
+      "id": "379b1a986ba6807881ccd5ee567dde3a",
+      "title": "Wk8 - FINS5512 - Lecture",
+      "status": "UNSW",
+      "kind": "lecture",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "055-wk8-fins5512-lecture.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/055-wk8-fins5512-lecture.png"
+    },
+    {
+      "id": "379b1a986ba680c59818c1b3ddca4df4",
+      "title": "Wk10 - FINS5512 - Lecture",
+      "status": "UNSW",
+      "kind": "lecture",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "056-wk10-fins5512-lecture.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/056-wk10-fins5512-lecture.png"
+    },
+    {
+      "id": "379b1a986ba68090a167ce176e9c1198",
+      "title": "Wk3 - FINS5512 - Lecture",
+      "status": "UNSW",
+      "kind": "lecture",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "057-wk3-fins5512-lecture.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/057-wk3-fins5512-lecture.png"
+    },
+    {
+      "id": "379b1a986ba680e7ad79f09a00989f8d",
+      "title": "Wk1 - FINS5512 - Lecture",
+      "status": "UNSW",
+      "kind": "lecture",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "058-wk1-fins5512-lecture.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/058-wk1-fins5512-lecture.png"
+    },
+    {
+      "id": "379b1a986ba6805bae93cc19a6ae44e3",
+      "title": "Wk10 - ACCT5925 - Lecture",
+      "status": "UNSW",
+      "kind": "lecture",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "059-wk10-acct5925-lecture.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/059-wk10-acct5925-lecture.png"
+    },
+    {
+      "id": "379b1a986ba6805883f4c44ac5aa76fd",
+      "title": "Wk1 - ACCT5925 - Lecture",
+      "status": "UNSW",
+      "kind": "lecture",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "060-wk1-acct5925-lecture.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/060-wk1-acct5925-lecture.png"
+    },
+    {
+      "id": "379b1a986ba6800d9bfff1a50022825a",
+      "title": "Wk2 - ACCT5925 - Lecture",
+      "status": "UNSW",
+      "kind": "lecture",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "061-wk2-acct5925-lecture.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/061-wk2-acct5925-lecture.png"
+    },
+    {
+      "id": "379b1a986ba6807481abc1d361ec10c8",
+      "title": "Wk5 - ACCT5925 - Lecture",
+      "status": "UNSW",
+      "kind": "lecture",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "062-wk5-acct5925-lecture.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/062-wk5-acct5925-lecture.png"
+    },
+    {
+      "id": "379b1a986ba68046b596e9085e2ebc9b",
+      "title": "Wk4 - ACCT5925 - Lecture",
+      "status": "UNSW",
+      "kind": "lecture",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "063-wk4-acct5925-lecture.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/063-wk4-acct5925-lecture.png"
+    },
+    {
+      "id": "379b1a986ba6802b94b1cd295f1000b7",
+      "title": "Wk9 - ACCT5925 - Lecture",
+      "status": "UNSW",
+      "kind": "lecture",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "064-wk9-acct5925-lecture.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/064-wk9-acct5925-lecture.png"
+    },
+    {
+      "id": "379b1a986ba6808b9091deb2f81fe377",
+      "title": "Wk7 - ACCT5925 - Lecture",
+      "status": "UNSW",
+      "kind": "lecture",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "065-wk7-acct5925-lecture.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/065-wk7-acct5925-lecture.png"
+    },
+    {
+      "id": "379b1a986ba680d09664f3dc3b9f24f8",
+      "title": "Wk6 - ACCT5925 - Lecture",
+      "status": "UNSW",
+      "kind": "lecture",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "066-wk6-acct5925-lecture.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/066-wk6-acct5925-lecture.png"
+    },
+    {
+      "id": "379b1a986ba680fb8af7d849ed2afe84",
+      "title": "Wk3 - ACCT5925 - Lecture",
+      "status": "UNSW",
+      "kind": "lecture",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "067-wk3-acct5925-lecture.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/067-wk3-acct5925-lecture.png"
+    },
+    {
+      "id": "379b1a986ba68055953ee72ba30a5650",
+      "title": "Wk8 - ACCT5925 - Lecture",
+      "status": "UNSW",
+      "kind": "lecture",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "068-wk8-acct5925-lecture.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/068-wk8-acct5925-lecture.png"
+    },
+    {
+      "id": "379b1a986ba680d8bf78fe5cfa05dce0",
+      "title": "Wk9 - FINS5512 - Checkpoint Quiz",
+      "status": "UNSW",
+      "kind": "checkpoint",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "069-wk9-fins5512-checkpoint-quiz.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/069-wk9-fins5512-checkpoint-quiz.png"
+    },
+    {
+      "id": "379b1a986ba6803e96cee6523ee1f9eb",
+      "title": "Wk7 - FINS5512 - Checkpoint Quiz",
+      "status": "UNSW",
+      "kind": "checkpoint",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "070-wk7-fins5512-checkpoint-quiz.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/070-wk7-fins5512-checkpoint-quiz.png"
+    },
+    {
+      "id": "379b1a986ba6809ca033c7b28f87d6eb",
+      "title": "Wk1 - FINS5512 - Checkpoint Quiz",
+      "status": "UNSW",
+      "kind": "checkpoint",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "071-wk1-fins5512-checkpoint-quiz.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/071-wk1-fins5512-checkpoint-quiz.png"
+    },
+    {
+      "id": "379b1a986ba680f397a1fadee72b6ffe",
+      "title": "Wk3 - FINS5512 - Checkpoint Quiz",
+      "status": "UNSW",
+      "kind": "checkpoint",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "072-wk3-fins5512-checkpoint-quiz.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/072-wk3-fins5512-checkpoint-quiz.png"
+    },
+    {
+      "id": "379b1a986ba6805da676ee3adbc0595b",
+      "title": "Wk2 - FINS5512 - Checkpoint Quiz",
+      "status": "UNSW",
+      "kind": "checkpoint",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "073-wk2-fins5512-checkpoint-quiz.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/073-wk2-fins5512-checkpoint-quiz.png"
+    },
+    {
+      "id": "379b1a986ba680d5a114df4b32eda6dc",
+      "title": "Wk5 - FINS5512 - Checkpoint Quiz",
+      "status": "UNSW",
+      "kind": "checkpoint",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "074-wk5-fins5512-checkpoint-quiz.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/074-wk5-fins5512-checkpoint-quiz.png"
+    },
+    {
+      "id": "379b1a986ba680938154f24da0156a65",
+      "title": "Wk4 - FINS5512 - Checkpoint Quiz",
+      "status": "UNSW",
+      "kind": "checkpoint",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "075-wk4-fins5512-checkpoint-quiz.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/075-wk4-fins5512-checkpoint-quiz.png"
+    },
+    {
+      "id": "379b1a986ba6801cb51ffcb244492dcf",
+      "title": "Wk6 - FINS5512 - Checkpoint Quiz",
+      "status": "UNSW",
+      "kind": "checkpoint",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "076-wk6-fins5512-checkpoint-quiz.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/076-wk6-fins5512-checkpoint-quiz.png"
+    },
+    {
+      "id": "379b1a986ba6808bb099d36a9a581c63",
+      "title": "Wk8 - FINS5512 - Checkpoint Quiz",
+      "status": "UNSW",
+      "kind": "checkpoint",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "077-wk8-fins5512-checkpoint-quiz.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/077-wk8-fins5512-checkpoint-quiz.png"
+    },
+    {
+      "id": "379b1a986ba6808aa2add0f1c1ef1478",
+      "title": "Wk10 - FINS5512 - Checkpoint Quiz",
+      "status": "UNSW",
+      "kind": "checkpoint",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "078-wk10-fins5512-checkpoint-quiz.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/078-wk10-fins5512-checkpoint-quiz.png"
+    },
+    {
+      "id": "379b1a986ba680eaaf22e44d63f3b0f8",
+      "title": "Wk9 - FINS5512 - Readings",
+      "status": "UNSW",
+      "kind": "readings",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "079-wk9-fins5512-readings.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/079-wk9-fins5512-readings.png"
+    },
+    {
+      "id": "379b1a986ba6800eaf71f7a9ca7d15cf",
+      "title": "Wk1 - FINS5512 - Readings",
+      "status": "UNSW",
+      "kind": "readings",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "080-wk1-fins5512-readings.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/080-wk1-fins5512-readings.png"
+    },
+    {
+      "id": "379b1a986ba68003be07d45d04b789de",
+      "title": "Wk5 - FINS5512 - Readings",
+      "status": "UNSW",
+      "kind": "readings",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "081-wk5-fins5512-readings.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/081-wk5-fins5512-readings.png"
+    },
+    {
+      "id": "379b1a986ba680139734d0aa6bbae7cc",
+      "title": "Wk4 - FINS5512 - Readings",
+      "status": "UNSW",
+      "kind": "readings",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "082-wk4-fins5512-readings.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/082-wk4-fins5512-readings.png"
+    },
+    {
+      "id": "379b1a986ba680e4ba41c789ecdcd34b",
+      "title": "Wk3 - FINS5512 - Readings",
+      "status": "UNSW",
+      "kind": "readings",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "083-wk3-fins5512-readings.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/083-wk3-fins5512-readings.png"
+    },
+    {
+      "id": "379b1a986ba680d3b04bc4a59b514d00",
+      "title": "Wk2 - FINS5512 - Readings",
+      "status": "UNSW",
+      "kind": "readings",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "084-wk2-fins5512-readings.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/084-wk2-fins5512-readings.png"
+    },
+    {
+      "id": "379b1a986ba680d49296d16899f5b9c3",
+      "title": "Wk6 - FINS5512 - Readings",
+      "status": "UNSW",
+      "kind": "readings",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "085-wk6-fins5512-readings.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/085-wk6-fins5512-readings.png"
+    },
+    {
+      "id": "379b1a986ba680dc8ed3cd6008472a8f",
+      "title": "Wk10 - FINS5512 - Readings",
+      "status": "UNSW",
+      "kind": "readings",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "086-wk10-fins5512-readings.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/086-wk10-fins5512-readings.png"
+    },
+    {
+      "id": "379b1a986ba68005afecdf28bcde762f",
+      "title": "Wk8 - FINS5512 - Readings",
+      "status": "UNSW",
+      "kind": "readings",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "087-wk8-fins5512-readings.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/087-wk8-fins5512-readings.png"
+    },
+    {
+      "id": "379b1a986ba680fa9c6ee3aa228d99be",
+      "title": "Wk7 - FINS5512 - Readings",
+      "status": "UNSW",
+      "kind": "readings",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "088-wk7-fins5512-readings.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/088-wk7-fins5512-readings.png"
+    },
+    {
+      "id": "379b1a986ba680a1a023fbb61412358e",
+      "title": "Wk10 - ACCT5925 - Readings",
+      "status": "UNSW",
+      "kind": "readings",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "089-wk10-acct5925-readings.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/089-wk10-acct5925-readings.png"
+    },
+    {
+      "id": "379b1a986ba680078cfed5ed4790a7ae",
+      "title": "Wk1 - ACCT5925 - Readings",
+      "status": "UNSW",
+      "kind": "readings",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "090-wk1-acct5925-readings.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/090-wk1-acct5925-readings.png"
+    },
+    {
+      "id": "379b1a986ba680eeb27cef0c09506ee5",
+      "title": "Wk2 - ACCT5925 - Readings",
+      "status": "UNSW",
+      "kind": "readings",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "091-wk2-acct5925-readings.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/091-wk2-acct5925-readings.png"
+    },
+    {
+      "id": "379b1a986ba68030b906d777e3f6bbde",
+      "title": "Wk7 - ACCT5925 - Readings",
+      "status": "UNSW",
+      "kind": "readings",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "092-wk7-acct5925-readings.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/092-wk7-acct5925-readings.png"
+    },
+    {
+      "id": "379b1a986ba680dc80edd472690987ad",
+      "title": "Wk3 - ACCT5925 - Readings",
+      "status": "UNSW",
+      "kind": "readings",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "093-wk3-acct5925-readings.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/093-wk3-acct5925-readings.png"
+    },
+    {
+      "id": "379b1a986ba680ad8839ceda6fc2078f",
+      "title": "Wk6 - ACCT5925 - Readings",
+      "status": "UNSW",
+      "kind": "readings",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "094-wk6-acct5925-readings.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/094-wk6-acct5925-readings.png"
+    },
+    {
+      "id": "379b1a986ba6808987eefc20d55adc53",
+      "title": "Wk4 - ACCT5925 - Readings",
+      "status": "UNSW",
+      "kind": "readings",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "095-wk4-acct5925-readings.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/095-wk4-acct5925-readings.png"
+    },
+    {
+      "id": "379b1a986ba680a59876fa850565697c",
+      "title": "Wk5 - ACCT5925 - Readings",
+      "status": "UNSW",
+      "kind": "readings",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "096-wk5-acct5925-readings.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/096-wk5-acct5925-readings.png"
+    },
+    {
+      "id": "379b1a986ba6809b842fce49dccbcb99",
+      "title": "Wk9 - ACCT5925 - Readings",
+      "status": "UNSW",
+      "kind": "readings",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "097-wk9-acct5925-readings.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/097-wk9-acct5925-readings.png"
+    },
+    {
+      "id": "379b1a986ba680aa93d4cccfc38c56eb",
+      "title": "Wk8 - ACCT5925 - Readings",
+      "status": "UNSW",
+      "kind": "readings",
+      "scope": "nested ordinary page under T2 2026",
+      "file": "098-wk8-acct5925-readings.png",
+      "github_raw_url": "https://raw.githubusercontent.com/LinzeColin/Notion/main/_assets/notion-icons/personal-value-growth/page-specific-v1/098-wk8-acct5925-readings.png"
+    }
+  ]
+}
