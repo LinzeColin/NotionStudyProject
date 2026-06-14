@@ -13,14 +13,38 @@
     "day": 1,
     "progress_label": "第1/28天"
   },
+  "scope_integration_2026_06_14": {
+    "authorized": true,
+    "integration_mode": "existing_projects_first_no_new_project_by_default",
+    "role": "agent tool workflow layer only; infrastructure implementation belongs to local-ai-infrastructure",
+    "tool_backlog": [
+      "local_model_as_tool",
+      "remote_gpu_model_endpoint_as_tool",
+      "RAG_as_tool",
+      "multimodal_model_as_tool",
+      "local_data_analysis_script_as_tool"
+    ],
+    "future_conditional_project": "GPU ML Systems & Model Training only if user opens distributed training/pretraining as main goal"
+  },
   "acceleration_policy": {
     "no_d000": true,
     "if_started_early_use_next_real_day": true,
     "never_skip_required_workflow_steps": true
   },
-  "absorbed_sources": ["ai", "prompt-engineering-loop-engineering", "Levnovo/Lenovo Notion", "Codex workflow", "Mermaid", "software development workflow"],
-  "next_action": "Start D01 on 2026-07-19 unless user explicitly pulls this project earlier; if pulled earlier, use D01 immediately, not D000.",
-  "notion_status": "synced",
+  "absorbed_sources": [
+    "ai",
+    "prompt-engineering-loop-engineering",
+    "Levnovo/Lenovo Notion",
+    "Codex workflow",
+    "Mermaid",
+    "software development workflow",
+    "local/remote model tool routing",
+    "RAG as tool",
+    "multimodal tool workflow",
+    "local data-analysis tool workflow"
+  ],
+  "next_action": "Start D01 on 2026-07-19 unless user explicitly pulls this project earlier; if pulled earlier, use D01 immediately, not D000. Keep local/remote model and RAG capabilities as bounded tools, not vague agent magic.",
+  "notion_status": "synced_scope_summary_pending_verification",
   "notion_sources": {
     "codex_study_timeline_database_id": "37eb1a986ba680bdb5f9ea2367b08991",
     "codex_study_timeline_data_source": "collection://37eb1a98-6ba6-80ad-94e0-000bbda7ab85",
