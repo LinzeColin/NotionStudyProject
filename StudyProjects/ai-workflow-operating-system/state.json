@@ -1,0 +1,13 @@
+{
+  "project_slug": "ai-workflow-operating-system",
+  "project_name": "AI Workflow Operating System",
+  "timezone": "Australia/Sydney",
+  "status": "queued",
+  "duration_days": 28,
+  "start_date": "2026-07-19",
+  "end_date": "2026-08-15",
+  "current_day": 0,
+  "absorbed_sources": ["ai", "prompt-engineering-loop-engineering", "Levnovo/Lenovo Notion", "Codex workflow", "Mermaid", "software development workflow"],
+  "next_action": "Start after Industrial AI SaaS Builder unless user explicitly chooses parallel mode.",
+  "last_updated": "2026-06-14"
+}
