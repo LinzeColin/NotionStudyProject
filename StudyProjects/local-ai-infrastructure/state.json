@@ -11,7 +11,17 @@
   "next_session": {
     "date": "2026-07-19",
     "day": 1,
-    "progress_label": "第1/28天"
+    "progress_label": "第1/28天",
+    "topic": "Local + remote AI infrastructure map"
+  },
+  "scope_integration_2026_06_14": {
+    "authorized": true,
+    "integration_mode": "existing_projects_first_no_new_project_by_default",
+    "gpu_budget_mode_current": "local/current hardware plus limited remote GPU experiments",
+    "new_machine_expected_date": "2026-06-30",
+    "new_machine_note": "User expects substantially larger GPU memory, CPU, and storage; future agents must verify actual specs after arrival before changing hardware assumptions.",
+    "training_large_models_choice": "C: distributed training / pretraining is future standalone scope",
+    "future_conditional_project": "GPU ML Systems & Model Training"
   },
   "acceleration_policy": {
     "no_d000": true,
@@ -20,15 +30,26 @@
   },
   "absorbed_sources": [
     "Local LLM Deployment",
+    "Remote GPU",
+    "Locally running 32B and 70B quantized models",
     "NPU applications",
     "local RAG",
+    "large document RAG / embedding / knowledge base",
+    "image generation / vision models / multimodal models",
     "local big-data strategy simulator",
     "CNN",
-    "AI plan local model and automation components"
+    "AI plan local model and automation components",
+    "training large models decision literacy"
   ],
-  "schedule_policy": "Must finish no later than 2026-08-15. Runs in controlled parallel with AI Workflow Operating System from 2026-07-19 to 2026-08-15.",
-  "next_action": "Start D01 on 2026-07-19 in controlled parallel with AI Workflow Operating System. If pulled earlier, use D01 immediately, not D000. Keep lessons concept-first and connect every infrastructure decision to local agent/RAG productivity, cost, privacy, and ROI.",
-  "notion_status": "synced_dates_verified_2026-06-14",
+  "excluded_or_future_scope": [
+    "from-scratch pretraining",
+    "distributed training hands-on",
+    "DeepSpeed/NCCL/CUDA internals",
+    "full production MLOps platform"
+  ],
+  "schedule_policy": "Must finish no later than 2026-08-15. Runs in controlled parallel with AI Workflow Operating System from 2026-07-19 to 2026-08-15. Dates unchanged after 2026-06-14 scope integration.",
+  "next_action": "Start D01 on 2026-07-19 in controlled parallel with AI Workflow Operating System. If pulled earlier, use D01 immediately, not D000. Keep lessons concept-first and connect every infrastructure decision to local/remote agent/RAG productivity, cost, privacy, reliability, and ROI.",
+  "notion_status": "synced_dates_verified_2026-06-14_scope_summary_pending_verification",
   "notion_sources": {
     "codex_study_timeline_database_id": "37eb1a986ba680bdb5f9ea2367b08991",
     "codex_study_timeline_data_source": "collection://37eb1a98-6ba6-80ad-94e0-000bbda7ab85",
