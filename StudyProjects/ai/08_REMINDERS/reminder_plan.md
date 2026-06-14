@@ -1,7 +1,8 @@
 # AI Reminder Plan
 
 Project: AI
-Goal: bring the user back to Codex daily.
+Status: archived on 2026-06-14. Historical only.
+Goal: no active reminders. This broad AI route was superseded by the consolidated Study Project route.
 
 ## Default Reminder
 
@@ -25,7 +26,8 @@ Ask: "Continue ai WxxDxx and sync my Notion notes."
 
 ## Policy
 
+- Do not send or schedule reminders from this folder unless the user explicitly reactivates `StudyProjects/ai`.
 - Keep reminders short.
 - Do not put long lessons in reminders by default.
 - Missed day means recovery mode, not guilt mode.
-- If user returns without exact code, route by `ai` or AI project context.
+- If user returns without exact code, route through `_system/study-project-orchestrator/PROJECT_INDEX.md`, not this archived folder.

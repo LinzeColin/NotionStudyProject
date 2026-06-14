@@ -6,22 +6,22 @@ Purpose: bring the user back to Codex. Reminders do not replace the learning sur
 
 | Automation | ID | Kind | Schedule | Role | Status |
 |---|---|---|---|---|---|
-| Study Project Daily Sync | `study-project-daily-sync` | cron | daily 18:10 Sydney | Detached GitHub/Notion sync, missed-study check, Phase C guard | ACTIVE |
-| Prompt Loop Study Daily Reminder | `prompt-loop-study-daily-reminder` | cron | daily 09:00 Sydney, 21 occurrences | Detached reminder that reads GitHub/Notion state and does not rely on a chat thread | ACTIVE |
+| Study Project Daily Sync | `study-project-daily-sync` | cron | daily 18:10 Sydney | Detached GitHub/Notion sync for active projects listed in `PROJECT_INDEX.md`; skips this archived project | ACTIVE |
+| Prompt Loop Study Daily Reminder | `prompt-loop-study-daily-reminder` | cron | daily 09:00 Sydney, 21 occurrences | Historical project-specific reminder | PAUSED on 2026-06-14 |
 
-## Phase C Guard
+## Archive Status
 
-The reminder and daily sync must not treat the project as complete after the 7-day B sprint. Phase C is scheduled for 2026-06-21 to 2026-07-04 and remains conditional on the W01 review.
+This project is archived and superseded by `ai-workflow-operating-system`. Do not send project-specific reminders or mark missed study unless the user explicitly reactivates it.
 
 ## Default Return Prompt
 
 ```text
-Continue prompt-engineering-loop-engineering W01D01. Start with active recall, then build Prompt Contract v1 and sync Notion notes.
+Reactivate prompt-engineering-loop-engineering only if explicitly authorized.
 ```
 
 ## Missed Study Rule
 
-If no actual minutes are recorded by 18:00 Sydney on a study day, mark `missed_study_today: true` in `state.json` and use:
+Archived projects are excluded from missed-study checks. If this project is reactivated later and no actual minutes are recorded by 18:00 Sydney on a study day, mark `missed_study_today: true` in `state.json` and use:
 
 ```text
 未完成今天学习打卡。请优先返回并同步今日学习：Continue prompt-engineering-loop-engineering W01Dxx and sync my Notion notes.

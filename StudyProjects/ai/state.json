@@ -22,7 +22,7 @@
   "current_focus": "W01D01 - baseline recall, AI mental map, and personal AI leverage map",
   "last_session_date": "2026-06-13",
   "streak": 0,
-  "next_action": "Complete D01 baseline active recall and build the Personal AI leverage map",
+  "next_action": "Archived on 2026-06-14. Do not continue this folder by default. Route AI/LLM/Agent/Automation learning through industrial-ai-saas-builder, ai-workflow-operating-system, local-ai-infrastructure, or gpu-ml-systems-model-training according to PROJECT_INDEX.md.",
   "github_path": "LinzeColin/Notion/StudyProjects/ai/",
   "notion_source": {
     "teamspace": "Linz Dashboard",
@@ -36,8 +36,21 @@
     "sync_mode": "summary_structured_links_plus_optional_full_body",
     "creation_status": "user_created_timeline_database_connected_day1_page_created"
   },
-  "reminder_mode": "return_to_codex",
-  "status": "active",
+  "reminder_mode": "archived_no_reminder",
+  "status": "archived_superseded",
+  "archive": {
+    "archived_at": "2026-06-14",
+    "archive_type": "superseded_by_consolidated_route",
+    "reason": "Original broad AI project was too broad and was replaced by explicit high-ROI routes with clearer scope, dates, and project ownership.",
+    "superseded_by": [
+      "industrial-ai-saas-builder",
+      "ai-workflow-operating-system",
+      "local-ai-infrastructure",
+      "gpu-ml-systems-model-training"
+    ],
+    "notion_archive_sync": "blocked_validation_error_page_marked_deleted",
+    "reactivation_rule": "Only reactivate if the user explicitly asks to resume StudyProjects/ai; otherwise do not count it as active or missed."
+  },
   "authorization": {
     "confirmed_reply": "1A，授权开始",
     "confirmed_scope": "1A_default_high_roi_scope",

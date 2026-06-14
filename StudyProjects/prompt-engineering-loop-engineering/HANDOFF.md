@@ -1,32 +1,27 @@
 # HANDOFF
 
-Timestamp: 2026-06-13 Australia/Sydney
+Timestamp: 2026-06-14 Australia/Sydney
 
 ## Current Goal
 
-Run a 21-day adaptive Study Project for prompt engineering and loop engineering:
-
-- Phase B: 2026-06-14 to 2026-06-20.
-- Phase C: 2026-06-21 to 2026-07-04, conditional after W01 review.
+Archived. This folder is retained as historical context for the earlier Prompt Engineering and Loop Engineering route.
 
 ## Current Status
 
-Project initialized and synced to GitHub.
-Notion timeline page created.
-Automations configured:
+Project archived on 2026-06-14 because the content is superseded by `ai-workflow-operating-system`.
 
-- `study-project-daily-sync`: detached cron, daily 18:10 Sydney.
-- `prompt-loop-study-daily-reminder`: detached cron, daily 09:00 Sydney for 21 occurrences.
+Automation cleanup completed:
 
-Day 1 is 2026-06-14.
+- `prompt-loop-study-daily-reminder`: paused.
+- `study-project-daily-sync`: remains active but now routes only through `PROJECT_INDEX.md` and skips archived projects.
 
 ## Key Decisions
 
 - Use GitHub `LinzeColin/Notion` as source of truth.
 - Use Notion `Codex Study Timeline` as learning timeline.
 - Do not overwrite existing Notion pages.
-- Use `第X/21天` plus phase progress such as `B阶段第1/7天`.
-- Do not end after B sprint. Phase C remains scheduled for 2026-06-21 to 2026-07-04 and must be promoted/revised/cancelled from W01 review evidence.
+- Do not count this project as active or missed unless explicitly reactivated.
+- Route prompt/loop/tool-workflow learning to `ai-workflow-operating-system`.
 
 ## Files To Watch
 
@@ -42,12 +37,12 @@ Run JSON and CSV parse checks before sync.
 
 ## Open Risks
 
-- Phase C scope should not be locked until W01 review.
+- Historical Notion timeline page may still exist. Do not mutate it unless the user explicitly asks for Notion archive cleanup; if modifying Notion, fetch schema/page format first.
 
 ## Next Step
 
-Continue W01D01:
+Do not continue this folder by default.
 
 ```text
-Continue prompt-engineering-loop-engineering W01D01. Start with active recall, then build Prompt Contract v1 and sync Notion notes.
+Reactivate prompt-engineering-loop-engineering only if explicitly authorized.
 ```

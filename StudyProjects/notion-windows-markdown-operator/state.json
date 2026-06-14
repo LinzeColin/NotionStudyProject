@@ -1,6 +1,6 @@
 {
   "project_slug": "notion-windows-markdown-operator",
-  "status": "active",
+  "status": "archived_outside_current_route",
   "timezone": "Australia/Sydney",
   "created_date": "2026-06-13",
   "start_date": "2026-06-14",
@@ -53,8 +53,16 @@
     {"day": 7, "date": "2026-06-20", "theme": "Final SOP and continuation decision", "status": "planned"}
   ],
   "last_sync": {
-    "github": "2026-06-13",
+    "github": "2026-06-14",
     "notion": "2026-06-13"
   },
-  "next_action": "Start Day 1 on 2026-06-14 with active recall baseline and Windows/XiaoXin keyboard drills."
+  "next_action": "Archived on 2026-06-14 as outside the current consolidated Study Project route. Do not count as active or missed unless the user explicitly reactivates notion-windows-markdown-operator.",
+  "archive": {
+    "archived_at": "2026-06-14",
+    "archive_type": "paused_outside_current_route",
+    "reason": "This is a practical operator sprint outside the current consolidated Top1 learning route. Keeping it active would pollute daily Study Project routing and missed-study checks.",
+    "superseded_by": [],
+    "notion_archive_sync": "blocked_validation_error_page_marked_deleted",
+    "reactivation_rule": "Only reactivate if the user explicitly asks to resume Notion/Windows/Markdown operator training."
+  }
 }

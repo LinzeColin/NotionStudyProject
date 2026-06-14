@@ -28,7 +28,7 @@
   "streak": 0,
   "missed_study_today": false,
   "last_reminder_at": "",
-  "next_action": "Continue prompt-engineering-loop-engineering W01D01. Start with active recall, then build Prompt Contract v1 and sync Notion notes.",
+  "next_action": "Archived on 2026-06-14. Do not continue this folder by default. Prompt/loop learning is superseded by ai-workflow-operating-system unless the user explicitly reactivates this project.",
   "notion_source": {
     "database_url": "https://app.notion.com/p/37eb1a986ba680bdb5f9ea2367b08991",
     "data_source_url": "collection://37eb1a98-6ba6-80ad-94e0-000bbda7ab85",
@@ -41,11 +41,22 @@
   },
   "automation": {
     "daily_sync_id": "study-project-daily-sync",
-    "daily_sync_role": "detached local cron; checks active Study Projects at 18:10 Sydney and marks missed study without relying on this thread",
+    "daily_sync_role": "detached local cron; now reads PROJECT_INDEX.md and skips archived projects unless explicitly reactivated",
     "detached_reminder_id": "prompt-loop-study-daily-reminder",
-    "detached_reminder_role": "detached local cron; daily return-to-Codex reminder at 09:00 Sydney for 21 occurrences without relying on a chat thread",
+    "detached_reminder_role": "paused on 2026-06-14 after archive cleanup",
+    "detached_reminder_status": "PAUSED",
     "phase_c_guard": "Phase C is scheduled 2026-06-21 to 2026-07-04 and must be promoted, revised, or cancelled from W01 review evidence."
   },
-  "reminder_mode": "app_automation_detached_daily_sync_plus_detached_daily_reminder",
-  "status": "active"
+  "reminder_mode": "archived_no_project_specific_reminder",
+  "status": "archived_superseded",
+  "archive": {
+    "archived_at": "2026-06-14",
+    "archive_type": "superseded_by_ai_workflow_operating_system",
+    "reason": "Prompt/loop material is now part of the later AI Workflow Operating System route; keeping this parallel active project would create duplicate reminders and false missed-study flags.",
+    "superseded_by": [
+      "ai-workflow-operating-system"
+    ],
+    "notion_archive_sync": "blocked_validation_error_page_marked_deleted",
+    "reactivation_rule": "Only reactivate if the user explicitly asks to resume this exact 21-day prompt/loop project."
+  }
 }

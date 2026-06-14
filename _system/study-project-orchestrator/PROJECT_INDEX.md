@@ -20,6 +20,16 @@ Default execution through 2026-08-15 is controlled parallel mode for the existin
 | 6 | Local AI Infrastructure | `local-ai-infrastructure` | scheduled parallel from 2026-07-19 | Remote GPU / Local LLM / 32B-70B quantized models / local RAG / large document knowledge base / multimodal / NPU / CNN / local big-data strategy simulator / training decision literacy | 2026-07-19 to 2026-08-15 | not_started; next is D01 / 第1/28天 | `37fb1a98-6ba6-815b-b096-c70b9183d79f` | 2026-06-14 | Start D01 on 2026-07-19 in controlled parallel with AI Workflow Operating System; verify actual new machine specs after 2026-06-30 before changing hardware assumptions. |
 | 7 | arXiv Top1 Program | `arxiv-top1-program` | active rolling program | arXiv / Q-FIN, PHYS, MATH, STAT, CS, ECON, EE/EESS, Q-BIO | rolling archive schedule | D002 validated: Q-FIN `q-fin.TR` day 2/30, PHYS `quant-ph` day 2/30; MATH `math.PR` not_started until first lesson | existing arXiv timeline pages; MATH Notion page not yet linked | 2026-06-14 | Next arXiv session must include three groups: Q-FIN D003, PHYS D003, MATH D001 |
 
+## Archived / Superseded Projects
+
+Archive source: `_system/study-project-orchestrator/ARCHIVE_INDEX.md`.
+
+| Project | Slug | Status | Reason | Reactivation rule |
+|---|---|---|---|---|
+| AI | `ai` | archived superseded | Broad AI route split into current higher-ROI projects. | Explicit user reactivation only. |
+| Prompt Engineering and Loop Engineering | `prompt-engineering-loop-engineering` | archived superseded | Prompt/loop route merged into `ai-workflow-operating-system`; project-specific reminder paused. | Explicit user reactivation only. |
+| Notion Windows Markdown Operator | `notion-windows-markdown-operator` | archived outside current route | Practical operator sprint should not pollute current Study queue. | Explicit user reactivation only. |
+
 ## 2026-06-14 Scope Integration
 
 User confirmed:
@@ -82,12 +92,14 @@ Before reading or writing any project state:
 7. `study-project-daily-sync` is a detached local cron sync. It must read GitHub/Notion directly and must not rely on the current chat thread.
 8. Do not route new AI/Agent/LLM lessons to the old `ai` folder unless explicitly reactivated.
 9. Do not route new Prompt/Loop lessons to the old `prompt-engineering-loop-engineering` folder unless explicitly reactivated.
-10. Do not mutate Notion until the target database/page schema, visible properties, and current formatting have been fetched.
-11. For consolidated projects, use the exact project name in the Notion `Project` select property.
-12. Do not change the 2026-08-15 cap for non-arXiv projects without explicit user authorization.
-13. For fixed-duration Study Projects, do not create artificial `D000` / `第0天`; if the user starts early, advance to the next real lesson number and keep all sync/check/review steps.
-14. If a project is marked `assets complete but recall pending`, do not advance to the next lesson until the user completes the independent recall gate.
-15. `GPU ML Systems & Model Training` now exists as `gpu-ml-systems-model-training`; do not create duplicates. Route distributed training, from-scratch pretraining literacy, CUDA/NCCL/FSDP/ZeRO/Megatron/DeepSpeed, and training-systems operations there.
+10. Do not count `notion-windows-markdown-operator` as an active Study Project unless explicitly reactivated.
+11. Read `_system/study-project-orchestrator/ARCHIVE_INDEX.md` before any daily sync, missed-study check, or reminder routing. Archived folders are historical memory only.
+12. Do not mutate Notion until the target database/page schema, visible properties, and current formatting have been fetched.
+13. For consolidated projects, use the exact project name in the Notion `Project` select property.
+14. Do not change the 2026-08-15 cap for non-arXiv projects without explicit user authorization.
+15. For fixed-duration Study Projects, do not create artificial `D000` / `第0天`; if the user starts early, advance to the next real lesson number and keep all sync/check/review steps.
+16. If a project is marked `assets complete but recall pending`, do not advance to the next lesson until the user completes the independent recall gate.
+17. `GPU ML Systems & Model Training` now exists as `gpu-ml-systems-model-training`; do not create duplicates. Route distributed training, from-scratch pretraining literacy, CUDA/NCCL/FSDP/ZeRO/Megatron/DeepSpeed, and training-systems operations there.
 
 ## Notion Placement Rule
 
