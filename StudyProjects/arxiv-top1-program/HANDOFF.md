@@ -17,6 +17,10 @@ Timezone: Australia/Sydney
 - queued group 不能默认从今天开始；必须根据 active slot 释放时间计算。
 - 学习笔记、Notion note、daily log、review 默认中文；只保留必要专业术语、archive code、API 名、论文名、工具名。
 - 2026-06-14 D002 已完成：Q-FIN market/limit/stop order recall validated；PHYS state recall partial/usable。下一次进入 D003，不再重复 stop order 入场门，只需连接 price formation、order book depth、gap、slippage。
+- 2026-06-14 Roadmap 已补建：GitHub `03_ROADMAPS/arxiv_roadmap.md`，Notion `arXiv Roadmap` page `37fb1a98-6ba6-8113-98bc-e669dcb55d3e`。
+- Roadmap generation 使用 2 个 configured external agents；ChatGPT、Claude、Perplexity connector 不可用，已记录 blocker。
+- `QFIN_Notion_Simple_Import_Pack.zip` 在用户提供路径未找到，已记录 blocker。
+- `CS.csv` 日期与 Notion CS timeline 已在 2026-06-14 修复并核验；CS group 窗口以 `2027-09-06 -> 2030-12-18` 为准。
 
 ## 正确 group 计划窗口
 
@@ -37,9 +41,10 @@ Timezone: Australia/Sydney
 
 - Codex Study Timeline database：`37eb1a986ba680bdb5f9ea2367b08991`。
 - arXiv Taxonomy database：`37cb1a986ba680838ccddc8c0931281b`。
+- `arXiv Roadmap` page：`37fb1a98-6ba6-8113-98bc-e669dcb55d3e`，Date `2026-06-13 -> 2030-12-18`，Project `arXiv`。
 - `arXiv Quantitative Finance` page：`37eb1a98-6ba6-8133-a01b-e6fbff80849b`，Date `2026-06-13 -> 2027-03-09`。
 - `arXiv Physics` page：`37eb1a98-6ba6-81a9-a1a3-e42720e82960`，Date `2026-06-13 -> 2030-08-20`。
-- `arXiv Computer Science` page：`37eb1a98-6ba6-800a-8e95-f17a784cf2a8`，Date `2030-04-23 -> 2033-08-04`。
+- `arXiv Computer Science` page：`37eb1a98-6ba6-800a-8e95-f17a784cf2a8`，Date `2027-09-06 -> 2030-12-18`。
 - 修改任何 Notion 页面前，必须先 fetch 当前 schema、属性和页面格式。
 
 ## Route Files
@@ -47,6 +52,7 @@ Timezone: Australia/Sydney
 - Q-FIN full route：`10_PROGRAM_STATE/group_routes/Q-FIN.csv`。
 - PHYS full route：`10_PROGRAM_STATE/group_routes/PHYS.csv`。
 - CS full route：`10_PROGRAM_STATE/group_routes/CS.csv`。
+- arXiv full roadmap：`03_ROADMAPS/arxiv_roadmap.md`。
 
 ## Automation 状态
 

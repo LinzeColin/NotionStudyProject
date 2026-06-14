@@ -166,11 +166,38 @@
     "arxiv_taxonomy_data_source": "collection://37cb1a98-6ba6-80a3-ae9e-000b6b455c93",
     "codex_study_timeline_database_id": "37eb1a986ba680bdb5f9ea2367b08991",
     "timeline_pages": {
+      "ROADMAP": "37fb1a98-6ba6-8113-98bc-e669dcb55d3e",
       "Q-FIN": "37eb1a98-6ba6-8133-a01b-e6fbff80849b",
       "PHYS": "37eb1a98-6ba6-81a9-a1a3-e42720e82960",
       "MATH": null,
       "CS": "37eb1a98-6ba6-800a-8e95-f17a784cf2a8"
     }
+  },
+  "roadmap_generation": {
+    "date": "2026-06-14",
+    "status": "completed_with_blockers",
+    "github_roadmap": "03_ROADMAPS/arxiv_roadmap.md",
+    "notion_page_id": "37fb1a98-6ba6-8113-98bc-e669dcb55d3e",
+    "notion_page_url": "https://app.notion.com/p/37fb1a986ba6811398bce669dcb55d3e",
+    "program_window": {
+      "start": "2026-06-13",
+      "end": "2030-12-18",
+      "source_of_truth": "state.json group_route_windows"
+    },
+    "completed_reviewers": [
+      "Codex agent Ramanujan",
+      "Codex agent Pascal"
+    ],
+    "blocked_reviewers_or_inputs": [
+      "ChatGPT connector unavailable",
+      "Claude connector unavailable",
+      "Perplexity connector unavailable",
+      "QFIN_Notion_Simple_Import_Pack.zip not found at provided path"
+    ],
+    "known_blockers": [
+      "CS.csv archive dates and Notion CS timeline were repaired on 2026-06-14; state.json and CS.csv are now aligned",
+      "Notion auto-linked some archive codes that look like URLs; GitHub roadmap remains clean"
+    ]
   },
   "last_sync_date": "2026-06-14",
   "last_learning_session": {
@@ -182,6 +209,6 @@
     "external_review_result": "05_REVIEWS/external_ai_reviews/2026-06-14_review_results.md",
     "reason": "User recalled market/limit/state and then passed stop order recall. External reviewer recommended spread/depth bridge before D003."
   },
-  "next_action": "D003 must include three groups: Q-FIN q-fin.TR archive day 3 starts with price formation and a 10-minute bid/ask spread + order book depth bridge; PHYS quant-ph archive day 3 starts with state recall then amplitude vs probability; MATH math.PR archive day 1 starts with probability as uncertainty compression and stochastic-process bridge. Include daily judgment question: 如果我是交易系统/研究系统/agent 系统，今天这个概念会让我避免哪一种亏钱、误判或伪知识错觉？",
+  "next_action": "D003 must include three groups: Q-FIN q-fin.TR archive day 3 starts with price formation and a 10-minute bid/ask spread + order book depth bridge; PHYS quant-ph archive day 3 starts with state recall then amplitude vs probability; MATH math.PR archive day 1 starts with probability as uncertainty compression and stochastic-process bridge. Include daily judgment question: 如果我是交易系统/研究系统/agent 系统，今天这个概念会让我避免哪一种亏钱、误判或伪知识错觉？ Preserve the newly created roadmap page. CS.csv and Notion CS dates were repaired on 2026-06-14.",
   "status": "active"
 }

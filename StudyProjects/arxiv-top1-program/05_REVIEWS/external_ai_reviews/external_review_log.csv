@@ -3,3 +3,8 @@ date,calendar_global_day,session,reviewer,status,packet_path,result_path,notes
 2026-06-14,2,D001-D002,Claude,blocked_unavailable,05_REVIEWS/external_ai_reviews/2026-06-14_review_packet.md,,No Claude connector/API/browser session available in this turn.
 2026-06-14,2,D001-D002,Perplexity,blocked_unavailable,05_REVIEWS/external_ai_reviews/2026-06-14_review_packet.md,,No Perplexity connector/API/browser session available in this turn.
 2026-06-14,2,D002_VALIDATION,Codex multi-agent reviewer,completed,05_REVIEWS/external_ai_reviews/2026-06-14_review_packet.md,05_REVIEWS/external_ai_reviews/2026-06-14_review_results.md,Reviewer Gibbs completed lightweight learning quality review; adopted spread/depth prerequisite and execution-vs-price-certainty framing.
+2026-06-14,2,ROADMAP,Codex agent Ramanujan,completed,,05_REVIEWS/external_ai_reviews/2026-06-14_roadmap_generation_results.md,Generated project/group/archive-level roadmap proposal; identified CS date conflict.
+2026-06-14,2,ROADMAP,Codex agent Pascal,completed,,05_REVIEWS/external_ai_reviews/2026-06-14_roadmap_generation_results.md,Generated 30-day archive-cycle rhythm, route emphasis, defer list, and CS date conflict.
+2026-06-14,2,ROADMAP,ChatGPT connector,blocked_unavailable,,05_REVIEWS/external_ai_reviews/2026-06-14_roadmap_generation_results.md,No callable ChatGPT connector in current tool context.
+2026-06-14,2,ROADMAP,Claude connector,blocked_unavailable,,05_REVIEWS/external_ai_reviews/2026-06-14_roadmap_generation_results.md,No callable Claude connector in current tool context.
+2026-06-14,2,ROADMAP,Perplexity connector,blocked_unavailable,,05_REVIEWS/external_ai_reviews/2026-06-14_roadmap_generation_results.md,No callable Perplexity connector in current tool context.

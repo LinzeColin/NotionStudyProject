@@ -13,13 +13,13 @@ Run `Industrial AI SaaS Builder` as a 34-day accelerated Study Project starting 
 - 2026-06-14 started as `D01 / 第1/34天`; D01 is complete after recall attempt 02.
 - The user continued immediately, so D02 / 第2/34天 started early under the acceleration rule.
 - D02 concept teaching and required output are complete.
-- D02 independent recall is pending, so D03 is gated.
+- D02 independent recall passed with correction, so D03 is open.
 - D02 Notion notes were appended and verified by fetching the page after write.
 - D02 external reviewer attempt timed out; blocker recorded, no external suggestions adopted.
 - D01 required outputs are complete: RAG opportunity scorecard and RAG decision matrix.
 - D01 remediation was required because recall attempt 01 did not pass.
 - D01 recall attempt 02 passed with 5/5 across: model memory vs RAG, evidence/checkability value, strong industrial RAG case, and non-RAG-first case.
-- D03 gate is closed until D02 micro recall passes.
+- D03 gate is open.
 - Notion timeline row Date is 2026-06-14 to 2026-07-17.
 - Existing `ai` study plan has been partially absorbed into this project.
 - Prompt/loop/Codex/Notion-specific material belongs to `ai-workflow-operating-system`.
@@ -64,7 +64,7 @@ D01 output:
 Date: 2026-06-14
 Progress label: `第2/34天`
 Topic: RAG pipeline as failure surface
-Status: teaching and output complete; independent recall pending
+Status: complete; independent recall passed with correction
 
 GitHub records:
 
@@ -77,19 +77,13 @@ D02 output:
 - RAG pipeline architecture diagram: complete.
 - Component failure-mode table: complete.
 - Minimal auditable industrial RAG architecture: complete.
-- Independent recall: pending.
+- Independent recall: passed with correction.
 
 ## Next Action
 
-Next session starts with D02 micro recall, not D03 immediately.
+Next session can start D03: RAG eval and trust boundary.
 
-Ask three questions:
-
-1. 为什么有 citation 不等于答案可靠？
-2. 如果答案引用了错误 SOP，可能是哪几层出了问题？
-3. 为什么实时温度/压力问题不应 RAG-first？
-
-If the user reaches 4/5 or better, open D03: RAG eval and trust boundary.
+Carry forward one correction: RAG pipeline failures and LLM generation failures are not necessarily independent, and the system is not automatically "extremely unreliable." Reliability depends on whether the evidence chain is auditable, evaluated, and repairable.
 
 D03 required output:
 

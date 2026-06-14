@@ -12,8 +12,8 @@
   "current_week": 1,
   "current_day": 2,
   "current_progress_label": "第2/34天",
-  "current_day_status": "D02_teaching_and_required_output_complete_recall_pending",
-  "current_lesson_status": "D02_teaching_asset_complete_D03_gate_closed_until_micro_recall",
+  "current_day_status": "D02_complete_recall_passed_with_correction",
+  "current_lesson_status": "D03_gate_open",
   "scope_integration_2026_06_14": {
     "authorized": true,
     "integration_mode": "existing_projects_first_no_new_project_by_default",
@@ -43,7 +43,7 @@
     "D01 recall attempt 02": "complete_passed",
     "D02 RAG pipeline architecture diagram": "complete",
     "D02 component failure-mode table": "complete",
-    "D02 independent recall": "pending"
+    "D02 independent recall": "complete_passed_with_correction"
   },
   "recall_attempts": [
     {
@@ -91,14 +91,14 @@
     "D02_start_requirement": "Start D02 with pipeline failure-surface teaching: parsing, chunking, embedding, retrieval, reranking, generation, citation, eval."
   },
   "promotion_gate_to_D03": {
-    "active_recall_recorded": "pending",
+    "active_recall_recorded": "attempt_01_passed_with_correction",
     "concept_teaching_complete": true,
     "required_outputs_complete": true,
     "github_log_updated": true,
     "notion_synced": true,
     "external_review_or_blocker_logged": true,
-    "allowed_to_promote": false,
-    "D03_start_requirement": "Before D03, run a three-question micro recall on citation reliability, wrong-SOP failure localization, and real-time routing boundary."
+    "allowed_to_promote": true,
+    "D03_start_requirement": "D03 is open. Start with RAG eval and trust boundary; preserve D02 correction that RAG reliability depends on auditable evidence chain and failures are not necessarily independent."
   },
   "external_review_status": {
     "route_review": "completed",
@@ -132,25 +132,25 @@
     "date": "2026-06-14",
     "day": 2,
     "progress_label": "第2/34天",
-    "type": "D02_worked_teaching_and_required_output_complete",
-    "topic": "RAG pipeline as failure surface and minimal auditable industrial RAG architecture",
+    "type": "D02_recall_attempt_01_passed_with_correction",
+    "topic": "RAG pipeline reliability, wrong-SOP failure localization, and real-time routing boundary",
     "actual_minutes": null,
     "github_log": "StudyProjects/industrial-ai-saas-builder/04_DAILY_LOGS/2026-06-14_D02.md",
     "remediation_note": null,
-    "recall_attempt_note": null,
+    "recall_attempt_note": "StudyProjects/industrial-ai-saas-builder/04_DAILY_LOGS/2026-06-14_D02_RECALL_ATTEMPT_01.md",
     "scope_integration_record": "_system/study-project-orchestrator/2026-06-14_SCOPE_UPDATE_GPU_RAG_MULTIMODAL.md",
     "notion_synced": true,
     "notion_page_id": "37fb1a98-6ba6-81d2-9a22-d08f109448d5",
     "external_review_or_blocker_logged": true,
-    "outcome": "D02 concept teaching and required output asset are complete. Independent recall is pending, so D03 remains gated."
+    "outcome": "D02 micro recall passed with correction. D03 gate is open."
   },
   "next_session": {
     "date": "2026-06-15",
-    "day": 2,
-    "progress_label": "第2/34天",
-    "topic": "D02 micro recall gate before D03",
-    "core_question": "Can the user explain why citation does not prove reliability and locate wrong-SOP failures across source, metadata, retrieval, context, and generation?",
-    "required_output": "Three-question D02 recall gate; if passed, open D03 RAG eval and trust boundary."
+    "day": 3,
+    "progress_label": "第3/34天",
+    "topic": "RAG eval and trust boundary",
+    "core_question": "How do we prove an industrial RAG answer is grounded, useful, current, and business-valid?",
+    "required_output": "Eval rubric + 20-question eval set."
   },
   "week_1_policy": {
     "theme": "RAG judgment + Industrial SaaS ROI",
