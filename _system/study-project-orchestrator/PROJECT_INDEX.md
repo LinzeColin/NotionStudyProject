@@ -12,7 +12,7 @@ Default execution through 2026-08-15 is now controlled parallel mode, because th
 
 | Order | Project | Slug | Status | Domain | Planned window | Current progress | Notion Timeline | Last sync | Next action |
 |---:|---|---|---|---|---|---|---|---|---|
-| 1 | Industrial AI SaaS Builder | `industrial-ai-saas-builder` | active from 2026-06-14 | Industrial AI / RAG / SaaS / business strategy / architecture / PM / Codex / AI SWE | 2026-06-14 to 2026-07-17 | D01 completed / 第1/34天 | `37fb1a98-6ba6-81d2-9a22-d08f109448d5` | 2026-06-14 | Next D02 on 2026-06-15: RAG pipeline as failure surface; output `pipeline architecture diagram + failure-mode table` |
+| 1 | Industrial AI SaaS Builder | `industrial-ai-saas-builder` | active from 2026-06-14 | Industrial AI / RAG / SaaS / business strategy / architecture / PM / Codex / AI SWE | 2026-06-14 to 2026-07-17 | D01 assets complete but core RAG recall pending / 第1/34天 | `37fb1a98-6ba6-81d2-9a22-d08f109448d5` | 2026-06-14 | Do D01 remediation recall check: explain RAG vs model memory, why evidence/checkability is the value, one strong RAG case, one non-RAG-first case; only then start D02. |
 | 2 | CEO Finance Strategy System | `ceo-finance-strategy-system` | scheduled parallel from 2026-06-18 | CEO/CFO commercial judgment / finance / legal basics / trading / arbitrage risk | 2026-06-18 to 2026-07-15 | not_started; next is D01 / 第1/28天 | `37fb1a98-6ba6-815a-b6c7-df67a5656fd4` | 2026-06-14 | Start D01 on 2026-06-18 after Industrial AI SaaS RAG foundation; education and decision-framework only |
 | 3 | AI Workflow Operating System | `ai-workflow-operating-system` | queued | Prompt / Loop / AI Agent / Codex / Notion OS / Mermaid / software workflow | 2026-07-19 to 2026-08-15 | not_started; next is D01 / 第1/28天 | `37fb1a98-6ba6-8146-a1ac-f721aa2aff8f` | 2026-06-14 | Start D01 on 2026-07-19 unless explicitly pulled earlier; runs in parallel with Local AI Infrastructure |
 | 4 | Local AI Infrastructure | `local-ai-infrastructure` | scheduled parallel from 2026-07-19 | Local LLM / NPU / local RAG / CNN / local big-data strategy simulator | 2026-07-19 to 2026-08-15 | not_started; next is D01 / 第1/28天 | `37fb1a98-6ba6-815b-b096-c70b9183d79f` | 2026-06-14 | Start D01 on 2026-07-19 in controlled parallel with AI Workflow Operating System |
@@ -58,6 +58,7 @@ Before reading or writing any project state:
 11. For consolidated projects, use the exact project name in the Notion `Project` select property.
 12. Do not change the 2026-08-15 cap for non-arXiv projects without explicit user authorization.
 13. For fixed-duration Study Projects, do not create artificial `D000` / `第0天`; if the user starts early, advance to the next real lesson number and keep all sync/check/review steps.
+14. If a project is marked `assets complete but recall pending`, do not advance to the next lesson until the user completes the independent recall gate.
 
 ## Notion Placement Rule
 
