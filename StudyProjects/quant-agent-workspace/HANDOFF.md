@@ -18,9 +18,9 @@ D01 completed and D02 opened early on 2026-06-14:
 - Q1 scored 3/5: user correctly identified time window, friction, market change, slippage, spread, and event sensitivity as reasons paper/model analysis differs from realized returns.
 - Q2/Q3 were retested and passed. D01 gate is closed as complete.
 - User strongly wants time-loss reduction in real trading. Safe translation recorded as `supervised live execution workflow`: Agent monitors, validates, risk-checks, generates `OrderIntent`, and alerts; human confirms execution.
-- D02 created `09_FRONTIER/data_source_matrix.md`; user practice is pending: classify three sources by grade, `OrderIntent` eligibility, and fail-closed action.
+- D02 created `09_FRONTIER/data_source_matrix.md`; user completed the three-case classification practice.
 - D02 has a six-attempt review record: `Nietzsche`, `Archimedes`, and `Ramanujan` completed; ChatGPT, Claude, and Perplexity are recorded as `blocked_unavailable` because no callable reviewer connector/API/browser session was available. Fixes adopted: Case 1 is `OrderIntent=conditional`, matrix includes trade-use fields, three-part grading, reconciliation rules, and `OrderIntent` non-executable safety flags.
-- User attempted all D2 cases. Case 1 is partial pass, score 3/5, pending fixed-format rewrite. Case 2 passed 5/5. Case 3 passed 4/5. D3 remains closed.
+- User attempted all D2 cases. Case 1 final retest passed 5/5 in fixed format: `Grade=A`, `OrderIntent=conditional`, and fail-closed blockers include freshness SLA, closed/halted market, abnormal spread/depth, unknown latency, risk gate failure, unknown `tradable_at`, and stronger-source conflict. Case 2 passed 5/5. Case 3 passed 4/5. D02 is complete and D3 gate is open.
 - `study-project-orchestrator` local skill was updated on 2026-06-14 to require a default roster of Agent + ChatGPT + Claude + Perplexity + two additional external/configured AI reviewer attempts, with at least five traceable attempts before claiming completion.
 
 ## Key Decisions
@@ -43,5 +43,5 @@ D01 completed and D02 opened early on 2026-06-14:
 ## Next Step
 
 ```text
-Continue quant-agent-workspace W01D02. Rewrite Case 1 in fixed format; Case 2 and Case 3 have passed.
+Continue quant-agent-workspace W01D03. Start Strategy Hypothesis Design: convert research ideas into falsifiable strategy contracts.
 ```

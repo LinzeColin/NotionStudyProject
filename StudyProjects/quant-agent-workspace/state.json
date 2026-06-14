@@ -10,12 +10,12 @@
   "current_week": 1,
   "current_day": 2,
   "current_day_label": "第2/21天",
-  "current_focus": "Evidence/data source grading, freshness rules, and fail-closed behavior",
+  "current_focus": "D02 complete; next is Strategy Hypothesis Design",
   "last_session_date": "2026-06-14",
   "streak": 1,
   "missed_study_today": false,
   "last_reminder_at": "",
-  "next_action": "Continue quant-agent-workspace W01D02. Rewrite Case 1 in fixed format; Case 2 and Case 3 have passed.",
+  "next_action": "Continue quant-agent-workspace W01D03. Start Strategy Hypothesis Design: convert research ideas into falsifiable strategy contracts.",
   "notion_source": {
     "database_url": "https://app.notion.com/p/37eb1a986ba680bdb5f9ea2367b08991",
     "data_source_url": "collection://37eb1a98-6ba6-80ad-94e0-000bbda7ab85",
@@ -37,6 +37,6 @@
     "daily_sync_id": "study-project-daily-sync",
     "daily_sync_role": "detached local cron; reads project index and checks missed study"
   },
-  "lesson_status": "D01 recall passed; D02 opened early; 6-attempt review recorded; Case 2-3 passed; Case 1 fixed-format rewrite pending; D3 closed",
+  "lesson_status": "D01 complete; D02 complete after final Case 1 retest; 6-attempt review recorded; D3 gate open",
   "status": "active"
 }

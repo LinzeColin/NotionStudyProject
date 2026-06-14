@@ -1,6 +1,6 @@
 # External AI Review Results - 2026-06-14 D02
 
-Status: completed_6_attempt_review
+Status: completed_6_attempt_review; D02 complete after final Case 1 retest
 Reviewers:
 
 - Codex reviewer sub-agent `Nietzsche` (`019ec431-be0c-7f40-9696-9648356de974`)
@@ -85,3 +85,15 @@ Grade=A, OrderIntent=no until reconciled, fail-closed=block new order intents an
 ```
 
 Case 3 is accepted. A full production answer should also expire or recheck related existing intents and resume only after audit evidence confirms reconciliation.
+
+## Final Retest Result
+
+Case 1 final answer:
+
+```text
+Grade=A, OrderIntent=conditional, fail-closed=block signal/OrderIntent if 30s exceeds strategy freshness SLA, market is closed/halted, spread/depth abnormal, latency unknown, risk gate fails, tradable_at is unknown, or stronger-source conflict exists.
+```
+
+Decision: pass, score 5/5.
+
+Reason: the final answer correctly separates source credibility from trade-use eligibility and names the required fail-closed blockers. D02 is complete and D03 gate is open.
