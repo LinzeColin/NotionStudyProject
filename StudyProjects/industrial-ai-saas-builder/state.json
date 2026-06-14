@@ -1,0 +1,29 @@
+{
+  "project_slug": "industrial-ai-saas-builder",
+  "project_name": "Industrial AI SaaS Builder",
+  "timezone": "Australia/Sydney",
+  "status": "active_from_2026-06-15",
+  "duration_days": 34,
+  "start_date": "2026-06-15",
+  "end_date": "2026-07-18",
+  "current_day": 0,
+  "next_session": {
+    "date": "2026-06-15",
+    "day": 1,
+    "topic": "Local vectorized RAG mental model",
+    "required_output": "RAG 概念卡 + RAG 失败模式表"
+  },
+  "absorbed_sources": [
+    {
+      "slug": "ai",
+      "absorbed_scope": ["AI fundamentals", "LLMs", "Agent architecture", "automation", "AI productization"]
+    }
+  ],
+  "related_projects": {
+    "ai_workflow_operating_system": "prompt/loop/Codex/Notion/Mermaid/software workflow",
+    "local_ai_infrastructure": "local LLM/RAG/NPU/CNN/simulator infrastructure",
+    "ceo_finance_strategy_system": "business strategy/legal/finance/trading/arbitrage"
+  },
+  "notion_status": "pending; do not mutate Notion until schema/page format is fetched in the main workflow",
+  "last_updated": "2026-06-14"
+}
