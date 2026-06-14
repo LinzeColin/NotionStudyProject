@@ -14,6 +14,27 @@
   "current_progress_label": "第1/34天",
   "current_day_status": "completed_after_recall_attempt_02",
   "current_lesson_status": "D01_complete_D02_gate_open",
+  "scope_integration_2026_06_14": {
+    "authorized": true,
+    "integration_mode": "existing_projects_first_no_new_project_by_default",
+    "project_role": "business_judgment_roi_product_boundary_architecture_decision_only",
+    "included_as_judgment_topics": [
+      "large_document_RAG_knowledge_base_ROI",
+      "embedding_and_source_governance_as_product_quality",
+      "multimodal_vision_image_generation_use_case_ROI",
+      "local_vs_API_vs_remote_GPU_deployment_tradeoff",
+      "32B_70B_quantized_model_business_feasibility",
+      "training_large_models_as_defer_or_future_project_decision"
+    ],
+    "not_implementation_owner": [
+      "remote_GPU_setup",
+      "local_model_serving",
+      "vision_multimodal_runtime",
+      "local_data_pipeline_implementation",
+      "distributed_training_or_pretraining"
+    ],
+    "future_conditional_project": "GPU ML Systems & Model Training only if user explicitly opens a 60-90 day route"
+  },
   "required_outputs_status": {
     "RAG opportunity scorecard": "complete",
     "RAG vs model memory vs fine-tuning vs workflow automation vs agent decision matrix": "complete",
@@ -70,9 +91,11 @@
     "route_review": "completed",
     "acceleration_correction_review": "completed",
     "d01_completion_review": "blocked_logged_not_claimed",
+    "scope_integration_review": "completed_by_multi_agent_reviewer_Pasteur",
     "latest_packet": "StudyProjects/industrial-ai-saas-builder/05_REVIEWS/external_ai_reviews/2026-06-14_D01_completion_packet.md",
     "latest_result": "StudyProjects/industrial-ai-saas-builder/05_REVIEWS/external_ai_reviews/2026-06-14_D01_completion_results.md",
-    "blocker_reason": "Separate ChatGPT/Claude/Perplexity connectors unavailable; multi-agent review only runs when explicitly authorized."
+    "scope_integration_record": "_system/study-project-orchestrator/2026-06-14_SCOPE_UPDATE_GPU_RAG_MULTIMODAL.md",
+    "blocker_reason": "Separate ChatGPT/Claude/Perplexity connectors unavailable; multi-agent review was used for scope routing."
   },
   "missed_study_today": false,
   "acceleration_policy": {
@@ -96,16 +119,17 @@
     "date": "2026-06-14",
     "day": 1,
     "progress_label": "第1/34天",
-    "type": "D01_recall_attempt_02_passed",
-    "topic": "RAG vs model memory and RAG scenario judgment",
+    "type": "D01_recall_attempt_02_passed_plus_scope_integration",
+    "topic": "RAG vs model memory and routing GPU/RAG/multimodal/training scope",
     "actual_minutes": null,
     "github_log": "StudyProjects/industrial-ai-saas-builder/04_DAILY_LOGS/2026-06-14_D01.md",
     "remediation_note": "StudyProjects/industrial-ai-saas-builder/04_DAILY_LOGS/2026-06-14_D01_RAG_CORE_EXPLANATION.md",
     "recall_attempt_note": "StudyProjects/industrial-ai-saas-builder/04_DAILY_LOGS/2026-06-14_D01_RECALL_ATTEMPT_02.md",
+    "scope_integration_record": "_system/study-project-orchestrator/2026-06-14_SCOPE_UPDATE_GPU_RAG_MULTIMODAL.md",
     "notion_synced": true,
     "notion_page_id": "37fb1a98-6ba6-81d2-9a22-d08f109448d5",
     "external_review_or_blocker_logged": true,
-    "outcome": "Recall attempt 02 passed. D01 is complete and D02 gate is open."
+    "outcome": "Recall attempt 02 passed. D01 is complete and D02 gate is open. New GPU/RAG/multimodal/training scope was routed into existing projects without changing dates."
   },
   "next_session": {
     "date": "2026-06-15",
@@ -125,7 +149,9 @@
       "agent orchestration",
       "SaaS auth/billing/multi-tenancy",
       "prompt tricks",
-      "full business plan"
+      "full business plan",
+      "GPU infrastructure implementation",
+      "distributed training or from-scratch pretraining"
     ]
   },
   "learning_policy": {
@@ -134,7 +160,7 @@
     "notes_language": "Chinese by default except professional terms",
     "daily_end_requirement": "Always provide upcoming lesson map and sync GitHub + Notion when available."
   },
-  "notion_status": "synced",
+  "notion_status": "synced_scope_summary_2026-06-14",
   "notion_sources": {
     "codex_study_timeline_database_id": "37eb1a986ba680bdb5f9ea2367b08991",
     "codex_study_timeline_data_source": "collection://37eb1a98-6ba6-80ad-94e0-000bbda7ab85",
