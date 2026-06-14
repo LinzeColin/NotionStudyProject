@@ -5,3 +5,5 @@ date,global_day,track_id,group_code,archive_code,display_code,archive_day,master
 2026-06-14,2,2,PHYS,quant-ph,PHYS - quant-ph,1,1,d001_catchup_taught_not_validated,D002 starts with active recall before state model
 2026-06-14,2,1,Q-FIN,TR,Q-FIN - TR,1,4,d001_self_recall_partial_validated,D002 can start after quick terminology correction
 2026-06-14,2,2,PHYS,quant-ph,PHYS - quant-ph,1,2,d001_self_recall_partial_validated,D002 must reinforce measurement as filter and information boundary
+2026-06-14,2,1,Q-FIN,TR,Q-FIN - TR,2,7,d002_order_types_taught_not_validated,D003 starts with practice check on market/limit/stop orders
+2026-06-14,2,2,PHYS,quant-ph,PHYS - quant-ph,2,5,d002_state_model_taught_not_validated,D003 starts with practice check on state not equal reality
