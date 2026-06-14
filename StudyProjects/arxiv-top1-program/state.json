@@ -11,6 +11,7 @@
   "date_rule_for_notion_timeline": "Only currently active groups default to the program start date. Queued group dates must be computed from active-slot promotion rules or explicit project state; never default every queued group to today.",
   "learning_note_language_rule": "Learning notes, daily logs, reviews, and Notion note content must be Chinese by default. Keep English only for unavoidable professional terms, API names, paper/category codes, exact source titles, and tool names.",
   "daily_session_header_rule": "Every arXiv daily session must first state Global Day, both active Groups, current Archive codes/names, and Archive Day out of 30.",
+  "daily_judgment_question": "如果我是交易系统，今天这个概念会让我避免哪一种亏钱错觉？",
   "group_order": [
     "Q-FIN",
     "PHYS",
@@ -112,9 +113,9 @@
       "end_date": "2026-07-12",
       "archive_day": 2,
       "archive_cycle_days": 30,
-      "mastery_pct": 7,
+      "mastery_pct": 10,
       "status": "active",
-      "last_lesson_status": "D002 taught on 2026-06-14: market order, limit order, stop order. Not yet validated by user self-recall."
+      "last_lesson_status": "D002 partial validated on 2026-06-14. User understands market/limit order and state. Stop order standard answer taught; quick recall still needed before D003."
     },
     {
       "track_id": 2,
@@ -129,9 +130,9 @@
       "end_date": "2026-07-12",
       "archive_day": 2,
       "archive_cycle_days": 30,
-      "mastery_pct": 5,
+      "mastery_pct": 8,
       "status": "active",
-      "last_lesson_status": "D002 taught on 2026-06-14: state as computable description, not reality itself. Not yet validated by user self-recall."
+      "last_lesson_status": "D002 state recall validated on 2026-06-14. User understands state as computable/quantified compression that preserves some information and omits other information."
     }
   ],
   "promotion_rule": "Two active slots are maintained. When an active group completes, the next queued group in group_order starts the next calendar day in the freed slot. Do not assign queued group start dates before promotion unless the queue simulation already determines them.",
@@ -157,11 +158,12 @@
   "last_learning_session": {
     "date": "2026-06-14",
     "calendar_global_day": 2,
-    "lesson_covered": "D002",
-    "daily_log": "04_DAILY_LOGS/2026-06-14_D002.md",
-    "status": "taught_not_validated",
-    "reason": "D002 was taught after D001 partial validation. User has not yet repeated the three D002 practice answers."
+    "lesson_covered": "D002 validation",
+    "daily_log": "04_DAILY_LOGS/2026-06-14_D002_VALIDATION.md",
+    "status": "partial_validated",
+    "external_review_result": "05_REVIEWS/external_ai_reviews/2026-06-14_review_results.md",
+    "reason": "User recalled market/limit/state. Stop order was taught after user asked; external reviewer recommended spread/depth bridge before D003."
   },
-  "next_action": "Before D003, ask three recall questions: market order vs limit order; why stop order does not guarantee stop price fill; why state is not reality itself. Then teach price formation and amplitude vs probability.",
+  "next_action": "D003 must start with quick stop-order recall and a 10-minute bid/ask spread + order book depth bridge, then teach price formation and amplitude vs probability. Include daily judgment question: 如果我是交易系统，今天这个概念会让我避免哪一种亏钱错觉？",
   "status": "active"
 }
