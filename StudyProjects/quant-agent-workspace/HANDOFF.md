@@ -19,8 +19,9 @@ D01 completed and D02 opened early on 2026-06-14:
 - Q2/Q3 were retested and passed. D01 gate is closed as complete.
 - User strongly wants time-loss reduction in real trading. Safe translation recorded as `supervised live execution workflow`: Agent monitors, validates, risk-checks, generates `OrderIntent`, and alerts; human confirms execution.
 - D02 created `09_FRONTIER/data_source_matrix.md`; user practice is pending: classify three sources by grade, `OrderIntent` eligibility, and fail-closed action.
-- D02 has now been reviewed by three Codex reviewer sub-agents: `Nietzsche`, `Archimedes`, and `Ramanujan`. Fixes adopted: Case 1 is `OrderIntent=conditional`, matrix includes trade-use fields, three-part grading, reconciliation rules, and `OrderIntent` non-executable safety flags.
-- User attempted Case 1. Decision: partial pass, score 3/5. The answer named the right blockers, but "可操作候选池" must be corrected to `conditional signal candidate`, not `OrderIntent` yet.
+- D02 has a six-attempt review record: `Nietzsche`, `Archimedes`, and `Ramanujan` completed; ChatGPT, Claude, and Perplexity are recorded as `blocked_unavailable` because no callable reviewer connector/API/browser session was available. Fixes adopted: Case 1 is `OrderIntent=conditional`, matrix includes trade-use fields, three-part grading, reconciliation rules, and `OrderIntent` non-executable safety flags.
+- User attempted all D2 cases. Case 1 is partial pass, score 3/5, pending fixed-format rewrite. Case 2 passed 5/5. Case 3 passed 4/5. D3 remains closed.
+- `study-project-orchestrator` local skill was updated on 2026-06-14 to require a default roster of Agent + ChatGPT + Claude + Perplexity + two additional external/configured AI reviewer attempts, with at least five traceable attempts before claiming completion.
 
 ## Key Decisions
 
@@ -42,5 +43,5 @@ D01 completed and D02 opened early on 2026-06-14:
 ## Next Step
 
 ```text
-Continue quant-agent-workspace W01D02. Rewrite Case 1 in fixed format, then answer Case 2 and Case 3.
+Continue quant-agent-workspace W01D02. Rewrite Case 1 in fixed format; Case 2 and Case 3 have passed.
 ```

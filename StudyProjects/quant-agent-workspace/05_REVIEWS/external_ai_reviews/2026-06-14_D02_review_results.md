@@ -1,11 +1,18 @@
 # External AI Review Results - 2026-06-14 D02
 
-Status: completed_3_agent_review
+Status: completed_6_attempt_review
 Reviewers:
 
 - Codex reviewer sub-agent `Nietzsche` (`019ec431-be0c-7f40-9696-9648356de974`)
 - Codex reviewer sub-agent `Archimedes` (`019ec440-a4d3-71c1-a9b6-c727d491bc86`)
 - Codex reviewer sub-agent `Ramanujan` (`019ec440-f8f1-7403-a7e5-5b451381d3f0`)
+- ChatGPT: `blocked_unavailable` because no callable ChatGPT reviewer connector/API/browser session was available in this run.
+- Claude: `blocked_unavailable` because no callable Claude reviewer connector/API/browser session was available in this run.
+- Perplexity: `blocked_unavailable` because no callable Perplexity reviewer connector/API/browser session was available in this run.
+
+Roster evidence:
+
+- `2026-06-14_D02_reviewer_roster.csv`
 
 ## Findings
 
@@ -62,3 +69,19 @@ OrderIntent=conditional, not automatic yes.
 This is only a conditional signal candidate, not an OrderIntent yet.
 fail-closed=block signal/OrderIntent if 30s exceeds strategy freshness SLA, market is closed/halted, spread/depth abnormal, latency unknown, risk gate fails, tradable_at is unknown, or stronger-source conflict exists.
 ```
+
+## User Case 2-3 Decision
+
+Case 2: pass, score 5/5.
+
+```text
+Grade=D or C, OrderIntent=no, fail-closed=research-only until official filing or company announcement confirms.
+```
+
+Case 3: pass, score 4/5.
+
+```text
+Grade=A, OrderIntent=no until reconciled, fail-closed=block new order intents and reconcile broker report vs local ledger.
+```
+
+Case 3 is accepted. A full production answer should also expire or recheck related existing intents and resume only after audit evidence confirms reconciliation.

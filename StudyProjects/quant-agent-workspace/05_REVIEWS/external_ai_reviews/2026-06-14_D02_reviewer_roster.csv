@@ -1,0 +1,7 @@
+date,day,reviewer,reviewer_type,status,evidence,notes
+2026-06-14,D02,Nietzsche,configured_agent,completed,2026-06-14_D02_review_results.md,Reviewed D2 rubric and matrix; fixes adopted.
+2026-06-14,D02,Archimedes,configured_agent,completed,2026-06-14_D02_review_results.md,Reviewed user Case 1 and recommended conditional signal candidate wording.
+2026-06-14,D02,Ramanujan,configured_agent,completed,2026-06-14_D02_review_results.md,Reviewed teaching clarity and pass decision.
+2026-06-14,D02,ChatGPT,named_external_ai,blocked_unavailable,tool_search,No callable ChatGPT reviewer connector/API/browser session was available in this run.
+2026-06-14,D02,Claude,named_external_ai,blocked_unavailable,tool_search,No callable Claude reviewer connector/API/browser session was available in this run.
+2026-06-14,D02,Perplexity,named_external_ai,blocked_unavailable,tool_search,No callable Perplexity reviewer connector/API/browser session was available in this run.
