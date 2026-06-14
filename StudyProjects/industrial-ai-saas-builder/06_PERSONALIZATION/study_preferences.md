@@ -32,6 +32,7 @@ Updated: 2026-06-14
 | Multi-project confusion risk | User runs several Study Projects in parallel/sequence | Always read project index and state before writing. |
 | Artificial schedule padding | User rejected D000 and wants acceleration when possible | Never create Day 0; start the next real lesson early and keep all sync/review steps. |
 | Template friction | User dislikes being asked to fill templates when they need teaching | Provide worked answers and reusable artifacts, then use quick recall checks later. |
+| Core concept uncertainty | User explicitly said the RAG core statement was unknown and needed detailed explanation | Treat this as remediation gate; do not promote to next lesson until independent recall passes. |
 
 ## Teaching Adjustments
 
@@ -40,3 +41,4 @@ Updated: 2026-06-14
 | 2026-06-14 | Do not create D000; treat early start as D01 | User explicitly corrected that D00 has no value and acceleration is preferred | Project state corrected to D01 started early; D000 log removed. |
 | 2026-06-14 | If today's lesson is completed and user continues, advance to next lesson early | User wants faster overall completion when possible | Added to skill, reference, state, and handoff. |
 | 2026-06-14 | Use worked-answer mode when user asks Codex to complete learning instead of waiting for quiz answers | User wants concept teaching and usable answers, not empty templates | D01 completed with standard answers, scorecard, and decision matrix; D02 starts with quick independent recall. |
+| 2026-06-14 | When the user says a core problem has no answer/unclear, stop lesson progression and deliver deep concept remediation first | The user needs concept mastery before practice; D01 RAG core sentence was not yet internalized | Added D01 RAG core explanation note, Notion supplement, state recall gate, and project index block before D02. |
