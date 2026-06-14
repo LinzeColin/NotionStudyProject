@@ -1,2 +1,2 @@
 date,week,day,planned_minutes,actual_minutes,energy_1_5,recall_score_1_5,concept_score_1_5,output_score_1_5,roi_score_1_5,streak,notion_synced,github_updated,next_action
-2026-06-14,W01,D01,45,,,3,4,5,5,1,yes,yes,"D02: RAG pipeline as failure surface; start with quick recall on RAG vs model memory and wrong-tool cases"
+2026-06-14,W01,D01,45,,,5,5,5,5,1,yes,yes,"D02: RAG pipeline as failure surface; output pipeline architecture diagram + component failure-mode table"
