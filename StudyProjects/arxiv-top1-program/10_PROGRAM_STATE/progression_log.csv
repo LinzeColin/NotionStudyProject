@@ -7,3 +7,5 @@ date,global_day,track_id,group_code,archive_code,display_code,archive_day,master
 2026-06-14,2,2,PHYS,quant-ph,PHYS - quant-ph,1,2,d001_self_recall_partial_validated,D002 must reinforce measurement as filter and information boundary
 2026-06-14,2,1,Q-FIN,TR,Q-FIN - TR,2,7,d002_order_types_taught_not_validated,D003 starts with practice check on market/limit/stop orders
 2026-06-14,2,2,PHYS,quant-ph,PHYS - quant-ph,2,5,d002_state_model_taught_not_validated,D003 starts with practice check on state not equal reality
+2026-06-14,2,1,Q-FIN,TR,Q-FIN - TR,2,10,d002_self_recall_partial_validated,D003 starts with 10-minute bid/ask spread + depth bridge before price formation
+2026-06-14,2,2,PHYS,quant-ph,PHYS - quant-ph,2,8,d002_state_recall_validated,D003 can proceed to amplitude vs probability after quick state recall
