@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Re Zero Emilia minimal Notion-style icon">
+  <defs>
+    <linearGradient id="paper" x1="52" y1="36" x2="204" y2="220">
+      <stop stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f7f8fb"/>
+    </linearGradient>
+    <linearGradient id="ice" x1="68" y1="48" x2="194" y2="200">
+      <stop stop-color="#e9f7ff"/>
+      <stop offset="0.55" stop-color="#d9d6ff"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+    <linearGradient id="violet" x1="96" y1="86" x2="170" y2="166">
+      <stop stop-color="#c4b5fd"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="256" height="256" rx="48" fill="#fbfbfc"/>
+  <rect x="50" y="35" width="156" height="186" rx="26" fill="url(#paper)" stroke="#d9dbe3" stroke-width="7"/>
+
+  <path d="M82 77h92M82 103h92M82 129h42" stroke="#d6d9e2" stroke-width="9" stroke-linecap="round"/>
+  <path d="M74 174c18 18 48 26 82 20 14-3 25-8 34-15" fill="none" stroke="#e5e7eb" stroke-width="10" stroke-linecap="round"/>
+
+  <path d="M89 160c21-47 49-75 84-91-13 32-28 67-22 111-20-22-41-26-62-20z" fill="url(#ice)" stroke="#cbd5e1" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M112 150c15-26 32-45 51-58-9 22-16 44-14 69-12-10-25-14-37-11z" fill="#ffffff" opacity="0.72"/>
+
+  <circle cx="129" cy="166" r="22" fill="#ffffff" stroke="#d8b4fe" stroke-width="6"/>
+  <path d="M129 147v38M110 166h38M116 153l26 26M142 153l-26 26" stroke="url(#violet)" stroke-width="5" stroke-linecap="round"/>
+
+  <path d="M188 58l14 14-14 14-14-14z" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="5"/>
+  <path d="M61 201h28" stroke="#e5e7eb" stroke-width="7" stroke-linecap="round"/>
+</svg>
