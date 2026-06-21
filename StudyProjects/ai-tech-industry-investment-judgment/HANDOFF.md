@@ -42,7 +42,7 @@ Build a 30-day Study Project for AI-era technology, industry and investment judg
 
 ## Duration Change
 
-User changed the active cycle from 90 days to 30 days. The current end date is `2026-07-20`. The 60/90-day company valuation, full memo, simulation portfolio, and monitoring-system work is now treated as post-30 extension候选, not current-cycle scope.
+User clarified the active cycle should be a 30-day compression, not content reduction. The current end date is `2026-07-20`. AI capability, infrastructure, power bottlenecks, company research, financial model, Reverse DCF, simulated portfolio, monitoring Dashboard, and Memo output all remain in current-cycle scope. Delivery depth is compressed into minimum viable assets.
 
 ## Next Step
 

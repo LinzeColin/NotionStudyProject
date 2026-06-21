@@ -7,6 +7,7 @@
 | 2026-06-21 | Project select option | updated | `AI Tech Industry Investment Judgment` | Added to `Project` select after first create attempt failed safely. |
 | 2026-06-21 | New project page | created_verified | `386b1a98-6ba6-8120-86dc-c28e53ce3809` | Page created in `Codex Study Timeline` with date range, tags, B-tech icon and notebook body. |
 | 2026-06-21 | Project duration | updated_verified | `386b1a98-6ba6-8120-86dc-c28e53ce3809` | Changed active cycle to 30 days; Notion date range set to 2026-06-21 through 2026-07-20. |
+| 2026-06-21 | Compression scope | corrected | `386b1a98-6ba6-8120-86dc-c28e53ce3809` | Corrected route: 30 days compresses time only and keeps all original learning modules. |
 
 ## Backup Location
 

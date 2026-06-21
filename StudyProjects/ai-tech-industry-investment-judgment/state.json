@@ -18,6 +18,7 @@
     "company research",
     "financial statements and valuation",
     "probability and falsification",
+    "simulated portfolio and risk budget",
     "memo writing and monitoring dashboard"
   ],
   "hard_boundaries": [
@@ -28,7 +29,7 @@
     "no financial advice",
     "facts inference opinion unknown must be separated"
   ],
-  "notion_status": "synced_duration_30_2026-06-21",
+  "notion_status": "synced_30_day_full_content_2026-06-21",
   "notion_sources": {
     "codex_study_timeline_database_id": "37eb1a98-6ba6-80bd-b5f9-ea2367b08991",
     "codex_study_timeline_data_source": "collection://37eb1a98-6ba6-80ad-94e0-000bbda7ab85",
@@ -36,7 +37,7 @@
     "timeline_page_url": "https://app.notion.com/p/386b1a986ba6812086dcc28e53ce3809",
     "timeline_project_select": "AI Tech Industry Investment Judgment"
   },
-  "github_status": "duration_update_synced_2026-06-21",
+  "github_status": "full_content_compression_synced_2026-06-21",
   "external_review_status": {
     "roadmap_packet": "StudyProjects/ai-tech-industry-investment-judgment/05_REVIEWS/roadmap_generation_packet.md",
     "status": "blocked_unavailable",
@@ -56,7 +57,20 @@
     "to_days": 30,
     "from_end_date": "2026-09-18",
     "to_end_date": "2026-07-20",
-    "reason": "User requested changing the Study Project duration to 30 days."
+    "reason": "User requested changing the Study Project duration to 30 days.",
+    "content_policy": "compress_time_only_do_not_reduce_learning_content",
+    "current_cycle_includes": [
+      "AI capability measurement",
+      "AI infrastructure supply chain",
+      "data center and power bottlenecks",
+      "company research",
+      "financial statements",
+      "Reverse DCF and scenario valuation",
+      "probability and falsification",
+      "simulated portfolio",
+      "industrial monitoring dashboard",
+      "three memo outputs including one full-structure draft"
+    ]
   },
   "last_updated": "2026-06-21"
 }

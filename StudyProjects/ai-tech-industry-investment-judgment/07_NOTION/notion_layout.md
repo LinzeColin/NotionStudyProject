@@ -18,6 +18,7 @@ The Notion page should stay simple:
 7. Memo Tracker
 8. 公司池
 9. 周复盘
+10. 30天全内容压缩路线
 
 ## Minimal Properties
 
@@ -28,6 +29,10 @@ Use existing `Codex Study Timeline` fields only:
 | Name | AI时代技术-产业-投资判断力 |
 | Project | AI Tech Industry Investment Judgment |
 | Date | 2026-06-21 to 2026-07-20 |
+
+## Compression Note
+
+This is a 30-day time compression, not a content reduction. The Notion page must keep company research, financial model, Reverse DCF, simulated portfolio, monitoring dashboard, and Memo output inside the current cycle.
 | Tags | AI infrastructure, investment research, valuation, memo, evidence |
 
 ## Icon Rule

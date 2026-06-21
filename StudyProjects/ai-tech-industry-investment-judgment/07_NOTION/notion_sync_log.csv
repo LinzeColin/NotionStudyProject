@@ -4,3 +4,5 @@ date,object,status,details
 2026-06-21,Project select option,updated,Added AI Tech Industry Investment Judgment after safe create failure reported missing select option.
 2026-06-21,New project page,created_verified,Created and fetched https://app.notion.com/p/386b1a986ba6812086dcc28e53ce3809.
 2026-06-21,Project duration,updated_verified,Changed active cycle from 90 days to 30 days and updated Notion date end to 2026-07-20.
+2026-06-21,Compression scope,corrected,User clarified 30 days means time compression only; restored company research valuation portfolio monitoring and memo into current-cycle scope.
+2026-06-21,Notion page body,updated_verified,Synced 30-day full-content compressed route into Notion page body.

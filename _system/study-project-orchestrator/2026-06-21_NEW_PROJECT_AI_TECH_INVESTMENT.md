@@ -34,7 +34,7 @@ Slug: `ai-tech-industry-investment-judgment`
 | Previous end date | 2026-09-18 |
 | New end date | 2026-07-20 |
 | Notion status | Date range and page body updated |
-| Scope impact | Full valuation model, full investment Memo, simulated portfolio, and monitoring system v1 are moved to post-30 extension候选. |
+| Scope impact | User clarified this is time compression only. Full learning modules stay in current-cycle scope; outputs become compressed minimum viable assets. |
 
 ## Why Project Index Was Not Committed Here
 
