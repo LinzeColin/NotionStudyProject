@@ -19,11 +19,22 @@ Slug: `ai-tech-industry-investment-judgment`
 | Field | Value |
 |---|---|
 | Path | `StudyProjects/ai-tech-industry-investment-judgment/` |
-| Duration | 90 days |
-| Window | 2026-06-21 to 2026-09-18 |
-| Current progress | D01 / 第1/90天, project created but lesson not started |
+| Duration | 30 days |
+| Window | 2026-06-21 to 2026-07-20 |
+| Current progress | D01 / 第1/30天, project created but lesson not started |
 | Notion page | `386b1a98-6ba6-8120-86dc-c28e53ce3809` |
 | Notion URL | `https://app.notion.com/p/386b1a986ba6812086dcc28e53ce3809` |
+
+## 2026-06-21 Duration Change
+
+| Field | Value |
+|---|---|
+| Previous duration | 90 days |
+| New duration | 30 days |
+| Previous end date | 2026-09-18 |
+| New end date | 2026-07-20 |
+| Notion status | Date range and page body updated |
+| Scope impact | Full valuation model, full investment Memo, simulated portfolio, and monitoring system v1 are moved to post-30 extension候选. |
 
 ## Why Project Index Was Not Committed Here
 

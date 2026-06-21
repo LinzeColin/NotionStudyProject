@@ -3,12 +3,12 @@
   "project_name": "AI时代技术-产业-投资判断力",
   "timezone": "Australia/Sydney",
   "status": "active_from_2026-06-21",
-  "duration_days": 90,
+  "duration_days": 30,
   "start_date": "2026-06-21",
-  "end_date": "2026-09-18",
+  "end_date": "2026-07-20",
   "current_week": 1,
   "current_day": 1,
-  "current_progress_label": "第1/90天",
+  "current_progress_label": "第1/30天",
   "current_day_status": "project_created_not_started",
   "source_file": "/Users/linzezhang/Downloads/投资逻辑分析.rtf",
   "scope": [
@@ -28,7 +28,7 @@
     "no financial advice",
     "facts inference opinion unknown must be separated"
   ],
-  "notion_status": "synced_created_2026-06-21",
+  "notion_status": "synced_duration_30_2026-06-21",
   "notion_sources": {
     "codex_study_timeline_database_id": "37eb1a98-6ba6-80bd-b5f9-ea2367b08991",
     "codex_study_timeline_data_source": "collection://37eb1a98-6ba6-80ad-94e0-000bbda7ab85",
@@ -36,7 +36,7 @@
     "timeline_page_url": "https://app.notion.com/p/386b1a986ba6812086dcc28e53ce3809",
     "timeline_project_select": "AI Tech Industry Investment Judgment"
   },
-  "github_status": "pushed_commit_fa00cf9",
+  "github_status": "duration_update_synced_2026-06-21",
   "external_review_status": {
     "roadmap_packet": "StudyProjects/ai-tech-industry-investment-judgment/05_REVIEWS/roadmap_generation_packet.md",
     "status": "blocked_unavailable",
@@ -45,10 +45,18 @@
   "next_session": {
     "date": "2026-06-21",
     "day": 1,
-    "progress_label": "第1/90天",
+    "progress_label": "第1/30天",
     "topic": "个人研究章程",
     "core_question": "为什么我的目标不是复制明星投资人的持仓？",
-    "required_output": "个人研究章程 + 证据等级表 v0.1 + 90天研究系统边界"
+    "required_output": "个人研究章程 + 证据等级表 v0.1 + 30天研究系统边界"
+  },
+  "duration_change": {
+    "date": "2026-06-21",
+    "from_days": 90,
+    "to_days": 30,
+    "from_end_date": "2026-09-18",
+    "to_end_date": "2026-07-20",
+    "reason": "User requested changing the Study Project duration to 30 days."
   },
   "last_updated": "2026-06-21"
 }

@@ -11,7 +11,7 @@ The Notion page should stay simple:
 
 1. 项目范围
 2. 核心目标
-3. 当前 90 天课程地图
+3. 当前 30 天课程地图
 4. Week 1 任务
 5. 研究章程
 6. 证据等级
@@ -27,7 +27,7 @@ Use existing `Codex Study Timeline` fields only:
 |---|---|
 | Name | AI时代技术-产业-投资判断力 |
 | Project | AI Tech Industry Investment Judgment |
-| Date | 2026-06-21 to 2026-09-18 |
+| Date | 2026-06-21 to 2026-07-20 |
 | Tags | AI infrastructure, investment research, valuation, memo, evidence |
 
 ## Icon Rule

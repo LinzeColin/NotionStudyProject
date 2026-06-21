@@ -3,3 +3,4 @@ date,object,status,details
 2026-06-21,NotionBackup,created,Backup manifest and snapshots saved under NotionBackup/20260621.
 2026-06-21,Project select option,updated,Added AI Tech Industry Investment Judgment after safe create failure reported missing select option.
 2026-06-21,New project page,created_verified,Created and fetched https://app.notion.com/p/386b1a986ba6812086dcc28e53ce3809.
+2026-06-21,Project duration,updated_verified,Changed active cycle from 90 days to 30 days and updated Notion date end to 2026-07-20.

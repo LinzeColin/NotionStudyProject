@@ -5,7 +5,7 @@ Updated: 2026-06-21
 
 ## Current Goal
 
-Build a 90-day Study Project for AI-era technology, industry and investment judgment from `/Users/linzezhang/Downloads/投资逻辑分析.rtf`.
+Build a 30-day Study Project for AI-era technology, industry and investment judgment from `/Users/linzezhang/Downloads/投资逻辑分析.rtf`.
 
 ## Current State
 
@@ -16,14 +16,15 @@ Build a 90-day Study Project for AI-era technology, industry and investment judg
 | Notion project page | created and verified |
 | External review handshake | blocked_unavailable in this side conversation |
 | Day 1 lesson | not started |
+| Duration update | changed from 90 days to 30 days on 2026-06-21 |
 
 ## Key Decisions
 
 | Decision | Value |
 |---|---|
-| Duration | 90 days |
+| Duration | 30 days |
 | Start | 2026-06-21 |
-| End | 2026-09-18 |
+| End | 2026-07-20 |
 | Learning boundary | Research and simulated decision system only, no real-money trading or options/leverage tasks |
 | Notion role | Clean notebook in `Codex Study Timeline` |
 | GitHub role | Source of truth under `StudyProjects/ai-tech-industry-investment-judgment/` |
@@ -37,12 +38,16 @@ Build a 90-day Study Project for AI-era technology, industry and investment judg
 | Page ID | `386b1a98-6ba6-8120-86dc-c28e53ce3809` |
 | Page URL | `https://app.notion.com/p/386b1a986ba6812086dcc28e53ce3809` |
 | Project select | `AI Tech Industry Investment Judgment` |
-| Date | 2026-06-21 to 2026-09-18 |
+| Date | 2026-06-21 to 2026-07-20 |
+
+## Duration Change
+
+User changed the active cycle from 90 days to 30 days. The current end date is `2026-07-20`. The 60/90-day company valuation, full memo, simulation portfolio, and monitoring-system work is now treated as post-30 extension候选, not current-cycle scope.
 
 ## Next Step
 
-Start D01 / 第1/90天:
+Start D01 / 第1/30天:
 
 ```plain text
-Continue ai-tech-industry-investment-judgment D01 / 第1/90天。先做主动回忆：为什么我的目标不是复制明星投资人的持仓？然后建立《个人研究章程》。
+Continue ai-tech-industry-investment-judgment D01 / 第1/30天。先做主动回忆：为什么我的目标不是复制明星投资人的持仓？然后建立《个人研究章程》。
 ```

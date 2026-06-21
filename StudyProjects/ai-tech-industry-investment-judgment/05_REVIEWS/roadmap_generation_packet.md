@@ -2,11 +2,11 @@
 
 Project: `ai-tech-industry-investment-judgment`
 Created: 2026-06-21
-Purpose: Prepare external review for the 90-day route.
+Purpose: Prepare external review for the 30-day route.
 
 ## Review Questions
 
-1. 90 天路线是否过宽，哪些模块应压缩或延后？
+1. 30 天路线是否仍然过宽，哪些模块应压缩或延后？
 2. 是否有更高 ROI 的 AI 基础设施/投资判断学习顺序？
 3. 哪些主题容易制造虚假理解或伪进度？
 4. W01 的研究操作系统是否足够支撑后续公司研究和估值？

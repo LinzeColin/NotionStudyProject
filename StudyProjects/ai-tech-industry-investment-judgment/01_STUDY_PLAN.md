@@ -1,8 +1,8 @@
 # Study Plan
 
 Project: `ai-tech-industry-investment-judgment`
-Duration: 90 days
-Progress format: `第X/90天`
+Duration: 30 days
+Progress format: `第X/30天`
 Default daily time: flexible, with green/yellow/red protocol
 
 ## Learning Strategy
@@ -36,7 +36,7 @@ Default daily time: flexible, with green/yellow/red protocol
 | D06 | 2026-06-26 | 公司池 v0.1 | 5 家公司研究卡 | 每家公司有业务、瓶颈、风险、数据源。 |
 | D07 | 2026-06-27 | W01 复盘 | 一页周复盘 + W02 唯一问题 | 删除低价值任务，确定下一周主线。 |
 
-## 30-Day System Layer
+## 30-Day Current Cycle
 
 | Stage | Days | Focus | Output |
 |---|---:|---|---|
@@ -45,40 +45,24 @@ Default daily time: flexible, with green/yellow/red protocol
 | AI infrastructure | D15-D21 | GPU、HBM、网络、存储、云、数据中心 | AI 计算产业链图 |
 | Power bottleneck | D22-D30 | 电力、冷却、并网、土地、建设周期 | AI 基础设施瓶颈树 + 第一篇两页产业观察 |
 
-## 60-Day Company And Valuation Layer
+## Post-30 Extension候选
 
-| Stage | Days | Focus | Output |
-|---|---:|---|---|
-| Bottleneck economics | D31-D37 | 供给弹性、扩产周期、利润池迁移 | 20 家公司研究池 |
-| Financial statements | D38-D44 | 收入、毛利、CapEx、折旧、FCF、ROIC | 一家公司三表分析 |
-| Valuation | D45-D51 | Reverse DCF、WACC、预期差、三情景估值 | 一个可修改假设的估值模型 |
-| Moat and falsification | D52-D60 | 合同、客户集中度、融资、资源权利、反方证据 | Bull/Base/Bear 决策卡 |
+30 天结束后，周复盘决定是否进入 60/90 天扩展。扩展候选不计入当前周期验收。
 
-## 90-Day Decision And Output Layer
+| Extension | Focus | Output |
+|---|---|---|
+| Company and valuation | 供给弹性、公司池、三表、FCF、ROIC、Reverse DCF | 20 家公司研究池 + 一个估值模型 |
+| Decision and portfolio | 一手资料、完整 Memo、模拟组合、风险预算 | 5-8 页完整 Memo + 模拟组合 |
+| Monitoring system | 领先指标、催化剂、告警规则、Dashboard | AI 产业监控系统 v1 |
 
-| Stage | Days | Focus | Output |
-|---|---:|---|---|
-| Primary-source research | D61-D67 | 年报、电话会、官方数据、监管文件 | 第一篇完整投资 Memo |
-| Portfolio and risk | D68-D74 | 模拟组合、仓位、相关性、最大损失 | 模拟组合 + 风险预算 |
-| Monitoring | D75-D81 | 领先指标、催化剂、证伪信号 | 产业雷达与告警规则 |
-| Investment committee | D82-D90 | 最终整合、反方答辩、下一周期计划 | 5-8 页完整 Memo + 未来90天迭代计划 |
-
-## 12-Week Deliverables
+## 4-Week Deliverables
 
 | Week | Theme | Main deliverable |
 |---:|---|---|
 | W01 | 研究操作系统 | 《个人研究章程》+ Evidence Ladder + Claim Ledger |
 | W02 | AI 能力测量 | AI 能力指标面板 v0.1 |
 | W03 | AI 计算产业链 | GPU/HBM/网络/存储/云产业链图 |
-| W04 | 数据中心与电力 | AI 基础设施瓶颈树 |
-| W05 | 瓶颈经济学 | 20 家公司研究池 |
-| W06 | 财务与单位经济 | 一家公司三表分析 |
-| W07 | 估值与预期差 | Reverse DCF + 三情景估值 |
-| W08 | 护城河与证伪 | Bull/Base/Bear 决策卡 |
-| W09 | 一手资料研究 | 第一篇完整 Memo |
-| W10 | 组合与风险 | 模拟组合 + 风险预算 |
-| W11 | 催化剂与监控 | 产业雷达和告警规则 |
-| W12 | 投资委员会 | 最终 Memo + 口头答辩提纲 |
+| W04 | 数据中心、电力与综合输出 | AI 基础设施瓶颈树 + 两页产业观察 / Mini Memo |
 
 ## Green / Yellow / Red Protocol
 

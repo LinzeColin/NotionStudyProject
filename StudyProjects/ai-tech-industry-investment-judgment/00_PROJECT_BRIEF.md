@@ -3,15 +3,15 @@
 Project slug: `ai-tech-industry-investment-judgment`
 Timezone: Australia/Sydney
 Start date: 2026-06-21
-Planned end date: 2026-09-18
-Duration: 90 days
+Planned end date: 2026-07-20
+Duration: 30 days
 Status: active from 2026-06-21
 
 ## Core Goal
 
 目标不是复制任何投资人的持仓，也不是追逐短期热点，而是成为具备技术预测、产业链推演、财务估值、概率判断和工具构建能力的 AI 时代研究型建设者。
 
-90 天后，最低可验收结果是一篇有数据、有估值、有反方观点、有证伪条件的产业或公司投资 Memo，以及一套可继续复利的研究系统。
+30 天后，最低可验收结果是一篇有数据、有反方观点、有证伪条件的 AI 基础设施产业观察 / Mini Memo，以及一套可继续复利的研究底座。完整公司估值模型、模拟组合和多篇投资 Memo 放到后续扩展周期，不塞进当前 30 天。
 
 ## Scope
 
@@ -38,15 +38,15 @@ Status: active from 2026-06-21
 
 ## Success Criteria
 
-| Capability | 90-day evidence |
+| Capability | 30-day evidence |
 |---|---|
 | 技术判断 | AI 能力趋势图、benchmark 质量卡、技术驱动解释。 |
 | 产业推演 | AI 基础设施产业链图、瓶颈树、利润池迁移假设。 |
-| 公司研究 | 10-20 家公司研究数据库和至少 3 个反方证据。 |
-| 财务估值 | 一个可修改假设的财务与估值模型。 |
-| 概率决策 | 至少 30 条带概率、期限、证伪条件的预测记录。 |
-| 输出能力 | 3 篇研究 Memo，至少 1 篇 5-8 页完整 Memo。 |
-| 工具复利 | AI 产业监控 Dashboard 和可复用研究模板。 |
+| 公司研究 | 5-10 家公司研究池，每家公司至少 1 个反方证据。 |
+| 财务估值 | 估值前置框架：收入、CapEx、FCF、ROIC、市场预期差字段。 |
+| 概率决策 | 至少 10 条带概率、期限、证伪条件的预测记录。 |
+| 输出能力 | 1 篇 2-4 页产业观察 / Mini Memo。 |
+| 工具复利 | AI 产业监控 Dashboard v0.1 和可复用研究模板。 |
 
 ## Source Input
 
@@ -54,11 +54,11 @@ Primary source file:
 
 `/Users/linzezhang/Downloads/投资逻辑分析.rtf`
 
-The source file provides the project name, default 90-day route, first-week plan, hard constraints, daily green/yellow/red protocol, and Notion-ready notes.
+The source file provides the project name, default 90-day route, first-week plan, hard constraints, daily green/yellow/red protocol, and Notion-ready notes. The active cycle was shortened to 30 days by user instruction on 2026-06-21.
 
 ## Day 1
 
-2026-06-21 is `Day 1/90`.
+2026-06-21 is `Day 1/30`.
 
 Day 1 focus:
 
@@ -68,4 +68,4 @@ Day 1 focus:
 
 Minimum output:
 
-`个人研究章程 + 证据等级表 v0.1 + 90天研究系统边界`
+`个人研究章程 + 证据等级表 v0.1 + 30天研究系统边界`

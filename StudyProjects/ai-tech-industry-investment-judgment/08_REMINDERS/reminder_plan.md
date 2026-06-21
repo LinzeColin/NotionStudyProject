@@ -5,7 +5,7 @@ Purpose: bring the user back to Codex daily. Reminder is not the main teaching s
 ## Default Prompt
 
 ```plain text
-Continue ai-tech-industry-investment-judgment. Tell me today's Day X/90, start with active recall, then teach today's concept and sync GitHub/Notion.
+Continue ai-tech-industry-investment-judgment. Tell me today's Day X/30, start with active recall, then teach today's concept and sync GitHub/Notion.
 ```
 
 ## Schedule
