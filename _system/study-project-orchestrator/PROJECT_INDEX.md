@@ -10,7 +10,7 @@
 
 # Study Project Index
 
-Generated: 2026-06-14  
+Generated: 2026-06-22  
 Timezone: Australia/Sydney  
 Status: active
 
@@ -28,7 +28,7 @@ Default execution through 2026-08-15 is controlled parallel mode for the existin
 | 4 | GPU ML Systems & Model Training | `gpu-ml-systems-model-training` | scheduled from 2026-06-30 | GPU ML systems / CUDA / PyTorch / distributed training / FSDP / ZeRO / NCCL / Megatron-LM / DeepSpeed / model training operations | 2026-06-30 to 2026-09-27 | not_started; next is D01 / 第1/90天 | `37fb1a98-6ba6-81f1-929a-fd4290f4be04` | 2026-06-14 | Start D01 on 2026-06-30 with actual hardware/environment profile; do not plan expensive training before hardware and budget are verified. |
 | 5 | AI Workflow Operating System | `ai-workflow-operating-system` | queued | Prompt / Loop / AI Agent / Codex / Notion OS / Mermaid / software workflow / local-remote model tool routing / RAG as tool / multimodal tool workflow | 2026-07-19 to 2026-08-15 | not_started; next is D01 / 第1/28天 | `37fb1a98-6ba6-8146-a1ac-f721aa2aff8f` | 2026-06-14 | Start D01 on 2026-07-19 unless explicitly pulled earlier; runs in parallel with Local AI Infrastructure; keep model/RAG/multimodal capabilities as bounded tools. |
 | 6 | Local AI Infrastructure | `local-ai-infrastructure` | scheduled parallel from 2026-07-19 | Remote GPU / Local LLM / 32B-70B quantized models / local RAG / large document knowledge base / multimodal / NPU / CNN / local big-data strategy simulator / training decision literacy | 2026-07-19 to 2026-08-15 | not_started; next is D01 / 第1/28天 | `37fb1a98-6ba6-815b-b096-c70b9183d79f` | 2026-06-14 | Start D01 on 2026-07-19 in controlled parallel with AI Workflow Operating System; verify actual new machine specs after 2026-06-30 before changing hardware assumptions. |
-| 7 | arXiv Top1 Program | `arxiv-top1-program` | active rolling program | arXiv / Q-FIN, PHYS, MATH, STAT, CS, ECON, EE/EESS, Q-BIO | rolling archive schedule | Q-FIN `q-fin.TR` D003 validated; PHYS `quant-ph` D003 validated; MATH `math.PR` D002 validated on 2026-06-21; Roadmap page created; CS route date repaired | Roadmap `37fb1a98-6ba6-8113-98bc-e669dcb55d3e`; MATH `386b1a98-6ba6-81a7-a8ce-f76d95e6f511`; existing group pages | 2026-06-21 | Next arXiv teaching must cover one exact archive only and use balanced catch-up. Default next: MATH `math.PR` D003; PHYS `quant-ph` D004 and Q-FIN `q-fin.TR` D004 wait. |
+| 7 | arXiv Top1 Program | `arxiv-top1-program` | active rolling program | arXiv / Q-FIN, PHYS, MATH, STAT, CS, ECON, EE/EESS, Q-BIO | rolling archive schedule | Q-FIN `q-fin.TR` D003 validated and D004 LOB/VWAP gate validated on 2026-06-22; PHYS `quant-ph` D003 validated; MATH `math.PR` D003 validated on 2026-06-22; Roadmap page created; CS route date repaired | Roadmap `37fb1a98-6ba6-8113-98bc-e669dcb55d3e`; MATH `386b1a98-6ba6-81a7-a8ce-f76d95e6f511`; existing group pages | 2026-06-22 | Next arXiv teaching must cover one exact archive only. Default next: Q-FIN `q-fin.TR` D004 adverse selection; start with VWAP recall and why immediate fill can be bad news. |
 | 8 | 全工业体系 666 小类 ROI 学习计划 | `industrial-666-roi-map` | active from 2026-06-15 | Industrial taxonomy / manufacturing strategy / GB/T 4754-2017 small-class ranking / industry research / ROI opportunity mapping | 2026-06-15 to 2026-09-12 | D01 open / 第1/90天; project scaffold created; Notion row-level sync complete via Chrome fallback; page body/icon incomplete | `Codex Study Timeline` row verified via Chrome fallback; connector still blocked; page body/icon pending | 2026-06-16 | Start D01: verify taxonomy/source strategy, teach why industrial small class is the minimum unit, and explain scoring schema v0.1. |
 
 ## Archived / Superseded Projects
@@ -108,11 +108,11 @@ arXiv now runs three active groups daily:
 
 | Slot | Group | Current archive | Start | Archive day |
 |---:|---|---|---|---:|
-| 1 | Q-FIN | `q-fin.TR` Trading and Market Microstructure | 2026-06-13 | 3/30 validated |
+| 1 | Q-FIN | `q-fin.TR` Trading and Market Microstructure | 2026-06-13 | 3/30 validated; D004 LOB/VWAP gate validated on 2026-06-22 |
 | 2 | PHYS | `quant-ph` Quantum Physics | 2026-06-13 | 3/30 validated |
-| 3 | MATH | `math.PR` Probability | 2026-06-15 | D002 validated on 2026-06-21; next D003 |
+| 3 | MATH | `math.PR` Probability | 2026-06-15 | 3/30 validated on 2026-06-22 |
 
-Do not retroactively mark MATH as studied on 2026-06-14. MATH D002 was validated on 2026-06-21; continue balanced catch-up with MATH D003 before PHYS/Q-FIN D004 unless the user requests focus mode.
+Do not retroactively mark MATH as studied on 2026-06-14. MATH D003 was validated on 2026-06-22. Since all active tracks are now at D003 and Q-FIN D004 pre-gate is complete, the default next lesson is Q-FIN `q-fin.TR` D004 adverse selection unless the user requests PHYS or MATH focus mode.
 
 ## Routing Rules
 
@@ -122,7 +122,7 @@ Before reading or writing any project state:
 2. Match it against this index.
 3. If there is no matching project, run the new project intake lock.
 4. If multiple projects match, ask the user to choose from a numbered list.
-5. Write only to the selected project folder under `StudyProjects/<project-slug>/`.
+5. Write only to the selected project folder under `StudyProjects/<project-slug>`.
 6. Learning notes, daily logs, reviews, and Notion note content must be Chinese by default. Keep English only for professional terms, archive codes, exact source titles, API names, and tool names.
 7. `study-project-daily-sync` is a detached local cron sync. It must read GitHub/Notion directly and must not rely on the current chat thread.
 8. Do not route new AI/Agent/LLM lessons to the old `ai` folder unless explicitly reactivated.
