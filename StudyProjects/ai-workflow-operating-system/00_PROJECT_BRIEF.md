@@ -3,9 +3,9 @@
 Project slug: `ai-workflow-operating-system`
 Timezone: Australia/Sydney
 Planned start date: 2026-06-22
-Planned end date: 2026-07-19
+Planned end date: 2026-07-18
 Duration: 28 days
-Status: active / D01 completed
+Status: active / D02 completed
 
 ## Goal
 
@@ -25,7 +25,7 @@ This project consolidates:
 
 ## 2026-06-22 Early Start Note
 
-The project was originally queued for 2026-07-19. The user explicitly pulled Prompt Engineering / Loop Engineering learning forward on 2026-06-22. Per the no-D000 acceleration rule, 2026-06-22 is D01, not D0, and the 28-day route now runs through 2026-07-19.
+The project was originally queued for 2026-07-19. The user explicitly pulled Prompt Engineering / Loop Engineering learning forward on 2026-06-22. Per the no-D000 acceleration rule, 2026-06-22 is D01, not D0. The user then continued immediately, so D02 was also completed on 2026-06-22 and the current 28-session route runs through 2026-07-18.
 
 ## 2026-06-14 Scope Integration Boundary
 
