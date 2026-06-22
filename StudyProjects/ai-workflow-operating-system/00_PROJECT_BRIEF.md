@@ -2,10 +2,10 @@
 
 Project slug: `ai-workflow-operating-system`
 Timezone: Australia/Sydney
-Planned start date: 2026-07-19
-Planned end date: 2026-08-15
+Planned start date: 2026-06-22
+Planned end date: 2026-07-19
 Duration: 28 days
-Status: queued
+Status: active / D01 completed
 
 ## Goal
 
@@ -22,6 +22,10 @@ This project consolidates:
 | Mermaid | architecture diagrams, flowcharts, sequence diagrams, ER/data models |
 | Software development workflow | issue -> spec -> implementation -> test -> review -> package -> handoff |
 | Local/remote AI tools | Treat local LLMs, remote GPU endpoints, RAG systems, multimodal models, and data-analysis scripts as tools inside agent workflows. |
+
+## 2026-06-22 Early Start Note
+
+The project was originally queued for 2026-07-19. The user explicitly pulled Prompt Engineering / Loop Engineering learning forward on 2026-06-22. Per the no-D000 acceleration rule, 2026-06-22 is D01, not D0, and the 28-day route now runs through 2026-07-19.
 
 ## 2026-06-14 Scope Integration Boundary
 
@@ -50,8 +54,7 @@ User authorized integrating the new infrastructure topics into existing projects
 
 ## Relationship To Other Projects
 
-- Starts after `Industrial AI SaaS Builder` unless the user explicitly chooses parallel mode.
-- Runs in controlled parallel with `local-ai-infrastructure` from 2026-07-19 to 2026-08-15.
+- Originally planned to start after `Industrial AI SaaS Builder`, but explicitly pulled forward by the user on 2026-06-22.
 - Supports every future Study Project by improving the user's agent/Codex operating leverage.
 - Does not replace `industrial-ai-saas-builder`; it is the operating system behind future execution.
 - Does not implement remote GPU/local model infrastructure directly; it teaches how agents should call those capabilities safely after Local AI Infrastructure defines them.
