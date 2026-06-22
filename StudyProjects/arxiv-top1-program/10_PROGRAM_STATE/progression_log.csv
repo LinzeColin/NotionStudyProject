@@ -15,3 +15,4 @@ date,global_day,track_id,group_code,archive_code,display_code,archive_day,master
 2026-06-21,9,3,MATH,PR,MATH - PR,2,11,d002_conditional_probability_bayesian_update_validated,Next balanced catch-up remains MATH math.PR D003 Distribution variance and tail risk before PHYS or Q-FIN D004
 2026-06-22,10,3,MATH,PR,MATH - PR,3,18,d003_distribution_variance_tail_risk_validated,All active archives are now at D003; Q-FIN D004 can proceed after LOB gate
 2026-06-22,10,1,Q-FIN,TR,Q-FIN - TR,3,18,d004_lob_walk_gate_vwap_validated,Q-FIN q-fin.TR D004 adverse selection can start next
+2026-06-22,10,1,Q-FIN,TR,Q-FIN - TR,4,25,d004_adverse_selection_validated,Today ended; default next balanced lesson PHYS quant-ph D004 or optional Q-FIN q-fin.TR D005 if user chooses focus mode
