@@ -7,6 +7,26 @@
 - 学习频率不固定
 - 一次记录可以涉及多个项目
 
+## 2026-06-22 20:46 AEST｜arXiv Top1 Program｜Q-FIN D004｜约 25 分钟
+
+- 学习内容：Q-FIN / `q-fin.TR` D004 Adverse Selection；为什么“成交成功”不等于交易质量好，post-fill adverse movement 可能说明被 informed trader / toxic flow 打中。
+- 学习行为：回忆 / 深化 / 迁移 / ROI / 结束学习并保存同步 Notion
+- 用户反馈前的关键理解或回答：用户先回答 VWAP 是加权平均，低价成交量更多会拉低平均执行价；随后在 limit buy 场景中复用了标准模板；在 limit sell 100 且 mid 到 100.70 的新场景中，用户能独立指出可能被更有信息优势的买方打中，fill 可能来自 toxic flow，应降低挂单尺寸、扩大 spread、暂停信号或要求额外确认。
+- 暴露出的错误或信息缺口：用户仍会使用“吸筹”等叙事词，需要继续改成 microstructure 语言；方向词需要更精确，limit sell 100 后 mid 到 100.70 是上涨，不是下跌。
+- 纠正后的核心理解：VWAP 是 volume-weighted average execution price，不是 best ask 或 last price。Adverse selection 的核心是成交后价格快速朝自己不利方向移动，说明成交可能筛选出了更有信息优势的对手方。
+- 深度理解与因果：limit order 提供流动性，但被谁打中不是随机的；当 informed/aggressive trader 选择与你成交，可能是因为当前价格对他更有利。成交后 mid/mark 的方向性移动是判断 fill 质量的重要证据。
+- 边界、反例或证伪：fill rate 高不等于策略好；如果 fill 后持续 adverse movement，系统不能把成交当成功，应把它当成风险信号。提示后复述不能当独立掌握证据。
+- 陌生迁移：用户能把 buy 场景迁移到 sell 场景：limit sell 100 成交后 mid 到 100.70，说明卖方可能卖早/卖便宜，被 informed buyer 打中。
+- 新视角：交易系统应跟踪 post-fill markout，而不是只看是否成交。成交本身可能是负面信息。
+- ROI 或经济联系：避免把高成交率误认为高收益；通过降低挂单尺寸、扩大 spread、取消/重定价旧挂单、暂停信号或增加确认条件，减少被 toxic flow 系统性收割。
+- 突破能力证据：用户完成了一个方向相反的新场景迁移，虽然有方向词错误，但机制判断正确。
+- 本次有证据的评分：VWAP recall 4/5；limit buy 模板复述 3/5；limit sell independent transfer 4/5；Q-FIN D004 overall validated。
+- 教学中有效的方法：明确区分提示后复述与独立迁移；用 buy/sell 对称场景检验是否真正理解 adverse selection。
+- 用户不满意的地方：此前需要用户提醒保存同步；本轮按用户明确命令保存并同步 Notion。
+- 下次需要调整的教学方式：继续使用具体成交后 mid/mark 移动场景；禁止用“吸筹/洗盘”等叙事词替代 order book、toxic flow、post-fill adverse movement。
+- 需要复习：VWAP vs last price vs best ask；adverse selection；toxic flow；post-fill markout；passive order risk。
+- 下次继续：默认 balanced route 进入 `PHYS / quant-ph` D004 Measurement / repeated shots / observable；如果用户指定 Q-FIN focus mode，则进入 `q-fin.TR` D005 Toxic flow / spread compensation。
+
 ## 2026-06-22 20:44 AEST｜AI Workflow Operating System｜D04-D06｜约 35 分钟
 
 - 学习内容：D04 Action Gate / Stop Condition；D05 State Machine / Workflow State；D06 Evaluation / Evals 开始。重点围绕 no-human-interference trading agent、Codex 工作流、状态机防越级、eval 防主观自信。
