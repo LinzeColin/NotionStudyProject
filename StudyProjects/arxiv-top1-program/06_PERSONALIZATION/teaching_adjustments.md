@@ -59,3 +59,4 @@ Timezone: Australia/Sydney
 - 2026-06-22 MATH / `math.PR` D003：用户能抓住 variance 和 tail risk，但 base-rate arithmetic 仍需要练习。后续概率课先让用户算 false-positive denominator，再迁移到 trading/agent/industrial alarm。
 - 2026-06-22 workflow correction：当用户说“下一步”且上一课已经 validated，Codex 应先保存/同步或明确问是否保存，不应直接进入新 lesson 导致记录断档。用户明确质疑“为什么不保存同步更新”，说明闭环优先级高。
 - 2026-06-22 Q-FIN gate：用户能正确计算 LOB walk、last price 和 VWAP。Q-FIN D004 可以正式讲 adverse selection，但开头要先复述 VWAP = volume-weighted average execution price，不是 quoted price。
+- 2026-06-22 Q-FIN D004：用户已能独立迁移 adverse selection 到 limit sell 场景。后续 Q-FIN 继续要求用 microstructure 语言，避免“吸筹/洗盘”等叙事词。需要继续压实方向词：sell 后 mid 到 100.70 是上涨，不是下跌。
