@@ -16,3 +16,5 @@ date,calendar_global_day,session,notion_page,page_id,archive_code,sync_scope,res
 2026-06-21,9,MATH_math.PR_D001_REVIEW,arXiv Mathematics,386b1a98-6ba6-81a7-a8ce-f76d95e6f511,math.PR,external_review_adoption_and_d002_gate,success
 2026-06-21,9,MATH_math.PR_D002,arXiv Mathematics,386b1a98-6ba6-81a7-a8ce-f76d95e6f511,math.PR,learning_notes_conditional_probability_bayesian_update,success
 2026-06-21,9,MATH_math.PR_D002_REVIEW,arXiv Mathematics,386b1a98-6ba6-81a7-a8ce-f76d95e6f511,math.PR,external_review_adoption_and_d003_gate,success
+2026-06-22,10,MATH_math.PR_D003,arXiv Mathematics,386b1a98-6ba6-81a7-a8ce-f76d95e6f511,math.PR,learning_notes_distribution_variance_tail_risk,success
+2026-06-22,10,QFIN_q-fin.TR_D004_GATE,arXiv Quantitative Finance,37eb1a98-6ba6-8133-a01b-e6fbff80849b,q-fin.TR,lob_walk_vwap_gate_and_next_d004,success
