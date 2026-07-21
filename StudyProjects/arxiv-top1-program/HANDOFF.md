@@ -4,7 +4,7 @@
 **Canonical project ID:** `arxiv-top1-program`
 **Status:** active
 **Aliases / merged from:** [`arXiv Top1 Program`, `arxiv`]
-**State source commit:** `ad23b51`（项目最后一次写入）；install base `6cac133`；补充证据 `31409cb`（未合并孤立分支 `origin/sync/pause-20260623`）
+**State source commit:** `ad23b51`（项目最后一次写入）；install base `6cac133`；2026-06-23 暂停证据（原 `31409cb`）已吸收进 `main`，见 `_system/study-project-orchestrator/2026-06-23_PAUSED_SYNC_RECORD.md`
 **Handoff file commit:** resolve with `git log -1 --format=%H -- StudyProjects/arxiv-top1-program/HANDOFF.md`; do not self-reference
 **Last updated UTC:** `2026-07-21T22:55:46Z`
 
@@ -53,7 +53,7 @@
 | Adverse selection 与 post-fill markout | R1 | next_related_session | H0 反向场景正确，有方向词纠正 | 同上 / current |
 | Base-rate 算术 `P(A\|E)` | R0 | next_related_session | 未完成 | `04_DAILY_LOGS/2026-06-22_MATH_math.PR_D003_QFIN_gate.md` / current |
 | Distribution / variance / tail risk | R1 | next_related_session | H0 正确 | 同上 / current |
-| amplitude vs probability vs action permission | R0 | PHYS 轨道恢复时 | 未取证（会话被暂停） | `origin/sync/pause-20260623` / unknown |
+| amplitude vs probability vs action permission | R0 | PHYS 轨道恢复时 | 未取证（会话被暂停） | `_system/study-project-orchestrator/2026-06-23_PAUSED_SYNC_RECORD.md` / unknown |
 
 ### Reperformance
 | Capability | Trigger | Variation / failure path | Last result |
@@ -73,7 +73,8 @@
 - Recheck due / trigger：PHYS 轨道恢复时；任一 group slot 释放时重算 queued group 起始日（**不得默认从当天开始**）。
 - Superseded knowledge：教学素材中的 A/B 策略 EV 旧数值已作废。
 - Unknowns：
-  - `PHYS quant-ph` D004 的暂停证据只存在于**未合并**的孤立分支 `origin/sync/pause-20260623`（`31409cb`，与 main 无共同祖先），main HEAD 中没有该记录；
+  - `PHYS quant-ph` D004 于 2026-06-23 开讲后被 Owner 要求暂停，**等待明确恢复指令**；该记录原本只存在于孤立分支 `sync/pause-20260623`（`31409cb`），现已吸收进 `main`（`_system/study-project-orchestrator/2026-06-23_PAUSED_SYNC_RECORD.md`），分支已删除；
+  - 原文「用户反馈：已反馈『amplitude-like 是内部中间量，不能直接当 probability 使用』」**归属不明**，不计任何证据等级，恢复轨道时须 H0 冷回忆重新取证；
   - external review 全部 `blocked_unavailable`（configured agent、ChatGPT、Claude、Perplexity、external 1/2），**不得声称 external review completed**；
   - Q-FIN D004 只创建了 review packet，未完成 reviewer handshake。
 
@@ -87,6 +88,6 @@
 
 - Prior Handoff/log/state references：本文件重建前的版本见 `git show 6cac133:StudyProjects/arxiv-top1-program/HANDOFF.md`；精简学习记录见 `_system/study-project-orchestrator/LEARNING_LOG.md`；机器状态见 `state.json`；指标见 `metrics.csv` 与 `10_PROGRAM_STATE/progression_log.csv`；group 计划窗口与 Notion/automation 细节见重建前 Handoff。
 - Merge/alias history：无合并来源。
-- Recovery notes：recovery ref `study-os-v0.0.0.2-pre-20260721T225052Z`。暂停记录：`git show origin/sync/pause-20260623:PAUSED_SYNC_RECORD_20260623.md`。`study-project-daily-sync` 为 detached local cron，无有效学习记录时应写 missed/blocked，不得伪造进度。
+- Recovery notes：recovery ref `study-os-v0.0.0.2-pre-20260721T225052Z`。暂停记录 canonical 副本：`_system/study-project-orchestrator/2026-06-23_PAUSED_SYNC_RECORD.md`（原始 commit `31409cb`，分支已删，仍可 `git cat-file -p 31409cb...` 取回）。`study-project-daily-sync` 为 detached local cron，无有效学习记录时应写 missed/blocked，不得伪造进度。
 
 > Current executable state, not a transcript. Preserve contrary evidence and Git history; compress repetition.

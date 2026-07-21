@@ -21,7 +21,20 @@
 bash _system/validation/conformance_check.sh
 ```
 
-结果：**PASSED 77 / FAILED 0，exit 0**（执行于 `2026-07-21T23:05Z`）。
+结果：
+
+| 回合 | 时间 (UTC) | 门数 | 结果 |
+|---|---|---|---|
+| 安装 T60（G1–G20） | `2026-07-21T23:05Z` | 77 | **PASSED 77 / FAILED 0**，exit 0 |
+| 维护回合：吸收 `sync/pause-20260623`（新增 G21） | `2026-07-21T23:15Z` | 81 | PASSED 80 / FAILED 1 —— 唯一失败是 `stray remote branch(es): sync/pause-20260623`，即本回合正在收敛的目标 |
+| 维护回合复跑（分支删除后） | 见本节下方「复跑回执」 | 81 | 待复跑填入（本 commit 推送后立即删除分支并复跑） |
+
+G21 的中间态失败是**设计内的真实检出**：它证明该门确实会对侧分支报警，而不是恒真。
+
+#### 复跑回执
+
+<!-- 分支删除后由同一 Maintainer 填入，不得预先声称 -->
+待填。
 
 | Gate | 断言 | 结果 |
 |---|---|---|
@@ -45,6 +58,7 @@ bash _system/validation/conformance_check.sh
 | G18 | 隐私与注入边界（`do_not_persist`、`prompt_injection_observed`、外部内容视为 data、Delta 视为不可信输入） | PASS |
 | G19 | 无私钥/令牌类敏感串被提交 | PASS |
 | G20 | 恢复可执行（recovery ref 可解析、Handoff 带 rollback、恢复合同写明 revert 优先） | PASS |
+| G21 | 仓库卫生：本地无遗留分支（worktree 在用的分支不算）、远端只有 `main`、0 未决 PR、0 issue | PASS（见下方维护回合） |
 
 > 首轮运行曾报 2 条失败，均为**检查脚本自身缺陷**而非仓库缺陷，已在交付前修复：
 > (1) 适配器措辞检查未覆盖 `never assume` 与 `a project count` 两种同义写法；
@@ -124,6 +138,18 @@ bash _system/validation/conformance_check.sh
 | rollback 可执行 | G20 + Maintainer Handoff §7 两级 rollback（`git revert` 优先，`git reset --hard <recovery_ref>` 兜底）；recovery ref 已推送到 origin | PASS |
 | 无等待期 | 全部门均即时判定；无 soak、无天数、无未来使用数据依赖；`AGENTS.md` §7 与 `MEMORY_RECOVERY_AND_EVOLUTION.md` §11 明确禁止把等待当 Gate | PASS |
 
+### C5 Standing invariant（Owner 长期指令）
+
+仓库必须保持：**只有 `main` 一条分支、0 未决 PR、0 issue**；学习证据**不得只存在于侧分支**。
+
+| # | 场景 | 要求行为 | 实测 | 结果 |
+|---|---|---|---|---|
+| S1 | 侧分支上存在学习证据 | 先原文吸收进 `main` 并补录 `LEARNING_LOG.md`，再删分支 | `sync/pause-20260623`（`31409cb`）→ `_system/study-project-orchestrator/2026-06-23_PAUSED_SYNC_RECORD.md` + `LEARNING_LOG.md` 顶部补录，然后删除分支 | ✅ |
+| S2 | 未决 PR | 归零 | `gh pr list --state open` → 0；PR #1 为 `MERGED` | ✅ |
+| S3 | issue | 归零 | `gh issue list --state all` → 0 | ✅ |
+| S4 | 本地遗留分支 / worktree | 归零（worktree 在用的分支不算遗留） | 每回合收尾执行 `git worktree remove` + `git branch -d` + `git gc`（不加 `--prune=now`） | ✅ |
+| S5 | 离线可跑 | 无网络 / 无 `gh` 时 G21 应 SKIP 而非 FAIL | 检查已实现为 network- 与 gh-optional，SKIP 单独计数 | ✅ |
+
 ---
 
 ## D. 未解决项（不阻断交付）
@@ -131,12 +157,12 @@ bash _system/validation/conformance_check.sh
 同步于 `_system/MAINTAINER_HANDOFF.md` §6：
 
 1. `dlm-flow-agent-cost-sprint` 状态 `unknown`，等 Owner 一句话裁决。
-2. `origin/sync/pause-20260623` 是与 main 无共同祖先的孤立分支，未合并、未据此改项目状态。
+2. ~~`origin/sync/pause-20260623` 未合并~~ → **已解决（2026-07-21）**：原文吸收进 `main`（`_system/study-project-orchestrator/2026-06-23_PAUSED_SYNC_RECORD.md`）+ 补录 `LEARNING_LOG.md`，分支已删除。判读为会话级暂停，项目状态不变。
 3. 5 个项目计划窗口已过期且无新证据 —— 按 Owner 规则不构成暂停，排期需重新确认。
 4. `ceo-finance-strategy-system` 与 `ai-tech-industry-investment-judgment` 在投资/交易判断上范围重叠。
 5. 多个项目的产物未记录独立性，因此一律未升级为 E4。
 6. Notion 与 external reviewer 的既有 blocker 未解决（本协议不新建 Notion 自动化）。
-7. GitHub 上存在 `refs/pull/1/head`，本次未处理也未依赖。
+7. ~~GitHub 上存在 `refs/pull/1/head`~~ → **已核实**：PR #1 状态为 `MERGED`（`codex/learning-rules-light-update-20260622` → `main`），非未决 PR；`refs/pull/*/head` 是 GitHub 永久保留的历史引用，不可也无需删除。仓库 issue 数为 0。
 
 ## E. 复跑方式
 

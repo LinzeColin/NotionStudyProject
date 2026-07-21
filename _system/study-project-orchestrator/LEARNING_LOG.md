@@ -7,6 +7,28 @@
 - 学习频率不固定
 - 一次记录可以涉及多个项目
 
+## 2026-06-23｜arXiv Top1 Program｜PHYS quant-ph D004（暂停会话）｜时长未记录
+
+> 本条为 **补录**：原始记录只存在于孤立分支 `sync/pause-20260623`（`31409cb`），不在 `main` 的默认读取路径上。现按 Owner 指令吸收进主线。原文逐字保留于 `_system/study-project-orchestrator/2026-06-23_PAUSED_SYNC_RECORD.md`。**下列字段仅依据该原文，无任何推测补写。**
+
+- 学习内容：PHYS / `quant-ph` D004 —— 量化：从 amplitude-like 到 `p_raw` / `p_exec` 的决策链路。
+- 学习行为：新内容（开讲后被 Owner 要求暂停，未完成）
+- 用户反馈前的关键理解或回答：未记录。原文只写「用户反馈：已反馈『amplitude-like 是内部中间量，不能直接当 probability 使用』」，**无法判定该句是 Owner 独立表述还是教学反馈**，因此不计任何证据等级。
+- 暴露出的错误或信息缺口：未评估（会话在取证前中止）
+- 纠正后的核心理解：未评估
+- 深度理解与因果：未评估
+- 边界、反例或证伪：未评估
+- 陌生迁移：未评估
+- 新视角：未评估
+- ROI 或经济联系：未评估
+- 突破能力证据：未评估
+- 本次有证据的评分：无。本次会话未产生可评分的独立表现。
+- 教学中有效的方法：未评估
+- 用户不满意的地方：Owner 再次要求「只讲一个 archive，不混入其他域内容」—— 说明此前存在跨 archive 混讲。
+- 下次需要调整的教学方式：严格单 archive 授课；恢复 PHYS 轨道时先用 H0 冷回忆重新验证「amplitude/confidence 为什么不是 probability / action permission」。
+- 需要复习：amplitude-like 中间量 vs probability vs action permission；`p_raw` → `p_exec` 决策链路。
+- 下次继续：**等待 Owner 明确恢复指令**。恢复则续 PHYS `quant-ph` D004；未恢复则按 balanced route 走 `MATH math.PR` D004，或按 Owner 指定 focus mode 走 `Q-FIN q-fin.TR` D005。
+
 ## 2026-06-22 20:46 AEST｜arXiv Top1 Program｜Q-FIN D004｜约 25 分钟
 
 - 学习内容：Q-FIN / `q-fin.TR` D004 Adverse Selection；为什么“成交成功”不等于交易质量好，post-fill adverse movement 可能说明被 informed trader / toxic flow 打中。

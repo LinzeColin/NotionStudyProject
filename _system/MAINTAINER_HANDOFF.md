@@ -6,33 +6,36 @@
 
 - repository: `LinzeColin/NotionStudyProject`
 - remote: `git@github.com:LinzeColin/NotionStudyProject.git`
-- branch: `main`
-- task_base_commit: `6cac133a7e6352fe5db71904055f22d61d3e79b3`
+- branch: `main`（**唯一分支**）
+- task_base_commit: `977165ac7c834747f3234843566ba4fc80701b4e`
+- install_commit: `977165ac7c834747f3234843566ba4fc80701b4e`（v0.0.0.2 首次安装）
 - handoff_file_commit: RESOLVE_WITH_GIT_LOG_DO_NOT_SELF_REFERENCE — `git log -1 --format=%H -- _system/MAINTAINER_HANDOFF.md`
-- updated_at_utc: `2026-07-21T23:00:00Z`
-- worktree_after_run: clean（实施在 worktree `_scratch/notionstudy-study-os-v0002` 分支 `feat/study-os-v0.0.0.2` 完成，随后快进合并到 `main` 并推送；worktree 与分支已回收）
+- updated_at_utc: `2026-07-21T23:20Z`
+- worktree_after_run: clean（实施隔离在 worktree `_scratch/notionstudy-branch-cleanup` / 分支 `chore/absorb-pause-record`，快进合并到 `main` 后 worktree 与分支已回收；主工作树全程停 `main` 且干净）
 - push_status: pushed to `origin/main`
 
 ## 2. Maintainer Identity & Capability
 
 - last_agent: Claude Code / `claude-opus-4-8`
-- capabilities: [read, write, shell, git, tests, commit, push]
+- capabilities: [read, write, shell, git, tests, commit, push, gh]
 - capability_gaps: 无 Notion 写入连接器；无外部 reviewer 连接器；不执行 Notion / MCP / 外部 FSRS 集成（协议范围外）
-- task_mode: `install`
-- authorized_scope: 七个 Root 文件、四个薄适配器、`_system/**`、canonical active 项目的 `HANDOFF.md`
-- base_commit: `6cac133a7e6352fe5db71904055f22d61d3e79b3`
+- task_mode: `session_merge`（吸收孤立分支上的会话记录 + 仓库卫生收敛）
+- authorized_scope: `_system/**`、`StudyProjects/arxiv-top1-program/HANDOFF.md`、删除已吸收的远端分支
+- base_commit: `977165ac7c834747f3234843566ba4fc80701b4e`
 
 ## 3. Current Status
 
 - status: `ready`
-- completed_tasks: [T00 baseline, T10 recovery_point, T20 dynamic_discovery, T30 contract_and_adapters, T40 state_rebuild, T50 continuity, T60 conformance, T70 commit_push]
+- completed_tasks:
+  - v0.0.0.2 安装 T00–T70（commit `977165a`）
+  - 吸收 `sync/pause-20260623` 会话记录并收敛仓库分支（本次）
 - failed_or_skipped_tasks: []
-- modified_files: 见 §5 evidence_paths 与交付 commit 的 `git show --stat`
+- modified_files: 见交付 commit 的 `git show --stat`
 
 ## 4. Dynamic Project Inventory Summary
 
-- inventory_source_commit: `6cac133a7e6352fe5db71904055f22d61d3e79b3`
-- supplementary_evidence_ref: `origin/sync/pause-20260623` @ `31409cb05ae5d140fa5702d65d535342611cce11`（未合并孤立分支）
+- inventory_source_commit: `6cac133a7e6352fe5db71904055f22d61d3e79b3`（安装时的发现输入快照）
+- supplementary_evidence_absorbed: `31409cb05ae5d140fa5702d65d535342611cce11`（原孤立分支 `sync/pause-20260623`）已吸收进 `main`，canonical 副本 `_system/study-project-orchestrator/2026-06-23_PAUSED_SYNC_RECORD.md`，分支已删除
 - candidate_directory_count: 13
 - canonical_count: 13
 - active_count: 9
@@ -40,6 +43,7 @@
 - merged_count: 1
 - archived_count: 2
 - unknown_count: 1
+- topology_changed_since_install: false（本次只吸收证据，未改任何项目状态）
 - alias_or_merge_warnings:
   - 裸词「AI」有四路歧义（`ai` / `ai-workflow-operating-system` / `ai-tech-industry-investment-judgment` / `industrial-ai-saas-builder`），**未注册为 alias**；命中时给最小编号选择。
   - `ai` 被拆分为四个后继项目而非并入单一目标，因此按 `archived` + `superseded_by` 处理，不用 `merged_into`，以保证 alias 唯一解析。
@@ -50,43 +54,52 @@
 ## 5. Validation
 
 - commands_or_oracles:
-  - `bash _system/validation/conformance_check.sh`（G1–G20 机械门）
-  - `_system/validation/CONFORMANCE_REPORT_v0.0.0.2.md`（Learning / Discovery / Takeover 金丝雀）
-- passed: G1–G20 全部通过（详见报告 §1 与脚本输出）
+  - `bash _system/validation/conformance_check.sh`（G1–G21 机械门，含仓库卫生门）
+  - `_system/validation/CONFORMANCE_REPORT_v0.0.0.2.md`（Learning / Discovery / Takeover 金丝雀 + 故障注入测试）
+- passed: G1–G21 全部通过（81/81，exit 0）
 - failed: []
 - evidence_paths:
   - `_system/validation/conformance_check.sh`
   - `_system/validation/CONFORMANCE_REPORT_v0.0.0.2.md`
   - `_system/STUDY_INDEX.md`
+- standing_invariant（每次写入任务后必须仍然成立）：仓库只有 `main` 一条分支、0 个未决 PR、0 个 issue。学习证据**不得只存在于侧分支**；必须先吸收进 `main`，再删分支。该不变量由 **G21** 机械断言。
 
 ## 6. Open Items
 
 - unresolved_unknowns:
   1. `dlm-flow-agent-cost-sprint` 状态 `unknown` —— 项目文件完整，但两份 Legacy 索引都未收录。需 Owner 一句话裁决 active / paused / archived。已保留、未路由、未删除。
-  2. `origin/sync/pause-20260623`（`31409cb`）是与 `main` **无共同祖先**的孤立分支，内容为 2026-06-23 arXiv `PHYS quant-ph` 的会话级暂停记录。未合并、未据此改项目状态。需 Owner 决定合并、保留还是废弃。
+  2. arXiv `PHYS quant-ph` D004 于 2026-06-23 开讲后被 Owner 要求暂停，**等待明确恢复指令**（会话级暂停，项目仍 `active`）。记录见 `_system/study-project-orchestrator/2026-06-23_PAUSED_SYNC_RECORD.md`。
   3. 多个项目计划窗口已过期且无新证据（`industrial-ai-saas-builder`、`quant-agent-workspace`、`ceo-finance-strategy-system`、`ai-workflow-operating-system`、`ai-tech-industry-investment-judgment`）。按 Owner 规则窗口过期不构成暂停，但排期需 Owner 重新确认。
   4. `ceo-finance-strategy-system` 与 `ai-tech-industry-investment-judgment` 在投资/交易判断上范围重叠，当前按 Legacy 定义划分，未合并。
   5. 多个项目的产物（RAG scorecard、决策矩阵、`OrderIntent` schema、data source matrix 等）在仓库中记为 complete，但**未记录独立性**，因此一律未升级为 E4。
   6. Notion 与 external reviewer 的既有 blocker 未解决（connector 重认证、图标写入、已删除页面、reviewer 不可达）。本协议不新建 Notion 自动化。
-  7. GitHub 上存在 `refs/pull/1/head`（`933ca44`）。本次未处理，也未依赖。
+- resolved_since_install:
+  - 原孤立分支 `sync/pause-20260623` 已吸收并删除；仓库回到单分支。
+  - PR #1 已核实为 `MERGED`（`codex/learning-rules-light-update-20260622` → `main`），非未决。`refs/pull/*/head` 是 GitHub 永久历史引用，不可也无需删除，不计为 open PR。
 - unapplied_root_proposals: []
 - known_risks:
-  - Legacy `PROJECT_INDEX.md` / `ARCHIVE_INDEX.md` 仍留在仓库中作为证据来源；若后继 Agent 误把它们当路由源会复活旧拓扑。`STUDY_ORCHESTRATOR_ROUTE.md` §2 已显式声明它们不再路由。
+  - Legacy `PROJECT_INDEX.md` / `ARCHIVE_INDEX.md` 仍留在仓库中作为证据来源；若后继 Agent 误把它们当路由源会复活旧拓扑。`STUDY_ORCHESTRATOR_ROUTE.md` §2 与两文件顶部横幅已显式声明它们不再路由。
   - 适配器是入口而非强制保证；未加载适配器的 Agent 需通过 Generic Prompt 显式加载。
-- next_exact_action: **Owner 只需二选一** —— 直接开始学习（例如 `开始学习：AI Workflow OS，直接进 D06 critical failure 判定`），或用一句话裁决 `dlm-flow-agent-cost-sprint` 的状态（active / paused / archived）。两者互不阻塞。
+  - 任何 Agent 若在侧分支上留下学习记录而不吸收进 `main`，会同时破坏「证据在默认读取路径上」和单分支不变量。G21 会检出，但只在有人跑它时。
+- next_exact_action: **Owner 三选一，互不阻塞** ——
+  1. 直接开始学习，例如 `开始学习：AI Workflow OS，直接进 D06 critical failure 判定`；
+  2. 一句话裁决 `dlm-flow-agent-cost-sprint` 的状态（active / paused / archived）；
+  3. 一句话决定 arXiv `PHYS quant-ph` D004 是否恢复。
 
 ## 7. Recovery
 
-- recovery_ref: `study-os-v0.0.0.2-pre-20260721T225052Z` → `6cac133a7e6352fe5db71904055f22d61d3e79b3`（已推送到 origin）
+- recovery_ref: `study-os-v0.0.0.2-pre-20260721T225052Z` → `6cac133a7e6352fe5db71904055f22d61d3e79b3`（已推送到 origin，安装前快照）
 - delivery_or_last_commit: RESOLVE_WITH_GIT_LOG — `git log -1 --format=%H -- _system/MAINTAINER_HANDOFF.md`
 - rollback_command:
   ```bash
-  # 首选：可逆撤销交付 commit，保留历史
+  # 首选：可逆撤销最近一次维护 commit，保留历史
   git revert --no-edit $(git log -1 --format=%H -- _system/MAINTAINER_HANDOFF.md)
+  # 回到 v0.0.0.2 安装点（保留安装，撤销其后的维护）
+  git revert --no-edit 977165a..HEAD
   # 全量回到安装前快照（仅在 Owner 明确要求时）
   git reset --hard study-os-v0.0.0.2-pre-20260721T225052Z
   ```
-- 恢复暂停记录：`git show origin/sync/pause-20260623:PAUSED_SYNC_RECORD_20260623.md`
+- 恢复 2026-06-23 暂停记录：canonical 副本 `_system/study-project-orchestrator/2026-06-23_PAUSED_SYNC_RECORD.md`；原始 commit 仍可 `git cat-file -p 31409cb05ae5d140fa5702d65d535342611cce11`（分支已删，该对象可能最终被远端 GC —— canonical 副本才是可靠来源）。
 - 恢复任一被重建的项目 Handoff：`git show 6cac133:StudyProjects/<slug>/HANDOFF.md`
 
 ## 8. Successor Instructions
@@ -98,7 +111,9 @@ Verify this file against current Git status/log before acting. Preserve Owner ch
 ```bash
 git fetch origin && git log --oneline -5 origin/main
 cat AGENTS.md _system/MAINTAINER_HANDOFF.md _system/STUDY_INDEX.md
-bash _system/validation/conformance_check.sh
+bash _system/validation/conformance_check.sh          # 期望 exit 0
 ```
 
-然后按 `_system/templates/AGENT_TAKEOVER_CHECKLIST.md` 输出 `MAINTAINER_BOOTSTRAP` 再动手。合并一次学习会话用 `_system/templates/GENERIC_MAINTAINER_SESSION_MERGE_PROMPT.md`。本次实施的全部必要状态都在 Git 与本文件中，**不依赖任何 Agent 的私有记忆**。
+收尾必须同时满足（G21 会断言）：改动已合进 `main`、远端只剩 `main` 一条分支、0 未决 PR、0 issue、本地无遗留分支与 worktree。
+
+然后按 `_system/templates/AGENT_TAKEOVER_CHECKLIST.md` 输出 `MAINTAINER_BOOTSTRAP` 再动手。合并一次学习会话用 `_system/templates/GENERIC_MAINTAINER_SESSION_MERGE_PROMPT.md`。本仓全部必要状态都在 Git 与本文件中，**不依赖任何 Agent 的私有记忆**。

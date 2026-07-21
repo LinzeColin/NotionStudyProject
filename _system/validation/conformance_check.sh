@@ -15,6 +15,7 @@ cd "$(dirname "$0")/../.." || exit 1
 
 PASS=0
 FAIL=0
+SKIP=0
 ok()   { printf 'PASS  %s\n' "$1"; PASS=$((PASS+1)); }
 bad()  { printf 'FAIL  %s\n' "$1"; FAIL=$((FAIL+1)); }
 chk()  { if eval "$2" >/dev/null 2>&1; then ok "$1"; else bad "$1"; fi; }
@@ -220,7 +221,41 @@ chk "maintainer handoff carries a rollback command" "grep -q 'rollback_command' 
 chk "recovery contract documents revert-first" "grep -q 'git revert' MEMORY_RECOVERY_AND_EVOLUTION.md"
 
 echo
+echo "== G21 Repository hygiene: single trunk, no stray branch / open PR / open issue =="
+# Standing Owner directive: the repository keeps exactly one branch (main) and
+# carries no open PR and no open issue. Learning evidence must never live only
+# on a side branch — absorb it into main first, then delete the branch.
+# Network- and gh-optional: unreachable checks SKIP instead of failing, so this
+# suite still runs offline for any successor Agent.
+# A branch currently checked out in a worktree is work in progress, not litter
+# (repo policy requires development to happen in a worktree). Only branches that
+# no worktree holds are leftovers that must be cleaned up.
+LIVE=$(git worktree list --porcelain | awk '/^branch /{sub("refs/heads/","",$2); print $2}')
+LEFTOVER=$(git for-each-ref --format='%(refname:short)' refs/heads \
+           | grep -vx 'main' | grep -vxF "${LIVE:-__none__}" || true)
+if [ -z "$LEFTOVER" ]; then ok "no leftover local branch (only main + live worktree branches)"
+else bad "leftover local branch(es): $(printf '%s' "$LEFTOVER" | tr '\n' ' ')"; fi
+
+if git ls-remote --heads origin >/dev/null 2>&1; then
+  RB=$(git ls-remote --heads origin | awk '{print $2}' | sed 's#refs/heads/##')
+  RB_EXTRA=$(printf '%s\n' "$RB" | grep -vx 'main' || true)
+  if [ -z "$RB_EXTRA" ]; then ok "remote has only 'main' (no stray branch)"
+  else bad "stray remote branch(es): $(printf '%s' "$RB_EXTRA" | tr '\n' ' ')"; fi
+else
+  printf 'SKIP  remote branch check (remote unreachable)\n'; SKIP=$((SKIP+1))
+fi
+
+if command -v gh >/dev/null 2>&1 && gh repo view >/dev/null 2>&1; then
+  OPR=$(gh pr list --state open --json number --jq 'length' 2>/dev/null || echo unknown)
+  OIS=$(gh issue list --state open --json number --jq 'length' 2>/dev/null || echo unknown)
+  case "$OPR" in 0) ok "no open pull request" ;; unknown) printf 'SKIP  open PR check (gh query failed)\n'; SKIP=$((SKIP+1)) ;; *) bad "open pull requests: $OPR" ;; esac
+  case "$OIS" in 0) ok "no open issue" ;; unknown) printf 'SKIP  open issue check (gh query failed)\n'; SKIP=$((SKIP+1)) ;; *) bad "open issues: $OIS" ;; esac
+else
+  printf 'SKIP  open PR / issue check (gh unavailable or not authenticated)\n'; SKIP=$((SKIP+2))
+fi
+
+echo
 echo "=============================="
-printf 'PASSED: %d   FAILED: %d\n' "$PASS" "$FAIL"
+printf 'PASSED: %d   FAILED: %d   SKIPPED: %d\n' "$PASS" "$FAIL" "$SKIP"
 echo "=============================="
 [ "$FAIL" -eq 0 ] || exit 1

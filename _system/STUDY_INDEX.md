@@ -5,7 +5,7 @@
 ## Generation Receipt
 
 - inventory_source_commit: `6cac133a7e6352fe5db71904055f22d61d3e79b3`
-- supplementary_evidence_ref: `origin/sync/pause-20260623` @ `31409cb05ae5d140fa5702d65d535342611cce11`（未合并的孤立分支，见 Unknowns）
+- supplementary_evidence_absorbed: `31409cb05ae5d140fa5702d65d535342611cce11`（原孤立分支 `sync/pause-20260623`）已于 2026-07-21 吸收进 `main`，canonical 副本 `_system/study-project-orchestrator/2026-06-23_PAUSED_SYNC_RECORD.md`；分支已删除
 - index_file_commit: RESOLVE_WITH_GIT_LOG_DO_NOT_SELF_REFERENCE — `git log -1 --format=%H -- _system/STUDY_INDEX.md`
 - generated_at_utc: `2026-07-21T22:55:46Z`
 - discovery_agent: Claude Code / claude-opus-4-8 (Implementer Agent)
@@ -24,7 +24,7 @@
 
 | Canonical ID | Title | Status | Aliases / Merged From | Merged Into | Brief | Handoff | Default Route | Current Focus | Next Action | Review / Trigger | Validity | State Source Commit |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `arxiv-top1-program` | arXiv Top1 Program | active | `arXiv Top1 Program`、`arxiv` | — | `StudyProjects/arxiv-top1-program/00_PROJECT_BRIEF.md` | `StudyProjects/arxiv-top1-program/HANDOFF.md` | M | 三条 active track：`Q-FIN q-fin.TR` D004 validated、`PHYS quant-ph` D004 已开讲后被 Owner 暂停、`MATH math.PR` D003 validated | 先确认 PHYS `quant-ph` D004 是否恢复；未恢复则按 balanced route 处理 `MATH math.PR` D004 或 Owner 指定 focus | Recall：VWAP vs last price vs best ask、adverse selection、toxic flow、post-fill markout、base-rate 算术 | current | `ad23b51`（+ 未合并 `31409cb`） |
+| `arxiv-top1-program` | arXiv Top1 Program | active | `arXiv Top1 Program`、`arxiv` | — | `StudyProjects/arxiv-top1-program/00_PROJECT_BRIEF.md` | `StudyProjects/arxiv-top1-program/HANDOFF.md` | M | 三条 active track：`Q-FIN q-fin.TR` D004 validated、`PHYS quant-ph` D004 已开讲后被 Owner 暂停、`MATH math.PR` D003 validated | 先确认 PHYS `quant-ph` D004 是否恢复；未恢复则按 balanced route 处理 `MATH math.PR` D004 或 Owner 指定 focus | Recall：VWAP vs last price vs best ask、adverse selection、toxic flow、post-fill markout、base-rate 算术 | current | `ad23b51` + 已吸收的 `31409cb` |
 | `ai-workflow-operating-system` | AI Workflow Operating System | active | `Prompt Engineering and Loop Engineering`、`prompt-engineering-loop-engineering`、`AI Workflow OS` | — | `StudyProjects/ai-workflow-operating-system/00_PROJECT_BRIEF.md` | `StudyProjects/ai-workflow-operating-system/HANDOFF.md` | B | D04 Action Gate、D05 State Machine 完成；D06 Evaluation 已开始未验收 | D06 critical-failure 判定题：10 个任务过 8，失败 2 个是「权限不足仍继续执行」，是 80% 可靠还是不可上线缺陷 | Reperformance：Research/Execution/Risk Gate 归因；`killed` vs `blocked`；state transition 不可跳级 | recheck_due（计划窗口 2026-06-22→2026-07-18 已过） | `f475430` |
 | `industrial-ai-saas-builder` | Industrial AI SaaS Builder | active | `Industrial AI SaaS Builder` | — | `StudyProjects/industrial-ai-saas-builder/00_PROJECT_BRIEF.md` | `StudyProjects/industrial-ai-saas-builder/HANDOFF.md` | J | D01、D02 完成（D02 独立回忆经纠正后通过），D03 gate 开放 | D03：RAG eval 与 trust boundary，产出 Eval rubric + 20 题 eval set | Reperformance：RAG vs 模型记忆判断；Recall：可核查性价值、非 RAG-first 反例 | recheck_due（计划窗口 2026-06-14→2026-07-17 已过） | `ef1ad30` |
 | `quant-agent-workspace` | Quant Agent Workspace | active | `Quant Agent Workspace` | — | `StudyProjects/quant-agent-workspace/00_PROJECT_BRIEF.md` | `StudyProjects/quant-agent-workspace/HANDOFF.md` | B | D01、D02 完成，D03 gate 开放；`OrderIntent` schema 与 data source matrix 已产出 | D03 Strategy Hypothesis Design：把研究想法转成可证伪的 strategy contract | Reperformance：三案例分级与 fail-closed blocker 复做（换输入） | recheck_due（计划窗口 2026-06-14→2026-07-04 已过） | `30096ff` |
@@ -70,7 +70,7 @@
 ## Known Gaps & Unknowns
 
 1. `dlm-flow-agent-cost-sprint` 状态 `unknown`：两份 Legacy 索引都未收录，但项目文件完整。等 Owner 一句话裁决，其余项目不受阻塞。
-2. `origin/sync/pause-20260623`（`31409cb`）是一条**未合并的孤立分支**（与 main 无共同祖先），内容为 2026-06-23 的暂停同步记录：arXiv `PHYS / quant-ph` 当日课程「amplitude-like → p_raw / p_exec」被 Owner 要求暂停，等待明确恢复指令。该记录**不在 main HEAD**，因此按会话级暂停处理，未据此把 `arxiv-top1-program` 项目标为 paused。
+2. 【已解决】原孤立分支 `sync/pause-20260623`（`31409cb`，与 main 无共同祖先）承载 2026-06-23 的暂停同步记录：arXiv `PHYS / quant-ph` 当日课程「amplitude-like → p_raw / p_exec」被 Owner 要求暂停，等待明确恢复指令。该记录已原文吸收进 `main`（`_system/study-project-orchestrator/2026-06-23_PAUSED_SYNC_RECORD.md`）并补录到 `LEARNING_LOG.md`，分支已按 Owner 指令删除。判读为**会话级**暂停，因此 `arxiv-top1-program` 仍为 `active`；PHYS 轨道待 Owner 明确恢复。
 3. Legacy `PROJECT_INDEX.md` 已漂移：生成时间标注 2026-06-22，但未收录 2026-06-21 建立的 `ai-tech-industry-investment-judgment`，也未收录 `dlm-flow-agent-cost-sprint`。原因见 `_system/study-project-orchestrator/2026-06-21_NEW_PROJECT_AI_TECH_INVESTMENT.md`（当时工作树有未处理脏改动）。本 Index 已按 HEAD 事实修正。
 4. `ceo-finance-strategy-system` 与 `local-ai-infrastructure` 在本次安装前**没有** `HANDOFF.md`，已按当前证据新建，能力证据一律写 `not yet proven`。
 5. 多个项目的计划窗口已过期且无新证据（见 Validity 列）。按 Owner 规则，这不构成暂停理由，只是排期需要 Owner 重新确认。
