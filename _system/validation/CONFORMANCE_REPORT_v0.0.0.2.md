@@ -27,14 +27,29 @@ bash _system/validation/conformance_check.sh
 |---|---|---|---|
 | 安装 T60（G1–G20） | `2026-07-21T23:05Z` | 77 | **PASSED 77 / FAILED 0**，exit 0 |
 | 维护回合：吸收 `sync/pause-20260623`（新增 G21） | `2026-07-21T23:15Z` | 81 | PASSED 80 / FAILED 1 —— 唯一失败是 `stray remote branch(es): sync/pause-20260623`，即本回合正在收敛的目标 |
-| 维护回合复跑（分支删除后） | 见本节下方「复跑回执」 | 81 | 待复跑填入（本 commit 推送后立即删除分支并复跑） |
+| 维护回合复跑（分支删除后） | `2026-07-21T23:18:27Z` | 81 | **PASSED 81 / FAILED 0 / SKIPPED 0**，exit 0 |
 
 G21 的中间态失败是**设计内的真实检出**：它证明该门确实会对侧分支报警，而不是恒真。
 
 #### 复跑回执
 
-<!-- 分支删除后由同一 Maintainer 填入，不得预先声称 -->
-待填。
+在**干净的 main 工作树**（`origin/main` 快进拉取后、worktree 与临时分支已回收）执行：
+
+```text
+2026-07-21T23:18:27Z  bash _system/validation/conformance_check.sh
+...
+== G21 Repository hygiene: single trunk, no stray branch / open PR / open issue ==
+PASS  no leftover local branch (only main + live worktree branches)
+PASS  remote has only 'main' (no stray branch)
+PASS  no open pull request
+PASS  no open issue
+==============================
+PASSED: 81   FAILED: 0   SKIPPED: 0
+==============================
+exit=0
+```
+
+删除分支前已先核验证据在 `origin/main` 上可读（`2026-06-23_PAUSED_SYNC_RECORD.md` 2371 bytes、`LEARNING_LOG.md` 顶部条目均通过 GitHub API 取回确认），**先落地再删除**，不存在证据只在本地的时间窗。原 commit `31409cb` 目前仍可按 SHA 取回，但 canonical 副本才是可靠来源。
 
 | Gate | 断言 | 结果 |
 |---|---|---|
