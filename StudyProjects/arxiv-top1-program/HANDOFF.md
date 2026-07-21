@@ -1,107 +1,92 @@
-# HANDOFF
+# Project Handoff
 
-Updated: 2026-06-22 20:46 AEST
-Timezone: Australia/Sydney
+**Protocol:** v0.0.0.2
+**Canonical project ID:** `arxiv-top1-program`
+**Status:** active
+**Aliases / merged from:** [`arXiv Top1 Program`, `arxiv`]
+**State source commit:** `ad23b51`（项目最后一次写入）；install base `6cac133`；补充证据 `31409cb`（未合并孤立分支 `origin/sync/pause-20260623`）
+**Handoff file commit:** resolve with `git log -1 --format=%H -- StudyProjects/arxiv-top1-program/HANDOFF.md`; do not self-reference
+**Last updated UTC:** `2026-07-21T22:55:46Z`
 
-## 当前目标
+## 1. Snapshot
 
-运行 `arxiv-top1-program`：滚动式 arXiv archive mastery 计划，同时保持三个 active slots。
+- Stable goal：滚动式 arXiv archive mastery 计划，长期同时保持三个 active group slot；每个 archive/category 固定 30 天，group 总时长 = `archive_count × 30 天`。
+- Current focus：`Q-FIN q-fin.TR` D004 已验收；`MATH math.PR` D003 已验收；`PHYS quant-ph` D003 已验收、D004 已开讲但被 Owner 在 2026-06-23 要求暂停。
+- Default route：M（概念回忆与机制解释为主，判断题作为 J 探针）。
+- Current primary contract：M。
+- Next smallest action：先确认 `PHYS quant-ph` D004 是否恢复。恢复则从「为什么 amplitude/confidence 不是 probability/action permission」冷回忆起步；不恢复则按 balanced route 进入 `MATH math.PR` D004（Expectation vs risk-adjusted decision），或按 Owner 指定 focus mode 进入 `Q-FIN q-fin.TR` D005（Toxic flow / spread compensation）。
+- Recommended start prompt：`开始学习：arXiv，先确认 PHYS quant-ph D004 是否恢复`
 
-## 当前状态
+## 2. Capability Evidence
 
-- 项目开始日期：2026-06-13。
-- 当前 global day：D010。
-- 今天学习已结束：2026-06-22。
-- 当前 active tracks：`Q-FIN - q-fin.TR` D004 validated、`PHYS - quant-ph` D003、`MATH - math.PR` D003。
-- 每个 archive/category 固定 30 天。group 总时长 = `archive_count * 30 天`。
-- queued group 不能默认从今天开始；必须根据 active slot 释放时间计算。
-- 学习笔记、Notion note、daily log、review 默认中文；只保留必要专业术语、archive code、API 名、论文名、工具名。
+### Reliable without AI (E3/E4)
+- 无。当前没有满足「延迟后 H0 独立复现」或「真实产物/已解析判断」的记录。
 
-## 今日完成
+### Provisional independent (E2)
+- LOB walk 与 VWAP 计算 — H0 独立：ask book `100.00×50 / 100.10×30 / 100.30×40`，market buy 100，正确给出 fill `50/30/20`、last price `100.30`、VWAP `100.09` — observed 2026-06-22（评分 4/5）。
+- Adverse selection 机制迁移 — H0 独立完成反向场景：`limit sell 100` 成交后 mid 到 `100.70`，正确判断可能被 informed buyer 打中、fill 可能来自 toxic flow，应降低挂单尺寸、扩大 spread、暂停信号或要求额外确认 — observed 2026-06-22（评分 4/5）。**同轮存在方向词纠正（把「上涨到 100.70」说成「下跌」），按合同不升级为 E3。**
+- Variance / tail risk 策略选择 — H0 独立选择方差与尾部风险更小的策略 B 并给出理由 — observed 2026-06-22（`MATH math.PR` D003）。
 
-### MATH / `math.PR` D003
+### Assisted exposure only (E0/E1)
+- Adverse selection 的 `limit buy` 标准模板复述 — highest hint：提示后复述（H2 级） — 明确不计为独立掌握。
+- `PHYS quant-ph` D004「amplitude-like → p_raw / p_exec 决策链路」 — 课程已开讲即被暂停，无独立表现记录。
 
-- 2026-06-22 已完成概念验证：Distribution、variance、tail risk。
-- 用户能选择较低 variance/tail risk 的策略 B，并指出亏损更小、收益更好。
-- 需要继续强化 base-rate arithmetic：`P(A)=1%`, `P(E|A)=90%`, `P(E|not A)=9%` 时 `P(A|E)≈9.17%`，不是 90%。
+### Not yet proven
+- Base-rate 算术 — 缺失 Oracle：在 `P(A)=1%`、`P(E|A)=90%`、`P(E|not A)=9%` 条件下，无提示独立算出 `P(A|E)≈9.17%`，并说明低 base rate 下假阳性绝对数量为何淹没真阳性。
+- 「amplitude-like 是内部中间量，不能直接当 probability 使用」 — 缺失 Oracle：暂停记录中该句归属不明（无法判定是 Owner 独立表述还是教学反馈），恢复 PHYS 轨道时必须用 H0 冷回忆重新取证。
+- 延迟保持 — 缺失 Oracle：以上 E2 项均未做跨会话延迟复测。
 
-### Q-FIN / `q-fin.TR` D004 Gate
+## 3. Misconceptions, Failures & Counterevidence
 
-- 2026-06-22 已完成 LOB/VWAP gate：ask book `100.00 x50`, `100.10 x30`, `100.30 x40`，market buy 100。
-- 用户正确给出 fill levels `50/30/20`、last price `100.30`、VWAP `100.09`。
+- 把 `P(E|A)` 直接当作 `P(A|E)` — counterexample：`P(A)=1%`、`P(E|A)=90%`、`P(E|not A)=9%` 时 `P(A|E)≈9.17%` 而非 90% — status: open。
+- 用「吸筹/洗盘」等叙事词替代 microstructure 语言 — counterexample：必须改用 order book、toxic flow、post-fill markout 表述 — status: reduced。
+- 方向词不精确：`limit sell 100` 成交后 mid 到 `100.70` 是上涨不是下跌 — status: reduced（同轮已纠正，需延迟复测）。
+- 把「成交成功」当作交易质量好 — counterexample：fill 后持续 adverse movement 时，成交本身是风险信号 — status: reduced。
+- 教学素材曾出现错误数字（原称 A/B 策略 EV 相近，实际 A EV=0、B EV=0.65）— status: resolved，**不得把该错误数字当作概念证据**。
 
-### Q-FIN / `q-fin.TR` D004 正课
+## 4. Review Queues
 
-- 2026-06-22 已完成：Adverse Selection。
-- 核心理解：成交成功不等于交易质量好；post-fill mid/mark 快速朝自己不利方向移动，说明 fill 可能来自 informed trader / toxic flow。
-- 用户先在 limit buy 场景复述模板，未计为独立掌握。
-- 用户在 limit sell 场景完成独立迁移：`limit sell 100` 成交后 mid 到 `100.70`，说明可能卖早/卖便宜，被 informed buyer 打中；系统应降低挂单尺寸、扩大 spread、暂停信号或要求额外确认。
-- 纠正点：应说 mid 上涨到 100.70，不是下跌到 100.70。
-- Q-FIN `q-fin.TR` archive day 现为 4/30，mastery_pct 25。
+### Recall
+| Item | Level | Due window | Last pre-help result | Source / validity |
+|---|---|---|---|---|
+| VWAP vs last price vs best ask | R1 | next_related_session | H0 正确（4/5，2026-06-22） | `04_DAILY_LOGS/2026-06-22_QFIN_q-fin.TR_D004.md` / current |
+| Adverse selection 与 post-fill markout | R1 | next_related_session | H0 反向场景正确，有方向词纠正 | 同上 / current |
+| Base-rate 算术 `P(A\|E)` | R0 | next_related_session | 未完成 | `04_DAILY_LOGS/2026-06-22_MATH_math.PR_D003_QFIN_gate.md` / current |
+| Distribution / variance / tail risk | R1 | next_related_session | H0 正确 | 同上 / current |
+| amplitude vs probability vs action permission | R0 | PHYS 轨道恢复时 | 未取证（会话被暂停） | `origin/sync/pause-20260623` / unknown |
 
-## Notion 状态
+### Reperformance
+| Capability | Trigger | Variation / failure path | Last result |
+|---|---|---|---|
+| LOB walk + VWAP 计算 | next_related_session | 换 book 深度与订单方向（market sell / 部分成交） | H0 正确（2026-06-22） |
+| 从 post-fill 价格移动判断 fill 质量 | variation_due | 换成 partial fill、跨价位成交、延迟 markout 窗口 | H0 正确（2026-06-22） |
 
-- `arXiv Quantitative Finance` page：`37eb1a98-6ba6-8133-a01b-e6fbff80849b`，已追加 Q-FIN D004 前置门和 D004 adverse selection 笔记。
-- `arXiv Mathematics` page：`386b1a98-6ba6-81a7-a8ce-f76d95e6f511`，已追加 MATH D003 笔记。
-- 修改任何 Notion 页面前，必须先 fetch 当前 schema、属性和页面格式。
+### Resolution
+| Decision / prediction | Initial confidence | Resolution trigger | Kill / update condition |
+|---|---|---|---|
+| balanced route（三轨道轮转）优于 focus mode | unknown | Owner 明确选择 focus mode 时 | Owner 指定 Q-FIN focus 即改为 focus |
+| group 计划窗口（Q-FIN→2027-03-09、PHYS→2030-08-20、MATH→2029-01-29） | unknown | 任一 slot 提前释放或 Owner 改排期 | 实际进度与窗口偏离时重算，不回填历史日期 |
 
-## GitHub 记录
+## 5. Validity
 
-已更新或创建：
+- Current sources：`10_PROGRAM_STATE/group_routes/{Q-FIN,PHYS,CS}.csv`、`03_ROADMAPS/arxiv_roadmap.md`、`04_DAILY_LOGS/2026-06-22_*`、`10_PROGRAM_STATE/progression_log.csv`、`metrics.csv`。
+- Recheck due / trigger：PHYS 轨道恢复时；任一 group slot 释放时重算 queued group 起始日（**不得默认从当天开始**）。
+- Superseded knowledge：教学素材中的 A/B 策略 EV 旧数值已作废。
+- Unknowns：
+  - `PHYS quant-ph` D004 的暂停证据只存在于**未合并**的孤立分支 `origin/sync/pause-20260623`（`31409cb`，与 main 无共同祖先），main HEAD 中没有该记录；
+  - external review 全部 `blocked_unavailable`（configured agent、ChatGPT、Claude、Perplexity、external 1/2），**不得声称 external review completed**；
+  - Q-FIN D004 只创建了 review packet，未完成 reviewer handshake。
 
-- `04_DAILY_LOGS/2026-06-22_MATH_math.PR_D003_QFIN_gate.md`
-- `04_DAILY_LOGS/2026-06-22_QFIN_q-fin.TR_D004.md`
-- `05_REVIEWS/external_ai_reviews/2026-06-22_MATH_D003_QFIN_gate_review_packet.md`
-- `05_REVIEWS/external_ai_reviews/2026-06-22_QFIN_D004_review_packet.md`
-- `metrics.csv`
-- `10_PROGRAM_STATE/progression_log.csv`
-- `07_NOTION/notion_sync_log.csv`
-- `05_REVIEWS/external_ai_reviews/external_review_log.csv`
-- `06_PERSONALIZATION/teaching_adjustments.md`
-- `state.json`
-- `_system/study-project-orchestrator/LEARNING_LOG.md`
-- `_system/study-project-orchestrator/PROJECT_INDEX.md`
+## 6. Operating Preferences
 
-## External Review 状态
+- Effective methods：明确区分「提示后复述」与「独立迁移」；用 buy/sell 对称场景检验是否真正理解；先给可用结论再讲机制。
+- Avoid / adjust：不要用叙事词替代 microstructure 术语；不要一课混入多个 archive 的内容（Owner 明确要求「只讲一个 archive」）；不要回填历史学习日期（例如不得把 MATH 追记为 2026-06-14 已学）。
+- Time / format preference：学习笔记、daily log、review、Notion 正文默认中文；只保留必要专业术语、archive code、论文名、API 名与工具名。
 
-- Q-FIN D004 只创建 review packet；未完成 reviewer handshake。
-- Configured agent reviewer、ChatGPT、Claude、Perplexity、external reviewer 1/2 均记录 `blocked_unavailable`。
-- 不要声称 external review completed。
+## 7. Legacy & Recovery
 
-## 正确 group 计划窗口
+- Prior Handoff/log/state references：本文件重建前的版本见 `git show 6cac133:StudyProjects/arxiv-top1-program/HANDOFF.md`；精简学习记录见 `_system/study-project-orchestrator/LEARNING_LOG.md`；机器状态见 `state.json`；指标见 `metrics.csv` 与 `10_PROGRAM_STATE/progression_log.csv`；group 计划窗口与 Notion/automation 细节见重建前 Handoff。
+- Merge/alias history：无合并来源。
+- Recovery notes：recovery ref `study-os-v0.0.0.2-pre-20260721T225052Z`。暂停记录：`git show origin/sync/pause-20260623:PAUSED_SYNC_RECORD_20260623.md`。`study-project-daily-sync` 为 detached local cron，无有效学习记录时应写 missed/blocked，不得伪造进度。
 
-| Group | Archive 数量 | 计划开始 | 计划结束 | 状态 |
-|---|---:|---|---|---|
-| Q-FIN | 9 | 2026-06-13 | 2027-03-09 | active |
-| PHYS | 51 | 2026-06-13 | 2030-08-20 | active |
-| MATH | 32 | 2026-06-15 | 2029-01-29 | active_from_2026-06-15 |
-| STAT | 6 | 2027-03-10 | 2027-09-05 | queued |
-| CS | 40 | 2027-09-06 | 2030-12-18 | queued |
-| ECON | 3 | 2029-01-30 | 2029-04-29 | queued |
-| EE/EESS | 4 | 2029-04-30 | 2029-08-27 | queued |
-| Q-BIO | 10 | 2029-08-28 | 2030-06-23 | queued |
-
-## Route Files
-
-- Q-FIN full route：`10_PROGRAM_STATE/group_routes/Q-FIN.csv`。
-- PHYS full route：`10_PROGRAM_STATE/group_routes/PHYS.csv`。
-- CS full route：`10_PROGRAM_STATE/group_routes/CS.csv`。
-- arXiv full roadmap：`03_ROADMAPS/arxiv_roadmap.md`。
-
-## Automation 状态
-
-- `study-project-daily-sync` 已改为 detached local cron。
-- 目标：每天读取 GitHub/Notion 状态并同步更新，不依赖当前聊天线程。
-- 如果当日没有有效学习记录，automation 应写入 missed/blocked 状态；不能伪造学习进度。
-
-## 下一步
-
-默认下一课走 balanced route：
-
-- 推荐：PHYS / `quant-ph` D004：Measurement, repeated shots, observable。开头先回忆为什么 amplitude/confidence 不是 probability/action permission。
-- 如果用户明确选择 Q-FIN focus mode：Q-FIN / `q-fin.TR` D005：Toxic flow / spread compensation。开头先回忆为什么 `limit sell 100` 成交后 mid 到 `100.70` 可能是 adverse selection。
-- Pending：MATH / `math.PR` D004：Expectation vs risk-adjusted decision。
-
-教学必须讲到可使用：概念含义、核心机制、失败模式、真实例子、决策规则、ROI 最大化行动。
-
-每次 session 结束必须同步 GitHub，并给出后续课程。
+> Current executable state, not a transcript. Preserve contrary evidence and Git history; compress repetition.

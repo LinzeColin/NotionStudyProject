@@ -1,3 +1,10 @@
+> **[Study OS v0.0.0.2] LEGACY — 不再用于路由。**
+> 路由索引已迁移到 `_system/STUDY_INDEX.md`（动态发现，含 canonical ID / status / aliases / merged_into）。
+> 本文件保留为 **Legacy 证据来源**：拓扑历史、归档理由、arXiv 排期、Notion 与 automation 规则、旧 Notion 放置/图标规则。
+> 已知漂移：本文件未收录 2026-06-21 建立的 `ai-tech-industry-investment-judgment`，也未收录 `dlm-flow-agent-cost-sprint`。
+> 与 `_system/STUDY_INDEX.md` 冲突时，重建 Index，**不要**反向改写项目状态。
+> 下方「Current User Learning Override」的多项目并行规则**仍然有效**，已并入 `AGENTS.md` §4.1。
+
 # Current User Learning Override
 
 - 所有学习项目允许并行推进。

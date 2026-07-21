@@ -1,87 +1,83 @@
-# HANDOFF
+# Project Handoff
 
-Timestamp: 2026-06-15 Australia/Sydney
+**Protocol:** v0.0.0.2
+**Canonical project ID:** `industrial-666-roi-map`
+**Status:** active
+**Aliases / merged from:** [`Industrial 666 ROI Map`, `industrial-666`, `全工业体系 666 小类 ROI 学习计划`]
+**State source commit:** `b837db3`（项目最后一次写入）；install base `6cac133`
+**Handoff file commit:** resolve with `git log -1 --format=%H -- StudyProjects/industrial-666-roi-map/HANDOFF.md`; do not self-reference
+**Last updated UTC:** `2026-07-21T22:55:46Z`
 
-## Current Goal
+## 1. Snapshot
 
-Run `industrial-666-roi-map`, a 90-day first-phase Study Project for building high-ROI industrial small-class judgment from the user's 666-small-class prompt.
+- Stable goal：90 天第一阶段 —— 建立以工业小类为最小单元的高 ROI 判断力：分类体系、评分模型、来源核验严谨度，先做 top-100 地图，再做 top-30 深研。
+- Current focus：D01 已开放但**未开课**；项目脚手架、`scoring_schema.csv` v0.1 已就绪；Notion 行级同步经 Chrome fallback 完成，页面正文与图标未完成。
+- Default route：J（研究、证据综合与 ROI 判断为终点）。
+- Current primary contract：J。
+- Next smallest action：开 D01 —— 核验 taxonomy 与来源策略，讲清「工业小类为何是最小单元」，解释 scoring schema v0.1。
+- Recommended start prompt：`开始学习：industrial-666-roi-map D01`
 
-## Current Status
+## 2. Capability Evidence
 
-| Field | Value |
-|---|---|
-| Project | 全工业体系 666 小类 ROI 学习计划 |
-| Slug | `industrial-666-roi-map` |
-| Current day | D01 / 第1/90天 |
-| Start | 2026-06-15 |
-| End | 2026-09-12 |
-| Notion | partial_chrome_fallback_synced |
-| GitHub | local project files created |
-| Icon asset | `_assets/notion-icons/study-timeline-pages/industrial-666-roi-map-b-tech-v1.svg` ready locally |
+### Reliable without AI (E3/E4)
+- 无。
 
-## Key Decisions
+### Provisional independent (E2)
+- 无。项目尚未开课，无 pre-help 表现记录。
 
-1. Do not claim mastery of all 666 small classes in 90 days.
-2. First build taxonomy, scoring, and source-verification rigor.
-3. Prioritize top-100 map and top-30 deep research.
-4. Notion is notebook only; connector writes remain blocked by reauthentication, but the user explicitly authorized Chrome fallback for row-level edits.
-5. External review packet is saved, but external reviewer execution is blocked in this side conversation without explicit delegation authorization/connectors.
-6. User requested all child page icons in `Codex Study Timeline` be aligned to style rules. The local matching icon asset is prepared; actual Notion icon mutation is not complete because connector access is blocked and Chrome icon upload requires a safer file-upload path.
-7. Chrome fallback verified the `Industrial 666 ROI Map` row in `Codex Study Timeline` with Project, Date range, and one core tag.
+### Assisted exposure only (E0/E1)
+- 项目脚手架、`10_INDUSTRIAL_DATABASE/scoring_schema.csv` v0.1、`03_WEEKLY_PLANS/W01.md` 已创建，但由工具产出，不构成能力证据。
 
-## Files To Read First
+### Not yet proven
+- 「工业小类为何是最小单元」 — 缺失 Oracle：无提示独立解释，并举出一个小类比大类更能决定 ROI 的具体例子。
+- Scoring schema v0.1 的可辩护性 — 缺失 Oracle：独立说明每个维度的含义、权重理由与失效场景。
+- 来源核验严谨度 — 缺失 Oracle：对一个小类独立给出来源、权威级别、`valid_as_of` 与 recheck trigger。
 
-| File | Purpose |
-|---|---|
-| `state.json` | Machine-readable project state. |
-| `00_PROJECT_BRIEF.md` | Project boundary and success criteria. |
-| `01_STUDY_PLAN.md` | 3/7/30/90-day route. |
-| `03_WEEKLY_PLANS/W01.md` | First-week plan. |
-| `10_INDUSTRIAL_DATABASE/scoring_schema.csv` | Scoring model. |
-| `07_NOTION/notion_sync_log.csv` | Notion blocker and sync status. |
+## 3. Misconceptions, Failures & Counterevidence
 
-## Next Step
+- 尚无学习证据，因此暂无已暴露误区。
+- 预置边界（防止误区的硬约束）：**不得声称 90 天内掌握全部 666 个小类**；先建分类、评分与来源核验严谨度，再做 top-100 地图与 top-30 深研。
 
-Start D01 teaching:
+## 4. Review Queues
 
-```text
-Continue industrial-666-roi-map D01.
-```
+### Recall
+| Item | Level | Due window | Last pre-help result | Source / validity |
+|---|---|---|---|---|
+| 工业小类 vs 大类作为分析最小单元 | R0 | D01 | 未取证 | `00_PROJECT_BRIEF.md` / current |
+| GB/T 4754-2017 小类口径 | R0 | D01 | 未取证 | `11_SOURCE_PROMPTS/` / recheck_due |
 
-D01 must teach why "industrial small class" is the minimum unit, verify taxonomy/source strategy, and create the first source checklist + scoring schema explanation.
+### Reperformance
+| Capability | Trigger | Variation / failure path | Last result |
+|---|---|---|---|
+| 用 scoring schema 给一个小类打分并说明理由 | next_related_session | 换一个数据可得性差的小类 | 未做 |
+| 为一个小类建立可核验来源清单 | real_artifact_due | 来源冲突 / 数据过期路径 | 未做 |
 
-## Notion Fallback Result
+### Resolution
+| Decision / prediction | Initial confidence | Resolution trigger | Kill / update condition |
+|---|---|---|---|
+| scoring schema v0.1 的维度与权重可用 | unknown | 首次实际打分后 | 若同一小类在不同来源下得分剧烈摆动则改版 |
+| 计划窗口 2026-06-15→2026-09-12 | unknown | D01 实际开课日期 | 长期未开课需 Owner 重新确认 |
 
-Chrome visible UI verification on 2026-06-16 01:04 AEST:
+## 5. Validity
 
-| Property | Value |
-|---|---|
-| Name | Industrial 666 ROI Map |
-| Project | Industrial 666 ROI Map |
-| Date | June 15, 2026 -> September 12, 2026 |
-| Tags | industrial taxonomy |
-| Backup before mutation | `NotionBackup/20260615/codex_study_timeline_chrome_visible_snapshot.md` |
+- Current sources：`00_PROJECT_BRIEF.md`、`01_STUDY_PLAN.md`、`03_WEEKLY_PLANS/W01.md`、`10_INDUSTRIAL_DATABASE/scoring_schema.csv`、`11_SOURCE_PROMPTS/`、`07_NOTION/notion_sync_log.csv`。
+- Recheck due / trigger：taxonomy 与来源策略在 D01 核验前一律视为未验证；GB/T 4754-2017 口径需在首次打分前确认版本与适用范围。
+- Superseded knowledge：无。
+- Unknowns：
+  - Notion connector 写入仍被重认证阻断，行级编辑经 Owner 明确授权的 Chrome fallback 完成；**页面正文与图标未完成**，不得声称 Notion 同步完成；
+  - 本地图标素材 `_assets/notion-icons/study-timeline-pages/industrial-666-roi-map-b-tech-v1.svg` 已就绪，但 Notion 图标写入需要更安全的文件上传路径；
+  - external review packet 已保存，但在该侧会话中无授权/连接器执行外部复核。
 
-Not completed:
+## 6. Operating Preferences
 
-| Item | Status | Reason |
-|---|---|---|
-| Page body | not_synced | Opening the page from the table via Chrome fallback was unstable; Enter moved selection to another row, so continuing risked writing to the wrong page. |
-| Page icon | not_synced | Local asset exists, but Notion UI upload or bulk icon write needs connector access or explicit action-time file-upload confirmation. |
-| Bulk child-page icon audit | not_synced | Requires connector fetch or a safer bulk channel. Do not claim complete. |
+- Effective methods：先建方法与口径，再铺量；每个结论都要能追到来源。
+- Avoid / adjust：不铺陈 666 个小类的清单；不用随机 emoji 或与现有风格不符的图标；连接器不可用时记录 blocker 而不是声称完成。
+- Time / format preference：学习笔记与 Notion 正文默认中文。
 
-## Pending Notion Action
+## 7. Legacy & Recovery
 
-After Notion connector reauthentication or a safer confirmed Chrome file-upload flow:
+- Prior Handoff/log/state references：重建前版本 `git show 6cac133:StudyProjects/industrial-666-roi-map/HANDOFF.md`（含完整 Notion / 图标 / external review 决策记录）；`state.json`；`metrics.csv`；`07_NOTION/notion_sync_log.csv`。
+- Merge/alias history：无合并来源。
+- Recovery notes：recovery ref `study-os-v0.0.0.2-pre-20260721T225052Z`。
 
-1. Fetch `Codex Study Timeline` database and data source schema.
-2. Query all child pages/rows.
-3. Back up relevant content before any bulk mutation.
-4. Sync the lightweight Chinese page body into `Industrial 666 ROI Map`.
-5. Apply the blue/white B-tech icon style to every child page under the database, using existing assets when names match and `_assets/notion-icons/study-timeline-pages/industrial-666-roi-map-b-tech-v1.svg` for this project.
-
-## Latest Notion Connector Check
-
-2026-06-15 22:22 AEST: user invoked the Notion connector again and provided the `Codex Study Timeline` URL. `_fetch` on the database URL and `get_users(self)` both returned `This app connection requires reauthentication before other actions on this app can succeed.` No Notion backup, page creation, content update, or icon update was performed.
-
-2026-06-15 22:55-2026-06-16 01:04 AEST: user authorized Chrome fallback. Chrome visible UI was used to create/update the `Industrial 666 ROI Map` timeline row and verify Project, Date, and Tags. This does not resolve connector reauthentication and does not complete page body/icon work.
+> Current executable state, not a transcript. Preserve contrary evidence and Git history; compress repetition.

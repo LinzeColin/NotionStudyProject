@@ -1,3 +1,8 @@
+> **[Study OS v0.0.0.2] LEGACY — 不再用于路由。**
+> 归档与路由状态已迁移到 `_system/STUDY_INDEX.md`。本文件保留为 **Legacy 证据来源**：归档决策、automation 清理记录与 Notion 阻塞状态。
+> 注意：下表把 `prompt-engineering-loop-engineering` 记为 "archived superseded duplicate route"；按 v0.0.0.2 拓扑规则，它有唯一后继目标，因此在 `_system/STUDY_INDEX.md` 中分类为 **`merged` → `ai-workflow-operating-system`**。`ai` 因被拆分为四个后继项目而无唯一目标，保持 **`archived` + `superseded_by`**。
+> 与 `_system/STUDY_INDEX.md` 冲突时，重建 Index，**不要**反向改写项目状态。
+
 # Study Project Archive Index
 
 Updated: 2026-06-14  

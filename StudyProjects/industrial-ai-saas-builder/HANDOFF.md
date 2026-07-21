@@ -1,91 +1,84 @@
-# HANDOFF - Industrial AI SaaS Builder
+# Project Handoff
 
-Updated: 2026-06-14  
-Timezone: Australia/Sydney
+**Protocol:** v0.0.0.2
+**Canonical project ID:** `industrial-ai-saas-builder`
+**Status:** active
+**Aliases / merged from:** [`Industrial AI SaaS Builder`]
+**State source commit:** `ef1ad30`（项目最后一次写入）；install base `6cac133`
+**Handoff file commit:** resolve with `git log -1 --format=%H -- StudyProjects/industrial-ai-saas-builder/HANDOFF.md`; do not self-reference
+**Last updated UTC:** `2026-07-21T22:55:46Z`
 
-## Current Goal
+## 1. Snapshot
 
-Run `Industrial AI SaaS Builder` as a 34-day accelerated Study Project starting 2026-06-14 as Day 1/34.
+- Stable goal：以工业 AI SaaS 为载体，建立 RAG 判断力、多模态产品判断、本地 vs 远程部署 ROI、架构与商业策略判断力（34 天加速课程）。
+- Current focus：D01 完成（recall attempt 02 通过）；D02 完成（独立回忆经纠正后通过）；D03 gate 已开放。
+- Default route：J（证据判断与选型决策为终点）。
+- Current primary contract：J。
+- Next smallest action：D03 —— RAG eval 与 trust boundary，产出 Eval rubric 与 20 题 eval set。
+- Recommended start prompt：`开始学习：Industrial AI SaaS Builder D03 RAG eval 与 trust boundary`
 
-## Current State
+## 2. Capability Evidence
 
-- Artificial D000 / Day 0 has been removed.
-- 2026-06-14 started as `D01 / 第1/34天`; D01 is complete after recall attempt 02.
-- The user continued immediately, so D02 / 第2/34天 started early under the acceleration rule.
-- D02 concept teaching and required output are complete.
-- D02 independent recall passed with correction, so D03 is open.
-- D02 Notion notes were appended and verified by fetching the page after write.
-- D02 external reviewer attempt timed out; blocker recorded, no external suggestions adopted.
-- D01 required outputs are complete: RAG opportunity scorecard and RAG decision matrix.
-- D01 remediation was required because recall attempt 01 did not pass.
-- D01 recall attempt 02 passed with 5/5 across: model memory vs RAG, evidence/checkability value, strong industrial RAG case, and non-RAG-first case.
-- D03 gate is open.
-- Notion timeline row Date is 2026-06-14 to 2026-07-17.
-- Existing `ai` study plan has been partially absorbed into this project.
-- Prompt/loop/Codex/Notion-specific material belongs to `ai-workflow-operating-system`.
-- Local model/NPU/CNN/simulator material belongs to `local-ai-infrastructure`.
-- Business/finance/legal/arbitrage material belongs to `ceo-finance-strategy-system`.
+### Reliable without AI (E3/E4)
+- 无。D01 recall attempt 02 与 D02 recall 都发生在同一学习日、且紧接补救/纠正，不满足延迟独立复现条件。
 
-## Acceleration Rule
+### Provisional independent (E2)
+- D01 独立回忆 5/5：模型记忆 vs RAG、证据/可核查性价值、强工业 RAG 案例、非 RAG-first 反例 — observed 2026-06-14（attempt 02，attempt 01 未通过后已补救）。
+- D02 独立回忆通过（含纠正）：RAG pipeline 作为 failure surface — observed 2026-06-14。
 
-No D000. If the user starts before the planned Day 1, use the next real day number immediately. If the user completes a day's lesson and wants to continue, advance to the next real lesson early.
+### Assisted exposure only (E0/E1)
+- D01 recall attempt 01 — 未通过，触发 remediation — 只证明接触过。
+- D02 纠正点：RAG pipeline 失败与 LLM 生成失败不必然独立，系统不会因此自动「极不可靠」；可靠性取决于证据链是否可审计、可评测、可修复 — 该结论为同轮纠正产物，需另题 H0 复测。
 
-Acceleration must never skip active recall, concept teaching, required output asset, GitHub sync, Notion sync, verification, external review handshake or explicit blocker log, state update, personalization update, and upcoming lesson map.
+### Not yet proven
+- 产物独立性 — 缺失 Oracle：D01 的 RAG opportunity scorecard、RAG vs 模型记忆 vs 微调 vs 工作流自动化 vs agent 决策矩阵，以及 D02 的 RAG pipeline 架构图、组件失效模式表、最小可审计工业 RAG 架构，仓库中均记为 complete，但**没有记录这些产物由 Owner 主导完成还是 AI 生成**，因此不得计为 E4。
+- 延迟保持与迁移 — 缺失 Oracle：换一个未讲过的行业场景，无提示独立判断该不该 RAG-first。
+- Eval 能力 — 缺失 Oracle：独立写出 eval rubric 与可复现的 20 题 eval set。
 
-## D01 Completed Lesson
+## 3. Misconceptions, Failures & Counterevidence
 
-Date: 2026-06-14  
-Progress label: `第1/34天`  
-Topic: Why Industrial AI SaaS starts with RAG judgment  
-Status: completed after recall attempt 02
+- 认为 RAG pipeline 失败与 LLM 生成失败相互独立、因而系统「极不可靠」 — counterexample：失败相关时可靠性取决于证据链是否可审计、可评测、可修复 — status: reduced（需延迟复测）。
+- D01 首次回忆未通过（attempt 01） — status: resolved（attempt 02 5/5 通过）。
 
-GitHub records:
+## 4. Review Queues
 
-- `StudyProjects/industrial-ai-saas-builder/04_DAILY_LOGS/2026-06-14_D01.md`
-- `StudyProjects/industrial-ai-saas-builder/04_DAILY_LOGS/2026-06-14_D01_RAG_CORE_EXPLANATION.md`
-- `StudyProjects/industrial-ai-saas-builder/04_DAILY_LOGS/2026-06-14_D01_RECALL_ATTEMPT_01.md`
-- `StudyProjects/industrial-ai-saas-builder/04_DAILY_LOGS/2026-06-14_D01_RECALL_ATTEMPT_02.md`
-- `StudyProjects/industrial-ai-saas-builder/05_REVIEWS/external_ai_reviews/2026-06-14_D01_completion_packet.md`
-- `StudyProjects/industrial-ai-saas-builder/05_REVIEWS/external_ai_reviews/2026-06-14_D01_completion_results.md`
-- `StudyProjects/industrial-ai-saas-builder/03_WEEKLY_PLANS/W01.md`
+### Recall
+| Item | Level | Due window | Last pre-help result | Source / validity |
+|---|---|---|---|---|
+| 模型记忆 vs RAG 的适用边界 | R1 | next_related_session | H0 正确 5/5（2026-06-14，attempt 02） | `04_DAILY_LOGS/2026-06-14_D01_RECALL_ATTEMPT_02.md` / current |
+| 证据 / 可核查性的价值 | R1 | next_related_session | H0 正确（同上） | 同上 / current |
+| 非 RAG-first 的反例 | R1 | next_related_session | H0 正确（同上） | 同上 / current |
+| RAG pipeline 的失效面与组件失效模式 | R1 | next_related_session | H0 通过但有纠正 | `04_DAILY_LOGS/2026-06-14_D02.md` / current |
 
-Notion page:
+### Reperformance
+| Capability | Trigger | Variation / failure path | Last result |
+|---|---|---|---|
+| 对一个新行业场景判断该不该 RAG-first | variation_due | 换未讲过的行业 + 换数据可得性约束 | 未做 |
+| 产出可复现的 eval rubric + 20 题 eval set | real_artifact_due | D03 必需产物；必须由 Owner 主导 | 未开始 |
+| 画出最小可审计工业 RAG 架构 | failure_injection_due | 注入检索失败 / 文档过期 / 权限越界 | 已产出，独立性未记录 |
 
-- https://app.notion.com/p/37fb1a986ba681d29a22d08f109448d5
+### Resolution
+| Decision / prediction | Initial confidence | Resolution trigger | Kill / update condition |
+|---|---|---|---|
+| 计划窗口 2026-06-14→2026-07-17（34 天加速） | unknown | Owner 重新确认排期 | 窗口已过且自 2026-06-14 无新证据，需 Owner 裁决 |
 
-D01 output:
+## 5. Validity
 
-- RAG opportunity scorecard: complete.
-- RAG vs model memory vs fine-tuning vs workflow automation vs agent decision matrix: complete.
-- Independent recall: passed on attempt 02.
+- Current sources：`04_DAILY_LOGS/2026-06-14_D01*.md`、`04_DAILY_LOGS/2026-06-14_D02.md`、`05_REVIEWS/external_ai_reviews/`、`03_WEEKLY_PLANS/W01.md`、`state.json`、`metrics.csv`。
+- Recheck due / trigger：计划窗口已过且自 2026-06-14 起无新证据 —— 排期需 Owner 重新确认（窗口过期不构成暂停理由）。
+- Superseded knowledge：人为 `D000` / 第 0 天语义已删除；提前开始时直接用下一个真实课程号。
+- Unknowns：D01/D02 产物的独立性；D02 external reviewer 尝试超时，blocker 已记录、**未采纳任何外部建议**，不得声称 external review 完成。
 
-## D02 Current Lesson
+## 6. Operating Preferences
 
-Date: 2026-06-14
-Progress label: `第2/34天`
-Topic: RAG pipeline as failure surface
-Status: complete; independent recall passed with correction
+- Effective methods：先做独立回忆再讲解；未通过就补救并重测，不放行到下一课；每课必须有真实产出物。
+- Avoid / adjust：不创建 `D000`；加速不得跳过 active recall、概念教学、必需产出、GitHub 同步、Notion 同步、验证、external review handshake 或明确 blocker 记录、state 更新、personalization 更新与下一课地图。
+- Time / format preference：加速规则 —— Owner 提前开始或当天想继续时，直接进下一个真实课程号。
 
-GitHub records:
+## 7. Legacy & Recovery
 
-- `StudyProjects/industrial-ai-saas-builder/04_DAILY_LOGS/2026-06-14_D02.md`
-- `StudyProjects/industrial-ai-saas-builder/05_REVIEWS/external_ai_reviews/2026-06-14_D02_packet.md`
-- `StudyProjects/industrial-ai-saas-builder/05_REVIEWS/external_ai_reviews/2026-06-14_D02_results.md`
+- Prior Handoff/log/state references：重建前版本 `git show 6cac133:StudyProjects/industrial-ai-saas-builder/HANDOFF.md`（含完整 D01/D02 记录清单、Notion 页面链接与 gate 明细）；`state.json`；`metrics.csv`；`04_DAILY_LOGS/`；`05_REVIEWS/`。
+- Merge/alias history：吸收 `ai` 项目中 AI 基础、LLM、agent、自动化、AI 产品化范围。Prompt/loop/Codex/Notion 专属内容归 `ai-workflow-operating-system`；本地模型/NPU/CNN/模拟器归 `local-ai-infrastructure`；商业/金融/法律/套利归 `ceo-finance-strategy-system`。
+- Recovery notes：recovery ref `study-os-v0.0.0.2-pre-20260721T225052Z`。
 
-D02 output:
-
-- RAG pipeline architecture diagram: complete.
-- Component failure-mode table: complete.
-- Minimal auditable industrial RAG architecture: complete.
-- Independent recall: passed with correction.
-
-## Next Action
-
-Next session can start D03: RAG eval and trust boundary.
-
-Carry forward one correction: RAG pipeline failures and LLM generation failures are not necessarily independent, and the system is not automatically "extremely unreliable." Reliability depends on whether the evidence chain is auditable, evaluated, and repairable.
-
-D03 required output:
-
-- Eval rubric.
-- 20-question eval set.
+> Current executable state, not a transcript. Preserve contrary evidence and Git history; compress repetition.
