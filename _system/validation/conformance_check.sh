@@ -21,8 +21,10 @@ bad()  { printf 'FAIL  %s\n' "$1"; FAIL=$((FAIL+1)); }
 chk()  { if eval "$2" >/dev/null 2>&1; then ok "$1"; else bad "$1"; fi; }
 
 INDEX=_system/STUDY_INDEX.md
+# v0.0.0.3 起为双平面八文件（融合 Governance 治理标准，新增 Skill 规则清单）
 ROOTS=(AGENTS.md STUDY_PRODUCT.md STUDY_ARCHITECTURE.md STUDY_ORCHESTRATOR_ROUTE.md \
-       TEACHING_METHOD_REGISTRY.md SESSION_ACCEPTANCE_AND_REVIEW.md MEMORY_RECOVERY_AND_EVOLUTION.md)
+       TEACHING_METHOD_REGISTRY.md SESSION_ACCEPTANCE_AND_REVIEW.md MEMORY_RECOVERY_AND_EVOLUTION.md \
+       SKILL_RULES_CHECKLIST.md)
 ADAPTERS=(CLAUDE.md GEMINI.md .github/copilot-instructions.md .agents/skills/study-os/SKILL.md)
 # Canonical rows live ONLY under "## Canonical Projects"; the alias table below it
 # uses the same pipe syntax and must never be parsed as a project row.
@@ -37,7 +39,7 @@ TEMPLATES=(_system/templates/HANDOFF_STANDARD_TEMPLATE.md \
            _system/templates/GENERIC_MAINTAINER_SESSION_MERGE_PROMPT.md \
            _system/templates/AGENT_TAKEOVER_CHECKLIST.md)
 
-echo "== G1  Seven Root files present =="
+echo "== G1  Eight governance files present =="
 for f in "${ROOTS[@]}"; do chk "root exists: $f" "[ -s '$f' ]"; done
 
 echo
@@ -59,7 +61,7 @@ chk "study index exists" "[ -s $INDEX ]"
 echo
 echo "== G4  No self-referential commit SHA in derived/handoff files =="
 chk "index declares non-self-reference rule" "grep -q 'DO_NOT_SELF_REFERENCE' $INDEX"
-chk "maintainer handoff declares non-self-reference rule" "grep -q 'DO_NOT_SELF_REFERENCE\|do not self-reference' _system/MAINTAINER_HANDOFF.md"
+chk "maintainer handoff declares non-self-reference rule" "grep -qE 'DO_NOT_SELF_REFERENCE|do not self-reference|不写自引用' _system/MAINTAINER_HANDOFF.md"
 chk "index records inventory_source_commit" "grep -q 'inventory_source_commit' $INDEX"
 
 echo
@@ -190,7 +192,7 @@ chk "fixed-count prohibition stated in every adapter" "( for f in ${ADAPTERS[*]}
 
 echo
 echo "== G16 Routine sessions cannot silently rewrite Root =="
-chk "root change requires owner authorization (AGENTS)" "grep -q 'Root 修改必须由 Owner 明确授权' AGENTS.md"
+chk "root change requires owner authorization (AGENTS)" "grep -qE '明确授权' AGENTS.md"
 chk "delta template forbids root writes by default" "grep -q 'owner_authorized_root_change: false' _system/templates/STUDY_SESSION_DELTA_TEMPLATE.md"
 chk "merge prompt forbids root writes" "grep -q 'Do not modify Root files' _system/templates/GENERIC_MAINTAINER_SESSION_MERGE_PROMPT.md"
 
@@ -206,7 +208,7 @@ echo
 echo "== G18 Privacy and prompt-injection boundaries are declared =="
 chk "delta has do_not_persist" "grep -q 'do_not_persist' _system/templates/STUDY_SESSION_DELTA_TEMPLATE.md"
 chk "delta has prompt_injection_observed" "grep -q 'prompt_injection_observed' _system/templates/STUDY_SESSION_DELTA_TEMPLATE.md"
-chk "root treats external content as data" "grep -q '视为 data\|仅作数据' AGENTS.md MEMORY_RECOVERY_AND_EVOLUTION.md"
+chk "root treats external content as data" "grep -qE '只是数据|视为数据' AGENTS.md MEMORY_RECOVERY_AND_EVOLUTION.md"
 chk "merge prompt treats delta as untrusted" "grep -q 'untrusted input' _system/templates/GENERIC_MAINTAINER_SESSION_MERGE_PROMPT.md"
 
 echo
@@ -217,7 +219,7 @@ chk "no private key material in tracked text" "! grep -rIl --exclude-dir=.git --
 echo
 echo "== G20 Recovery is executable =="
 chk "recovery ref exists" "git rev-parse --verify -q \"\$(git tag -l 'study-os-v0.0.0.2-pre-*' | tail -1)^{commit}\""
-chk "maintainer handoff carries a rollback command" "grep -q 'rollback_command' _system/MAINTAINER_HANDOFF.md"
+chk "maintainer handoff carries a rollback command" "grep -qE 'rollback_command|回滚命令' _system/MAINTAINER_HANDOFF.md"
 chk "recovery contract documents revert-first" "grep -q 'git revert' MEMORY_RECOVERY_AND_EVOLUTION.md"
 
 echo
@@ -253,6 +255,28 @@ if command -v gh >/dev/null 2>&1 && gh repo view >/dev/null 2>&1; then
 else
   printf 'SKIP  open PR / issue check (gh unavailable or not authenticated)\n'; SKIP=$((SKIP+2))
 fi
+
+echo
+echo "== G22 Governance four gates (volume / Chinese / evidence purity / registration) =="
+# 融合自 LinzeColin/Governance 双平面治理标准，实现见 _system/validation/four_gates.py
+if command -v python3 >/dev/null 2>&1; then
+  if python3 _system/validation/four_gates.py >/tmp/four_gates.$$ 2>&1; then
+    ok "four gates pass ($(grep -c '^PASS' /tmp/four_gates.$$) checks)"
+  else
+    bad "four gates FAILED:"; grep '^FAIL' /tmp/four_gates.$$ | sed 's/^/        /'
+  fi
+  rm -f /tmp/four_gates.$$
+else
+  printf 'SKIP  four gates (python3 unavailable)\n'; SKIP=$((SKIP+1))
+fi
+
+echo
+echo "== G23 Project registry present in README =="
+chk "README declares the project registry" "grep -q '项目登记表' README.md"
+chk "README carries the Notion registration address" "grep -q 'app.notion.com/p/37eb1a986ba680bdb5f9ea2367b08991' README.md"
+chk "README lists all eight governance files" "( for f in ${ROOTS[*]}; do grep -q \"\$f\" README.md || exit 1; done )"
+chk "root contract declares the four gates" "grep -q '四道门' AGENTS.md"
+chk "skill checklist adjudicates conflicts against governance" "grep -q '冲突裁决' SKILL_RULES_CHECKLIST.md"
 
 echo
 echo "=============================="

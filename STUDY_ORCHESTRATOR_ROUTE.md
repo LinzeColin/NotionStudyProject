@@ -1,104 +1,137 @@
-# Study Orchestrator Route｜v0.0.0.2
+# 操作流程与路由｜v0.0.0.3
 
-## 1. 目标
+对应 Governance 双平面标准的 `04_操作流程`。回答：**一次学习从头到尾一步步怎么走，以及本轮该走哪条路由。**
 
-选择“本轮怎样教、最终用什么证据证明用户脱离 AI 后会了”，并通过动态 Project Index 定位当前 canonical project。项目目录名和历史 slug 只提供 alias，不决定 active 状态。
+## 一、本文件要解决的问题
 
-## 2. Project Resolution
+选定「本轮怎样教、最终用什么证据证明 Owner 脱离 AI 之后真的会了」，并通过派生索引定位到唯一规范项目。**目录名和历史短名只提供别名，不决定项目是否在跑。**
 
-1. 从用户主题、显式 slug、标题或上下文提取候选；
+## 二、项目解析
+
+1. 从 Owner 的主题、显式短名、标题或上下文提取候选；
 2. 读取 `_system/STUDY_INDEX.md`；
-3. alias 解析到唯一 canonical ID；
-4. `merged` 转向 `merged_into`；`archived` 仅在 Owner 明确重启时使用；
-5. 多个 active candidate 会实质改变教学时，给一个最小编号选择；
-6. 无匹配则使用当前 intake 规则，不擅自创建重复项目；
-7. 不使用固定项目数、不默认扫描全仓。
+3. 别名解析到唯一规范名；
+4. `merged` 转向其合并目标；`archived` 仅在 Owner 明确重启时使用；
+5. 多个在跑候选且会实质改变教学时，给一个最小编号选择；
+6. 无匹配则走新建项目流程（第三节），**不擅自创建重复项目**；
+7. 不使用固定项目数，不默认扫描全仓。
 
-`_system/STUDY_INDEX.md` 是唯一路由索引。`_system/study-project-orchestrator/PROJECT_INDEX.md` 与 `ARCHIVE_INDEX.md` 保留为 Legacy 证据来源（拓扑历史、归档理由、Notion/自动化 blocker），**不再用于路由**；两者与 Index 冲突时重建 Index，不反向改写项目状态。
+`_system/STUDY_INDEX.md` 是唯一路由索引。`_system/study-project-orchestrator/PROJECT_INDEX.md` 与 `ARCHIVE_INDEX.md` 保留为**历史证据来源**（拓扑历史、归档理由、Notion 与自动化阻塞记录），**不再用于路由**；与索引冲突时重建索引，不反向改写项目状态。
 
-## 3. Router 输入
+## 三、新建项目流程
+
+**未完成登记不得开始教学。**
+
+1. 锁定范围：学习目标、领域、子方向、时长、每日时间、产出类型；
+2. 领域太宽时，先给 3–5 个具体子方向并推荐一个默认，等 Owner 明确确认后再锁；
+3. 确认短名、总时长和第一天日期；
+4. 取得 Owner 明确的开始授权；
+5. 创建 Notion 内容前，先把相关既有 Notion 内容备份到 `NotionBackup/YYYYMMDD/`；
+6. 创建项目目录与标准文件（清单见 `SKILL_RULES_CHECKLIST.md`）；
+7. **登记两处**：`README.md` 项目登记表 + Notion 时间线数据库；
+8. 重建 `_system/STUDY_INDEX.md`；
+9. 产出第一周计划和下一次的开始提示词。
+
+## 四、每日教学流程
+
+1. 恢复状态：读项目 `HANDOFF.md`、`state.json`、最近记录；
+2. 报出当前进度（`第X/Y天` 或滚动项目的当前分支进度）与本次最小可完成目标；
+3. **零基础认知链关口**：先确认基础能不能用大白话讲清楚，讲不清就先补基础；
+4. 冷回忆上一轮内容（在任何新教学之前）；
+5. 诊断薄弱记忆、误解或阻碍；
+6. 教当前概念：先机制，再边界，再反例；
+7. 给一个高价值练习或产出任务；
+8. 把概念翻译成 Owner 的决策、工作或生活里的实际用法；
+9. 记录获得帮助前的表现、独立性、最高提示等级；
+10. 结束时给下一次的精确开始提示词和后续课程预览。
+
+**加速规则：** Owner 提前开始或当天想继续时，直接进下一个真实课程号，**不创建 `D000` / 第 0 天**。加速不得跳过任何一步。
+
+**不得把「今天没学」当作失败或自动暂停的理由**（见 `AGENTS.md` 7.1）。
+
+## 五、路由输入
 
 ```yaml
-outcome: recall | explain | distinguish | execute | build | debug | evaluate | decide | create
-knowledge_type: fact | concept | procedure | condition | strategy | metacognition
-prior_state: novice | partial | fluent | expert
-error_state: unknown | low_confidence | misconception | high_confidence_wrong | none
-structure: well_defined | complex_task | uncertain_decision
-stakes: normal | high
-volatility: stable | dated | live_verification
-learning_state: new | review_due | provisional | transfer_due | verified
-constraints: time | energy | direct_answer | source_access
+目标类型: 回忆 | 解释 | 辨析 | 执行 | 构建 | 调试 | 评价 | 决策 | 创造
+知识类型: 事实 | 概念 | 程序 | 条件 | 策略 | 元认知
+先验水平: 新手 | 部分掌握 | 熟练 | 专家
+错误状态: 未知 | 低置信 | 误解 | 高置信度错误 | 无
+任务结构: 定义清晰 | 复杂任务 | 不确定决策
+风险: 一般 | 高
+波动性: 稳定 | 有时效 | 需实时核实
+学习状态: 新学 | 待复习 | 暂定 | 待迁移 | 已验证
+约束: 时间 | 精力 | 要求直接讲 | 来源可得性
 ```
 
-## 4. Primary Contracts
+## 六、三个主合同
 
-### M｜Mental Model & Memory
+### M｜心智模型与记忆
 
-终点是回忆、解释、辨析、计算或稳定心智模型。Oracle：无材料、无关键提示，正确解释机制/边界，并在延迟或换表述后仍成立。
+终点是回忆、解释、辨析、计算或稳定心智模型。**验收标准：** 无材料、无关键提示，能正确解释机制与边界，并在延迟之后或换个表述时仍然成立。
 
-### B｜Build & Behavior
+### B｜构建与行为
 
-终点是执行、构建、调试、修复或真实产物。Oracle：独立完成可用产物；改变输入/约束或注入故障后仍能诊断和恢复。
+终点是执行、构建、调试、修复或真实产物。**验收标准：** 独立完成可用产物；改变输入或约束、注入故障之后仍能诊断和恢复。
 
-### J｜Judgment, Inquiry & Synthesis
+### J｜判断、探究与综合
 
-终点是研究、评价、预测、证据综合或不确定决策。Oracle：明确结论/概率；事实、推断、假设、未知分开；有最强反方、证伪和更新触发。
+终点是研究、评价、预测、证据综合或不确定决策。**验收标准：** 给出明确结论或概率；事实、推断、假设、未知分开；有最强反方、证伪条件和更新触发。
 
-## 5. 决策树
+## 七、决策树
 
 ```text
-正确答案/解释是终点？             → M
-可工作行为/产物/修复是终点？       → B
-可辩护选择/预测/研究判断是终点？    → J
+正确答案或解释是终点？          → M
+可工作的行为、产物或修复是终点？ → B
+可辩护的选择、预测或研究判断？   → J
 ```
 
-混合任务只选当前一个 Primary Contract，按缺口切换：M→B→J、J→M→B 或 B→M→J。
+混合任务**只选当前一个主合同**，按缺口切换：M→B→J、J→M→B 或 B→M→J。
 
-## 6. Modifiers
+## 八、修饰符
 
-| Modifier | 触发 | 调整 |
+| 修饰符 | 触发条件 | 调整方式 |
 |---|---|---|
-| NOVICE | 先修不足 | Worked Example→Completion→Fading |
-| MISCONCEPTION | 高置信度错误 | 反例、对比、最小苏格拉底诊断 |
-| RECALL_DUE | Recall 到期 | 先冷回忆，最多少量探针 |
-| TRANSFER | 当前题会但未迁移 | 换情境、输入、约束或目标 |
-| HIGH_STAKES | 金融、安全、法律等 | 一手来源、置信度、证伪、停止条件 |
-| VOLATILE | AI/API/价格/政策 | Valid As Of + live verification |
-| LOW_TIME | 时间极短 | 一个最小证据单元 |
-| DIRECT | 用户要求直接讲 | 先完整回答；不自动记独立掌握 |
+| 新手 | 先修不足 | 完整示范 → 补全练习 → 逐步撤支架 |
+| 误解 | 高置信度错误 | 反例、对比、最小苏格拉底诊断 |
+| 待复习 | 回忆到期 | 先冷回忆，最多少量探针 |
+| 待迁移 | 当前题会了但换情境不会 | 换情境、输入、约束或目标 |
+| 高风险 | 金融、安全、法律等 | 一手来源、置信度、证伪、停止条件 |
+| 高波动 | 模型、接口、价格、政策 | 标注有效期起点 + 实时核实 |
+| 时间短 | 只有很少时间 | 一个最小证据单元 |
+| 要求直接讲 | Owner 说「直接讲」 | 先完整回答；**不自动记为独立掌握** |
 
-## 7. 六阶段
-
-```text
-FRAME → DIAGNOSE → MODEL → PRACTICE → TRANSFER/STRESS → REFLECT/UPDATE
-```
-
-短会话可跳过非必要阶段；结束时必须 UPDATE。
-
-## 8. 方法约束
-
-- 1 Primary Contract + 1 主方法 + 最多 2 辅助方法；
-- 不按 VAK 固定人格路由；
-- novice/高风险优先 explicit instruction / worked example；
-- 熟练后撤支架，避免 expertise reversal；
-- Productive Failure 仅在先修可达、有边界且后续整合明确时使用；
-- Interleaving 用于辨析，不等于随机切换项目；
-- Desirable Difficulty 必须有成功可能、反馈和恢复。
-
-## 9. Route Receipt
+## 九、六个阶段
 
 ```text
-Route=<M|B|J>｜State=<state>｜Methods=<1-3>｜Oracle=<one sentence>｜Review=<0-3 probes>
+框定 → 诊断 → 建模 → 练习 → 迁移/加压 → 复盘/更新
 ```
 
-用户当前明确目标优先于 review due；复习不得绑架会话。
+短会话可以跳过非必要阶段；**结束时必须更新状态**。
 
-## 10. 失败切换
+## 十、方法约束
 
-- 示例后仍不会：缩小 KC，Completion Problem；
-- 提示越来越多：停止升级 mastery，另建 H0 变式；
-- 苏格拉底无基础：直接建最小模型；
-- 实践反复失败：隔离瓶颈后回 whole task；
-- 判断不可解析：概率/代理指标/recheck/kill criteria；
-- 来源冲突：呈现分歧和未知，不强行统一；
-- 项目 alias 冲突：不猜 canonical，标 unknown 或最小澄清。
+- 一个主合同 + 一个主方法 + 最多两个辅助方法；
+- 不按学习风格给人贴标签分流；
+- 新手或高风险优先明确讲解与完整示范；
+- 熟练后撤掉支架，避免过度示范反而降低效果；
+- 先探索后讲解只在先修够、问题有边界、后续有整合时使用；
+- 交错练习用于辨析，**不等于随机切换项目**；
+- 有益难度必须有成功可能、有反馈、有恢复路径。
+
+## 十一、路由回执
+
+```text
+路由=<M|B|J>｜状态=<学习状态>｜方法=<1-3 个>｜验收=<一句话>｜复习探针=<0-3 个>
+```
+
+**Owner 当前明确的目标优先于到期复习；复习不得绑架会话。**
+
+## 十二、失败时怎么切换
+
+- 示范之后仍不会 → 缩小知识点，改用补全练习；
+- 提示越给越多 → 停止升级掌握等级，另建无提示变式题；
+- 苏格拉底式追问因无基础而低效 → 直接建最小模型；
+- 实践反复失败 → 隔离瓶颈后尽快回到完整任务；
+- 判断无法解析 → 改用概率、代理指标、复查触发和放弃条件；
+- 来源冲突 → 呈现分歧和未知，不强行统一；
+- 项目别名冲突 → 不猜规范名，标 `unknown` 或给最小澄清选择。

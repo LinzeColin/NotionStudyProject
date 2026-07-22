@@ -1,4 +1,4 @@
-# Immediate Conformance Report｜Study OS v0.0.0.2
+# Immediate Conformance Report｜Study OS v0.0.0.2 → v0.0.0.3
 
 - protocol_version: `v0.0.0.2`
 - repository: `LinzeColin/NotionStudyProject`
@@ -28,6 +28,7 @@ bash _system/validation/conformance_check.sh
 | 安装 T60（G1–G20） | `2026-07-21T23:05Z` | 77 | **PASSED 77 / FAILED 0**，exit 0 |
 | 维护回合：吸收 `sync/pause-20260623`（新增 G21） | `2026-07-21T23:15Z` | 81 | PASSED 80 / FAILED 1 —— 唯一失败是 `stray remote branch(es): sync/pause-20260623`，即本回合正在收敛的目标 |
 | 维护回合复跑（分支删除后） | `2026-07-21T23:18:27Z` | 81 | **PASSED 81 / FAILED 0 / SKIPPED 0**，exit 0 |
+| **v0.0.0.3 治理升级**（新增 G22/G23 + 四道门） | `2026-07-22T00:45Z` | 88 | **PASSED 88 / FAILED 0 / SKIPPED 0**，exit 0；四道门另计 20/20 |
 
 G21 的中间态失败是**设计内的真实检出**：它证明该门确实会对侧分支报警，而不是恒真。
 
@@ -74,6 +75,8 @@ exit=0
 | G19 | 无私钥/令牌类敏感串被提交 | PASS |
 | G20 | 恢复可执行（recovery ref 可解析、Handoff 带 rollback、恢复合同写明 revert 优先） | PASS |
 | G21 | 仓库卫生：本地无遗留分支（worktree 在用的分支不算）、远端只有 `main`、0 未决 PR、0 issue | PASS（见下方维护回合） |
+| G22 | **Governance 四道门**（体积 / 中文 / 证据纯净 / 登记），实现见 `_system/validation/four_gates.py` | PASS（20/20） |
+| G23 | README 含项目登记表、Notion 登记地址、八文件对照；根合同声明四道门；Skill 清单含冲突裁决 | PASS |
 
 > 首轮运行曾报 2 条失败，均为**检查脚本自身缺陷**而非仓库缺陷，已在交付前修复：
 > (1) 适配器措辞检查未覆盖 `never assume` 与 `a project count` 两种同义写法；
@@ -167,6 +170,17 @@ exit=0
 
 ---
 
+## C6 v0.0.0.3 治理升级实测
+
+| # | 场景 | 期望 | 实测 | 结果 |
+|---|---|---|---|---|
+| V1 | 中文门能抓到未登记英文 | 首跑应报错而非恒绿 | 首跑报 `AGENTS.md` / `STUDY_ARCHITECTURE.md` 出现未登记的 `Code`（来自产品名 `Claude Code`）→ 补进口径字典后转绿 | 真实检出 ✅ |
+| V2 | 体积门有实际约束力 | 八文件均在上限内且留有余量 | 201/240、137/200、267/340、137/180、175/280、137/220，两个「不限」文件 142 / 192 行 | ✅ |
+| V3 | 证据纯净门覆盖真实数据 | 9 个在跑项目的独立证据区被逐一检查 | 已检查 9 个交接文件，无提示后完成 / AI 生成字样混入 | ✅ |
+| V4 | 登记门覆盖全部在跑项目 | 9 个 `active` 项目全部在 README 登记表中 | 9/9 命中 | ✅ |
+| V5 | Notion 侧不得假绿 | 无连接器时必须显式记录阻塞 | README 第四节如实记「待人工核对 / 本次无 Notion 连接器」，登记门只验 GitHub 侧并要求该章节存在 | ✅ |
+| V6 | 中文化后旧检查项会失效 | 应被发现而不是静默通过 | 两条旧关键词检查（治理授权、外部内容视为数据）在中文化后失配 → 先确认条款仍在，再更新关键词 | 真实检出 ✅ |
+
 ## D. 未解决项（不阻断交付）
 
 同步于 `_system/MAINTAINER_HANDOFF.md` §6：
@@ -178,6 +192,8 @@ exit=0
 5. 多个项目的产物未记录独立性，因此一律未升级为 E4。
 6. Notion 与 external reviewer 的既有 blocker 未解决（本协议不新建 Notion 自动化）。
 7. ~~GitHub 上存在 `refs/pull/1/head`~~ → **已核实**：PR #1 状态为 `MERGED`（`codex/learning-rules-light-update-20260622` → `main`），非未决 PR；`refs/pull/*/head` 是 GitHub 永久保留的历史引用，不可也无需删除。仓库 issue 数为 0。
+8. **【v0.0.0.3 新增】Notion 一致性未核验** —— 本次运行的 Agent 无 Notion 连接器，`README.md` 第三节 9 个在跑项目与 Notion `Codex Study Timeline` 的一致性**未自动比对**，已如实记入 README 第四节，未声称已同步。下一个具备连接器的 Agent 应逐行核对并回填日期。
+9. **【v0.0.0.3 新增】本机 Skill 尚未换成仓库版薄入口** —— 仓库版已就位 `.agents/skills/study-project-orchestrator/SKILL.md`，同步方向必须是仓库 → 本机。
 
 ## E. 复跑方式
 

@@ -1,230 +1,267 @@
-# Study OS v0.0.0.2｜架构与关键决策
+# 系统架构与口径字典｜v0.0.0.3
 
-## 1. 双平面
+对应 Governance 双平面标准的 `02_系统架构` + `03_口径字典`。前十节讲**有哪些部件、数据怎么流**；第十一节是**口径字典**，规定每个术语怎么算、哪些英文允许出现（中文门的白名单来源）。
 
-### Plane A｜Learning Control Plane
+## 一、两个运行平面
 
-```text
-Outcome / Oracle
-→ MBJ Route
-→ Learner Diagnosis
-→ Method Selection
-→ Tutor Loop
-→ Independent Acceptance
-```
-
-### Plane B｜Continuity & Governance Plane
+### 学习控制面
 
 ```text
-GitHub HEAD
-→ Tutor LLM read
-→ Session Delta(base_commit)
-→ Active Maintainer Agent reconcile/write
-→ commit + MAINTAINER_HANDOFF + rollback
-→ successor Agent / Tutor LLM
+目标与验收标准
+→ 选路由（M / B / J）
+→ 诊断学习者当前水平
+→ 选教学方法
+→ 教学循环
+→ 独立验收
 ```
 
-## 2. Agent-neutral 角色模型
+### 连续性治理面
 
-| 角色 | 可以由谁承担 | 权限 |
+```text
+GitHub 当前 HEAD
+→ 教学方实时读取
+→ 会话增量（带基线提交号）
+→ 当前唯一写入方核对并写回
+→ 提交 + 更新维护交接 + 给出回滚命令
+→ 下一个 Agent 或教学方接手
+```
+
+## 二、角色模型
+
+| 角色 | 谁可以承担 | 权限 |
 |---|---|---|
-| Tutor LLM | ChatGPT、Claude、Gemini 或其他可 live-read GitHub 的 LLM | 默认只读教学与生成 Delta |
-| Implementer Agent | Claude Code、Codex、Gemini CLI、Copilot Agent 或其他可执行 Agent | 首次安装、验证、commit/push |
-| Maintainer Agent | 任意具备当前仓库写入能力的 Agent | 合并 Session、协议调整、恢复 |
-| Reviewer Agent | 任意独立 LLM/Agent | 只读复核，不与写入者共享未验证假设 |
+| 教学方 | ChatGPT、Claude、Gemini 或其他能实时读取仓库的大模型 | 默认只读教学、产出会话增量 |
+| 实施方 | Claude Code、Codex、Gemini CLI、Copilot Agent 或其他可执行 Agent | 首次安装、验证、提交推送 |
+| 维护方 | 任意具备当前仓库写权限的 Agent | 合并会话、调整协议、恢复 |
+| 复核方 | 任意独立大模型或 Agent | 只读复核，不与写入方共享未验证假设 |
 
-协议不指定永久“唯一 Agent”。它指定的是 **单任务单 active writer**：同一作用域同一时间只有一个 Maintainer Agent 写入；任务完成后可以换 Agent。
+协议**不指定永久唯一 Agent**，只要求**单任务单写入方**：同一作用域同一时间只有一个维护方在写；任务完成后可以换人。
 
-## 3. 跨 Agent 接力协议
+## 三、跨 Agent 接力
 
-### 3.1 Bootstrap
+### 3.1 启动
 
-后继 Agent 必须读取：
+后继 Agent 必须读取：当前平台的已知入口 → `/AGENTS.md` → `/_system/MAINTAINER_HANDOFF.md` → 当前 `git status`、HEAD、相关近期提交 → 本任务所需的治理文件，然后输出 `MAINTAINER_BOOTSTRAP` 回执。
 
-1. 当前平台的已知入口；
-2. `/AGENTS.md`；
-3. `/_system/MAINTAINER_HANDOFF.md`；
-4. 当前 `git status`、HEAD、最近相关 commits；
-5. 本次任务所需 Canonical 文件。
+### 3.2 写入租约
 
-输出：
+租约不是服务也不是锁文件，而是任务约定：记录基线提交号、作用域、当前写入方；禁止并发覆盖；完成后提交推送并更新维护交接；发现同域并发变化时做三方合并或触发暂停条件。
 
-```text
-MAINTAINER_BOOTSTRAP
-agent=<tool/model or unknown>
-repo=<owner/repo>
-branch=<branch>
-head=<sha>
-worktree=<clean|dirty>
-capabilities=<read,write,commands,test,commit,push>
-mode=<install|takeover|session_merge|root_change|recovery>
-scope=<files/domains>
-```
+### 3.3 交接
 
-### 3.2 Active Writer Lease
+`_system/MAINTAINER_HANDOFF.md` 保存**当前可执行状态**，不保存完整聊天：已完成什么、验证结果、未完成什么、下一个精确动作、风险、改了哪些文件、回滚命令、工作树状态。
 
-Lease 不是服务或锁文件，而是任务合同：
+### 3.4 抢占安全检查点
 
-- base commit；
-- scope；
-- active agent；
-- 禁止并发覆盖；
-- 完成后 commit/push、更新 Maintainer Handoff；
--若发现同域并发变化，做三方合并或触发 Stop Condition。
+Agent 在主动换手、上下文即将耗尽或工具可能中断前，**必须优先留下后继可访问的状态**：提交并推送一个可逆检查点；无推送权限时输出补丁路径、脏文件清单和精确恢复命令，并同步维护交接。
 
-### 3.3 Handoff
+**只存在于前一个 Agent 本地、未提交的改动，不属于可恢复状态**，不得描述为「可无缝接手」。
 
-`MAINTAINER_HANDOFF.md` 保存当前可执行状态，不保存完整聊天：完成内容、验证、未完成、下一精确动作、风险、修改文件、rollback 和工作树状态。
+## 四、动态项目发现
 
-### 3.4 Preemption-safe Checkpoint
+### 4.1 为什么不能按目录数量计数
 
-Agent 在主动换手、上下文即将耗尽或工具可能中断前，必须优先留下可访问状态：提交并 push 一个可逆 checkpoint，或在 push 无权限时输出 patch 路径、dirty files 与精确恢复命令，并同步 Maintainer Handoff。不同运行环境无法恢复仅存在于前 Agent 本地且未提交的改动；不得把这种不可见状态描述为“可无缝接手”。
-
-## 4. 动态项目发现
-
-### 4.1 为什么不能按目录计数
-
-项目目录可能仍存在但已合并、归档或 superseded；一个 canonical 项目也可能包含多个子路线。项目数量必须从当前 HEAD 的证据推断，而不是写死。
+项目目录可能仍然存在，但已经合并、归档或被取代；一个项目也可能包含多条子路线。**项目数量必须从当前 HEAD 的证据推断，不能写死。**
 
 ### 4.2 候选发现
 
-实施 Agent 搜索：
-
-- 当前项目根目录及其历史索引；
-- 包含 `00_PROJECT_BRIEF.md`、`PROJECT_BRIEF.md`、`HANDOFF.md`、课程入口或被路由文件引用的目录；
-- 现有 `PROJECT_INDEX`、`ARCHIVE_INDEX`、README、Handoff 中的 active / merged / archived 声明。
+搜索：项目根目录及其历史索引；包含 `00_PROJECT_BRIEF.md`、`HANDOFF.md`、课程入口或被路由文件引用的目录；现有索引、归档索引、README 和交接文件中的在跑/已合并/已归档声明。
 
 ### 4.3 分类
 
 ```text
-active      当前可路由
-paused      保留但不默认推进
-merged      已并入另一个 canonical project
-archived    历史只读
-unknown     证据冲突；默认不自动路由、不删除
+active     当前可路由
+paused     保留但不默认推进
+merged     已并入另一个项目
+archived   历史只读
+unknown    证据冲突；默认不自动路由、不删除
 ```
 
-### 4.4 Evidence Precedence
+### 4.4 证据优先级
 
-项目拓扑冲突时按以下优先级裁决：
+项目拓扑冲突时按以下顺序裁决：
 
 1. Owner 最新、明确且具体的合并/归档/复活指令；
-2. current HEAD 中最新 canonical Brief/Handoff 与显式 topology metadata；
-3. current project/archive index 与最近相关 commit/diff；
-4. 目录名和文件存在性；
+2. 当前 HEAD 中最新的项目简介、交接文件与显式拓扑声明；
+3. 当前索引、归档索引与最近的相关提交或差异；
+4. 目录名和文件是否存在；
 5. 旧日志、旧排期和聊天摘要。
 
-“可能已经合并”等不确定表述是调查线索，不足以直接改拓扑；Agent 应核验后分类，证据仍冲突则标 `unknown` 并继续处理其他明确项目。
+「可能已经合并」这类不确定表述**只是调查线索**，不足以直接改拓扑。核验后仍冲突则标 `unknown` 并继续处理其他明确项目 —— **一个项目歧义不得阻塞其余项目**。
 
-### 4.5 Canonical ID 与 Alias
+### 4.5 规范名与别名
 
-- 每个 canonical project 有唯一 ID；
-- old slug / old title / merged source 可作为 alias；
-- alias 必须解析到一个 canonical ID；
-- `merged_into` 链不得循环；
-- merged/archived 目录保留 Git 历史，默认不创建新的 Routine Handoff 写入；
-- ambiguous 项目以 `unknown` 保留，实施不因普通歧义阻塞，其余系统可继续。
+每个项目有唯一规范名；旧目录名、旧标题、被合并来源可以作为别名；**每个别名必须解析到唯一一个规范名**；合并链不得成环；已合并或已归档目录保留 Git 历史，默认不再写入新状态。
 
-## 5. Canonical Fact Domains
+若某个词同时可能指向多个项目（例如裸词「AI」），**不得注册为别名**，命中时给一个最小编号选择让 Owner 裁定。
 
-| 事实域 | Canonical 位置 | 写入者 |
+若一个项目被拆分为多个后继而非并入单一目标，用 `archived` + `被取代为` 记录，**不用合并关系**，以保证别名唯一解析不被破坏。
+
+## 五、事实域归属
+
+| 事实域 | 权威位置 | 谁能写 |
 |---|---|---|
-| 全局协议 | 七个 Root 文件 | Owner 授权的当前 Maintainer Agent |
-| 项目稳定目标 | canonical project Brief | 当前 Maintainer Agent |
-| 项目当前能力状态 | canonical project `HANDOFF.md` | 当前 Maintainer Agent |
-| 项目导航与 aliases | `_system/STUDY_INDEX.md`（派生） | 当前 Maintainer Agent |
-| Maintainer 连续性 | `_system/MAINTAINER_HANDOFF.md` | 每次写入任务的当前 Agent |
-| 会话增量 | `STUDY_SESSION_DELTA_*.md` 临时文件 | Tutor LLM 生成；Maintainer 消费 |
-| 审计和恢复 | Git history / recovery ref | Git |
+| 全局协议 | 八个治理文件 | Owner 授权的当前维护方 |
+| 项目稳定目标 | 项目 `00_PROJECT_BRIEF.md` | 当前维护方 |
+| 项目当前能力状态 | 项目 `HANDOFF.md` | 当前维护方 |
+| 项目导航与别名 | `_system/STUDY_INDEX.md`（**派生**） | 当前维护方（只能重建，不能手改） |
+| 项目对外登记 | `README.md` 登记表 + Notion 时间线数据库 | 当前维护方 |
+| 维护连续性 | `_system/MAINTAINER_HANDOFF.md` | 每次写入任务的当前 Agent |
+| 会话增量 | `STUDY_SESSION_DELTA_*.md` 临时文件 | 教学方产出、维护方消费 |
+| 审计与恢复 | Git 历史 / 恢复引用 | Git |
 
-## 6. Learning Runtime
+模型的隐藏记忆、聊天摘要、派生索引和外部展示，**都不得覆盖权威位置的状态**。
 
-### MBJ
+## 六、学习运行时
 
-- **M｜Mental Model & Memory：** 回忆、解释、辨析、长期保持。
-- **B｜Build & Behavior：** 执行、构建、调试、恢复、真实产物。
-- **J｜Judgment, Inquiry & Synthesis：** 研究、证据综合、概率判断、证伪与决策。
+### 三种主合同
 
-### 七维 Router
+- **M｜心智模型与记忆：** 回忆、解释、辨析、长期保持。
+- **B｜构建与行为：** 执行、构建、调试、恢复、真实产物。
+- **J｜判断、探究与综合：** 研究、证据综合、概率判断、证伪与决策。
 
-Outcome、knowledge type、prior state、error state、task structure、stakes/volatility、memory/transfer state。
+### 七维路由输入
 
-### 三时钟
+目标类型、知识类型、先验水平、错误状态、任务结构、风险与波动性、记忆与迁移状态。
 
-Memory、Capability、Validity。
+### 三个时钟
 
-### 三队列
+记忆时钟（会不会忘）、能力时钟（还能不能做）、有效性时钟（知识是否过期）。
 
-Recall、Reperformance、Resolution。用户不维护卡片或评分；模型根据 pre-help performance 提议变化，Maintainer 核验写回。
+### 三个队列
 
-## 7. Context Loading
+回忆队列、复做队列、结论复盘队列。用户**不维护卡片、不打分**；模型根据获得帮助前的表现提出变更建议，维护方核验后写回。
 
-Tutor LLM 典型读取：
+## 七、上下文加载
 
-```text
-AGENTS.md
-STUDY_ORCHESTRATOR_ROUTE.md
-_system/STUDY_INDEX.md
-selected canonical Brief + Handoff
-relevant Method Registry section + sources
-```
+教学方典型读取：`AGENTS.md` → `STUDY_ORCHESTRATOR_ROUTE.md` → `_system/STUDY_INDEX.md` → 选定项目的简介与交接 → 方法库相关章节与本轮资料。
 
-Maintainer Agent 典型读取：
+维护方典型读取：`AGENTS.md` → `_system/MAINTAINER_HANDOFF.md` → 当前 `git status` / `git log` → 相关治理文件 → 受影响的项目状态。
 
-```text
-AGENTS.md
-_system/MAINTAINER_HANDOFF.md
-current git status / log
-relevant Root contract
-affected project state or implementation task pack
-```
+## 八、已知 Agent 入口
 
-## 8. Known Agent Adapters
+Codex 读 `AGENTS.md`；Claude Code 读 `CLAUDE.md`；Gemini CLI 读 `GEMINI.md`；GitHub Copilot 读 `.github/copilot-instructions.md`；Agent Skills 读 `.agents/skills/study-os/SKILL.md`；未知 Agent 用通用启动或接管提示词显式加载。
 
-- Codex：`AGENTS.md`；
-- Claude Code：`CLAUDE.md` 导入 Canonical Contract；
-- Gemini CLI：`GEMINI.md`；
-- GitHub Copilot：`.github/copilot-instructions.md`；
-- Agent Skills：`.agents/skills/study-os/SKILL.md`；
-- 未知 Agent：使用 Generic Initial / Takeover Prompt 显式加载。
+**适配器只是入口，不是强制执行保证。** 回执和可重放验证负责发现「没加载」的情况。
 
-适配器是入口，不是强制执行保证；Receipt 和可重放验证负责发现未加载问题。
+## 九、会话增量与合并
 
-## 9. Session Delta 与 Merge
-
-Tutor LLM 结束时生成一个通用 Delta。当前 Maintainer Agent：
+教学方结束时产出一份通用增量。当前维护方按顺序处理：
 
 ```text
-verify repo/branch/protocol/base_commit
-→ resolve canonical project through dynamic Index
-→ verify pre-help evidence/hints/privacy
-→ merge into canonical Handoff
-→ update affected Index row and Maintainer Handoff
-→ immediate checks
-→ commit/push
-→ return receipt + rollback
+核验仓库/分支/协议/基线提交号
+→ 通过派生索引解析到规范项目
+→ 核验获得帮助前的表现、提示等级、隐私
+→ 合并进项目交接文件
+→ 更新 README 登记表、派生索引、维护交接
+→ 同步 Notion 或记录阻塞
+→ 即时验证
+→ 提交推送
+→ 返回回执与回滚命令
 ```
 
-## 10. Degraded Paths
+## 十、降级路径
 
 | 场景 | 行为 |
 |---|---|
-| Tutor 无 GitHub live read | 明确 `GITHUB_NOT_VERIFIED`；不声称当前状态；零上传模式不保证完整连续性 |
-| Agent 不支持自动入口 | 使用 Generic Prompt 显式要求读取 Root 与 Handoff |
-| base commit 过期 | 当前 HEAD 上三方语义合并；同域冲突才暂停 |
-| 项目状态不明 | 标 `unknown`，不自动路由、不删除；继续处理明确项目 |
-| 前 Agent 未留下 Handoff | 从 Git log/diff/任务包重建最小 Handoff，并记录缺口 |
-| 工作树有用户改动 | 不 discard；隔离分支/worktree 或限定提交文件 |
+| 教学方无法实时读取仓库 | 明确输出 `GITHUB_NOT_VERIFIED`；不声称当前状态；零上传模式不保证完整连续性 |
+| Agent 不支持自动入口 | 用通用提示词显式要求读取治理文件与交接 |
+| 基线提交号过期 | 在当前 HEAD 上做语义三方合并；只有同域冲突才暂停 |
+| 项目状态不明 | 标 `unknown`，不自动路由、不删除；继续处理其他明确项目 |
+| 前一个 Agent 没留交接 | 从 Git 日志、差异和任务包重建最小交接，并记录缺口 |
+| 工作树有 Owner 改动 | 不丢弃；隔离到分支或工作树，或限定提交文件 |
+| Notion 连接器不可用 | 记录阻塞到 `README.md` 与维护交接；**不得声称已同步** |
 
-## 11. ADR
+## 十一、口径字典
 
-- ADR-001：Markdown/Git 为跨 Agent 公共底座。
-- ADR-002：ChatGPT 是默认 Tutor，不是协议依赖。
-- ADR-003：Maintainer Agent 可替换；单任务单 active writer。
-- ADR-004：项目数量运行时发现；不写死。
-- ADR-005：合并项目通过 canonical ID + alias + history 处理。
-- ADR-006：`MAINTAINER_HANDOFF.md` 是跨 Agent 实施连续性最小载体。
-- ADR-007：不接外部 FSRS；保留三队列的零人工机制。
-- ADR-008：Known adapters + Generic Prompt；不声称任意 Agent 自动加载。
-- ADR-009：Routine Session 不改 Root。
-- ADR-010：无等待、无 soak；即时 Conformance Gate。
+本节是**中文门的白名单来源**。治理文件正文允许出现的英文，只有下表登记过的；未登记的英文术语出现在正文即判失败。代码块、文件路径、命令、文件名一律豁免。
+
+### 11.1 证据等级（怎么算「学会了」）
+
+| 等级 | 含义 | 能否算掌握 |
+|---|---|---|
+| `E0` | AI 生成、照抄、看过答案后复述 | 不能，只证明接触过 |
+| `E1` | 在 `H2`–`H4` 提示下完成 | 不能，只记录辅助学习 |
+| `E2` | 本轮在 `H0`/`H1` 下独立完成 | 暂定，仍需延迟或迁移复测 |
+| `E3` | 延迟之后无提示独立回忆，或完成陌生迁移 | 可以，算已验证能力 |
+| `E4` | 在真实项目、考试、产物或已解析的判断中成功用出来 | 可以，算迁移或实战掌握 |
+
+**同一轮纠正后答对不能直接记 `E3`；模型不得凭「看起来懂了」升级等级。**
+
+### 11.2 提示等级（帮了多少）
+
+| 等级 | 含义 | 对独立证据的影响 |
+|---|---|---|
+| `H0` | 无提示 | 可形成 `E2`–`E4` |
+| `H1` | 只指方向 | 通常最高 `E2`，需另题 `H0` 复测 |
+| `H2` | 给相关原则或关键线索 | 只能到 `E1` |
+| `H3` | 给部分步骤或结构 | 只能到 `E1` |
+| `H4` | 完整示范或直接给答案 | 只能到 `E0` |
+
+### 11.3 项目状态
+
+`active` 在跑可路由；`paused` 保留但不推进；`merged` 已并入另一个项目；`archived` 历史只读；`unknown` 证据冲突，不路由也不删除。
+
+**只有 Owner 明确要求才能改状态。计划窗口过期不构成任何状态变更理由。**
+
+### 11.4 回忆等级
+
+`R0`–`R6`。答错或空白降到 `R0`；`H2`–`H4` 后完成不升级或降一级；`H0`/`H1` 正确升一级；延迟无提示加陌生迁移可升两级；出现新反例时重开并降级；内容过期转有效性复查，**不因记忆成功而通过**。
+
+### 11.5 有效性状态
+
+`current` 当前有效；`recheck_due` 需要复查；`superseded` 已被取代；`unknown` 不明。高波动内容必须记录来源、权威级别、有效期起点、复查触发条件。
+
+### 11.6 英文术语登记表
+
+| 术语 | 中文含义 | 为什么保留英文 |
+|---|---|---|
+| `M` / `B` / `J` | 心智模型与记忆 / 构建与行为 / 判断探究与综合 | 三合同代号，全仓通用缩写 |
+| `E0`–`E4` | 证据等级，见 11.1 | 等级代号 |
+| `H0`–`H4` | 提示等级，见 11.2 | 等级代号 |
+| `R0`–`R6` | 回忆等级，见 11.4 | 等级代号 |
+| `active` `paused` `merged` `archived` `unknown` | 项目五状态，见 11.3 | 机器可读状态值，与 `state.json` 一致 |
+| `current` `recheck_due` `superseded` | 有效性状态，见 11.5 | 机器可读状态值 |
+| Oracle | 验收标准：一句话说清「怎样才算做到」 | 教育与验收领域通用词，无稳定中译 |
+| Agent | 能执行任务的智能体程序 | 行业通用词 |
+| LLM | 大语言模型 | 行业通用词 |
+| Git / GitHub / HEAD / commit / sha / branch / worktree / PR / issue / CI | 版本控制与协作平台的固有名词 | 工具固有名词，翻译反而找不到对应功能 |
+| Notion | Owner 使用的笔记与数据库工具 | 产品名 |
+| Markdown / JSON / CSV / YAML / API / MCP | 文件格式与接口的固有名词 | 技术固有名词 |
+| ROI | 投入产出比 | Owner 快捷指令中直接使用该词 |
+| FSRS | 一种间隔重复调度算法 | 算法专名；本仓只借鉴思路，**不接外部实现** |
+| arXiv | 论文预印本平台 | 平台名 |
+| slug | 项目的短横线小写标识名 | 与目录名、`state.json` 字段一致 |
+| `D01` / `第N/M天` | 课程编号，非自然日 | 课程编号格式 |
+| Owner | 仓库主人，即学习者本人 | 与治理文件中的权限主体一致 |
+| Tutor / Maintainer | 教学方 / 维护方 | 角色代号，回执格式中直接使用 |
+| Delta | 会话增量文件 | 文件名与模板字段名 |
+| AI | 人工智能 | Owner 快捷指令与全仓通用 |
+| ChatGPT / Claude Code / Codex / Gemini / Copilot / Perplexity | 具体的模型或 Agent 产品 | 产品名 |
+| CLI | 命令行工具 | 产品名后缀，如 Gemini CLI |
+| Governance | 本机 `LinzeColin/Governance` 仓，双平面治理标准的来源 | 仓库名 |
+| README | 仓库首页说明文件 | 文件名固有写法 |
+| Handoff | 交接文件 | 与 `MAINTAINER_HANDOFF.md` 文件名一致 |
+| Skill / Skills | 本机可复用的技能包 | 与 `SKILL.md`、`.agents/skills/` 一致 |
+| Cookie | 浏览器会话凭据 | 安全条款中的固有名词 |
+| App | 独立应用程序 | 非目标条款中的固有名词 |
+| vs | 「对比」 | 表格中对照两项时的通用缩写 |
+
+**结构性豁免（不算术语，无需登记）：** 版本号（如 `v0.0.0.3`）、列表与章节标记（`A.`–`J.`）、规则编号（`S01`、`C1`、`G21` 等）、代码块、行内代码、文件路径、命令、网址。
+
+新增英文术语必须先登记进本表，否则中文门会判失败。**登记表由 Owner 裁定**，维护方可提议、不可自行扩充。
+
+## 十二、关键决策记录
+
+- 以 Markdown 和 Git 作为跨 Agent 的公共底座。
+- ChatGPT 是默认教学方，不是协议依赖。
+- 维护方可替换；单任务单写入方。
+- 项目数量运行时发现，不写死。
+- 合并项目通过规范名 + 别名 + 历史处理。
+- `_system/MAINTAINER_HANDOFF.md` 是跨 Agent 连续性的最小载体。
+- 不接外部间隔重复引擎；保留三队列的零人工机制。
+- 已知适配器 + 通用提示词；不声称任意 Agent 都会自动加载。
+- 日常学习会话不改治理文件。
+- 无等待、无观察期；即时验证即交付门。
+- **融合 Governance 双平面：合同手写 + 门校验，状态派生渲染**（见 `AGENTS.md` 第二节的差异说明）。
+- **任何在跑项目必须双向登记在 `README.md` 与 Notion 时间线数据库**。

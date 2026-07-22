@@ -1,6 +1,8 @@
-# Study Index｜v0.0.0.2
+# Study Index｜v0.0.0.3
 
-> **Derived view.** 本文件由当前仓库 HEAD 动态发现生成，安装时和每次项目拓扑变化后必须重建。禁止把任务包预设或旧的固定项目清单复制进来。项目 `HANDOFF.md`、`00_PROJECT_BRIEF.md` 与可靠仓库证据高于本派生视图。
+> **派生视图，禁止手工编辑。** 本文件由当前仓库 HEAD 动态发现生成，安装时和每次项目拓扑变化后必须重建。禁止把任务包预设或旧的固定项目清单复制进来。项目 `HANDOFF.md`、`00_PROJECT_BRIEF.md` 与可靠仓库证据高于本派生视图。
+>
+> **v0.0.0.3 起：** 本表中所有 `active` / `paused` 项目**必须**同时登记在 `README.md` 的项目登记表和 Notion `Codex Study Timeline` 数据库（见 `AGENTS.md` 第五节）。登记门由 `_system/validation/four_gates.py` 机械校验。
 
 ## Generation Receipt
 
@@ -9,6 +11,7 @@
 - index_file_commit: RESOLVE_WITH_GIT_LOG_DO_NOT_SELF_REFERENCE — `git log -1 --format=%H -- _system/STUDY_INDEX.md`
 - generated_at_utc: `2026-07-21T22:55:46Z`
 - discovery_agent: Claude Code / claude-opus-4-8 (Implementer Agent)
+- topology_unchanged_since: `6cac133`（v0.0.0.3 治理升级未改动任何项目拓扑，计数与分类原样沿用）
 - discovery_inputs: `StudyProjects/*/{00_PROJECT_BRIEF.md,HANDOFF.md,state.json,MERGED_INTO_*.md}`、`_system/study-project-orchestrator/{PROJECT_INDEX.md,ARCHIVE_INDEX.md,LEARNING_LOG.md,*.md}`、`git log`/`git ls-remote`
 - candidate_directory_count: 13
 - canonical_project_count: 13

@@ -1,6 +1,6 @@
 ---
 name: study-os
-description: Run or maintain the v0.0.0.2 agent-neutral, GitHub-canonical Study OS with dynamic project discovery, MBJ routing, three-queue review, session delta, cross-agent takeover and recovery.
+description: Run or maintain the v0.0.0.3 agent-neutral, GitHub-canonical Study OS (dual-plane eight-file governance) with dynamic project discovery, MBJ routing, three-queue review, session delta, cross-agent takeover and recovery.
 ---
 
 # Study OS Skill
@@ -12,7 +12,7 @@ description: Run or maintain the v0.0.0.2 agent-neutral, GitHub-canonical Study 
 
 ## Tutor bootstrap
 
-Read `/AGENTS.md`, `/STUDY_ORCHESTRATOR_ROUTE.md`, dynamic `/_system/STUDY_INDEX.md`, then the selected canonical Brief/Handoff and only relevant method/source sections. Emit STUDY_BOOTSTRAP. Do not assume a project count.
+Read `/AGENTS.md`, `/STUDY_ORCHESTRATOR_ROUTE.md`, `/SKILL_RULES_CHECKLIST.md`, dynamic `/_system/STUDY_INDEX.md`, then the selected canonical Brief/Handoff and only relevant method/source sections. Emit STUDY_BOOTSTRAP. Do not assume a project count.
 
 ## Maintainer bootstrap
 
@@ -24,4 +24,4 @@ Use one Primary M/B/J Contract, one main question per turn and at most three met
 
 ## End / maintenance
 
-On `结束学习`, generate one Session Delta and one generic Maintainer Prompt. The active Maintainer validates base commit, resolves the canonical project, updates only affected state and Maintainer Handoff, validates, commits/pushes and returns rollback. Root changes need explicit Owner authorization.
+On `结束学习`, generate one Session Delta and one generic Maintainer Prompt. The active Maintainer validates base commit, resolves the canonical project, updates only affected state plus the README project registry and Maintainer Handoff, runs `_system/validation/conformance_check.sh` (four gates included), commits/pushes and returns rollback. Root changes need explicit Owner authorization.

@@ -1,142 +1,137 @@
-# PRD｜Study OS Orchestration v0.0.0.2
+# 产品需求｜v0.0.0.3
 
-## 1. Product Brief
+> **Owner 手写冻结区。** 对应 Governance 双平面标准的 `01_产品需求`。任何 Agent 只读，**不得改写本文件**。需要修改时由 Owner 亲自改，或明确授权后由单一维护方执行并单独验证。
 
-建立一套 ChatGPT-first 但不绑定 ChatGPT、可由任意编码 Agent 实施和接手的 Study OS。GitHub 保存可审计学习状态；用户不上传 Brief/Handoff、不维护卡片、不手动编辑队列，也不承担 Agent 间搬运上下文。模型和 Agent 通过统一 Root Contract、Session Delta、Maintainer Handoff 和 Git 历史完成连续运行。
-
-## 2. Working Backwards PR
-
-### 面向用户的发布说明
-
-用户可以选择 Claude Code、Codex 或其他 Agent 安装 Study OS；未来也可以在不同 Agent 之间切换。系统不再假设仓库有固定数量的学习项目，而是每次从当前 GitHub HEAD 识别 canonical 项目、合并关系、别名与归档状态。日常学习以 ChatGPT 为主，但任何能够实时读取仓库的 LLM 都可以继续同一个学习状态。结束时只生成一个增量文件和一条通用 Maintainer Prompt；任意写入 Agent 核验后写回 GitHub。
-
-### 预期结果
-
-- 开发或维护 Agent 可替换，不因模型切换丢失实施状态；
-- Tutor LLM 可替换，不因聊天记忆变化丢失学习状态；
-- 项目合并、归档和重命名不会导致重复项目或错误路由；
-- 用户不手动同步多份文档；
-- 所有能力判断可追溯到获得帮助前的表现；
-- 每次修改可验证、可回滚、可由后继 Agent 继续。
-
-## 3. 用户与角色
+## 一、为谁做
 
 | 角色 | 目标 | 不应承担 |
 |---|---|---|
-| Owner / Learner | 自然语言学习并做最终不可逆决策 | 手工维护索引、卡片、Handoff、Agent 记忆 |
-| Tutor LLM | 读取 live GitHub、路由、教学、生成 Delta | 直接宣称已掌握、默认写仓库 |
-| Implementer Agent | 首次安装 Root Contract、发现项目、重建状态、验证、提交 | 假设固定项目数、删除不明历史 |
-| Maintainer Agent | 合并学习增量、调整协议、修复与交接 | 依赖上一 Agent 的隐藏上下文 |
-| Successor Agent | 从 HEAD 和 Maintainer Handoff 接手 | 无验证覆盖当前工作 |
+| Owner / 学习者 | 用自然语言学习，并做最终不可逆决策 | 手工维护索引、卡片、交接文件、Agent 记忆 |
+| 教学方 | 实时读仓库、路由、教学、产出会话增量 | 直接宣称学会了、默认写仓库 |
+| 实施方 | 首次安装合同、发现项目、重建状态、验证、提交 | 假设固定项目数、删除不明历史 |
+| 维护方 | 合并学习增量、调整协议、修复与交接 | 依赖上一个 Agent 的私有上下文 |
+| 后继 Agent | 从 HEAD 与维护交接接手 | 未经验证就覆盖当前工作 |
 
-## 4. 战略目标与 OKR
+## 二、解决什么问题
 
-### O1｜消除 Agent / LLM 厂商锁定
+一句话：**把学习状态从「聊天记忆」搬到「可审计的仓库」，让换模型、换 Agent、换工具都不丢进度，同时不让 Owner 多干活。**
 
-- KR1.1：核心合同为普通 Markdown 与 Git，不要求特定 Agent 私有功能。
-- KR1.2：已知 Agent 入口只做薄适配，不复制 Canonical 规则。
-- KR1.3：任意后继 Maintainer 能仅凭仓库与 takeover Prompt 恢复当前状态。
+具体解决五个痛点：
 
-### O2｜动态适配真实项目结构
+1. **换 Agent 就失忆** —— 换个模型就要重新解释一遍上下文；
+2. **目录数被误当项目数** —— 项目合并、改名、归档后出现重复路由或幽灵项目；
+3. **虚假掌握** —— AI 在旁边时表现好，就被记成「学会了」；
+4. **知识过期** —— 记得很牢但内容已经不对了；
+5. **Owner 变成人肉同步器** —— 要反复上传文件、手改索引、在多处重复登记。
 
-- KR2.1：安装和每次结构变更均从当前 HEAD 发现项目，不使用固定计数。
-- KR2.2：每个 alias 只解析到一个 canonical project；无循环 merge 链。
-- KR2.3：merged / archived 项目默认不被路由，但历史与引用保留。
+## 三、明确不做什么
 
-### O3｜降低 Owner 操作与 token 浪费
+- 不做学习 App、数据库、后台服务、日历提醒、外部间隔重复引擎；
+- 不新建任何 Notion 自动化（只调用**既有**同步流程）；
+- 不自动扫描 Owner 的私有仓库或无权限内容；
+- 不声称所有 Agent 都会自动读取同一份文件；
+- 不声称本仓的三队列与外部间隔重复算法数学等价；
+- 不做并发多写入方的自动共识；
+- 不自动删除合并前项目、历史日志或不明内容；
+- **不把固定项目数、固定课程天数或观察期当作交付条件**。
 
-- KR3.1：日常不上传 Brief/Handoff，不编辑队列。
-- KR3.2：结束只产生一个 Delta 与一个通用 Prompt。
-- KR3.3：典型学习会话只加载 Root、Index、当前项目和必要方法章节。
+## 四、目标与关键结果
 
-### O4｜提高脱离 AI 后的真实能力
+### 目标一：消除对特定 Agent 或模型的绑定
 
-- KR4.1：pre-help response、independence、hint level 和 Oracle 是持久化最低证据。
-- KR4.2：M/B/J 各有独立验收；AI 代答不能升级 mastery。
-- KR4.3：记忆、技能复做、判断解析和知识时效分开管理。
+- 核心合同是普通 Markdown 与 Git，不要求任何 Agent 的私有功能；
+- 已知 Agent 入口只做薄适配，不复制规则正文；
+- 任意后继维护方仅凭仓库 + 接管提示词就能恢复当前状态。
 
-## 5. Baseline 与目标
+### 目标二：动态适配真实项目结构
 
-| 指标 | Baseline 风险 | v0.0.0.2 目标 | Oracle |
+- 安装和每次结构变更都从当前 HEAD 发现项目，不使用固定计数；
+- 每个别名只解析到一个项目；合并链不成环；
+- 已合并 / 已归档项目默认不被路由，但历史与引用保留。
+
+### 目标三：降低 Owner 的操作负担
+
+- 日常不上传项目文件、不编辑队列；
+- 结束时只产生一份增量 + 一条提示词；
+- 典型学习会话只加载根合同、索引、当前项目和必要方法章节；
+- **项目登记一次写两处（仓库 README 与 Notion），由 Agent 完成，不由 Owner 手工搬运。**
+
+### 目标四：提高脱离 AI 之后的真实能力
+
+- 获得帮助前的表现、独立性、提示等级和验收标准是持久化的最低证据；
+- 三种主合同各有独立验收；AI 代答不能升级掌握等级；
+- 记忆、技能复做、判断解析和知识时效分开管理。
+
+## 五、基线风险与目标状态
+
+| 指标 | 基线风险 | 目标 | 怎么验 |
 |---|---|---|---|
-| Agent 切换 | 依赖前 Agent 会话和厂商入口 | 新 Agent 从 HEAD + Maintainer Handoff 独立接手 | 在新 Agent 中执行 bootstrap，复现状态与下一任务 |
-| 项目数量 | 目录数被误当 canonical/active 数 | 由发现算法输出动态计数与分类 | Index 记录 inventory_source_commit；alias 唯一解析 |
-| 用户操作 | 重复上传和人工同步 | 日常仅开始、结束、转交文件+Prompt | 操作流演练 |
-| 写入冲突 | 多 Agent 并发覆盖 | 单任务单 active writer + base commit | stale-write 测试 |
-| 虚假掌握 | AI 在场表现被误记 | 所有状态含 pre-help evidence 与提示等级 | Handoff diff 审计 |
-| Root 漂移 | 日常学习顺手改方法论 | Routine Session 只提 proposal | merge gate |
+| 换 Agent | 依赖前一次会话和厂商入口 | 新 Agent 从 HEAD + 维护交接独立接手 | 在新 Agent 里跑启动流程，复现状态与下一动作 |
+| 项目数量 | 目录数被误当在跑项目数 | 由发现算法输出动态计数与分类 | 索引记录发现所依据的提交号；别名唯一解析 |
+| Owner 操作 | 重复上传和人工同步 | 日常只需开始、结束、转交文件 | 操作流演练 |
+| 写入冲突 | 多 Agent 并发覆盖 | 单任务单写入方 + 基线提交号 | 过期写入测试 |
+| 虚假掌握 | AI 在场的表现被误记 | 所有状态含帮助前证据与提示等级 | 交接文件差异审计 |
+| 规则漂移 | 日常学习顺手改方法论 | 日常会话只能提建议 | 合并门 |
+| 登记漂移 | 项目只在一处登记，两边不一致 | 在跑项目双向登记且一致 | 登记门 |
 
-## 6. In Scope
+## 六、范围内
 
-- 双平面七个 Canonical Root 文件；
-- Agent-neutral Implementer / Maintainer 角色；
+- 双平面八个治理文件；
+- Agent 中立的实施方 / 维护方角色；
 - `AGENTS.md`、`CLAUDE.md`、`GEMINI.md`、Copilot 与 Agent Skill 薄入口；
-- 通用 Bootstrap Receipt、Maintainer Receipt 和 takeover protocol；
-- 动态项目发现、状态分类、alias / merged_into / archive 处理；
-- 动态 `_system/STUDY_INDEX.md`；
+- 通用启动回执、维护回执和接管流程；
+- 动态项目发现、状态分类、别名与合并处理；
+- 派生的 `_system/STUDY_INDEX.md`；
 - `_system/MAINTAINER_HANDOFF.md`；
-- 任意 LLM Tutor Instructions，ChatGPT 专用一次性 Instructions；
-- MBJ+、七维 Router、Method Registry、三时钟和三队列；
-- Session Delta 与通用 Maintainer Merge Prompt；
-- 即时 conformance、回滚和隐私边界。
+- 任意大模型可用的教学指令，以及 ChatGPT 专用的一次性指令；
+- 三合同、七维路由、方法库、三时钟和三队列；
+- 会话增量与通用合并提示词；
+- 即时验证、四道门、回滚与隐私边界；
+- **项目双向登记（仓库 README + Notion 时间线数据库）**；
+- **本机 Skill 规则清单的仓库化**（`SKILL_RULES_CHECKLIST.md`）。
 
-## 7. Out of Scope
+## 七、功能要求
 
-- 学习 App、数据库、后台服务、日历提醒、MCP、Notion 自动化；
-- 自动扫描用户私有仓库或无权限内容；
-- 声称所有 Agent 都会自动读取同一文件；
-- 声称 FSRS-inspired 与 FSRS optimizer 数学等价；
-- 并发多写入者自动共识；
-- 自动删除合并前项目、历史日志或未知内容；
-- 以固定项目数、固定课程天数或 soak 作为交付 Gate；
-- 无 live GitHub 能力的 LLM 在零上传条件下完整运行。
+1. 任意实施方必须先声明工具能力、仓库、分支、HEAD、工作树和作用域。
+2. 实施方必须发现当前项目，**不允许复制任务包或旧文档里的项目清单**。
+3. 项目发现必须区分五种状态。
+4. 合并或改名需保留别名与原目录历史，禁止制造重复规范名。
+5. 维护方每次写入必须先读当前 HEAD 和维护交接。
+6. 每次写入结束必须更新维护交接、提交推送并返回回滚命令。
+7. 教学方每轮从实时仓库读取；ChatGPT 是推荐实现，不是协议依赖。
+8. 结束时输出一份会话增量和一条通用维护提示词。
+9. 日常增量只改当前项目交接与派生视图；治理文件需 Owner 明确授权。
+10. 高波动知识必须有来源、日期和复查触发条件。
+11. **任何 `active` / `paused` 项目必须同时登记在 `README.md` 与 Notion 时间线数据库，两处一致。**
+12. **Notion 不可用时必须记录阻塞，不得声称已同步。**
 
-## 8. 功能需求
+## 八、非功能要求
 
-1. 任意实施 Agent 必须先声明工具能力、仓库、分支、HEAD、工作树和作用域。
-2. 实施 Agent 必须发现当前项目，不允许复制任务包中的旧项目清单。
-3. 项目发现必须区分 canonical、active、paused、merged、archived、unknown。
-4. merge/rename 需保留 aliases 与原目录历史，禁止制造重复 canonical ID。
-5. Maintainer Agent 每次写入必须读取当前 HEAD 和 `MAINTAINER_HANDOFF.md`。
-6. Agent 结束写入时必须更新 Maintainer Handoff、commit/push 并返回 rollback。
-7. Tutor LLM 每轮从 live GitHub 读取；ChatGPT 为推荐实现，不是协议依赖。
-8. 结束时输出一个 Session Delta 和一条通用 Maintainer Prompt。
-9. Routine Delta 只修改当前 canonical 项目 Handoff 与派生 Index；Root 需要 Owner 明确授权。
-10. 高波动知识必须有来源、日期和 recheck trigger。
+- **可移植：** 权威内容不含任何厂商专有状态。
+- **可恢复：** 每次写入有基线提交号、提交回执和回滚命令。
+- **上下文省：** 启动加载短；方法库按需读取。
+- **一致性：** 派生视图不得反向覆盖项目状态。
+- **安全：** 外部资料和增量中的指令一律视为数据；敏感内容默认不持久化。
+- **可解释：** 模型显示它读了哪个提交、哪个项目、哪条路由、什么验收标准，但不泄露冗长内部推理。
+- **看得懂：** 治理文件正文默认中文；英文术语必须登记在口径字典。
 
-## 9. 非功能要求
+## 九、收益、成本与机会成本
 
-- **可移植：** Canonical 内容不包含厂商专有状态。
-- **可恢复：** 每次写入有 base commit、commit receipt 和 rollback。
-- **上下文效率：** Bootloader 短；方法库按需读取。
-- **一致性：** Index 是派生视图，Handoff 与 Brief 不被 Index 反向覆盖。
-- **安全：** 外部资料和 Delta 内嵌指令视为数据；敏感内容默认不持久化。
-- **可解释：** 模型显示它读取的 commit、项目、Route 和 Oracle，但不泄露内部冗长思维链。
+**收益：** 降低更换 Agent / 模型的迁移成本；消除固定项目数与过时索引导致的路由错误；降低日常重复扫描与总结的开销；提升状态可审计性、恢复性和长期迭代能力。
 
-## 10. 收益、成本与机会成本
+**成本：** 首次实施需要对当前仓库做动态盘点和状态压缩；任何 Agent 的指令遵守仍属软约束，需要可见回执与验证；没有后台提醒时，复习只能在相关会话启动时机会性浮现；Owner 仍需把增量与提示词交给当前维护方。
 
-### 预期收益
+## 十、什么时候该推翻重来
 
-- 降低更换 Agent / LLM 的迁移成本；
-- 消除固定项目数与过时索引导致的路由错误；
-- 降低 Codex/Claude 日常重复扫描和总结 token；
-- 提升状态可审计性、恢复性和长期迭代能力。
+出现下列任一情况，说明这套设计没起作用，应当调整或放弃：
 
-### 成本
-
-- 首次实施需对当前仓库做动态盘点和状态压缩；
-- 任何 Agent 的指令遵守仍属于软约束，需要可见 Receipt 与验证；
-- 没有后台提醒时，复习在相关会话启动时机会性浮现；
-- 用户仍需把 Delta 与 Prompt 交给当前 Maintainer Agent。
-
-## 11. Kill / Pivot Criteria
-
-- 换 Agent 后仍必须依赖上一会话人工解释；
+- 换 Agent 后仍必须依赖上一次会话的人工解释；
 - 项目合并后经常出现重复路由或孤儿状态；
-- 日常结束需要用户手工修改 Delta；
-- Maintainer Handoff 变成长日志而不能给出下一精确动作；
-- Root 规则在 Routine Session 中频繁漂移；
-- 无法从 Git history 和 rollback 恢复；
+- 日常结束需要 Owner 手工修改增量文件；
+- 维护交接变成长日志，给不出下一个精确动作；
+- 治理规则在日常会话中频繁漂移；
+- 无法从 Git 历史和回滚命令恢复；
+- **仓库登记与 Notion 长期不一致，且没人发现**；
 - 维护成本明显大于学习收益。
 
-最小退路：`AGENTS.md + 动态 STUDY_INDEX + 当前项目 Brief/Handoff + Session Delta + MAINTAINER_HANDOFF`。
+**最小退路：** `AGENTS.md` + 派生索引 + 当前项目简介与交接 + 会话增量 + 维护交接。
