@@ -2,7 +2,7 @@
 
 Agent 中立、模型中立、以 GitHub 为权威的**学习操作系统**。治理架构为**双平面八文件**，融合 `LinzeColin/Governance` 的双平面七文件治理标准。
 
-- 协议版本：`v0.0.0.4`
+- 协议版本：`v0.0.0.5`
 - 入口文件：[`AGENTS.md`](AGENTS.md)
 - 当前状态与下一步：[`_system/MAINTAINER_HANDOFF.md`](_system/MAINTAINER_HANDOFF.md)
 - 项目路由索引（派生，勿手改）：[`_system/STUDY_INDEX.md`](_system/STUDY_INDEX.md)
@@ -22,7 +22,7 @@ Agent 中立、模型中立、以 GitHub 为权威的**学习操作系统**。�
 
 ## 二、每次教学你会看到什么
 
-教学方的启动核验（读仓库、解析项目、选路由、加载状态）**默认静默执行，不展示**。你看到的回复直接以「今日课程状态」开头：日期、课程导航、主题、项目状态与已验收进度、`Route`、`State`、`Methods`、`Oracle`、`Review`，随后直接进正课。
+教学方的启动核验（读仓库、解析项目、选路由、加载状态）**默认静默执行，不展示**。你看到的回复直接以「今日课程状态」开头 —— 一个**渲染后的 Markdown 块**（二级标题 + 加粗字段 + 引用块 + 五行表格），含日期、课程导航、主题、项目状态与已验收进度，以及 `Route` / `State` / `Methods` / `Oracle` / `Review`，随后直接进正课。模板见 [`SESSION_ACCEPTANCE_AND_REVIEW.md`](SESSION_ACCEPTANCE_AND_REVIEW.md) 1.2。
 
 只有三种情况会显示提交号、已加载文件等技术信息：你明确要求审计、正在诊断路由错误、或 GitHub 无法实时核验（此时必须显示 `GITHUB_NOT_VERIFIED`）。
 

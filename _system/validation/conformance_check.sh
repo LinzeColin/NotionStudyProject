@@ -292,6 +292,16 @@ chk "tutor templates no longer require emitting a visible receipt" "( for f in _
 chk "skill checklist records the depth conflict adjudication" "grep -q 'C9' SKILL_RULES_CHECKLIST.md"
 
 echo
+echo "== G25 Status block must render as Markdown, not plain text (v0.0.0.5) =="
+chk "root contract forbids wrapping the status block in a code fence" "grep -q '不得.*代码围栏\|不得.*塞进代码' AGENTS.md"
+chk "acceptance file carries the markdown status template" "grep -q '今日课程状态」块的固定格式' SESSION_ACCEPTANCE_AND_REVIEW.md"
+chk "template uses a markdown fence, not a text fence" "grep -q '\`\`\`markdown' SESSION_ACCEPTANCE_AND_REVIEW.md"
+chk "template keeps all five routing rows" "( for k in Route State Methods Oracle Review; do grep -q \"\*\*\$k\*\*\" SESSION_ACCEPTANCE_AND_REVIEW.md || exit 1; done )"
+chk "tutor templates demand rendered markdown" "( for f in _system/templates/CHATGPT_PROJECT_INSTRUCTIONS.md _system/templates/GENERIC_LLM_STUDY_INSTRUCTIONS.md; do grep -q '渲染后的 Markdown' \$f || exit 1; done )"
+chk "tutor templates no longer hardcode a timezone" "! grep -q 'Australia/Sydney' _system/templates/CHATGPT_PROJECT_INSTRUCTIONS.md _system/templates/GENERIC_LLM_STUDY_INSTRUCTIONS.md"
+chk "skill checklist records the plain-text conflict" "grep -q 'C10' SKILL_RULES_CHECKLIST.md"
+
+echo
 echo "=============================="
 printf 'PASSED: %d   FAILED: %d   SKIPPED: %d\n' "$PASS" "$FAIL" "$SKIP"
 echo "=============================="

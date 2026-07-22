@@ -67,9 +67,15 @@ def bad(msg):
 
 
 def strip_exempt(text):
-    """去掉代码块、行内代码、网址、链接目标 —— 这些一律豁免。"""
-    text = re.sub(r"```.*?```", " ", text, flags=re.S)
-    text = re.sub(r"`[^`\n]*`", " ", text)
+    """去掉代码块、行内代码、网址、链接目标 —— 这些一律豁免。
+
+    围栏可能是 3 个以上反引号（正文里用 4 个反引号包 3 个反引号是合法写法），
+    必须按开栏长度配对收栏，否则会错配并把后续正文误当代码放行/误当正文拦截。
+    """
+    # 围栏代码块：开栏 N 个反引号，收栏至少 N 个反引号，按 N 精确配对
+    text = re.sub(r"^(`{3,})[^\n]*\n.*?^\1`*[ \t]*$", " ", text, flags=re.S | re.M)
+    # 行内代码：同样按反引号数量配对，支持 ``...`` 这类包含反引号的写法
+    text = re.sub(r"(`+)(?:(?!\1).)+?\1", " ", text, flags=re.S)
     text = re.sub(r"<https?://[^>]*>", " ", text)
     text = re.sub(r"\]\([^)]*\)", " ", text)          # markdown 链接目标
     text = re.sub(r"https?://\S+", " ", text)
