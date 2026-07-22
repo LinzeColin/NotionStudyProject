@@ -328,6 +328,25 @@ chk "tutor templates carry the minimum standards" "( for f in _system/templates/
 chk "skill checklist records the checklist-gaming conflict" "grep -q 'C12' SKILL_RULES_CHECKLIST.md"
 
 echo
+echo "== G28 Reference lesson skeleton must show density, not restate rules (v0.0.0.8) =="
+SK=_system/templates/REFERENCE_LESSON_SKELETON.md
+chk "skeleton exists" "[ -f \$SK ]"
+chk "all four segments are present" "( for k in 为什么要学这个 它是怎么来的 什么时候它不成立 你拿它干什么; do grep -q \"\$k\" \$SK || exit 1; done )"
+chk "all eight slots are present" "[ \$(grep -cE '^### 槽位 [1-8] ' \$SK) -eq 8 ]"
+chk "every slot carries a minimum standard" "[ \$(grep -c '^\*\*达标线：\*\*' \$SK) -eq 8 ]"
+# 反例是本文件的全部价值：只给正面示范，模型学不到「什么算没写够」
+chk "every slot carries a failing counter-example" "[ \$(grep -c '^\*\*不合格：\*\*' \$SK) -eq 8 ]"
+# 槽位 7 按定义必须绑真实项目，通用骨架写不出内容，故只有它没有正面示范
+chk "seven slots carry a passing demo, slot 7 deliberately does not" "[ \$(grep -c '示范（合格）' \$SK) -eq 7 ]"
+chk "slot 7 explains why it has no demo" "grep -q '通用骨架写不出来' \$SK"
+chk "self-check table has one row per item" "[ \$(awk '/^## 六、交付前自检/,0' \$SK | grep -cE '^\| [1-8] \|') -eq 8 ]"
+chk "skeleton warns it is a shape, not copy" "grep -q '照抄.*密度' \$SK"
+chk "skeleton declares its example subject project-neutral" "grep -q '与本仓任何真实项目无关' \$SK"
+chk "skeleton defers to the standards table on conflict" "grep -q 'TEACHING_METHOD_REGISTRY.md.*为准\|以本表为准' \$SK"
+chk "governance and tutor files point at the skeleton" "( for f in AGENTS.md SESSION_ACCEPTANCE_AND_REVIEW.md TEACHING_METHOD_REGISTRY.md _system/templates/CHATGPT_PROJECT_INSTRUCTIONS.md _system/templates/GENERIC_LLM_STUDY_INSTRUCTIONS.md; do grep -q 'REFERENCE_LESSON_SKELETON' \$f || exit 1; done )"
+chk "skill checklist registers the skeleton rule" "grep -q 'S50' SKILL_RULES_CHECKLIST.md"
+
+echo
 echo "=============================="
 printf 'PASSED: %d   FAILED: %d   SKIPPED: %d\n' "$PASS" "$FAIL" "$SKIP"
 echo "=============================="

@@ -2,7 +2,7 @@
 
 Agent 中立、模型中立、以 GitHub 为权威的**学习操作系统**。治理架构为**双平面八文件**，融合 `LinzeColin/Governance` 的双平面七文件治理标准。
 
-- 协议版本：`v0.0.0.7`
+- 协议版本：`v0.0.0.8`
 - 入口文件：[`AGENTS.md`](AGENTS.md)
 - 当前状态与下一步：[`_system/MAINTAINER_HANDOFF.md`](_system/MAINTAINER_HANDOFF.md)
 - 项目路由索引（派生，勿手改）：[`_system/STUDY_INDEX.md`](_system/STUDY_INDEX.md)
@@ -92,7 +92,7 @@ CLAUDE.md / GEMINI.md / .github/ / .agents/   各 Agent 的薄入口，不复制
 StudyProjects/<短名>/                     项目内容：简介、计划、每日记录、复盘、交接
 _system/STUDY_INDEX.md                    派生路由索引（勿手改，只能重建）
 _system/MAINTAINER_HANDOFF.md             维护连续性：现在到哪了、下一步做什么
-_system/templates/                        交接、会话增量、教学与接管提示词模板
+_system/templates/                        交接、会话增量、教学提示词、参考课骨架、接管清单
 _system/validation/                       四道门与结构检查脚本 + 验证报告
 _system/study-project-orchestrator/       历史记录与旧索引（保留为证据，不再路由）
 NotionBackup/ · _assets/                  Notion 快照与图标资产

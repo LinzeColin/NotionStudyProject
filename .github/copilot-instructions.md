@@ -1,4 +1,4 @@
-本仓治理架构为双平面八文件（`v0.0.0.7`）。开工前读 `/AGENTS.md`。
+本仓治理架构为双平面八文件（`v0.0.0.8`）。开工前读 `/AGENTS.md`。
 
 维护：另读 `/_system/MAINTAINER_HANDOFF.md`、当前 Git 状态与相关治理文件，输出 `MAINTAINER_BOOTSTRAP` 回执，改动后跑 `bash _system/validation/conformance_check.sh`（含四道门），并保证 active/paused 项目已登记进 `README.md` 与 Notion。
 

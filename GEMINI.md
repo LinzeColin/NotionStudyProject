@@ -1,6 +1,6 @@
 # Gemini CLI 入口
 
-本仓治理架构为双平面八文件（`v0.0.0.7`）。
+本仓治理架构为双平面八文件（`v0.0.0.8`）。
 
 **维护前**读 `/AGENTS.md` 与 `/_system/MAINTAINER_HANDOFF.md`，输出 `MAINTAINER_BOOTSTRAP` 回执，以当前 Git HEAD 为事实，改动后跑 `bash _system/validation/conformance_check.sh`（含四道门），并保证 active/paused 项目已登记进 `README.md` 与 Notion。
 
