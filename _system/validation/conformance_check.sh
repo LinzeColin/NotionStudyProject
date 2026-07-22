@@ -279,6 +279,19 @@ chk "root contract declares the four gates" "grep -q '四道门' AGENTS.md"
 chk "skill checklist adjudicates conflicts against governance" "grep -q '冲突裁决' SKILL_RULES_CHECKLIST.md"
 
 echo
+echo "== G24 Tutor bootstrap silence + default teaching depth (v0.0.0.4) =="
+chk "root contract makes tutor bootstrap silent by default" "grep -q '默认静默' AGENTS.md"
+chk "root contract lists what must never be shown" "grep -q '默认不显示什么' AGENTS.md"
+chk "root contract keeps GITHUB_NOT_VERIFIED as the degraded signal" "grep -q 'GITHUB_NOT_VERIFIED' AGENTS.md"
+chk "root contract defines the 今日课程状态 block" "grep -q '今日课程状态' AGENTS.md"
+chk "root contract states the eight-item depth floor" "grep -q '默认教学深度' AGENTS.md"
+chk "root contract forbids the summary-plus-one-question shortcut" "grep -q '一段概述 + 一道题' AGENTS.md"
+chk "acceptance file automates review-vs-new by elapsed time" "grep -q '复习还是新内容：自动判定' SESSION_ACCEPTANCE_AND_REVIEW.md"
+chk "tutor templates open with 今日课程状态" "( for f in _system/templates/CHATGPT_PROJECT_INSTRUCTIONS.md _system/templates/GENERIC_LLM_STUDY_INSTRUCTIONS.md; do grep -q '今日课程状态' \$f || exit 1; done )"
+chk "tutor templates no longer require emitting a visible receipt" "( for f in _system/templates/CHATGPT_PROJECT_INSTRUCTIONS.md _system/templates/GENERIC_LLM_STUDY_INSTRUCTIONS.md; do grep -qE '静默|不得出现' \$f || exit 1; done )"
+chk "skill checklist records the depth conflict adjudication" "grep -q 'C9' SKILL_RULES_CHECKLIST.md"
+
+echo
 echo "=============================="
 printf 'PASSED: %d   FAILED: %d   SKIPPED: %d\n' "$PASS" "$FAIL" "$SKIP"
 echo "=============================="

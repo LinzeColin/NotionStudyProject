@@ -1,4 +1,4 @@
-# 维护交接｜学习操作系统 v0.0.0.3
+# 维护交接｜学习操作系统 v0.0.0.4
 
 > 当前可执行的维护状态。**每次写仓库的任务结束时都必须更新本文件。** 与 Git 历史冲突时以 Git 为准。不要把包含本文件的那个提交号写进本文件；用 `git log -1 --format=%H -- _system/MAINTAINER_HANDOFF.md` 解析。
 
@@ -7,21 +7,21 @@
 - 仓库：`LinzeColin/NotionStudyProject`
 - 远端：`git@github.com:LinzeColin/NotionStudyProject.git`
 - 分支：`main`（**唯一分支**）
-- 本次任务基线提交：`70d3a5f23333ed20a80dfe4ddcd8c41feccda8fd`（Owner 手建 `README.md`）
+- 本次任务基线提交：`5dea041723b28dbf49d1e24ac1aa1127576fcd25`（`v0.0.0.3` 治理融合）
 - 首次安装提交：`977165ac7c834747f3234843566ba4fc80701b4e`（`v0.0.0.2`）
 - 本文件所在提交：用 `git log -1 --format=%H -- _system/MAINTAINER_HANDOFF.md` 解析，**不写自引用**
-- 更新时间：`2026-07-22T00:45Z`
-- 工作树：干净（实施隔离在工作树 `_scratch/notionstudy-governance` / 分支 `feat/dual-plane-governance`，快进合并到 `main` 后工作树与分支已回收）
+- 更新时间：`2026-07-22T01:33Z`
+- 工作树：干净（实施隔离在工作树 `_scratch/notionstudy-tutor-visibility` / 分支 `feat/tutor-visibility-and-depth`，快进合并到 `main` 后工作树与分支已回收）
 - 推送状态：已推送到 `origin/main`
 
 ## 二、维护方身份与能力
 
 - 上一个 Agent：Claude Code / `claude-opus-4-8`
 - 能力：读、写、命令行、Git、测试、提交、推送、`gh`
-- **能力缺口：无 Notion 连接器** —— 因此本次**无法核验** README 登记表与 Notion 时间线数据库是否一致（已如实记入 `README.md` 第四节，未假绿）
-- 任务模式：`root_change`（Owner 明确授权的治理架构升级）
-- 授权作用域：八个治理文件、`README.md`、四个薄适配器、`_system/**`
-- 基线提交：`70d3a5f`
+- **能力缺口：无 Notion 连接器** —— 因此本次**无法核验** README 登记表与 Notion 时间线数据库是否一致（已如实记入 `README.md` 第五节，未假绿）
+- 任务模式：`root_change`（Owner 明确授权：教学可见性 + 默认深度 + 复习自动判定）
+- 授权作用域：八个治理文件、`README.md`、五个薄适配器、`_system/templates/**`、`_system/validation/**`
+- 基线提交：`5dea041`
 
 ## 三、当前状态
 
@@ -29,7 +29,8 @@
 - 已完成：
   - `v0.0.0.2` 首次安装（提交 `977165a`）
   - 吸收孤立分支会话记录 + 仓库收敛为单分支（提交 `a25786e`、`6ac383d`）
-  - **`v0.0.0.3` 治理升级（本次）：** 融合 Governance 双平面标准、八文件、四道门、口径字典、全面中文化、项目双向登记、本机 Skill 仓库化
+  - `v0.0.0.3` 治理融合：Governance 双平面标准、八文件、四道门、口径字典、全面中文化、项目双向登记、本机 Skill 仓库化（提交 `5dea041`）
+  - **`v0.0.0.4`（本次）：** 教学方启动回执**默认静默**，可见回复以「今日课程状态」开头；新增默认教学深度八项；复习与新内容按距上次学习时间**自动判定**
 - 失败或跳过：无
 - 改动文件：见交付提交的 `git show --stat`
 
@@ -45,24 +46,26 @@
 ## 五、验证
 
 - 命令：
-  - `bash _system/validation/conformance_check.sh` —— 88/88 通过，退出码 0
+  - `bash _system/validation/conformance_check.sh` —— 98/98 通过，退出码 0（新增 `G24` 可见性与深度门）
   - `python3 _system/validation/four_gates.py` —— 四道门 20/20 通过，退出码 0
 - 失败：无
 - 证据路径：`_system/validation/conformance_check.sh`、`_system/validation/four_gates.py`、`_system/validation/CONFORMANCE_REPORT_v0.0.0.2.md`、`_system/STUDY_INDEX.md`
 - **长期不变量（每次写入后必须仍成立）：**
   1. 仓库只有 `main` 一条分支、0 未决合并请求、0 待办事项（`G21` 断言）；
   2. 四道门全过（`G22` 断言）；
-  3. 所有 `active` / `paused` 项目登记在 `README.md`（登记门断言）**且与 Notion 一致**（需人工或带连接器的 Agent 核验）。
+  3. 所有 `active` / `paused` 项目登记在 `README.md`（登记门断言）**且与 Notion 一致**（需人工或带连接器的 Agent 核验）；
+  4. 教学方启动静默、可见回复以「今日课程状态」开头、默认深度八项（`G24` 断言，已用三次注入测试验证非恒真门）。
 
 ## 六、待办与未知
 
-1. **Notion 一致性未核验** —— 本次无连接器，`README.md` 第四节 9 个在跑项目的「最后核对」仍为空。**下一个具备 Notion 连接器的 Agent 应逐行比对并填日期。**
+1. **Notion 一致性未核验** —— 本次无连接器，`README.md` 第五节 9 个在跑项目的「最后核对」仍为空。**下一个具备 Notion 连接器的 Agent 应逐行比对并填日期。**
 2. `dlm-flow-agent-cost-sprint` 状态 `unknown` —— 项目文件完整但两份旧索引都未收录。待 Owner 一句话裁决 `active` / `paused` / `archived`。
 3. arXiv 物理 `quant-ph` 第 4 课于 2026-06-23 开讲后被 Owner 要求暂停，**等待明确恢复指令**（会话级暂停，项目仍 `active`）。
 4. 5 个项目计划窗口已过期且无新证据 —— 按 Owner 规则不构成暂停，但排期需 Owner 重新确认。
 5. `ceo-finance-strategy-system` 与 `ai-tech-industry-investment-judgment` 在投资判断上范围重叠，当前按旧定义划分，未合并。
 6. 多个项目的产物未记录独立性，因此一律未升到 `E4`。
 7. 本机 `~/.codex/skills/study-project-orchestrator/` 尚未替换为仓库版薄入口 —— 仓库版已就位于 `.agents/skills/study-project-orchestrator/SKILL.md`，**同步方向必须是仓库 → 本机**。
+8. **`v0.0.0.4` 需要 Owner 动手一次**：把 `_system/templates/CHATGPT_PROJECT_INSTRUCTIONS.md` 里「———」之间的内容重新粘进 ChatGPT 的 Project Instructions，旧版本才会停止外显 `STUDY_BOOTSTRAP`。仓库改了不会自动改 ChatGPT 侧。
 
 - 未应用的治理修改建议：无
 - 已知风险：
@@ -72,12 +75,14 @@
 
 ## 七、下一个精确动作
 
-**Owner 四选一，互不阻塞：**
+**先做这一件（否则 ChatGPT 侧不会生效）：** 把 `_system/templates/CHATGPT_PROJECT_INSTRUCTIONS.md` 中「———」之间的全部内容，覆盖粘贴到 ChatGPT 的 Project Instructions。
+
+之后 Owner 四选一，互不阻塞：
 
 1. 直接开始学习，例如 `开始学习：AI 工作流操作系统，直接进第 6 课的严重失败判定`；
 2. 一句话裁决 `dlm-flow-agent-cost-sprint` 的状态；
 3. 一句话决定 arXiv 物理 `quant-ph` 第 4 课是否恢复；
-4. 让一个有 Notion 连接器的 Agent 去核对 `README.md` 第三节 9 个项目与 Notion 时间线数据库是否一致，并回填第四节的「最后核对」。
+4. 让一个有 Notion 连接器的 Agent 去核对 `README.md` 第四节 9 个项目与 Notion 时间线数据库是否一致，并回填第五节的「最后核对」。
 
 ## 八、恢复
 
@@ -87,13 +92,13 @@
 ```bash
 # 首选：可逆撤销最近一次维护提交
 git revert --no-edit $(git log -1 --format=%H -- _system/MAINTAINER_HANDOFF.md)
-# 只撤销 v0.0.0.3 治理升级，保留 v0.0.0.2 安装
-git revert --no-edit 70d3a5f..HEAD
+# 只撤销 v0.0.0.4 可见性与深度变更，保留 v0.0.0.3 治理融合
+git revert --no-edit 5dea041..HEAD
 # 全量回到安装前快照（仅在 Owner 明确要求时）
 git reset --hard study-os-v0.0.0.2-pre-20260721T225052Z
 ```
 
-- 恢复被重写的任一治理文件：`git show 70d3a5f:<文件名>`
+- 恢复被重写的任一治理文件：`git show 5dea041:<文件名>`
 - 恢复 2026-06-23 暂停记录：`_system/study-project-orchestrator/2026-06-23_PAUSED_SYNC_RECORD.md`
 
 ## 九、后继 Agent 怎么接手

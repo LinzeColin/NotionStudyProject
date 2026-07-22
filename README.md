@@ -2,7 +2,7 @@
 
 Agent 中立、模型中立、以 GitHub 为权威的**学习操作系统**。治理架构为**双平面八文件**，融合 `LinzeColin/Governance` 的双平面七文件治理标准。
 
-- 协议版本：`v0.0.0.3`
+- 协议版本：`v0.0.0.4`
 - 入口文件：[`AGENTS.md`](AGENTS.md)
 - 当前状态与下一步：[`_system/MAINTAINER_HANDOFF.md`](_system/MAINTAINER_HANDOFF.md)
 - 项目路由索引（派生，勿手改）：[`_system/STUDY_INDEX.md`](_system/STUDY_INDEX.md)
@@ -20,7 +20,15 @@ Agent 中立、模型中立、以 GitHub 为权威的**学习操作系统**。�
 | 记忆、增量合并、并发、隐私、恢复、协议演进与回滚、变更史 | [`MEMORY_RECOVERY_AND_EVOLUTION.md`](MEMORY_RECOVERY_AND_EVOLUTION.md) | `06_运维手册` |
 | 本机 Skill 的可勾选规则清单与冲突裁决 | [`SKILL_RULES_CHECKLIST.md`](SKILL_RULES_CHECKLIST.md) | 本仓特有 |
 
-## 二、四道门
+## 二、每次教学你会看到什么
+
+教学方的启动核验（读仓库、解析项目、选路由、加载状态）**默认静默执行，不展示**。你看到的回复直接以「今日课程状态」开头：日期、课程导航、主题、项目状态与已验收进度、`Route`、`State`、`Methods`、`Oracle`、`Review`，随后直接进正课。
+
+只有三种情况会显示提交号、已加载文件等技术信息：你明确要求审计、正在诊断路由错误、或 GitHub 无法实时核验（此时必须显示 `GITHUB_NOT_VERIFIED`）。
+
+**默认教学深度**：每个新知识单元至少覆盖问题框架、第一性原理模型、必要推导、完整实例演算、对比案例、反例或边界、现实迁移与投入产出、独立验收标准八项。**不接受「一段概述 + 一道题」。** 复习还是直接开新内容，由系统按距上次学习的时间自动判定，不问你。
+
+## 三、四道门
 
 改动后必须跑 `bash _system/validation/conformance_check.sh`（期望退出码 0）：
 
@@ -33,7 +41,7 @@ Agent 中立、模型中立、以 GitHub 为权威的**学习操作系统**。�
 
 **「绿的门是假门」：** 证据没接通时必须显示「未评估」「未取证」，门保持红，不做假绿。
 
-## 三、项目登记表（与 Notion 保持一致）
+## 四、项目登记表（与 Notion 保持一致）
 
 > **强制规则：** 任何 `active` / `paused` 项目必须**同时**登记在本表和 Notion `Codex Study Timeline` 数据库，两处一致。
 > Notion 登记地址：<https://app.notion.com/p/37eb1a986ba680bdb5f9ea2367b08991?v=37eb1a986ba68040b4f4000cc8b21956>
@@ -64,7 +72,7 @@ Agent 中立、模型中立、以 GitHub 为权威的**学习操作系统**。�
 | Notion Windows Markdown 操作 | `notion-windows-markdown-operator` | archived | 2026-06-14 归档，在当前路线之外 |
 | DLM 流动 Agent 成本冲刺 | `dlm-flow-agent-cost-sprint` | **unknown** | 项目文件完整但两份旧索引都未收录 → 待 Owner 一句话裁决，暂不路由、不删除 |
 
-## 四、Notion 同步状态
+## 五、Notion 同步状态
 
 | 项目 | Notion 登记 | 最后核对 | 阻塞 |
 |---|---|---|---|
@@ -73,7 +81,7 @@ Agent 中立、模型中立、以 GitHub 为权威的**学习操作系统**。�
 > **当前已知阻塞：** 本次运行的 Agent 没有 Notion 连接器，因此**无法自动核验**上表 9 个项目在 `Codex Study Timeline` 中的登记是否与本 README 一致。按登记门规则，此处如实记录阻塞，**未声称已同步**。
 > 下次任何具备 Notion 连接器的 Agent 接手时，应逐行比对并把本表「最后核对」填上日期。
 
-## 五、仓库结构
+## 六、仓库结构
 
 ```text
 八个治理文件                              规则本身（人类可读面）
@@ -88,7 +96,7 @@ _system/study-project-orchestrator/       历史记录与旧索引（保留为�
 NotionBackup/ · _assets/                  Notion 快照与图标资产
 ```
 
-## 六、怎么开始
+## 七、怎么开始
 
 **学习（任意可实时读仓库的大模型）：**
 
