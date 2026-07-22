@@ -296,10 +296,20 @@ echo "== G25 Status block must render as Markdown, not plain text (v0.0.0.5) =="
 chk "root contract forbids wrapping the status block in a code fence" "grep -q '不得.*代码围栏\|不得.*塞进代码' AGENTS.md"
 chk "acceptance file carries the markdown status template" "grep -q '今日课程状态」块的固定格式' SESSION_ACCEPTANCE_AND_REVIEW.md"
 chk "template uses a markdown fence, not a text fence" "grep -q '\`\`\`markdown' SESSION_ACCEPTANCE_AND_REVIEW.md"
-chk "template keeps all five routing rows" "( for k in Route State Methods Oracle Review; do grep -q \"\*\*\$k\*\*\" SESSION_ACCEPTANCE_AND_REVIEW.md || exit 1; done )"
+# v0.0.0.6 起字段名双语（路由 Route / 学习状态 State / …），旧的纯英文断言已失配
+chk "template keeps all five routing rows" "( for k in '路由 Route' '学习状态 State' '教学方法 Methods' '验收标准 Oracle' '复习探针 Review'; do grep -q \"\$k\" SESSION_ACCEPTANCE_AND_REVIEW.md || exit 1; done )"
 chk "tutor templates demand rendered markdown" "( for f in _system/templates/CHATGPT_PROJECT_INSTRUCTIONS.md _system/templates/GENERIC_LLM_STUDY_INSTRUCTIONS.md; do grep -q '渲染后的 Markdown' \$f || exit 1; done )"
 chk "tutor templates no longer hardcode a timezone" "! grep -q 'Australia/Sydney' _system/templates/CHATGPT_PROJECT_INSTRUCTIONS.md _system/templates/GENERIC_LLM_STUDY_INSTRUCTIONS.md"
 chk "skill checklist records the plain-text conflict" "grep -q 'C10' SKILL_RULES_CHECKLIST.md"
+
+echo
+echo "== G26 Protocol codes must be bilingual for the Owner (v0.0.0.6) =="
+chk "root contract forbids bare protocol codes" "grep -q '协议代号一律双语' AGENTS.md"
+chk "vocabulary owns the canonical bilingual renderings" "grep -q '面向 Owner 的双语写法' STUDY_ARCHITECTURE.md"
+chk "all three contract letters carry a Chinese full name" "( for k in 心智模型与记忆 构建与行为 判断、探究与综合; do grep -q \"\$k\" STUDY_ARCHITECTURE.md || exit 1; done )"
+chk "status template labels fields bilingually" "( for k in '路由 Route' '学习状态 State' '教学方法 Methods' '验收标准 Oracle' '复习探针 Review'; do grep -q \"\$k\" SESSION_ACCEPTANCE_AND_REVIEW.md || exit 1; done )"
+chk "tutor templates ban bare codes" "( for f in _system/templates/CHATGPT_PROJECT_INSTRUCTIONS.md _system/templates/GENERIC_LLM_STUDY_INSTRUCTIONS.md; do grep -q '判断、探究与综合' \$f || exit 1; done )"
+chk "skill checklist records the bare-code conflict" "grep -q 'C11' SKILL_RULES_CHECKLIST.md"
 
 echo
 echo "=============================="
