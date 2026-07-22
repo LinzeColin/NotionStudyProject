@@ -2,7 +2,7 @@
 
 Agent 中立、模型中立、以 GitHub 为权威的**学习操作系统**。治理架构为**双平面八文件**，融合 `LinzeColin/Governance` 的双平面七文件治理标准。
 
-- 协议版本：`v0.0.0.6`
+- 协议版本：`v0.0.0.7`
 - 入口文件：[`AGENTS.md`](AGENTS.md)
 - 当前状态与下一步：[`_system/MAINTAINER_HANDOFF.md`](_system/MAINTAINER_HANDOFF.md)
 - 项目路由索引（派生，勿手改）：[`_system/STUDY_INDEX.md`](_system/STUDY_INDEX.md)

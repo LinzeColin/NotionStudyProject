@@ -1,6 +1,6 @@
 ---
 name: study-os
-description: Run or maintain the v0.0.0.4 agent-neutral, GitHub-canonical Study OS (dual-plane eight-file governance) with dynamic project discovery, MBJ routing, three-queue review, session delta, cross-agent takeover and recovery.
+description: Run or maintain the v0.0.0.7 agent-neutral, GitHub-canonical Study OS (dual-plane eight-file governance) with dynamic project discovery, MBJ routing, three-queue review, session delta, cross-agent takeover and recovery.
 ---
 
 # Study OS Skill

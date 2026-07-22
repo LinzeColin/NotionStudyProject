@@ -312,6 +312,22 @@ chk "tutor templates ban bare codes" "( for f in _system/templates/CHATGPT_PROJE
 chk "skill checklist records the bare-code conflict" "grep -q 'C11' SKILL_RULES_CHECKLIST.md"
 
 echo
+echo "== G27 Depth floor must be measurable, escape hatches removed (v0.0.0.7) =="
+chk "method registry owns the per-item minimum standards" "grep -q '默认教学深度的最小合格标准（唯一真源）' TEACHING_METHOD_REGISTRY.md"
+chk "all eight items have a minimum standard row" "[ \$(awk '/^## 默认教学深度的最小合格标准/,0' TEACHING_METHOD_REGISTRY.md | grep -cE '^\| [1-8] \|') -eq 8 ]"
+chk "minimum standards are concrete, not restatements" "( for k in '至少三个可检验步骤' '中间量一个都不能省' '具体参数值'; do grep -q \"\$k\" TEACHING_METHOD_REGISTRY.md || exit 1; done )"
+chk "four-segment skeleton is defined" "( for k in 为什么要学这个 它是怎么来的 什么时候它不成立 你拿它干什么; do grep -q \"\$k\" TEACHING_METHOD_REGISTRY.md || exit 1; done )"
+chk "pre-delivery self-check is mandatory and silent" "grep -q '任何一项不达标，不许输出' TEACHING_METHOD_REGISTRY.md"
+chk "root contract points at the single source of truth" "grep -q 'TEACHING_METHOD_REGISTRY.md.*最小合格标准\|最小合格标准.*唯一真源' AGENTS.md"
+# 逃生舱回归门：这两句任何一句复活，深度下限就再次形同虚设（见 SKILL_RULES_CHECKLIST C12）
+chk "word-count escape hatch stays deleted" "! grep -rq '不按固定字数机械衡量\|不按字数机械衡量' AGENTS.md SESSION_ACCEPTANCE_AND_REVIEW.md _system/templates/CHATGPT_PROJECT_INSTRUCTIONS.md _system/templates/GENERIC_LLM_STUDY_INSTRUCTIONS.md"
+chk "self-judged time-pressure escape hatch stays deleted" "! grep -rq '或本次时间极短\|或时间极短' AGENTS.md SESSION_ACCEPTANCE_AND_REVIEW.md _system/templates/CHATGPT_PROJECT_INSTRUCTIONS.md _system/templates/GENERIC_LLM_STUDY_INSTRUCTIONS.md"
+chk "only the Owner may trigger compression, for one turn" "grep -q '只压缩当轮\|只压当轮\|只压那一轮' AGENTS.md"
+chk "no lesson tier switch exists" "grep -q '没有.*快课\|没有课程档位' TEACHING_METHOD_REGISTRY.md"
+chk "tutor templates carry the minimum standards" "( for f in _system/templates/CHATGPT_PROJECT_INSTRUCTIONS.md _system/templates/GENERIC_LLM_STUDY_INSTRUCTIONS.md; do grep -q '低于这条线就等于没交付\|低于线即未交付' \$f || exit 1; done )"
+chk "skill checklist records the checklist-gaming conflict" "grep -q 'C12' SKILL_RULES_CHECKLIST.md"
+
+echo
 echo "=============================="
 printf 'PASSED: %d   FAILED: %d   SKIPPED: %d\n' "$PASS" "$FAIL" "$SKIP"
 echo "=============================="
