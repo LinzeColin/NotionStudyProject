@@ -7,6 +7,13 @@ Agent 中立、模型中立、以 GitHub 为权威的**学习操作系统**。�
 - 当前状态与下一步：[`_system/MAINTAINER_HANDOFF.md`](_system/MAINTAINER_HANDOFF.md)
 - 项目路由索引（派生，勿手改）：[`_system/STUDY_INDEX.md`](_system/STUDY_INDEX.md)
 
+## 📦 数据落地政策（长期有效 · 自运行分仓治理）
+
+**本仓存学习内容与治理文件，长期/业务/运行时数据不入本仓。** 开发或学习中新产生的任何需长期存储的数据
+（导出件、数据库、含个人信息的记录等）一律写入私有仓 `LinzeColin/Private-Database`（其余项目数据 → `Private-MetaDatabase/`），
+用 `private_db_client.py` 免 clone 读写；Private-Database 禁止 `git clone`；派生/临时物走 `.gitignore`。
+**一次分清、长期自运行，不再需要人工反复迁移。**
+
 ## 一、八个治理文件
 
 | 规则内容 | 治理文件 | 对应 Governance |
